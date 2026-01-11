@@ -1,0 +1,2044 @@
+src/JSystem/J2DGraph/J2DAnimation.cpp:19:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:27:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:35:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:43:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:51:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:59:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:67:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:75:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:83:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:221:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:229:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:237:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:245:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:334:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:342:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:350:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:358:    if (getFrame() < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:560:    f32 frame = getFrame();
+src/JSystem/J2DGraph/J2DAnimation.cpp:561:    if (frame < 0) {
+src/JSystem/J2DGraph/J2DAnimation.cpp:592:    if (getFrame() < 0) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:17:int J3DFrameCtrl::checkPass(f32 passFrame) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:239:        u32 frame = (int)(mFrame + 0.5f);
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:395:            f32 rate = mFrame - frame;
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:398:            u32 next_frame = frame + 1;
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:413:                u32 rot1 = (u16)mRotData[entryX->mRotationOffset + frame];
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:447:                u32 rot1 = (u16)mRotData[entryY->mRotationOffset + frame];
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:481:                u32 rot1 = (u16)mRotData[entryZ->mRotationOffset + frame];
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:560:f32 J3DGetKeyFrameInterpolation(f32 frame, J3DAnmKeyTableBase* pKeyTable, T* pData) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:563:    if (frame < pData[0]) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:569:        if (pData[idx * 3] <= frame) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:585:        f32 interpolated = J3DHermiteInterpolation(frame, &pData[0], &pData[1], &pData[2], &pData[3], &pData[4], &pData[5]);
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:589:        if (pData[idx * 4] <= frame) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:597:            if (frame >= pData[var_r23]) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:605:        f32 interpolated = J3DHermiteInterpolation(frame, &pData[0], &pData[1], &pData[3], &pData[4], &pData[5], &pData[6]);
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:610:void J3DAnmTransformKey::calcTransform(f32 frame, u16 jointNo, J3DTransformInfo* pTransform) const {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:741:void J3DAnmTextureSRTKey::calcTransform(f32 frame, u16 jointNo, J3DTextureSRTInfo* pTexSRTInfo) const {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:813:    int frame = (int)(mFrame + 0.5f);
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:817:    } else if (frame >= (u16)maxFrame) {
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:862:        int frame = (int)(mFrame + 0.5f);
+src/JSystem/J3DGraphAnimator/J3DAnimation.cpp:1017:        int frame = (int)(mFrame + 0.5f);
+src/JSystem/JUtility/JUTProcBar.cpp:115:        int frameDuration = 16666;  // duration in miliseconds? for how long a frame takes,
+src/d/actor/d_a_L7demo_dr.cpp:189:        if (mpModelMorf->getFrame() < 156.0f) {
+src/d/actor/d_a_L7demo_dr.cpp:193:        } else if (156.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7demo_dr.cpp:208:        } else if (mpModelMorf->getFrame() >= 210.0f) {
+src/d/actor/d_a_L7demo_dr.cpp:272:    if (mpModelMorf->getFrame() == 115.0f || mpModelMorf->getFrame() == 147.0f) {
+src/d/actor/d_a_L7low_dr.cpp:85:            if (field_0x640 == 0 && mpModelMorf->getFrame() >= 33.0f) {
+src/d/actor/d_a_L7low_dr.cpp:101:            if (field_0x640 == 0 && mpModelMorf->getFrame() >= 67.0f) {
+src/d/actor/d_a_L7op_demo_dr.cpp:257:        mpModelMorf->setFrame(20.0f);
+src/d/actor/d_a_L7op_demo_dr.cpp:310:            if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:339:            if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:370:            if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:404:            if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:433:            if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:437:            if (mpModelMorf->getFrame() >= 33.0f) {
+src/d/actor/d_a_L7op_demo_dr.cpp:468:                } else if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:486:                } else if (8.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:639:            if (5.0f == mpModelMorf->getFrame() || 35.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:655:            f32 temp_f1 = mpModelMorf->getFrame();
+src/d/actor/d_a_L7op_demo_dr.cpp:681:            if (7.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:686:                if (mpModelMorf->getFrame() >= 33.0f) {
+src/d/actor/d_a_L7op_demo_dr.cpp:693:            if (7.0f == mpModelMorf->getFrame() || 37.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_L7op_demo_dr.cpp:695:            } else if (62.0f == mpModelMorf->getFrame()) {
+src/d/actor/d_a_alink.cpp:2319:        } else if (checkUnderMove0BckNoArc(ANM_HORSE_WAIT_B) && mUnderFrameCtrl[0].getFrame() < 77.0f) {
+src/d/actor/d_a_alink.cpp:3675:        if (mUnderFrameCtrl[0].getFrame() >= 9.0f) {
+src/d/actor/d_a_alink.cpp:5394:    f32 frame = i_anm->getFrame() + 1.0f;
+src/d/actor/d_a_alink.cpp:5591:                        field_0x0724->setFrame(field_0x0724->getFrameMax() - 0.001f);
+src/d/actor/d_a_alink.cpp:5593:                        field_0x0724->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:5957:        if (checkEquipHeavyBoots() && temp_r29->getFrame() >= mpHIO->mFrontRoll.m.mBootsAttackInitF && temp_r29->getFrame() < mpHIO->mFrontRoll.m.mBootsAttackEndF) {
+src/d/actor/d_a_alink.cpp:6021:        if (dComIfGs_getOil() != 0 && mUnderFrameCtrl[0].getFrame() >= field_0x347c && mUnderFrameCtrl[0].getFrame() <= field_0x3480) {
+src/d/actor/d_a_alink.cpp:6398:    return mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:6401:void daAlink_c::setAnimeFrame(f32 frame) {
+src/d/actor/d_a_alink.cpp:6402:    mUnderFrameCtrl[0].setFrame(frame);
+src/d/actor/d_a_alink.cpp:6403:    mUnderFrameCtrl[1].setFrame(frame);
+src/d/actor/d_a_alink.cpp:6404:    mUnderFrameCtrl[2].setFrame(frame);
+src/d/actor/d_a_alink.cpp:6406:    mUpperFrameCtrl[0].setFrame(frame);
+src/d/actor/d_a_alink.cpp:6407:    mUpperFrameCtrl[1].setFrame(frame);
+src/d/actor/d_a_alink.cpp:6408:    mUpperFrameCtrl[2].setFrame(frame);
+src/d/actor/d_a_alink.cpp:6525:        var_f31 = temp_r29->getFrame() / temp_r29->getEnd();
+src/d/actor/d_a_alink.cpp:6537:    param_0->setFrame(temp_r29->getFrame());
+src/d/actor/d_a_alink.cpp:6540:    param_2->setFrame(temp_r24->getFrame());
+src/d/actor/d_a_alink.cpp:6550:        param_1->setFrame(mUpperFrameCtrl[0].getFrame());
+src/d/actor/d_a_alink.cpp:6560:        param_3->setFrame(mUpperFrameCtrl[1].getFrame());
+src/d/actor/d_a_alink.cpp:6686:    param_0->setFrame(var_f31);
+src/d/actor/d_a_alink.cpp:6704:        param_1->setFrame(var_f31);
+src/d/actor/d_a_alink.cpp:6885:    var_r30->setFrame(var_f31);
+src/d/actor/d_a_alink.cpp:6991:    var_r30->setFrame(var_f31);
+src/d/actor/d_a_alink.cpp:7089:    } else if (!sp24 && (field_0x2fb3 != 0 || checkNoResetFlg3(FLG3_UNK_2000) || field_0x35c4.absXZ() > 1.0f || (checkUnderMove0BckNoArc(ANM_WAIT_B) && !sp34->checkPass(0.0f)))) {
+src/d/actor/d_a_alink.cpp:7287:            if (sp30->checkPass(var_f27)) {
+src/d/actor/d_a_alink.cpp:7289:            } else if (sp30->checkPass(var_f26)) {
+src/d/actor/d_a_alink.cpp:7297:        if (sp30->checkPass(var_f27)) {
+src/d/actor/d_a_alink.cpp:7299:        } else if (sp30->checkPass(var_f26)) {
+src/d/actor/d_a_alink.cpp:7315:        if (sp30->checkPass(var_f27)) {
+src/d/actor/d_a_alink.cpp:7321:        } else if (sp30->checkPass(var_f26)) {
+src/d/actor/d_a_alink.cpp:7553:        if (sp18->checkPass(sp14)) {
+src/d/actor/d_a_alink.cpp:7555:        } else if (sp18->checkPass(sp10)) {
+src/d/actor/d_a_alink.cpp:7641:            if (temp_r28->checkPass(11.0f)) {
+src/d/actor/d_a_alink.cpp:7643:            } else if (temp_r28->checkPass(8.0f)) {
+src/d/actor/d_a_alink.cpp:7646:        } else if (temp_r28->checkPass(0.0f)) {
+src/d/actor/d_a_alink.cpp:7648:        } else if (temp_r28->checkPass(0.5f * temp_r28->getEnd())) {
+src/d/actor/d_a_alink.cpp:7683:        var_r29->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:7719:        field_0x2154->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:7747:        mpFaceBtk->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:7865:            var_r29 = mUpperFrameCtrl[2].getFrame();
+src/d/actor/d_a_alink.cpp:7870:                var_r29 = mUpperFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:7872:                var_r29 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:7899:        field_0x2154->setFrame(var_r29);
+src/d/actor/d_a_alink.cpp:7900:        mpFaceBtk->setFrame(var_r26);
+src/d/actor/d_a_alink.cpp:7923:                    var_f31 = 1.0f + temp_r28->getFrame();
+src/d/actor/d_a_alink.cpp:7929:                        var_f31 = mUpperFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:7931:                        var_f31 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:7936:                    var_f31 = mUpperFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:7938:                    var_f31 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:7942:            var_f31 = mUpperFrameCtrl[2].getFrame();
+src/d/actor/d_a_alink.cpp:9168:    if (i_frameCtrl->checkPass(12.0f)) {
+src/d/actor/d_a_alink.cpp:10630:        } else if (frame_ctrl->getFrame() >= 7.0f || frame_ctrl->getFrame() < 11.0f) {
+src/d/actor/d_a_alink.cpp:11135:            if ((checkUpperAnime(0x80) && frame_ctrl->getFrame() <= mpHIO->mCut.mCutDashLeft.m.mCutAnm.mCancelFrame) ||
+src/d/actor/d_a_alink.cpp:11136:                (checkUpperAnime(0x81) && frame_ctrl->getFrame() <= mpHIO->mCut.mCutDashRight.m.mCutAnm.mCancelFrame) ||
+src/d/actor/d_a_alink.cpp:11137:                (checkUpperAnime(0x82) && frame_ctrl->getFrame() <= mpHIO->mCut.mCutDashCharge.m.mCutAnm.mCancelFrame) ||
+src/d/actor/d_a_alink.cpp:11349:                mUpperFrameCtrl[2].setFrame(12);
+src/d/actor/d_a_alink.cpp:11858:        } else if (frame_ctrl->getFrame() >= 20.0f) {
+src/d/actor/d_a_alink.cpp:11864:        } else if (frame_ctrl->checkPass(5.5f)) {
+src/d/actor/d_a_alink.cpp:11870:        } else if (frame_ctrl->checkPass(6.5f)) {
+src/d/actor/d_a_alink.cpp:12050:    mMagicArmorBodyBrk->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:12056:    mMagicArmorHeadBrk->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:13308:            var_f31 = field_0x2d7c->getFrame() - field_0x2d7c->getRate();
+src/d/actor/d_a_alink.cpp:13403:    field_0x33dc = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:13596:    brk->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:13607:    btk->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:13618:    btp->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:14474:    m_nSwordBtk->setFrame(0.0f);
+src/d/actor/d_a_alink.cpp:14758:        if (frameCtrl_p->checkPass(60.0f)) {
+src/d/actor/d_a_alink.cpp:14760:        } else if (frameCtrl_p->checkPass(150.0f)) {
+src/d/actor/d_a_alink.cpp:14762:        } else if (frameCtrl_p->checkPass(190.0f)) {
+src/d/actor/d_a_alink.cpp:14785:            var_f31 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink.cpp:14787:            var_f31 = mUpperFrameCtrl[1].getFrame();
+src/d/actor/d_a_alink.cpp:14791:        mUnderFrameCtrl[0].setFrame(var_f31);
+src/d/actor/d_a_alink.cpp:14792:        getNowAnmPackUnder(UNDER_0)->setFrame(var_f31);
+src/d/actor/d_a_alink.cpp:14874:        } else if (frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink.cpp:14884:            if (field_0x30ca == 0 && frameCtrl_p->checkPass(0.0f)) {
+src/d/actor/d_a_alink.cpp:15221:    } else if (frameCtrl_p->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink.cpp:15303:        if (field_0x3198 == 0 || mUnderFrameCtrl[0].getFrame() > 6.0f) {
+src/d/actor/d_a_alink.cpp:15363:    } else if (frameCtrl_p->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink.cpp:15504:        if (frameCtrl_p->checkPass(21.0f)) {
+src/d/actor/d_a_alink.cpp:15512:        if (frameCtrl_p->getFrame() > 16.0f) {
+src/d/actor/d_a_alink.cpp:15513:            if (frameCtrl_p->getFrame() >= 18.0f) {
+src/d/actor/d_a_alink.cpp:15519:        } else if (frameCtrl_p->getFrame() > 6.0f) {
+src/d/actor/d_a_alink.cpp:15559:        } else if (frameCtrl->getFrame() >= 18.0f) {
+src/d/actor/d_a_alink.cpp:15561:        } else if (frameCtrl->getFrame() >= 14.0f) {
+src/d/actor/d_a_alink.cpp:15591:        mUnderFrameCtrl[0].setFrame(3.0f);
+src/d/actor/d_a_alink.cpp:15592:        getNowAnmPackUnder(UNDER_0)->setFrame(3.0f);
+src/d/actor/d_a_alink.cpp:15616:    } else if (frameCtrl->getFrame() >= 14.0f) {
+src/d/actor/d_a_alink.cpp:15619:    } else if (frameCtrl->getFrame() > 9.0f) {
+src/d/actor/d_a_alink.cpp:15714:        if (frameCtrl_p->checkPass(19.0f)) {
+src/d/actor/d_a_alink.cpp:15718:        if (frameCtrl_p->getFrame() < 18.0f) {
+src/d/actor/d_a_alink.cpp:16194:        if (frameCtrl->getFrame() >= 3.0f) {
+src/d/actor/d_a_alink.cpp:16421:    } else if (frameCtrl->checkPass(4.0f)) {
+src/d/actor/d_a_alink.cpp:16497:    } else if (mUnderFrameCtrl[0].checkPass(6.0f)) {
+src/d/actor/d_a_alink.cpp:16776:    } else if (checkAnmEnd(temp_r29) || ((mDemo.getParam0() == 1) && (mDemo.getDemoMode() == 0x39 || mDemo.getDemoMode() == 0x3A)) || (mProcVar5.field_0x3012 != 0 && temp_r29->getFrame() > field_0x3480 && (checkInputOnR() || doTrigger() || grassCancelTrigger()))) {
+src/d/actor/d_a_alink.cpp:16808:    field_0x33dc = temp_r29->getFrame();
+src/d/actor/d_a_alink.cpp:18005:            } else if (checkUnderMove0BckNoArc(ANM_RIDE_CUT_TURN_CHARGE) && mUnderFrameCtrl[0].getFrame() < 6.0f) {
+src/d/actor/d_a_alink_boom.inc:118:            mUpperFrameCtrl[2].setFrame(tmp);
+src/d/actor/d_a_alink_boom.inc:286:         mUpperFrameCtrl[2].getFrame() <= mpHIO->mItem.mBoomerang.m.mCatchAnm.mCancelFrame) ||
+src/d/actor/d_a_alink_bottle.inc:100:            field_0x0724->setFrame(0.0f);
+src/d/actor/d_a_alink_bottle.inc:102:            field_0x0724->setFrame(1.0f);
+src/d/actor/d_a_alink_bottle.inc:104:            field_0x0724->setFrame(2.0f);
+src/d/actor/d_a_alink_bottle.inc:106:            field_0x0724->setFrame(4.0f);
+src/d/actor/d_a_alink_bottle.inc:108:            field_0x0724->setFrame(5.0f);
+src/d/actor/d_a_alink_bottle.inc:110:            field_0x0724->setFrame(6.0f);
+src/d/actor/d_a_alink_bottle.inc:112:            field_0x0724->setFrame(7.0f);
+src/d/actor/d_a_alink_bottle.inc:114:            field_0x0724->setFrame(8.0f);
+src/d/actor/d_a_alink_bottle.inc:116:            field_0x0724->setFrame(9.0f);
+src/d/actor/d_a_alink_bottle.inc:118:            field_0x0724->setFrame(10.0f);
+src/d/actor/d_a_alink_bottle.inc:120:            field_0x0724->setFrame(11.0f);
+src/d/actor/d_a_alink_bottle.inc:122:            field_0x0724->setFrame(3.0f);
+src/d/actor/d_a_alink_bottle.inc:125:                field_0x072c->setFrame(1.0f);
+src/d/actor/d_a_alink_bottle.inc:130:            field_0x0724->setFrame(5.0f);
+src/d/actor/d_a_alink_bottle.inc:132:            field_0x072c->setFrame(2.0f);
+src/d/actor/d_a_alink_bottle.inc:137:        field_0x072c->setFrame(2.0f);
+src/d/actor/d_a_alink_bottle.inc:195:        } else if (frameCtrl_p->checkPass(50.0f)) {
+src/d/actor/d_a_alink_bottle.inc:196:            field_0x071c->setFrame(0.0f);
+src/d/actor/d_a_alink_bottle.inc:213:                field_0x072c->setFrame(1.0f);
+src/d/actor/d_a_alink_bottle.inc:271:                field_0x072c->setFrame(2.0f);
+src/d/actor/d_a_alink_bottle.inc:290:        } else if (frameCtrl_p->checkPass(11.0f)) {
+src/d/actor/d_a_alink_bottle.inc:292:        } else if (mItemVar0.mBottleItemHealAmount >= 0 && frameCtrl_p->checkPass(21.0f)) {
+src/d/actor/d_a_alink_bottle.inc:299:            if (frameCtrl_p->checkPass(25.0f)) {
+src/d/actor/d_a_alink_bottle.inc:301:            } else if (frameCtrl_p->checkPass(17.0f)) {
+src/d/actor/d_a_alink_bottle.inc:316:        } else if (frameCtrl_p->checkPass(9.0f)) {
+src/d/actor/d_a_alink_bottle.inc:461:            field_0x072c->setFrame(2.0f);
+src/d/actor/d_a_alink_bottle.inc:483:        } else if (frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink_bottle.inc:498:        } else if (frameCtrl_p->getFrame() >= 18.0f) {
+src/d/actor/d_a_alink_bottle.inc:505:        } else if (frameCtrl_p->checkPass(11.0f)) {
+src/d/actor/d_a_alink_bottle.inc:513:        } else if (frameCtrl_p->getFrame() > 16.0f && frameCtrl_p->getFrame() < 31.0f) {
+src/d/actor/d_a_alink_bottle.inc:519:        if (mProcVar0.field_0x3008 == 0 && frameCtrl_p->getFrame() >= 25.0f) {
+src/d/actor/d_a_alink_bottle.inc:644:            if (frameCtrl_p->getFrame() > field_0x347c) {
+src/d/actor/d_a_alink_bottle.inc:677:        } else if (frameCtrl_p->getFrame() <= field_0x347c) {
+src/d/actor/d_a_alink_bottle.inc:697:    } else if (frameCtrl_p->getFrame() > field_0x3478 && mProcVar2.field_0x300c == 0) {
+src/d/actor/d_a_alink_bottle.inc:780:    } else if (frameCtrl->getFrame() >= 37.0f) {
+src/d/actor/d_a_alink_bottle.inc:782:    } else if (frameCtrl->getFrame() >= 15.0f) {
+src/d/actor/d_a_alink_bottle.inc:784:    } else if (frameCtrl->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_bottle.inc:790:    if (frameCtrl->checkPass(39.0f)) {
+src/d/actor/d_a_alink_bow.inc:263:                if (field_0x301c <= frameCtrl_p->getEnd() && frameCtrl_p->getFrame() < 0.1f &&
+src/d/actor/d_a_alink_bow.inc:393:        if (mUpperFrameCtrl[2].getFrame() >= 6.0f) {
+src/d/actor/d_a_alink_bow.inc:395:        } else if (mUpperFrameCtrl[2].getFrame() >= 1.0f) {
+src/d/actor/d_a_alink_bow.inc:406:            (mUpperFrameCtrl[2].getFrame() > mpHIO->mItem.mBow.m.mShootAnm.mCancelFrame &&
+src/d/actor/d_a_alink_bow.inc:420:        field_0x33dc = mUpperFrameCtrl[2].getFrame();
+src/d/actor/d_a_alink_canoe.inc:149:    f32 sp10 = frame_ctrl0->getFrame();
+src/d/actor/d_a_alink_canoe.inc:150:    f32 spC = frame_ctrl1->getFrame();
+src/d/actor/d_a_alink_canoe.inc:194:    frame_ctrl0->setFrame(sp10);
+src/d/actor/d_a_alink_canoe.inc:378:    } else if (frameCtrl->getFrame() < 9.0f) {
+src/d/actor/d_a_alink_canoe.inc:524:        } else if (mUnderFrameCtrl[0].checkPass(6)) {
+src/d/actor/d_a_alink_canoe.inc:814:        } else if (temp_r27->checkPass(0.0f)) {
+src/d/actor/d_a_alink_canoe.inc:830:            if (mProcVar0.field_0x3008 == 0 || temp_r27->getFrame() >= 19.0f) {
+src/d/actor/d_a_alink_canoe.inc:867:            if (temp_r27->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_canoe.inc:914:        } else if (frame_ctrl->checkPass(11)) {
+src/d/actor/d_a_alink_canoe.inc:975:        if (mUpperFrameCtrl[0].checkPass(11)) {
+src/d/actor/d_a_alink_canoe.inc:995:        } else if (temp_r29->getFrame() < 5.0f) {
+src/d/actor/d_a_alink_canoe.inc:1035:            mUpperFrameCtrl[0].setFrame(11.0f);
+src/d/actor/d_a_alink_canoe.inc:1036:            getNowAnmPackUpper(UPPER_0)->setFrame(11.0f);
+src/d/actor/d_a_alink_canoe.inc:1045:        } else if (temp_r29->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_canoe.inc:1093:    } else if (mUnderFrameCtrl[0].getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_canoe.inc:1119:    mUnderFrameCtrl[0].setFrame(temp_f31);
+src/d/actor/d_a_alink_canoe.inc:1120:    getNowAnmPackUnder(UNDER_0)->setFrame(temp_f31);
+src/d/actor/d_a_alink_canoe.inc:1121:    mUpperFrameCtrl[2].setFrame(temp_f31);
+src/d/actor/d_a_alink_canoe.inc:1122:    getNowAnmPackUpper(UPPER_2)->setFrame(temp_f31);
+src/d/actor/d_a_alink_canoe.inc:1155:        } else if (temp_r29->getFrame() >= 8.0f) {
+src/d/actor/d_a_alink_canoe.inc:1175:        temp_r28->setFrame(temp_f31);
+src/d/actor/d_a_alink_canoe.inc:1176:        temp_r29->setFrame(temp_f31);
+src/d/actor/d_a_alink_canoe.inc:1184:    mUnderFrameCtrl[1].setFrame(0.5f * mUnderFrameCtrl[1].getEnd());
+src/d/actor/d_a_alink_canoe.inc:1261:        } else if (temp_r30->getFrame() >= 65.0f) {
+src/d/actor/d_a_alink_canoe.inc:1265:        } else if (temp_r30->getFrame() >= 29.0f) {
+src/d/actor/d_a_alink_canoe.inc:1277:    } else if (temp_r30->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_canoe.inc:1279:    } else if (temp_r30->checkPass(field_0x347c)) {
+src/d/actor/d_a_alink_canoe.inc:1674:        mUpperFrameCtrl[2].setFrame(0.0f);
+src/d/actor/d_a_alink_canoe.inc:1675:        getNowAnmPackUpper(UPPER_2)->setFrame(0.0f);
+src/d/actor/d_a_alink_canoe.inc:1678:        mUnderFrameCtrl[0].setFrame(0.0f);
+src/d/actor/d_a_alink_canoe.inc:1679:        getNowAnmPackUnder(UNDER_0)->setFrame(0.0f);
+src/d/actor/d_a_alink_copyrod.inc:50:            mUpperFrameCtrl[2].setFrame(0.0f);
+src/d/actor/d_a_alink_copyrod.inc:51:            getNowAnmPackUpper(UPPER_2)->setFrame(0.0f);
+src/d/actor/d_a_alink_copyrod.inc:106:    frame_ctrl->setFrame(field_0x33e8 * frame_ctrl->getEnd());
+src/d/actor/d_a_alink_copyrod.inc:117:    field_0x0724->setFrame(0.0f);
+src/d/actor/d_a_alink_copyrod.inc:229:         mUpperFrameCtrl[2].getFrame() <= mpHIO->mItem.mBoomerang.m.mCatchAnm.mCancelFrame) ||
+src/d/actor/d_a_alink_copyrod.inc:389:    } else if (frameCtrl->getFrame() > field_0x3480 && checkNextAction(1)) {
+src/d/actor/d_a_alink_copyrod.inc:393:    } else if (frameCtrl->getFrame() >= field_0x3478 && frameCtrl->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_copyrod.inc:420:        field_0x0724->setFrame(0.0f);
+src/d/actor/d_a_alink_crawl.inc:16:    f32 frame;
+src/d/actor/d_a_alink_crawl.inc:17:    if (frame_ctrl->getFrame() >= 17.0f) {
+src/d/actor/d_a_alink_crawl.inc:18:        frame = frame_ctrl->getFrame() - 17.0f;
+src/d/actor/d_a_alink_crawl.inc:23:    return (mpHIO->mCrouch.m.mCrawlMoveRate * frame_ctrl->getRate()) * cM_fsin(frame * 0.18479956686496735f);
+src/d/actor/d_a_alink_crawl.inc:392:    f32 frame;
+src/d/actor/d_a_alink_crawl.inc:393:    if (frame_ctrl->checkPass(0.0f)) {
+src/d/actor/d_a_alink_crawl.inc:394:        frame = 0.0f;
+src/d/actor/d_a_alink_crawl.inc:486:    field_0x33cc = 1.0f - field_0x3478 * (field_0x347c - frame_ctrl->getFrame());
+src/d/actor/d_a_alink_crawl.inc:601:        if (var_r26 == 1 || temp_r29->checkPass(0.0f) || temp_r29->checkPass(17.0f)) {
+src/d/actor/d_a_alink_crawl.inc:679:        if (temp_r29->checkPass(0.0f) || temp_r29->checkPass(17.0f)) {
+src/d/actor/d_a_alink_crawl.inc:759:    f32 var_f31 = temp_r29->getFrame();
+src/d/actor/d_a_alink_crawl.inc:784:        temp_r29->setFrame(var_f31);
+src/d/actor/d_a_alink_crawl.inc:785:        getNowAnmPackUnder(UNDER_0)->setFrame(var_f31);
+src/d/actor/d_a_alink_crawl.inc:813:    field_0x33cc = field_0x3478 * (frame_ctrl->getFrame() - field_0x347c);
+src/d/actor/d_a_alink_cut.inc:909:             frameCtrl->getFrame() > 12.0f) ||
+src/d/actor/d_a_alink_cut.inc:911:             frameCtrl->getFrame() > 12.0f))
+src/d/actor/d_a_alink_cut.inc:925:    } else if ((!(frameCtrl->getFrame() > field_0x3484) && mProcVar1.field_0x300a == 4) ||
+src/d/actor/d_a_alink_cut.inc:928:        if (frameCtrl->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_cut.inc:948:        if (frameCtrl->getFrame() >= field_0x3478 && frameCtrl->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_cut.inc:958:            if (frameCtrl->getFrame() >= 24.0f) {
+src/d/actor/d_a_alink_cut.inc:960:            } else if (frameCtrl->getFrame() >= 4.0f) {
+src/d/actor/d_a_alink_cut.inc:964:            if (frameCtrl->getFrame() >= 26.0f) {
+src/d/actor/d_a_alink_cut.inc:966:            } else if (frameCtrl->getFrame() >= 4.0f) {
+src/d/actor/d_a_alink_cut.inc:969:        } else if (frameCtrl->getFrame() >= 24.0f) {
+src/d/actor/d_a_alink_cut.inc:1165:    if (frameCtrl_p->getFrame() >= mProcVar3.field_0x300e) {
+src/d/actor/d_a_alink_cut.inc:1167:    } else if (frameCtrl_p->getFrame() >= mProcVar2.field_0x300c) {
+src/d/actor/d_a_alink_cut.inc:1175:            if (!(frameCtrl_p->getFrame() > field_0x3484) || !checkCutCancelNextMode(3)) {
+src/d/actor/d_a_alink_cut.inc:1185:    } else if (!(frameCtrl_p->getFrame() > field_0x3484) || !checkCutCancelNextMode(3)) {
+src/d/actor/d_a_alink_cut.inc:1186:        if (frameCtrl_p->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_cut.inc:1202:        if (frameCtrl_p->getFrame() >= field_0x3478 && frameCtrl_p->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_cut.inc:1269:    if (frameCtrl->getFrame() >= 12.0f) {
+src/d/actor/d_a_alink_cut.inc:1273:    if (frameCtrl->getFrame() >= 3.0f) {
+src/d/actor/d_a_alink_cut.inc:1343:            if (!(frameCtrl->getFrame() > field_0x3484) || !checkCutCancelNextMode(3)) {
+src/d/actor/d_a_alink_cut.inc:1351:    } else if (!(frameCtrl->getFrame() > field_0x3484) || !checkCutCancelNextMode(3)) {
+src/d/actor/d_a_alink_cut.inc:1352:        if (frameCtrl->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_cut.inc:1364:        if (frameCtrl->getFrame() >= 9.0f) {
+src/d/actor/d_a_alink_cut.inc:1433:    } else if (frameCtrl->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_cut.inc:1484:    } else if (mUnderFrameCtrl[0].getFrame() >= mpHIO->mCut.mCutJump.m.mStartAttackFrame) {
+src/d/actor/d_a_alink_cut.inc:1545:    } else if (frameCtrl->getFrame() > mpHIO->mCut.mCutJump.m.mJumpSpinDelay && field_0x3198 != 2)
+src/d/actor/d_a_alink_cut.inc:1679:    if (frameCtrl->getFrame() >= 44.0f) {
+src/d/actor/d_a_alink_cut.inc:1685:            if (!(frameCtrl->getFrame() > field_0x3480) || !checkCutCancelNextMode(3)) {
+src/d/actor/d_a_alink_cut.inc:1694:    } else if (!(frameCtrl->getFrame() > field_0x3480) || !checkCutCancelNextMode(3)) {
+src/d/actor/d_a_alink_cut.inc:1695:        if (frameCtrl->getFrame() >= field_0x3484 && frameCtrl->getFrame() < field_0x3488) {
+src/d/actor/d_a_alink_cut.inc:1744:    } else if (mUnderFrameCtrl[0].getFrame() >= 6.0f) {
+src/d/actor/d_a_alink_cut.inc:1762:        f32 frame = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_cut.inc:1763:        mUpperFrameCtrl[2].setFrame(frame);
+src/d/actor/d_a_alink_cut.inc:1804:    BOOL var_r4 = m_nSwordBtk->getFrame() >= 14.0f || mProcVar0.field_0x3008 >= 14.0f;
+src/d/actor/d_a_alink_cut.inc:2081:        if (frameCtrl_p->getFrame() >= 37.0f) {
+src/d/actor/d_a_alink_cut.inc:2083:        } else if (frameCtrl_p->getFrame() >= 30.0f) {
+src/d/actor/d_a_alink_cut.inc:2087:        if (frameCtrl_p->checkPass(54.0f)) {
+src/d/actor/d_a_alink_cut.inc:2165:        if (frameCtrl->checkPass(7.0f)) {
+src/d/actor/d_a_alink_cut.inc:2290:            if (frameCtrl->getFrame() >= 2.0f) {
+src/d/actor/d_a_alink_cut.inc:2294:            if (!checkModeFlg(2) && frameCtrl->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_cut.inc:2457:            if (frameCtrl->getFrame() >= 39.0f) {
+src/d/actor/d_a_alink_cut.inc:2459:            } else if (frameCtrl->getFrame() >= 36.0f) {
+src/d/actor/d_a_alink_cut.inc:2461:            } else if (frameCtrl->getFrame() >= 26.0f) {
+src/d/actor/d_a_alink_cut.inc:2463:            } else if (frameCtrl->getFrame() >= 13.0f) {
+src/d/actor/d_a_alink_cut.inc:2466:                        frameCtrl->setFrame(13.0f);
+src/d/actor/d_a_alink_cut.inc:2474:            } else if (frameCtrl->checkPass(8.0f)) {
+src/d/actor/d_a_alink_cut.inc:2479:        if (frameCtrl->getFrame() >= 9.0f) {
+src/d/actor/d_a_alink_cut.inc:2485:        if (frameCtrl->checkPass(7.0f) || frameCtrl->checkPass(13.0f)) {
+src/d/actor/d_a_alink_cut.inc:2487:        } else if (frameCtrl->checkPass(28.0f) || frameCtrl->checkPass(38.0f) ||
+src/d/actor/d_a_alink_cut.inc:2488:                   frameCtrl->checkPass(48.0f))
+src/d/actor/d_a_alink_damage.inc:859:    f32 var_f30 = frame_ctrl->getFrame() - frame_ctrl->getStart();
+src/d/actor/d_a_alink_damage.inc:882:    } else if (frame_ctrl->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_damage.inc:1338:    field_0x33cc = field_0x347c * (field_0x3478 - temp_r30->getFrame());
+src/d/actor/d_a_alink_damage.inc:1360:        if (temp_r30->getFrame() > field_0x3480) {
+src/d/actor/d_a_alink_damage.inc:1373:        } else if (temp_r30->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_damage.inc:1379:        } else if (mProcVar2.field_0x300c != 0 && temp_r30->checkPass(18.0f)) {
+src/d/actor/d_a_alink_damage.inc:1385:            if (!dMsgObject_isTalkNowCheck() && temp_r30->getFrame() > 19.0f) {
+src/d/actor/d_a_alink_damage.inc:1386:                temp_r30->setFrame(19.0f);
+src/d/actor/d_a_alink_damage.inc:1387:                getNowAnmPackUnder(UNDER_0)->setFrame(19.0f);
+src/d/actor/d_a_alink_damage.inc:1391:        } else if (checkEndResetFlg1(ERFLG1_LARGE_DAMAGE_UP_STOP) && temp_r30->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_damage.inc:1392:            temp_r30->setFrame(field_0x3484);
+src/d/actor/d_a_alink_damage.inc:1393:            getNowAnmPackUnder(UNDER_0)->setFrame(field_0x3484);
+src/d/actor/d_a_alink_damage.inc:1516:    } else if (mUnderFrameCtrl[0].getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_damage.inc:1721:    mUnderFrameCtrl[0].setFrame(7.0f);
+src/d/actor/d_a_alink_damage.inc:1722:    getNowAnmPackUnder(UNDER_0)->setFrame(7.0f);
+src/d/actor/d_a_alink_demo.inc:822:                        field_0x2154->setFrame(field_0x2154->getFrameMax());
+src/d/actor/d_a_alink_demo.inc:1103:    if (frame_ctrl->getFrame() >= 59.0f) {
+src/d/actor/d_a_alink_demo.inc:1105:    } else if (frame_ctrl->getFrame() >= 20.0f) {
+src/d/actor/d_a_alink_demo.inc:1305:        btk->setFrame(0.0f);
+src/d/actor/d_a_alink_demo.inc:1318:        brk->setFrame(0.0f);
+src/d/actor/d_a_alink_demo.inc:1329:        var_f31 = i_anm->getFrame();
+src/d/actor/d_a_alink_demo.inc:1373:                i_anm->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1564:                                btk_p->setFrame(0.0f);
+src/d/actor/d_a_alink_demo.inc:1569:                                btk_p->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1577:                                mpDemoHDTmpBck->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1585:                                mpDemoHLTmpBck->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1590:                                field_0x06f8->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1598:                                mpDemoHRTmpBck->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1606:                                mpDemoFCTmpBck->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1612:                                mpFaceBtk->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1618:                                field_0x2154->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1627:                                field_0x069c->getBlkAnm()->setFrame(0.0f);
+src/d/actor/d_a_alink_demo.inc:1632:                                    field_0x069c->getBlkAnm()->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1642:            getNowAnmPackUnder(UNDER_0)->setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1644:            mUnderFrameCtrl[0].setFrame(var_f31);
+src/d/actor/d_a_alink_demo.inc:1701:                if (fabsf(frameCtrl_p->getFrame() - 15.0f) / 15.0f < 0.5f) {
+src/d/actor/d_a_alink_demo.inc:1702:                    frameCtrl_p->setFrame(15.0f);
+src/d/actor/d_a_alink_demo.inc:1704:                    frameCtrl_p->setFrame(0.0f);
+src/d/actor/d_a_alink_demo.inc:1899:            mUpperFrameCtrl[2].setFrame(tmp_6);
+src/d/actor/d_a_alink_demo.inc:2132:    if (mProcVar1.field_0x300a == 0 && !(frameCtrl_p->getFrame() < field_0x347c)) {
+src/d/actor/d_a_alink_demo.inc:2133:        if (frameCtrl_p->getFrame() < field_0x3480) {
+src/d/actor/d_a_alink_demo.inc:2136:                (field_0x3484 * (mProcVar3.field_0x300e * (frameCtrl_p->getFrame() - field_0x347c)));
+src/d/actor/d_a_alink_demo.inc:2184:    if (((mProcVar1.field_0x300a == 0 && frameCtrl_p->getFrame() >= (f32)frameCtrl_p->getEnd() - 5.0f) ||
+src/d/actor/d_a_alink_demo.inc:2341:    } else if (!checkWolf() && frameCtrl_p->getFrame() >= 29.0f) {
+src/d/actor/d_a_alink_demo.inc:2419:            if (frameCtrl_p->getFrame() >= 9.0f && frameCtrl_p->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_demo.inc:2424:        } else if (frameCtrl_p->checkPass(18.0f) && mProcVar3.field_0x300e != 0) {
+src/d/actor/d_a_alink_demo.inc:2570:        frame_ctrl->setFrame(0.0f);
+src/d/actor/d_a_alink_demo.inc:2574:        frame_ctrl->setFrame(1.0f);
+src/d/actor/d_a_alink_demo.inc:2761:                field_0x33cc = (frameCtrl_p->getFrame() - 101.0f) / 19.0f;
+src/d/actor/d_a_alink_demo.inc:2763:                if ((!checkWolf() && frameCtrl_p->checkPass(122.0f)) ||
+src/d/actor/d_a_alink_demo.inc:2764:                    (checkWolf() && frameCtrl_p->checkPass(114.0f)))
+src/d/actor/d_a_alink_demo.inc:2774:    if (checkAnmEnd(frameCtrl_p) || ((checkModeFlg(0x40000) && frameCtrl_p->getFrame() > 70.0f) ||
+src/d/actor/d_a_alink_demo.inc:2867:    } else if (mProcVar3.field_0x300e != 0 && frame_ctrl->checkPass(5.0f)) {
+src/d/actor/d_a_alink_demo.inc:3019:        } else if (frameCtrl_p->getFrame() >= 81.0f) {
+src/d/actor/d_a_alink_demo.inc:3191:        if (field_0x3478 > frame_ctrl->getFrame()) {
+src/d/actor/d_a_alink_demo.inc:3194:            field_0x3478 = frame_ctrl->getFrame();
+src/d/actor/d_a_alink_demo.inc:3202:    if (!checkWolf() && frame_ctrl->getFrame() >= 24.0f) {
+src/d/actor/d_a_alink_demo.inc:3337:    f32 var_f1 = (0.5f - field_0x3478 * (frameCtrl_p->getFrame() - frameCtrl_p->getStart())) * 2.0f;
+src/d/actor/d_a_alink_demo.inc:3363:    } else if (frameCtrl_p->checkPass(12.0f)) {
+src/d/actor/d_a_alink_demo.inc:3443:    } else if (frame_ctrl->checkPass(95.0f)) {
+src/d/actor/d_a_alink_demo.inc:3670:    } else if (frame_ctrl->checkPass(10.0f)) {
+src/d/actor/d_a_alink_demo.inc:3793:    } else if (frame_ctrl->getFrame() >= 32.0f) {
+src/d/actor/d_a_alink_demo.inc:3817:    } else if (frame_ctrl->getFrame() >= 36.0f) {
+src/d/actor/d_a_alink_demo.inc:3819:    } else if (frame_ctrl->getFrame() >= 9.0f) {
+src/d/actor/d_a_alink_demo.inc:3821:    } else if (frame_ctrl->getFrame() >= 1.0f) {
+src/d/actor/d_a_alink_demo.inc:4388:            (mProcID != PROC_WOLF_GRAB_PUT || !(mUnderFrameCtrl[0].getFrame() < field_0x3478)))
+src/d/actor/d_a_alink_effect.inc:297:    if (temp_r31->checkPass(l_wolfFootOnFrame[param_0][0])) {
+src/d/actor/d_a_alink_effect.inc:299:    } else if (temp_r31->checkPass(l_wolfFootOnFrame[param_0][1])) {
+src/d/actor/d_a_alink_effect.inc:301:    } else if (temp_r31->checkPass(l_wolfFootOnFrame[param_0][2])) {
+src/d/actor/d_a_alink_effect.inc:303:    } else if (temp_r31->checkPass(l_wolfFootOnFrame[param_0][3])) {
+src/d/actor/d_a_alink_effect.inc:658:                if (temp_r28->getFrame() >= 12.0f) {
+src/d/actor/d_a_alink_effect.inc:668:                (field_0x3198 == 0x145 || field_0x3198 == 0x146 || temp_r28->getFrame() >= 29.0f))
+src/d/actor/d_a_alink_effect.inc:683:            if (temp_r28->getFrame() >= 35.0f ||
+src/d/actor/d_a_alink_effect.inc:684:                (field_0x3198 == 0x14E && temp_r28->getFrame() >= 3.0f) ||
+src/d/actor/d_a_alink_effect.inc:685:                ((field_0x3198 == 0x145 || field_0x3198 == 0x146) && temp_r28->getFrame() >= 7.0f))
+src/d/actor/d_a_alink_effect.inc:710:            if (temp_r28->getFrame() >= 17.0f) {
+src/d/actor/d_a_alink_effect.inc:803:    f32 var_f31 = m_nSwordBtk->getFrame();
+src/d/actor/d_a_alink_effect.inc:956:    f32 temp_f1 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_effect.inc:1579:        if (field_0x072c != NULL && field_0x072c->getFrame() < 2.0f) {
+src/d/actor/d_a_alink_effect.inc:2026:    field_0x28->setFrame(0.0f);
+src/d/actor/d_a_alink_effect.inc:2033:    field_0x24->setFrame(0.0f);
+src/d/actor/d_a_alink_effect.inc:2043:    field_0x1c->setFrame(0.0f);
+src/d/actor/d_a_alink_effect.inc:2044:    field_0x20->setFrame(0.0f);
+src/d/actor/d_a_alink_effect.inc:2084:        field_0x28->setFrame(mLockCursorAngle);
+src/d/actor/d_a_alink_effect.inc:2093:        field_0x24->setFrame(var_f30);
+src/d/actor/d_a_alink_effect.inc:2094:        field_0x1c->setFrame(field_0x30);
+src/d/actor/d_a_alink_grab.inc:261:                    if (sp1C->getFrame() < field_0x3478) {
+src/d/actor/d_a_alink_grab.inc:262:                        f32 temp_f31 = (sp1C->getFrame() - 9.0f) / (field_0x3478 - 9.0f);
+src/d/actor/d_a_alink_grab.inc:266:                        f32 temp_f31 = (sp1C->getFrame() - field_0x3478) / (sp1C->getEnd() - field_0x3478);
+src/d/actor/d_a_alink_grab.inc:303:                f32 temp_f31_3 = 1.0f - ((sp1C->getFrame() - sp1C->getStart()) / (sp1C->getEnd() - sp1C->getStart()));
+src/d/actor/d_a_alink_grab.inc:362:            if (mProcID == PROC_GRAB_UP && mUnderFrameCtrl[0].getFrame() < 6.0f && temp_r3->current.pos.y < sp134.y) {
+src/d/actor/d_a_alink_grab.inc:464:    temp_r30->setFrame(field_0x33e8 * temp_r30->getEnd());
+src/d/actor/d_a_alink_grab.inc:465:    getNowAnmPackUpper(UPPER_2)->setFrame(temp_r30->getFrame());
+src/d/actor/d_a_alink_grab.inc:616:    if (mUpperFrameCtrl[2].checkPass(field_0x343c)) {
+src/d/actor/d_a_alink_grab.inc:750:        setCarryArmAngle(field_0x347c * (mUnderFrameCtrl[0].getFrame() - mpHIO->mGrab.m.mFailAnm.mStartFrame), 0.0f);
+src/d/actor/d_a_alink_grab.inc:752:        setCarryArmAngle(0.0f, field_0x347c * (mUnderFrameCtrl[0].getFrame() - mpHIO->mGrab.m.mPrepareAnm.mStartFrame));
+src/d/actor/d_a_alink_grab.inc:795:    if (checkAnmEnd(temp_r29) || (checkInputOnR() && (temp_r29->getFrame() > mpHIO->mGrab.m.mLiftBackAnm.mCancelFrame))) {
+src/d/actor/d_a_alink_grab.inc:805:        if (temp_r29->getFrame() < field_0x3478) {
+src/d/actor/d_a_alink_grab.inc:808:            var_f31 = (temp_r29->getFrame() - field_0x3478) / (temp_r29->getEnd() - field_0x3478);
+src/d/actor/d_a_alink_grab.inc:811:        setCarryArmAngle(1.0f - ((temp_r29->getFrame() - 9.0f) / (temp_r29->getEnd() - 9.0f)), var_f31);
+src/d/actor/d_a_alink_grab.inc:896:    if (var_r30->checkPass(field_0x343c)) {
+src/d/actor/d_a_alink_grab.inc:907:    } else if (var_r30->getFrame() > field_0x347c) {
+src/d/actor/d_a_alink_grab.inc:986:        if (temp_r28->getFrame() < field_0x3478) {
+src/d/actor/d_a_alink_grab.inc:989:            var_f31 = field_0x3480 * (temp_r28->getFrame() - field_0x3478);
+src/d/actor/d_a_alink_grab.inc:991:        setCarryArmAngle(1.0f - (field_0x347c * (temp_r28->getFrame() - 9.0f)), var_f31);
+src/d/actor/d_a_alink_grab.inc:993:        setCarryArmAngle(0.0f, field_0x347c * (temp_r28->getFrame() - mpHIO->mGrab.m.mThrowAnm.mStartFrame));
+src/d/actor/d_a_alink_grab.inc:1061:        mUpperFrameCtrl[2].setFrame(0.0f);
+src/d/actor/d_a_alink_grab.inc:1095:    } else if (checkAnmEnd(temp_r30) || (checkInputOnR() && (temp_r30->getFrame() > mpHIO->mGrab.m.mCarryAnm.mCancelFrame))) {
+src/d/actor/d_a_alink_grab.inc:1129:    } else if (temp_r30->getFrame() < field_0x3478) {
+src/d/actor/d_a_alink_grab.inc:1133:            setCarryArmAngle(field_0x347c * (mUnderFrameCtrl[0].getFrame() - mpHIO->mGrab.m.mCarryLiftAnm.mStartFrame), 0.0f);
+src/d/actor/d_a_alink_grab.inc:1181:        if (frame_ctrl->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_grab.inc:1262:        } else if (temp_r30->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_grab.inc:1272:    } else if (temp_r30->getFrame() > mpHIO->mItem.mPickUp.m.mGrabAnm.mCancelFrame) {
+src/d/actor/d_a_alink_grab.inc:1275:    } else if (temp_r30->checkPass(9.0f)) {
+src/d/actor/d_a_alink_grab.inc:1329:    } else if (temp_r28->getFrame() < mpHIO->mItem.mPickUp.m.mPlaceAnm.mCancelFrame) {
+src/d/actor/d_a_alink_grab.inc:1332:    } else if (temp_r28->checkPass(9.0f)) {
+src/d/actor/d_a_alink_grab.inc:1396:                   (mProcID == PROC_CHAIN_UP && mUnderFrameCtrl[0].getFrame() >= 8.0f) ||
+src/d/actor/d_a_alink_grab.inc:1397:                   (mProcID == PROC_WOLF_CHAIN_UP && mUnderFrameCtrl[0].getFrame() >= 7.0f));
+src/d/actor/d_a_alink_grab.inc:1444:    if (checkAnmEnd(temp_r29) || (checkInputOnR() && temp_r29->getFrame() > mpHIO->mItem.mFmChain.m.mGripAnm.mCancelFrame)) {
+src/d/actor/d_a_alink_grab.inc:1457:    } else if (temp_r29->getFrame() >= 9.0f) {
+src/d/actor/d_a_alink_grab.inc:1752:        if (temp_r29->checkPass(0.0f)) {
+src/d/actor/d_a_alink_grab.inc:1756:        if (temp_r29->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_grab.inc:1766:        if (temp_r29->checkPass(0.0f) || field_0x3198 != 0 || mProcVar5.field_0x3012 != 0) {
+src/d/actor/d_a_alink_grab.inc:1877:    if (temp_r29->checkPass(0.0f) || field_0x3198 != 0 || mProcVar5.field_0x3012 != 0) {
+src/d/actor/d_a_alink_grab.inc:2225:    if (mProcVar2.field_0x300c == 0 || (mProcVar1.field_0x300a == 0 && temp_r28->getFrame() < 29.0f)) {
+src/d/actor/d_a_alink_grab.inc:2254:            if (temp_r28->getFrame() >= 81.0f) {
+src/d/actor/d_a_alink_grab.inc:2257:            } else if (temp_r28->getFrame() >= 39.0f) {
+src/d/actor/d_a_alink_grab.inc:2259:            } else if (temp_r28->getFrame() >= 32.0f) {
+src/d/actor/d_a_alink_grab.inc:2321:        f32 temp_f30 = temp_r28->getFrame();
+src/d/actor/d_a_alink_grab.inc:2352:            temp_r28->setFrame(temp_f30);
+src/d/actor/d_a_alink_grab.inc:2353:            getNowAnmPackUnder(UNDER_0)->setFrame(temp_f30);
+src/d/actor/d_a_alink_guard.inc:455:        if (temp_r30->getFrame() > field_0x3488) {
+src/d/actor/d_a_alink_guard.inc:465:        if (temp_r30->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_guard.inc:468:        } else if (temp_r30->getFrame() >= field_0x3478 && temp_r30->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_guard.inc:508:    } else if (temp_r30->getFrame() > mpHIO->mGuard.m.mGuardBreakAnm.mCancelFrame) {
+src/d/actor/d_a_alink_guard.inc:625:    } else if (mProcVar0.field_0x3008 != 0 && !checkNotJumpSinkLimit() && temp_r30->getFrame() > mpHIO->mGuard.mTurnMove.m.mTwirlCutDelayF) {
+src/d/actor/d_a_alink_guard.inc:629:        if (temp_r30->getFrame() > mpHIO->mGuard.mTurnMove.m.mTurnAnm.mCancelFrame) {
+src/d/actor/d_a_alink_guard.inc:637:        if (temp_r30->checkPass(19.0f)) {
+src/d/actor/d_a_alink_hang.inc:193:        (mProcID != PROC_HANG_FALL_START || !(mUnderFrameCtrl->getFrame() < 3.0f)) &&
+src/d/actor/d_a_alink_hang.inc:322:    } else if (frame_ctrl->getFrame() > field_0x3478 && checkInputOnR() &&
+src/d/actor/d_a_alink_hang.inc:417:    if (frame_ctrl->checkPass(5.0f)) {
+src/d/actor/d_a_alink_hang.inc:599:                        f32 temp_f29 = frameCtrl->getFrame() / frameCtrl->getEnd();
+src/d/actor/d_a_alink_hang.inc:610:                        frameCtrl->setFrame(temp_f29 * (f32)frameCtrl->getEnd());
+src/d/actor/d_a_alink_hang.inc:688:        field_0x33dc = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_hang.inc:713:        field_0x33dc = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_hang.inc:716:    if (frameCtrl->checkPass(9.0f)) {
+src/d/actor/d_a_alink_hang.inc:727:    if (frameCtrl->getFrame() >= 9.0f) {
+src/d/actor/d_a_alink_hang.inc:894:    } else if (frameCtrl->getFrame() >= 33.0f) {
+src/d/actor/d_a_alink_hang.inc:896:    } else if (frameCtrl->getFrame() >= 31.0f) {
+src/d/actor/d_a_alink_hang.inc:1113:            } else if (frameCtrl->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_hang.inc:1115:            } else if (frameCtrl->checkPass(field_0x347c)) {
+src/d/actor/d_a_alink_hang.inc:1122:                if (frameCtrl->getFrame() >= 59.0f) {
+src/d/actor/d_a_alink_hang.inc:1124:                } else if (frameCtrl->getFrame() >= 51.0f) {
+src/d/actor/d_a_alink_hang.inc:1126:                } else if (frameCtrl->getFrame() >= 3.0f) {
+src/d/actor/d_a_alink_hang.inc:1130:                if (frameCtrl->getFrame() >= 148.0f) {
+src/d/actor/d_a_alink_hang.inc:1132:                } else if (frameCtrl->getFrame() >= 136.0f) {
+src/d/actor/d_a_alink_hang.inc:1134:                } else if (frameCtrl->getFrame() >= 32.0f) {
+src/d/actor/d_a_alink_hang.inc:1138:                if (frameCtrl->getFrame() >= 117.0f) {
+src/d/actor/d_a_alink_hang.inc:1140:                } else if (frameCtrl->getFrame() >= 105.0f) {
+src/d/actor/d_a_alink_hang.inc:1409:        if (frame_ctrl->getFrame() >= 23.0f) {
+src/d/actor/d_a_alink_hang.inc:1412:        } else if (frame_ctrl->getFrame() >= 11.0f) {
+src/d/actor/d_a_alink_hang.inc:1478:    } else if (frame_ctrl->getFrame() >= 19.0f) {
+src/d/actor/d_a_alink_hang.inc:1515:        if (frame_ctrl->getFrame() >= 11.0f) {
+src/d/actor/d_a_alink_hang.inc:2121:        (checkAnmEnd(frameCtrl) || (checkInputOnR() && frameCtrl->getFrame() > field_0x3478)))
+src/d/actor/d_a_alink_hang.inc:2186:            (checkAnmEnd(frameCtrl) || (checkInputOnR() && frameCtrl->getFrame() > field_0x3478)))
+src/d/actor/d_a_alink_hang.inc:2370:        } else if (fabsf(frameCtrl->getFrame()) > 0.1f) {
+src/d/actor/d_a_alink_hang.inc:2377:            if (!checkBgClimbMove(4) && (field_0x3198 == 0 || frameCtrl->getFrame() < 12.0f)) {
+src/d/actor/d_a_alink_hang.inc:2528:    if (!frame_ctrl->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_hang.inc:2529:        frame_ctrl->checkPass(field_0x347c);
+src/d/actor/d_a_alink_hang.inc:2729:    f32 frame = -1;
+src/d/actor/d_a_alink_hang.inc:2731:        frame = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_hang.inc:2736:    if (frame >= 0) {
+src/d/actor/d_a_alink_hang.inc:2737:        mUnderFrameCtrl[0].setFrame(frame);
+src/d/actor/d_a_alink_hang.inc:2757:    if (frameCtrl->checkPass(17) || frameCtrl->checkPass(0)) {
+src/d/actor/d_a_alink_hang.inc:2772:        f32 frame;
+src/d/actor/d_a_alink_hang.inc:2773:        if (frameCtrl->getFrame() >= 17.0f) {
+src/d/actor/d_a_alink_hang.inc:2774:            frame = frameCtrl->getFrame() - 17.0f;
+src/d/actor/d_a_alink_hang.inc:2781:                       cM_fsin((frame * M_PI) * 0.083333336f);
+src/d/actor/d_a_alink_hang.inc:2927:        if (frame_ctrl->getFrame() >= field_0x3478 && frame_ctrl->getFrame() <= field_0x347c) {
+src/d/actor/d_a_alink_hook.inc:519:            mUpperFrameCtrl[2].setFrame(tmp_0);
+src/d/actor/d_a_alink_hook.inc:594:                mUpperFrameCtrl[2].setFrame(tmp_0);
+src/d/actor/d_a_alink_hook.inc:1812:                mUnderFrameCtrl[0].setFrame(0.0f);
+src/d/actor/d_a_alink_hook.inc:1813:                getNowAnmPackUnder(UNDER_0)->setFrame(0.0f);
+src/d/actor/d_a_alink_hook.inc:1895:    if (frameCtrl_p->checkPass(4.0f)) {
+src/d/actor/d_a_alink_hook.inc:1897:    } else if (checkNoResetFlg0(FLG0_EQUIP_HVY_BOOTS) && frameCtrl_p->checkPass(10.0f)) {
+src/d/actor/d_a_alink_hook.inc:2073:                mUnderFrameCtrl[0].setFrame(0.0f);
+src/d/actor/d_a_alink_hook.inc:2074:                getNowAnmPackUnder(UNDER_0)->setFrame(0.0f);
+src/d/actor/d_a_alink_horse.inc:384:                f32 frame = horse_p->getAnmFrame(0) / horse_p->getAnmFrameMax(0) + 0.5f;
+src/d/actor/d_a_alink_horse.inc:385:                if (frame > 1.0f) {
+src/d/actor/d_a_alink_horse.inc:386:                    frame -= 1.0f;
+src/d/actor/d_a_alink_horse.inc:389:                f32 var_f0 = frame * (f32)mUnderFrameCtrl[0].getEnd();
+src/d/actor/d_a_alink_horse.inc:390:                mUnderFrameCtrl[0].setFrame(var_f0);
+src/d/actor/d_a_alink_horse.inc:498:        mUnderFrameCtrl[0].setFrame(e_wb_p->nowAnimeFrame());
+src/d/actor/d_a_alink_horse.inc:535:    mUnderFrameCtrl[0].setFrame(temp_f1);
+src/d/actor/d_a_alink_horse.inc:539:        mUpperFrameCtrl[0].setFrame(temp_f1);
+src/d/actor/d_a_alink_horse.inc:736:         sp24->getFrame() > mpHIO->mHorse.m.mHorseWalkStartFrame) ||
+src/d/actor/d_a_alink_horse.inc:737:        (checkHorseWaitLashAnime() && sp20->getFrame() > 13.0f))
+src/d/actor/d_a_alink_horse.inc:743:        ((checkHorseUnderDashStartAnime() && sp20->getFrame() > 13.0f) ||
+src/d/actor/d_a_alink_horse.inc:744:         (checkHorseUnderLashAnime() && sp20->getFrame() > 13.0f)))
+src/d/actor/d_a_alink_horse.inc:848:        if (mUnderFrameCtrl[0].checkPass(10.0f)) {
+src/d/actor/d_a_alink_horse.inc:924:            var_f31 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_horse.inc:937:    getNowAnmPackUnder(UNDER_0)->setFrame(var_f31);
+src/d/actor/d_a_alink_horse.inc:938:    mUnderFrameCtrl[0].setFrame(var_f31);
+src/d/actor/d_a_alink_horse.inc:941:        getNowAnmPackUnder(UNDER_1)->setFrame(field_0x3460);
+src/d/actor/d_a_alink_horse.inc:943:        field_0x3460 = getNowAnmPackUnder(UNDER_1)->getFrame();
+src/d/actor/d_a_alink_horse.inc:945:        getNowAnmPackUnder(UNDER_1)->setFrame(var_f31);
+src/d/actor/d_a_alink_horse.inc:947:        getNowAnmPackUnder(UNDER_1)->setFrame(temp_r29->getAnmFrame(1));
+src/d/actor/d_a_alink_horse.inc:950:    getNowAnmPackUpper(UPPER_0)->setFrame(var_f31);
+src/d/actor/d_a_alink_horse.inc:1373:        if (temp_r29->getFrame() >= 25.0f) {
+src/d/actor/d_a_alink_horse.inc:1376:        } else if (temp_r29->getFrame() >= 14.0f) {
+src/d/actor/d_a_alink_horse.inc:1381:            if (temp_r29->getFrame() > 15.0f) {
+src/d/actor/d_a_alink_horse.inc:1383:            } else if (temp_r29->getFrame() >= 4.0f) {
+src/d/actor/d_a_alink_horse.inc:1386:        } else if (temp_r29->getFrame() >= 4.0f && temp_r29->getFrame() < 8.0f) {
+src/d/actor/d_a_alink_horse.inc:1388:        } else if (temp_r29->getFrame() > 8.0f) {
+src/d/actor/d_a_alink_horse.inc:1394:        if (temp_r29->getFrame() >= 46.0f) {
+src/d/actor/d_a_alink_horse.inc:1397:            if (!checkBoarRide() || (field_0x2fc0 == 0) || temp_r29->getFrame() >= 53.0f) {
+src/d/actor/d_a_alink_horse.inc:1412:            if (temp_r29->getFrame() >= 17.0f) {
+src/d/actor/d_a_alink_horse.inc:1416:                    if (temp_r29->getFrame() >= 41.0f && checkHorseRide()) {
+src/d/actor/d_a_alink_horse.inc:1419:                } else if (temp_r29->getFrame() >= 38.0f && checkHorseRide()) {
+src/d/actor/d_a_alink_horse.inc:1426:        if (temp_r29->getFrame() >= 11.0f && temp_r29->getFrame() < 16.0f) {
+src/d/actor/d_a_alink_horse.inc:1430:        if (temp_r29->getFrame() >= 17.0f && checkHorseRide() && mProcVar2.field_0x300c != 0) {
+src/d/actor/d_a_alink_horse.inc:1577:    if (temp_r29->getFrame() >= 35.0f) {
+src/d/actor/d_a_alink_horse.inc:1580:        if (temp_r29->getFrame() >= 14.0f) {
+src/d/actor/d_a_alink_horse.inc:1582:        } else if (temp_r29->getFrame() >= 4.0f) {
+src/d/actor/d_a_alink_horse.inc:1589:    } else if (!(temp_r29->getFrame() >= 24.0f)) {
+src/d/actor/d_a_alink_horse.inc:1590:        if (temp_r29->getFrame() >= 21.0f) {
+src/d/actor/d_a_alink_horse.inc:1592:        } else if (temp_r29->getFrame() >= 3.0f) {
+src/d/actor/d_a_alink_horse.inc:1604:    } else if (temp_r29->getFrame() >= 32.0f) {
+src/d/actor/d_a_alink_horse.inc:1625:        if (temp_r29->getFrame() < 27.0f) {
+src/d/actor/d_a_alink_horse.inc:1626:            f32 temp_f31 = temp_r29->getFrame() / 27.0f;
+src/d/actor/d_a_alink_horse.inc:1629:        } else if (temp_r29->getFrame() < 32.0f) {
+src/d/actor/d_a_alink_horse.inc:1717:    if (mUnderFrameCtrl[0].getFrame() < 13.0f && mEquipItem == 0x103 && !checkBootsOrArmorHeavy() && checkCutTurnInputTrigger()) {
+src/d/actor/d_a_alink_horse.inc:2032:    } else if (temp_r30->getFrame() > field_0x3484 && (checkNoResetFlg2(FLG2_UNK_2) || checkResetFlg0(RFLG0_UNK_40) || spActionButton())) {
+src/d/actor/d_a_alink_horse.inc:2049:        if (temp_r30->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_horse.inc:2058:        if (temp_r30->getFrame() >= field_0x3478 && temp_r30->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_horse.inc:2107:        if (m_nSwordBtk->getFrame() >= 14.0f || mProcVar0.field_0x3008 >= 14.0f) {
+src/d/actor/d_a_alink_horse.inc:2155:        if (temp_r30->getFrame() > mpHIO->mCut.mHorseCutCharge.m.mSpinAnm.mCancelFrame) {
+src/d/actor/d_a_alink_horse.inc:2170:        if (temp_r30->getFrame() >= mpHIO->mCut.mHorseCutCharge.m.mSpinAttackStartFrame && temp_r30->getFrame() < mpHIO->mCut.mHorseCutCharge.m.mSpinAttackEndFrame) {
+src/d/actor/d_a_alink_horse.inc:2236:    f32 temp_f1 = cM_fsin(field_0x347c * (temp_r30->getFrame() - temp_r30->getStart()));
+src/d/actor/d_a_alink_horse.inc:2627:    } else if (frameCtrl_p->getFrame() >= 78.0f) {
+src/d/actor/d_a_alink_horse.inc:2629:    } else if (frameCtrl_p->getFrame() >= 75.0f) {
+src/d/actor/d_a_alink_horse.inc:2632:    } else if (frameCtrl_p->getFrame() >= 68.0f) {
+src/d/actor/d_a_alink_horse.inc:2634:    } else if (frameCtrl_p->checkPass(20.0f)) {
+src/d/actor/d_a_alink_horse.inc:2716:        f32 temp_f31 = temp_r28->getFrame() / temp_r28->getEnd();
+src/d/actor/d_a_alink_horse.inc:2721:        if (temp_r28->checkPass(0.0f)) {
+src/d/actor/d_a_alink_horse.inc:2817:        if (temp_r30->checkPass(7.0f)) {
+src/d/actor/d_a_alink_horse.inc:2819:        } else if (temp_r30->checkPass(36.0f)) {
+src/d/actor/d_a_alink_horse.inc:2822:    } else if (temp_r30->checkPass(7.0f)) {
+src/d/actor/d_a_alink_horse.inc:2847:    } else if (frameCtrl_p->getFrame() >= 34.0f) {
+src/d/actor/d_a_alink_horse.inc:2851:    } else if (frameCtrl_p->getFrame() >= 12.0f) {
+src/d/actor/d_a_alink_horse.inc:2853:    } else if (frameCtrl_p->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_horse.inc:2922:        if (mUnderFrameCtrl[0].getFrame() >= 14.0f) {
+src/d/actor/d_a_alink_hvyboots.inc:282:    } else if (frameCtrl_p->checkPass(10.0f)) {
+src/d/actor/d_a_alink_hvyboots.inc:284:    } else if (frameCtrl_p->checkPass(16.0f)) {
+src/d/actor/d_a_alink_hvyboots.inc:293:    } else if (frameCtrl_p->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_iceleaf.inc:486:        if (frame_ctrl->checkPass(0.0f)) {
+src/d/actor/d_a_alink_iceleaf.inc:493:        } else if (frame_ctrl->checkPass(7.0f)) {
+src/d/actor/d_a_alink_iceleaf.inc:527:        if (mUnderFrameCtrl[0].checkPass(6.0f)) {
+src/d/actor/d_a_alink_iceleaf.inc:620:        if (mUnderFrameCtrl[0].getFrame() > mpHIO->mCut.m.mNormalSwingDuration) {
+src/d/actor/d_a_alink_iceleaf.inc:682:    if (frame_ctrl->getFrame() >= 4.0f && frame_ctrl->getFrame() < 14.0f) {
+src/d/actor/d_a_alink_iceleaf.inc:700:            if (frame_ctrl->getFrame() >= 3.0f) {
+src/d/actor/d_a_alink_ironball.inc:296:            f32 temp_f29 = (sp30->getFrame() - 13.0f) / temp_f25;
+src/d/actor/d_a_alink_ironball.inc:313:            sp38 = 2.0f * (1.0f + sp30->getFrame());
+src/d/actor/d_a_alink_ironball.inc:384:        BOOL sp2C = ((mItemVar0.field_0x3018 == 0 && checkUnderMove1BckNoArc(ANM_IRONBALL_WALK)) && mNowAnmPackUnder[1].getRatio() > 0.8f) && (mUnderFrameCtrl[1].getFrame() >= 24.0f || mUnderFrameCtrl[1].getFrame() <= 3.0f);
+src/d/actor/d_a_alink_ironball.inc:517:            s16 sp10 = 32768.0f - (65536.0f * (temp_r24->getFrame() / temp_r24->getEnd()));
+src/d/actor/d_a_alink_ironball.inc:832:        mUnderFrameCtrl[0].setFrame(mUpperFrameCtrl[2].getFrame());
+src/d/actor/d_a_alink_ironball.inc:833:        getNowAnmPackUnder(UNDER_0)->setFrame(mUpperFrameCtrl[2].getFrame());
+src/d/actor/d_a_alink_ironball.inc:844:        if (field_0x3020 != 0 && frameCtrl->checkPass(19.0f)) {
+src/d/actor/d_a_alink_ironball.inc:860:        if (frameCtrl->getFrame() > 13.0f) {
+src/d/actor/d_a_alink_ironball.inc:866:        if (field_0x3020 != 0 && frameCtrl->checkPass(18.0f)) {
+src/d/actor/d_a_alink_ironball.inc:868:        } else if (frameCtrl->checkPass(0.0f)) {
+src/d/actor/d_a_alink_ironball.inc:1012:    if (mItemVar0.field_0x3018 == 4 && temp_r29->checkPass(6.0f)) {
+src/d/actor/d_a_alink_ironball.inc:1031:        if (temp_r29->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_ironball.inc:1079:    } else if (mItemVar0.field_0x3018 == 8 && frameCtrl->getFrame() > mpHIO->mItem.mIronBall.m.mCatchAnm.mCancelFrame) {
+src/d/actor/d_a_alink_kandelaar.inc:284:        } else if (frameCtrl_p->checkPass(10.0f)) {
+src/d/actor/d_a_alink_kandelaar.inc:285:            field_0x071c->setFrame(0.0f);
+src/d/actor/d_a_alink_kandelaar.inc:302:                field_0x072c->setFrame(2.0f);
+src/d/actor/d_a_alink_kandelaar.inc:396:    } else if (frameCtrl_p->getFrame() > field_0x3478 && mDemo.getDemoMode() != 0x27) {
+src/d/actor/d_a_alink_sumou.inc:86:        mUnderFrameCtrl[0].checkPass(7.0f))
+src/d/actor/d_a_alink_sumou.inc:189:    if (frameCtrl_p->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_sumou.inc:306:               frameCtrl_p->getFrame() >= 16.0f && frameCtrl_p->getFrame() < 28.0f)
+src/d/actor/d_a_alink_sumou.inc:574:        var_f31 = mUnderFrameCtrl[0].getFrame();
+src/d/actor/d_a_alink_sumou.inc:590:    mUnderFrameCtrl[0].setFrame(var_f31);
+src/d/actor/d_a_alink_sumou.inc:591:    getNowAnmPackUnder(UNDER_0)->setFrame(var_f31);
+src/d/actor/d_a_alink_sumou.inc:714:        } else if (frameCtrl_p->checkPass(field_0x347c)) {
+src/d/actor/d_a_alink_sumou.inc:716:        } else if (frameCtrl_p->checkPass(field_0x3480)) {
+src/d/actor/d_a_alink_sumou.inc:833:    if (frameCtrl_p->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_sumou.inc:855:        frameCtrl_p->checkPass(37.0f))
+src/d/actor/d_a_alink_sumou.inc:897:        } else if (frameCtrl_p->checkPass(127.0f)) {
+src/d/actor/d_a_alink_sumou.inc:899:        } else if (frameCtrl_p->checkPass(65.0f)) {
+src/d/actor/d_a_alink_sumou.inc:901:        } else if (frameCtrl_p->checkPass(9.0f)) {
+src/d/actor/d_a_alink_swim.inc:638:    f32 var_f26 = temp_r28->getFrame() * temp_f25;
+src/d/actor/d_a_alink_swim.inc:682:            } else if (temp_r27->getFrame() > 25.0f) {
+src/d/actor/d_a_alink_swim.inc:803:        if (temp_r27->checkPass(17.0f)) {
+src/d/actor/d_a_alink_swim.inc:810:            if (var_r25 == 0 && temp_r27->checkPass(0.0f)) {
+src/d/actor/d_a_alink_swim.inc:1162:    } else if (checkNoResetFlg0(FLG0_SWIM_UP) && frame_ctrl->getFrame() > 20.0f) {
+src/d/actor/d_a_alink_swim.inc:1171:    field_0x3478 = field_0x347c * frame_ctrl->getFrame();
+src/d/actor/d_a_alink_swim.inc:1176:    if (frame_ctrl->checkPass(15.0f) && mProcVar2.field_0x300c != 0) {
+src/d/actor/d_a_alink_swim.inc:1449:    f32 fvar8 = cM_fsin(field_0x347c * (frame_ctrl->getFrame() - frame_ctrl->getStart()));
+src/d/actor/d_a_alink_swim.inc:1462:    } else if (frame_ctrl->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_swindow.inc:276:    btp->setFrame(0.0f);
+src/d/actor/d_a_alink_swindow.inc:285:    btk->setFrame(0.0f);
+src/d/actor/d_a_alink_whistle.inc:93:    } else if (mEquipItem == fpcNm_ITEM_NONE && frameCtrl_p->getFrame() >= 9.0f) {
+src/d/actor/d_a_alink_wolf.inc:167:    mpDMidnaBrk->setFrame(1.0f);
+src/d/actor/d_a_alink_wolf.inc:172:    mpDMidnaMaskBrk->setFrame(1.0f);
+src/d/actor/d_a_alink_wolf.inc:177:    mpDMidnaHandBrk->setFrame(1.0f);
+src/d/actor/d_a_alink_wolf.inc:182:    mpDMidnaHairHandBrk->setFrame(1.0f);
+src/d/actor/d_a_alink_wolf.inc:353:    mpKanteraGlowBtk->setFrame(0.0f);
+src/d/actor/d_a_alink_wolf.inc:1000:        if (temp_r28->checkPass(l_wolfFootOnFrame[1][0])) {
+src/d/actor/d_a_alink_wolf.inc:1002:        } else if (temp_r28->checkPass(l_wolfFootOnFrame[1][1])) {
+src/d/actor/d_a_alink_wolf.inc:1004:        } else if (temp_r28->checkPass(l_wolfFootOnFrame[1][2])) {
+src/d/actor/d_a_alink_wolf.inc:1006:        } else if (temp_r28->checkPass(l_wolfFootOnFrame[1][3])) {
+src/d/actor/d_a_alink_wolf.inc:1018:    if (!checkBarkAnime() && temp_r28->checkPass(11.0f)) {
+src/d/actor/d_a_alink_wolf.inc:2333:        if (field_0x215c->checkPass(*var_r29)) {
+src/d/actor/d_a_alink_wolf.inc:2403:    } else if (checkUnderMove0BckNoArcWolf(WANM_SERVICE_WAIT_A) && temp_r30->checkPass(25.0f)) {
+src/d/actor/d_a_alink_wolf.inc:2470:    } else if (frameCtrl->getFrame() > 11.0f && mDemo.getDemoMode() != 0x32) {
+src/d/actor/d_a_alink_wolf.inc:2608:    if (frameCtrl_p->getFrame() > 3.0f && checkWolfAttackReverse(1)) {
+src/d/actor/d_a_alink_wolf.inc:2645:    } else if (frameCtrl_p->checkPass(2.5f) || frameCtrl_p->checkPass(14.0f)) {
+src/d/actor/d_a_alink_wolf.inc:2648:    } else if (frameCtrl_p->checkPass(8.0f) || frameCtrl_p->checkPass(16.5f)) {
+src/d/actor/d_a_alink_wolf.inc:2953:    } else if (frameCtrl->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:3098:    } else if (frameCtrl_p->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:3108:            if (!(frameCtrl_p->getFrame() < 38.0f)) {
+src/d/actor/d_a_alink_wolf.inc:3111:        } else if (frameCtrl_p->getFrame() > 56.0f) {
+src/d/actor/d_a_alink_wolf.inc:3112:            frameCtrl_p->setFrame((frameCtrl_p->getFrame() - 56.0f) + 38.0f);
+src/d/actor/d_a_alink_wolf.inc:3115:        if (frameCtrl_p->getFrame() >= 38.0f && frameCtrl_p->getFrame() <= 56.0f) {
+src/d/actor/d_a_alink_wolf.inc:3254:    frameCtrl_p->setFrame(frameCtrl_p->getEnd() - 0.001f);
+src/d/actor/d_a_alink_wolf.inc:3341:    } else if (frameCtrl->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:3476:        if (mNormalSpeed > 2.5f && frameCtrl_p->getFrame() >= 5.0f) {
+src/d/actor/d_a_alink_wolf.inc:3525:        (0.5f - field_0x3478 * (frameCtrl_p->getFrame() - frameCtrl_p->getStart())) * 2.0f;
+src/d/actor/d_a_alink_wolf.inc:3533:    if (!checkModeFlg(2) && frameCtrl_p->getFrame() > 4.5f) {
+src/d/actor/d_a_alink_wolf.inc:3599:    f32 var_f31 = (0.5f - field_0x3478 * frameCtrl_p->getFrame()) * 2.0f;
+src/d/actor/d_a_alink_wolf.inc:3609:    if (frameCtrl_p->checkPass(5.0f)) {
+src/d/actor/d_a_alink_wolf.inc:3619:    } else if (frameCtrl_p->checkPass(18.0f)) {
+src/d/actor/d_a_alink_wolf.inc:3638:        mUnderFrameCtrl[0].setFrame(mpHIO->mWolf.mWlSlide.m.mBackSlideAnm.mEndFrame);
+src/d/actor/d_a_alink_wolf.inc:4028:                if (frameCtrl_p->getFrame() > 56.0f) {
+src/d/actor/d_a_alink_wolf.inc:4029:                    frameCtrl_p->setFrame((frameCtrl_p->getFrame() - 56.0f) + 38.0f);
+src/d/actor/d_a_alink_wolf.inc:4032:                if (frameCtrl_p->getFrame() >= 38.0f && frameCtrl_p->getFrame() <= 56.0f) {
+src/d/actor/d_a_alink_wolf.inc:4038:                frameCtrl_p->setFrame(56.0f);
+src/d/actor/d_a_alink_wolf.inc:4207:    f32 frame = frameCtrl->getFrame();
+src/d/actor/d_a_alink_wolf.inc:4209:    if (frame >= 13.5f) {
+src/d/actor/d_a_alink_wolf.inc:4210:        frame -= 13.5f;
+src/d/actor/d_a_alink_wolf.inc:4213:    return mpHIO->mWolf.mWlRope.m.mMovementRate * frameCtrl->getRate() * cM_fsin(0.23271057f * frame);
+src/d/actor/d_a_alink_wolf.inc:4327:        mUnderFrameCtrl[0].setFrame(13.5f);
+src/d/actor/d_a_alink_wolf.inc:4328:        getNowAnmPackUnder(UNDER_0)->setFrame(13.5f);
+src/d/actor/d_a_alink_wolf.inc:4429:    if (var_r27 == 1 || temp_r28->checkPass(0.0f) || temp_r28->checkPass(15.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4493:    f32 temp_f30 = temp_r28->getFrame();
+src/d/actor/d_a_alink_wolf.inc:4604:    f32 temp_f31 = temp_r28->getFrame();
+src/d/actor/d_a_alink_wolf.inc:4621:            if (temp_r28->checkPass(22.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4644:            if (temp_r28->checkPass(27.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4668:        if (temp_r28->checkPass(4.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4709:    f32 temp_f30 = field_0x347c * temp_r28->getFrame();
+src/d/actor/d_a_alink_wolf.inc:4719:    f32 temp_f31 = temp_r28->getFrame();
+src/d/actor/d_a_alink_wolf.inc:4720:    if (temp_r28->checkPass(9.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4724:    } else if (temp_r28->checkPass(13.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4820:        if (temp_r29->checkPass(30.0f) || temp_r29->checkPass(61.0f) || temp_r29->checkPass(86.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4822:        } else if (temp_r29->checkPass(65.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4826:        if (temp_r29->checkPass(16.0f) || temp_r29->checkPass(33.0f) || temp_r29->checkPass(50.0f) || temp_r29->checkPass(71.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4828:        } else if (temp_r29->checkPass(60.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4836:        if (temp_r29->getFrame() > 46.0f) {
+src/d/actor/d_a_alink_wolf.inc:4839:            mNormalSpeed = (7.0f + (2.0f * (2 - ((int)temp_r29->getFrame() / 15)))) * fabsf(cM_fsin((M_PI * temp_r29->getFrame()) / 15.0f));
+src/d/actor/d_a_alink_wolf.inc:4842:        if ((temp_r29->getFrame() >= 5.0f && temp_r29->getFrame() < 19.0f) || (temp_r29->getFrame() >= 39.0f && temp_r29->getFrame() < 51.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4848:        if ((temp_r29->getFrame() >= 13.0f && temp_r29->getFrame() < 30.0f) || (temp_r29->getFrame() >= 48.0f && temp_r29->getFrame() < 63.0f)) {
+src/d/actor/d_a_alink_wolf.inc:4914:        if (temp_r28->getFrame() >= 12.5f && temp_r28->getFrame() <= 14.5f) {
+src/d/actor/d_a_alink_wolf.inc:5069:            if (mProcVar5.field_0x3012 && (checkModeFlg(0x100) || checkAnmEnd(temp_r28) || temp_r28->getFrame() > mpHIO->mWolf.mWlPoint.m.mLandingAnm.mCancelFrame)) {
+src/d/actor/d_a_alink_wolf.inc:5443:    if (mProcVar3.field_0x300e != 0 && frameCtrl_p->getFrame() >= 23.0f) {
+src/d/actor/d_a_alink_wolf.inc:5547:    if (frameCtrl_p->checkPass(6.0f)) {
+src/d/actor/d_a_alink_wolf.inc:5552:        if (frameCtrl_p->getFrame() > 22.0f) {
+src/d/actor/d_a_alink_wolf.inc:5553:            frameCtrl_p->setFrame(22.0f);
+src/d/actor/d_a_alink_wolf.inc:5554:            getNowAnmPackUnder(UNDER_0)->setFrame(22.0f);
+src/d/actor/d_a_alink_wolf.inc:5662:    } else if (frameCtrl_p->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:5809:        f32 temp_f31 = 2.0f * (0.5f - (field_0x3480 * temp_r29->getFrame()));
+src/d/actor/d_a_alink_wolf.inc:5830:        if (mProcVar3.field_0x300e != 0 && temp_r29->checkPass(24.0f)) {
+src/d/actor/d_a_alink_wolf.inc:5834:        if (temp_r29->getFrame() > field_0x347c) {
+src/d/actor/d_a_alink_wolf.inc:5852:        } else if (temp_r29->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:5854:        } else if (checkEndResetFlg1(ERFLG1_LARGE_DAMAGE_UP_STOP) && temp_r29->getFrame() > field_0x3484) {
+src/d/actor/d_a_alink_wolf.inc:5855:            temp_r29->setFrame(field_0x3484);
+src/d/actor/d_a_alink_wolf.inc:5856:            getNowAnmPackUnder(UNDER_0)->setFrame(field_0x3484);
+src/d/actor/d_a_alink_wolf.inc:5995:    if (frameCtrl_p->getFrame() >= 15.0f) {
+src/d/actor/d_a_alink_wolf.inc:5996:        var_f1 = frameCtrl_p->getFrame() - 15.0f;
+src/d/actor/d_a_alink_wolf.inc:6045:    if ((param_0 != 0 && (frameCtrl->checkPass(11.0f) || frameCtrl->checkPass(26.0f))) ||
+src/d/actor/d_a_alink_wolf.inc:6215:        if (var_r27 == 1 || temp_r29->checkPass(0.0f) || temp_r29->checkPass(15.0f)) {
+src/d/actor/d_a_alink_wolf.inc:6315:        if (temp_r29->checkPass(0.0f) || temp_r29->checkPass(15.0f)) {
+src/d/actor/d_a_alink_wolf.inc:6486:    if (checkWolfSwimDashAnime() && mUnderFrameCtrl[0].checkPass(7.0f)) {
+src/d/actor/d_a_alink_wolf.inc:6684:    if (frameCtrl_p->checkPass(6.0f)) {
+src/d/actor/d_a_alink_wolf.inc:6746:    } else if (frameCtrl->checkPass(17.0f)) {
+src/d/actor/d_a_alink_wolf.inc:6767:        field_0x0724->setFrame(1.0f);
+src/d/actor/d_a_alink_wolf.inc:6769:        field_0x0724->setFrame(0.0f);
+src/d/actor/d_a_alink_wolf.inc:7119:    if (var_r28 == true || frameCtrl_p->checkPass(0.0f) || frameCtrl_p->checkPass(15.0f)) {
+src/d/actor/d_a_alink_wolf.inc:7455:    } else if (frameCtrl_p->getFrame() > field_0x3478 && mNormalSpeed <= 5.0f) {
+src/d/actor/d_a_alink_wolf.inc:7618:    if (checkNoResetFlg2(FLG2_UNK_8) && frameCtrl_p->getFrame() >= 14.0f) {
+src/d/actor/d_a_alink_wolf.inc:7628:            if (!(frameCtrl_p->getFrame() > field_0x3478) || !checkNextActionWolf(1)) {
+src/d/actor/d_a_alink_wolf.inc:7635:    } else if (frameCtrl_p->getFrame() > field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:7643:        if (frameCtrl_p->checkPass(field_0x3484)) {
+src/d/actor/d_a_alink_wolf.inc:7647:        if (mProcVar2.field_0x300c == 0 && frameCtrl_p->getFrame() >= 3.0f) {
+src/d/actor/d_a_alink_wolf.inc:7663:        if (frameCtrl_p->getFrame() >= field_0x347c && frameCtrl_p->getFrame() < field_0x3480) {
+src/d/actor/d_a_alink_wolf.inc:7729:    } else if (mProcVar3.field_0x300e == 0 && frameCtrl_p->getFrame() >= 4.0f &&
+src/d/actor/d_a_alink_wolf.inc:7730:               frameCtrl_p->getFrame() < 13.0f)
+src/d/actor/d_a_alink_wolf.inc:7852:               (frameCtrl_p->checkPass(9.0f) || frameCtrl_p->checkPass(16.0f)))
+src/d/actor/d_a_alink_wolf.inc:7887:    } else if (frameCtrl->getFrame() >= 3.0f && frameCtrl->getFrame() < 8.0f) {
+src/d/actor/d_a_alink_wolf.inc:8114:        if (frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8263:            if (frameCtrl_p->checkPass(0.0f) || frameCtrl_p->checkPass(17.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8265:                    if (frameCtrl_p->checkPass(0.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8266:                        frameCtrl_p->setFrame(0.0f);
+src/d/actor/d_a_alink_wolf.inc:8268:                        frameCtrl_p->setFrame(17.0f);
+src/d/actor/d_a_alink_wolf.inc:8276:            } else if (frameCtrl_p->checkPass(14.0f) || frameCtrl_p->checkPass(36.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8278:            } else if (frameCtrl_p->checkPass(7.5f) || frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8280:            } else if (frameCtrl_p->checkPass(20.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8350:    if (frameCtrl_p->checkPass(field_0x3478)) {
+src/d/actor/d_a_alink_wolf.inc:8356:    if (frameCtrl_p->getFrame() >= field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:8364:    } else if (frameCtrl_p->getFrame() > field_0x347c) {
+src/d/actor/d_a_alink_wolf.inc:8402:    if (frameCtrl_p->getFrame() < field_0x3478) {
+src/d/actor/d_a_alink_wolf.inc:8416:        } else if (frameCtrl_p->getFrame() < field_0x347c) {
+src/d/actor/d_a_alink_wolf.inc:8455:    if (frameCtrl->checkPass(10.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8516:    } else if (mProcVar2.field_0x300c == 0 && frameCtrl->checkPass(17.5f)) {
+src/d/actor/d_a_alink_wolf.inc:8754:    } else if (mUnderFrameCtrl[0].getFrame() < 3.0f) {
+src/d/actor/d_a_alink_wolf.inc:9039:        if (frame_ctrl->getFrame() >= 25.0f) {
+src/d/actor/d_a_alink_wolf.inc:9070:        if (frame_ctrl->checkPass(field_0x3478) && dig_actor != NULL) {
+src/d/actor/d_a_alink_wolf.inc:9075:        if (frame_ctrl->getFrame() >= 11.0f) {
+src/d/actor/d_a_alink_wolf.inc:9076:            if (frame_ctrl->getFrame() <= 41.0f) {
+src/d/actor/d_a_alink_wolf.inc:9194:        if (mProcVar4.field_0x3010 >= 0 && frameCtrl_p->checkPass(21.0f)) {
+src/d/actor/d_a_alink_wolf.inc:9199:    if (frameCtrl_p->checkPass(100.0f)) {
+src/d/actor/d_a_b_bh.cpp:737:            i_this->mpModelMorf->setFrame(10.0f);
+src/d/actor/d_a_b_dr.cpp:507:        if (mAnm == ANM_DR_BOOT_C && (int)mpModelMorf->getFrame() <= 45) {
+src/d/actor/d_a_b_dr.cpp:869:        if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:874:        if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:900:        if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f) && param_0 == 4) {
+src/d/actor/d_a_b_dr.cpp:919:            if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:925:            if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:934:            if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:946:                if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:974:        if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f)) {
+src/d/actor/d_a_b_dr.cpp:1468:        if ((int)mpModelMorf->getFrame() < 28) {
+src/d/actor/d_a_b_dr.cpp:1584:            if ((int)mpModelMorf->getFrame() >= 34) {
+src/d/actor/d_a_b_dr.cpp:1607:            if ((int)mpModelMorf->getFrame() >= 34) {
+src/d/actor/d_a_b_dr.cpp:1646:            if (mpModelMorf->getFrame() >= 27.0f) {
+src/d/actor/d_a_b_dr.cpp:1718:        if ((int)mpModelMorf->getFrame() >= 45) {
+src/d/actor/d_a_b_dr.cpp:1915:            if (mpModelMorf->getFrame() >= 27.0f) {
+src/d/actor/d_a_b_dr.cpp:2108:        if (mAnm == ANM_DR_FEINT_B && (int)mpModelMorf->getFrame() >= 23) {
+src/d/actor/d_a_b_dr.cpp:2192:            if ((int)mpModelMorf->getFrame() >= 33 && sp8) {
+src/d/actor/d_a_b_dr.cpp:2265:        if (cLib_calcTimer<int>(&mTimer[2]) == 0 && (int)mpModelMorf->getFrame() >= 48) {
+src/d/actor/d_a_b_dr.cpp:2574:            if (mAnm == ANM_DR_FLY || (mAnm == ANM_DR_FLAP_TO_FLY && (int)mpModelMorf->getFrame() >= 15)) {
+src/d/actor/d_a_b_dr.cpp:2882:                if ((int)mpModelMorf->getFrame() >= (int)(mpModelMorf->getEndFrame() - 1.0f) && sp30.abs() < 20.0f) {
+src/d/actor/d_a_b_dr.cpp:2983:        if ((int)mpModelMorf->getFrame() >= 14) {
+src/d/actor/d_a_b_dr.cpp:3086:        if ((int)mpModelMorf->getFrame() < 50) {
+src/d/actor/d_a_b_dr.cpp:3135:            if ((int)mpModelMorf->getFrame() >= 34) {
+src/d/actor/d_a_b_dr.cpp:3158:            if ((int)mpModelMorf->getFrame() >= 34) {
+src/d/actor/d_a_b_dr.cpp:3227:        if ((int)mpModelMorf->getFrame() >= 45) {
+src/d/actor/d_a_b_dr.cpp:3484:        if ((int)mpModelMorf->getFrame() >= 30) {
+src/d/actor/d_a_b_dr.cpp:3582:        if ((int)mpModelMorf->getFrame() < 35.0f + JREG_F(5)) {
+src/d/actor/d_a_b_dre.cpp:257:        if (mpModelMorf->getFrame() > 250.0f && mAnm == 0x17) {
+src/d/actor/d_a_b_dre.cpp:262:            if (!(mpModelMorf->getFrame() <= 130.0f) || mAnm != 0x38) {
+src/d/actor/d_a_b_dre.cpp:275:        if (mpModelMorf->getFrame() > 130.0f && mAnm == 0x38) {
+src/d/actor/d_a_b_dre.cpp:326:        if (mpModelMorf->getFrame() < 270.0f) {
+src/d/actor/d_a_b_dre.cpp:530:        if (mpModelMorf->getFrame() > 40.0f) {
+src/d/actor/d_a_b_ds.cpp:1434:        if ((int)mpZantMorf->getFrame() < 50) {
+src/d/actor/d_a_b_ds.cpp:1443:        if ((int)mpZantMorf->getFrame() < 191) {
+src/d/actor/d_a_b_ds.cpp:1461:        if ((int)mpZantMorf->getFrame() >= 250) {
+src/d/actor/d_a_b_ds.cpp:1466:        if ((int)mpZantMorf->getFrame() < 340) {
+src/d/actor/d_a_b_ds.cpp:1475:        if ((int)mpZantMorf->getFrame() < 346) {
+src/d/actor/d_a_b_ds.cpp:1532:        if ((int)mpZantMorf->getFrame() < 65) {
+src/d/actor/d_a_b_ds.cpp:1614:        if ((int)mpMorf->getFrame() < 330) {
+src/d/actor/d_a_b_ds.cpp:1633:        if ((int)mpMorf->getFrame() > 460) {
+src/d/actor/d_a_b_ds.cpp:2217:        if ((int)mpMorf->getFrame() > 130) {
+src/d/actor/d_a_b_ds.cpp:2221:        if ((int)mpMorf->getFrame() < 140) {
+src/d/actor/d_a_b_ds.cpp:2441:        if ((int)mpMorf->getFrame() > 82) {
+src/d/actor/d_a_b_ds.cpp:2486:        if ((int)mpMorf->getFrame() > 90 && (int)mpMorf->getFrame() < 110) {
+src/d/actor/d_a_b_ds.cpp:2489:            int ivar3 = (int)((mpMorf->getFrame() - 90.0f) / 4.0f) + 7;
+src/d/actor/d_a_b_ds.cpp:2497:                if ((int)mpMorf->getFrame() > 100 && bvar1) {
+src/d/actor/d_a_b_ds.cpp:2502:                if ((int)mpMorf->getFrame() > 100 && bvar1) {
+src/d/actor/d_a_b_ds.cpp:2527:        if ((int)mpMorf->getFrame() >= 177 && (int)mpMorf->getFrame() <= 195) {
+src/d/actor/d_a_b_ds.cpp:2542:    if ((int)mpMorf->getFrame() > 70 && (int)mpMorf->getFrame() < 150) {
+src/d/actor/d_a_b_ds.cpp:2781:        if ((int)mpMorf->getFrame() < 30) {
+src/d/actor/d_a_b_ds.cpp:3481:        if ((int)mpMorf->getFrame() >= 20) {
+src/d/actor/d_a_b_ds.cpp:5185:                    if ((int)mpMorf->getFrame() >= 72 && (int)mpMorf->getFrame() < 79) {
+src/d/actor/d_a_b_ds.cpp:5207:                    if ((int)mpMorf->getFrame() >= 34 && (int)mpMorf->getFrame() < 41) {
+src/d/actor/d_a_b_gg.cpp:1190:        } else if (mpModelMorf->getFrame() > 18.0f && mAnm == BCK_GGB_TAKE_OFF) {
+src/d/actor/d_a_b_gg.cpp:1877:        if (mAnm == BCK_GGA_ATTACK_4 || mpModelMorf->getFrame() > 15.0f) {
+src/d/actor/d_a_b_gg.cpp:2753:        if (mpModelMorf->getFrame() > 37.0f && mAnm == BCK_GGB_ATTACK_B) {
+src/d/actor/d_a_b_gg.cpp:2870:                if (rnd < (10.0f + nREG_F(0)) && mpModelMorf->getFrame() > (5.0f + nREG_F(6))) {
+src/d/actor/d_a_b_gg.cpp:3095:    } else if (mpModelMorf->getFrame() > 2.0f && 0.0f != field_0x684.z) {
+src/d/actor/d_a_b_gg.cpp:3151:    } else if ((mpModelMorf->getFrame() > 176.0f || mpModelMorf->isStop()) && 0.0f != field_0x684.z) {
+src/d/actor/d_a_b_gg.cpp:3248:        if (mpModelMorf->getFrame() < 200.0f) {
+src/d/actor/d_a_b_gg.cpp:4183:    if (mAnm == BCK_GGA_SHOUT && mpModelMorf->getFrame() > 32.0f) {
+src/d/actor/d_a_b_gm.cpp:746:        if (i_this->mpModelMorf->getFrame() >= 160.0f) {
+src/d/actor/d_a_b_gnd.cpp:1187:            i_this->mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_b_gnd.cpp:1188:            i_this->mpHorseMorf->setFrame(0.0f);
+src/d/actor/d_a_b_gnd.cpp:1220:            i_this->mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_b_gnd.cpp:1221:            i_this->mpHorseMorf->setFrame(0.0f);
+src/d/actor/d_a_b_gnd.cpp:1721:            i_this->mpModelMorf->setFrame(anm_frame - 1);
+src/d/actor/d_a_b_gnd.cpp:1806:                i_this->mpModelMorf->setFrame(10.0f);
+src/d/actor/d_a_b_gnd.cpp:1894:                    i_this->mpModelMorf->setFrame(10.0f);
+src/d/actor/d_a_b_gnd.cpp:3128:        if (i_this->mpModelMorf->getFrame() > 340.0f) {
+src/d/actor/d_a_b_gnd.cpp:3161:            i_this->mpModelMorf->setFrame(20.0f);
+src/d/actor/d_a_b_gnd.cpp:4147:        i_this->mpGndEyeBtk[i_this->mGndEyeBtkNo]->setFrame(0.0f);
+src/d/actor/d_a_b_mgn.cpp:1584:            if (mpMgnBtk->getFrame() > 30.0f) {
+src/d/actor/d_a_b_mgn.cpp:1774:        if (mpMgnModelMorf->getFrame() <= 6.0f) {
+src/d/actor/d_a_b_mgn.cpp:1905:        if (mpMgnModelMorf->getFrame() >= 15.0f) {
+src/d/actor/d_a_b_mgn.cpp:1984:        if (mpMgnModelMorf->getFrame() < 42.0f) {
+src/d/actor/d_a_b_mgn.cpp:1991:        if (mpMgnModelMorf->getFrame() >= 30.0f) {
+src/d/actor/d_a_b_mgn.cpp:2103:        if (mpMgnModelMorf->getFrame() >= 26.0f) {
+src/d/actor/d_a_b_mgn.cpp:2407:        if (mpMgnModelMorf->getFrame() >= 12.0f && mpMgnModelMorf->getFrame() < 43.0f) {
+src/d/actor/d_a_b_mgn.cpp:2410:        } else if (mpMgnModelMorf->getFrame() >= 43.0f) {
+src/d/actor/d_a_b_mgn.cpp:2635:        if (mpMgnModelMorf->getFrame() < 275.0f) {
+src/d/actor/d_a_b_mgn.cpp:2656:        if (mpMgnModelMorf->getFrame() >= 305.0f) {
+src/d/actor/d_a_b_mgn.cpp:2663:        if (mpMgnModelMorf->getFrame() < 305.0f) {
+src/d/actor/d_a_b_mgn.cpp:2667:        if (mpMgnModelMorf->getFrame() > 290.0f) {
+src/d/actor/d_a_b_mgn.cpp:2892:        if (mpMgnModelMorf->getFrame() < 230.0f) {
+src/d/actor/d_a_b_mgn.cpp:2918:        if (mpMgnModelMorf->getFrame() >= 333.0f) {
+src/d/actor/d_a_b_mgn.cpp:2999:        mpMgnBtk->setFrame(nREG_F(8) + 5.0f);
+src/d/actor/d_a_b_ob.cpp:788:    int frame = i_this->mBodyParts[0].mpMorf->getFrame();
+src/d/actor/d_a_b_ob.cpp:805:        if (frame == 100) {
+src/d/actor/d_a_b_ob.cpp:809:        if (frame >= 100) {
+src/d/actor/d_a_b_ob.cpp:1963:    i_this->mpCoreMorf->setFrame(i_this->field_0x4740);
+src/d/actor/d_a_b_ob.cpp:3115:        i_this->mpCoreMorf->setFrame(i_this->field_0x4740);
+src/d/actor/d_a_b_oh.cpp:735:    this_->mpBtk->setFrame(cM_rndF(39.0f));
+src/d/actor/d_a_b_oh.cpp:748:    this_->mpBrk->setFrame(cM_rndF(39.0f));
+src/d/actor/d_a_b_oh2.cpp:164:        i_this->mpBrk->setFrame(0.0f);
+src/d/actor/d_a_b_oh2.cpp:165:        i_this->mpBtk->setFrame(0.0f);
+src/d/actor/d_a_b_oh2.cpp:248:    _this->mpBtk->setFrame(cM_rndF(39.0f));
+src/d/actor/d_a_b_oh2.cpp:261:    _this->mpBrk->setFrame(cM_rndF(39.0f));
+src/d/actor/d_a_b_tn.cpp:1873:        mpModelMorf2->setFrame(15.0f);
+src/d/actor/d_a_b_tn.cpp:1903:        if (mpModelMorf2->getFrame() < 80.0f) {
+src/d/actor/d_a_b_tn.cpp:1950:        if (mpModelMorf2->getFrame() < 30.0f) {
+src/d/actor/d_a_b_tn.cpp:1956:        } else if (mpModelMorf2->getFrame() < 57.0f) {
+src/d/actor/d_a_b_tn.cpp:2413:    f32 frame;
+src/d/actor/d_a_b_tn.cpp:2440:        if (mpModelMorf2->getFrame() >= 20.0f && mpModelMorf2->getFrame() < 25.0f) {
+src/d/actor/d_a_b_tn.cpp:2461:        if (mpModelMorf2->getFrame() <= 30.0f) {
+src/d/actor/d_a_b_tn.cpp:2466:        if (frame >= 18.0f && frame < 29.0f) {
+src/d/actor/d_a_b_tn.cpp:2498:        if (mpModelMorf2->getFrame() <= 22.0f) {
+src/d/actor/d_a_b_tn.cpp:2502:        if (mpModelMorf2->getFrame() >= 22.0f && mpModelMorf2->getFrame() < 30.0f) {
+src/d/actor/d_a_b_tn.cpp:3020:        if (mpModelMorf2->getFrame() < 23.0f) {
+src/d/actor/d_a_b_tn.cpp:3746:        if (mActionMode2Copy != 0 && mpModelMorf2->getFrame() < 8.0f) {
+src/d/actor/d_a_b_tn.cpp:3801:        if (mWalkDir != 0 && mpModelMorf2->getFrame() < 10.0f) {
+src/d/actor/d_a_b_tn.cpp:3805:        if (mpModelMorf2->getFrame() < 20.0f) {
+src/d/actor/d_a_b_tn.cpp:3906:        if (mpModelMorf2->getFrame() < 10.0f) {
+src/d/actor/d_a_b_yo.cpp:1379:            mpBtkAnm->setFrame(2.0f);
+src/d/actor/d_a_b_yo.cpp:2453:        if (mpYetaMorf->getFrame() < 100.0f) {
+src/d/actor/d_a_b_yo.cpp:3357:            mpBtkAnm->setFrame(1.0f);
+src/d/actor/d_a_b_zant.cpp:1383:        if (mpModelMorf->getFrame() > 5.0f) {
+src/d/actor/d_a_b_zant.cpp:1580:        if (mpModelMorf->getFrame() > 110.0f) {
+src/d/actor/d_a_b_zant.cpp:2166:            mpModelMorf->setFrame(10.0f);
+src/d/actor/d_a_b_zant.cpp:2206:                f32 anm_frame = mpModelMorf->getFrame();
+src/d/actor/d_a_b_zant.cpp:2442:                mpModelMorf->setFrame(8.0f);
+src/d/actor/d_a_b_zant.cpp:2749:        f32 anm_frame = mpModelMorf->getFrame();
+src/d/actor/d_a_b_zant.cpp:2938:            if (mpModelMorf->getFrame() < 14) {
+src/d/actor/d_a_b_zant.cpp:2939:                mpModelMorf->setFrame(6);
+src/d/actor/d_a_b_zant.cpp:2941:                mpModelMorf->setFrame(19);
+src/d/actor/d_a_b_zant.cpp:2982:            if (mpModelMorf->getFrame() < 14) {
+src/d/actor/d_a_b_zant.cpp:2983:                mpModelMorf->setFrame(12);
+src/d/actor/d_a_b_zant.cpp:2985:                mpModelMorf->setFrame(25);
+src/d/actor/d_a_b_zant.cpp:4397:            f32 var_f31 = mpModelMorf->getFrame();
+src/d/actor/d_a_b_zant.cpp:4435:            mpModelMorf->setFrame(300);
+src/d/actor/d_a_b_zant.cpp:4474:        mpMahojinStartBtk->setFrame(0);
+src/d/actor/d_a_b_zant.cpp:4476:        mpMahojinEndBrk->setFrame(0);
+src/d/actor/d_a_b_zant.cpp:4502:        mpMahojinBrk2->setFrame(30);
+src/d/actor/d_a_b_zant.cpp:4503:        mpMahojinStartBtk2->setFrame(19);
+src/d/actor/d_a_b_zant_mobile.cpp:244:            mpMorf->setFrame(field_0x660);
+src/d/actor/d_a_b_zant_mobile.cpp:265:            mpMorf->setFrame(field_0x660);
+src/d/actor/d_a_b_zant_mobile.cpp:307:            mpMorf->setFrame(field_0x660);
+src/d/actor/d_a_b_zant_mobile.cpp:316:            mpMorf->setFrame(field_0x660);
+src/d/actor/d_a_bd.cpp:358:        if (i_this->field_0x64C[0] == 0 && !((int)i_this->mpMorf->getFrame() > 1)) {
+src/d/actor/d_a_bd.cpp:904:    i_this->mpBtk->setFrame((f32)(int)i_this->field_0x5EC);
+src/d/actor/d_a_bg.cpp:348:                        if (dDemo_c::getFrame() >= 1118) {
+src/d/actor/d_a_boomerang.cpp:171:    m_cursorYellowBck->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:178:    m_cursorYellowBpk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:188:    m_cursorYellow2Brk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:189:    m_cursorYellowBrk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:217:    m_cursorRed2Brk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:218:    m_cursorRedBrk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:246:    m_cursorOrange2Brk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:247:    m_cursorOrangeBrk->setFrame(0.0f);
+src/d/actor/d_a_boomerang.cpp:360:            m_cursorYellowBck->setFrame(field_0x98[i]);
+src/d/actor/d_a_boomerang.cpp:361:            m_cursorYellowBpk->setFrame(field_0x98[i] > 21.0f ? 21.0f : field_0x98[i]);
+src/d/actor/d_a_boomerang.cpp:890:        m_windBtk->setFrame(0.0f);
+src/d/actor/d_a_cow.cpp:2946:                mpBtp->setFrame(0.0f);
+src/d/actor/d_a_crod.cpp:212:            mLight.mPow = mBck.getFrame() * 300.0f * 0.03125f;
+src/d/actor/d_a_cstaF.cpp:178:            m_coverBtk->setFrame(0.0f);
+src/d/actor/d_a_cstaF.cpp:184:            m_coverBrk->setFrame(0.0f);
+src/d/actor/d_a_cstaF.cpp:405:        } else if (m_brk.getFrame() >= 15.0f) {
+src/d/actor/d_a_cstaF.cpp:419:            } else if (m_brk.getFrame() >= 15.0f) {
+src/d/actor/d_a_cstaF.cpp:447:    m_btk.setFrame(0.0f);
+src/d/actor/d_a_cstaF.cpp:454:    m_btk.setFrame(0.0f);
+src/d/actor/d_a_cstatue.cpp:560:            } else if (mpMorf->getFrame() > 12.0f) {
+src/d/actor/d_a_cstatue.cpp:562:            } else if (mpMorf->getFrame() > 7.0f) {
+src/d/actor/d_a_cstatue.cpp:659:        if (mCurrentAnim == CStatueAnimIndex_2 && mpMorf->getFrame() >= 13.0f &&
+src/d/actor/d_a_cstatue.cpp:660:            mpMorf->getFrame() < 21.0f)
+src/d/actor/d_a_cstatue.cpp:718:                mpMorf->getFrame() < 30.0f)
+src/d/actor/d_a_cstatue.cpp:1029:    mAnim1.setFrame(0.0f);
+src/d/actor/d_a_cstatue.cpp:1039:    mAnim1.setFrame(0.0f);
+src/d/actor/d_a_cstatue.cpp:1128:        mpMorf->setFrame(0.0f);
+src/d/actor/d_a_do.cpp:2245:            i_this->mpMorf->setFrame(0.0f);
+src/d/actor/d_a_do.cpp:2249:            i_this->mpMorf->setFrame(0.0f);
+src/d/actor/d_a_door_bossL1.cpp:416:                field_0x58c->setFrame(0.0f);
+src/d/actor/d_a_door_bossL1.cpp:591:    f32 frame = field_0x588->getFrame();
+src/d/actor/d_a_door_bossL1.cpp:592:    if (frame == 12.0f) {
+src/d/actor/d_a_door_bossL1.cpp:594:    } else if (frame == 18.0f) {
+src/d/actor/d_a_door_bossL1.cpp:661:    f32 frame = field_0x588->getFrame();
+src/d/actor/d_a_door_bossL1.cpp:662:    if (frame == 11.0f) {
+src/d/actor/d_a_door_bossL1.cpp:664:    } else if (frame == 12.0f) {
+src/d/actor/d_a_door_bossL1.cpp:678:    } else if (frame == 4.0f) {
+src/d/actor/d_a_door_bossL5.cpp:256:    if (field_0x584->getFrame() == 18.0f) {
+src/d/actor/d_a_door_knob00.cpp:478:        field_0x57c.setFrame(38.0f);
+src/d/actor/d_a_door_mbossL1.cpp:722:                field_0x594->setFrame(0.0f);
+src/d/actor/d_a_door_mbossL1.cpp:969:        if (mBckAnms[0]->getFrame() == 17.0f) {
+src/d/actor/d_a_door_mbossL1.cpp:973:        if (getDoorType() == DOOR_TYPE_1 && mBckAnms[0]->getFrame() == 17.0f) {
+src/d/actor/d_a_door_mbossL1.cpp:984:        if (mBckAnms[0]->getFrame() == 18.0f) {
+src/d/actor/d_a_door_mbossL1.cpp:990:        if (getDoorType() == DOOR_TYPE_1 && mBckAnms[0]->getFrame() == 20.0f) {
+src/d/actor/d_a_door_mbossL1.cpp:1090:        field_0x590->setFrame(38.0f);
+src/d/actor/d_a_door_shutter.cpp:474:    f32 frame = field_0x584.getFrame();
+src/d/actor/d_a_door_shutter.cpp:478:        if (field_0x584.getFrame() == 17.0f) {
+src/d/actor/d_a_door_shutter.cpp:481:            if (field_0x584.getFrame() == 18.0f) {
+src/d/actor/d_a_door_shutter.cpp:506:            field_0x584.getFrame() == 17.0f)
+src/d/actor/d_a_door_shutter.cpp:511:            if (field_0x584.getFrame() == 20.0f) {
+src/d/actor/d_a_door_shutter.cpp:524:            if (field_0x584.getFrame() == 20.0f || (frame < 20.0f && field_0x584.getFrame() >= 20.0f))
+src/d/actor/d_a_door_shutter.cpp:665:    field_0x584.setFrame(0.0f);
+src/d/actor/d_a_door_shutter.cpp:667:    field_0x5a0.setFrame(0.0f);
+src/d/actor/d_a_door_shutter.cpp:1014:            dVar19 = field_0x584.getFrame();
+src/d/actor/d_a_door_shutter.cpp:1017:            dVar19 = field_0x5a0.getFrame();
+src/d/actor/d_a_door_shutter.cpp:1059:            dVar19 = field_0x5a0.getFrame();
+src/d/actor/d_a_door_shutter.cpp:1062:            dVar19 = field_0x584.getFrame();
+src/d/actor/d_a_e_ai.cpp:433:            m_modelMorf->setFrame(25.0f);
+src/d/actor/d_a_e_ai.cpp:459:        if ((int)m_modelMorf->getFrame() == 4) {
+src/d/actor/d_a_e_db.cpp:396:        i_this->modelMorf->setFrame(15.0f);
+src/d/actor/d_a_e_db.cpp:1436:            spE = (5000.0f + TREG_F(13)) * cM_ssin((65536.0f * i_this->modelMorf->getFrame()) / 11.0f);
+src/d/actor/d_a_e_dd.cpp:435:            if ((frame >= AREG_S(0) + 12 && frame <= AREG_S(1) + 29) || frame <= AREG_S(2) + 2 || frame >= AREG_S(3) + 37) {
+src/d/actor/d_a_e_dd.cpp:439:            if (i_this->field_0x6aa[0] == 0 && (frame == 7 || frame == 33)) {
+src/d/actor/d_a_e_dd.cpp:457:            if ((frame >= AREG_S(0) + 12 && frame <= AREG_S(1) + 29) || frame <= AREG_S(2) + 2 || frame >= AREG_S(3) + 37) {
+src/d/actor/d_a_e_dd.cpp:464:            if ((frame == 7 || frame == 33) && sp40.abs() < 100.0f) {
+src/d/actor/d_a_e_dd.cpp:559:            if ((frame >= AREG_S(0) + 12 && frame <= AREG_S(1) + 29) || frame <= AREG_S(2) + 2 || frame >= AREG_S(3) + 37) {
+src/d/actor/d_a_e_dd.cpp:563:            if ((i_this->field_0x6aa[0] == 0 && (frame == 7 || frame == 33)) || (i_this->field_0x6aa[1] == 0 && (way_bg_check(i_this, 200.0f) || i_this->field_0x6d0 != 0))) {
+src/d/actor/d_a_e_dd.cpp:581:            if ((frame >= AREG_S(0) + 12 && frame <= AREG_S(1) + 29) || frame <= AREG_S(2) + 2 || frame >= AREG_S(3) + 37) {
+src/d/actor/d_a_e_dd.cpp:588:            if ((frame == 7 || frame == 33) && sp40.abs() < 100.0f) {
+src/d/actor/d_a_e_dd.cpp:662:                    i_this->mpModelMorf->setFrame(JREG_F(7) + 12.0f);
+src/d/actor/d_a_e_dd.cpp:682:            if (frame == 3) {
+src/d/actor/d_a_e_dd.cpp:683:                i_this->mpModelMorf->setFrame(2.0f);
+src/d/actor/d_a_e_dd.cpp:774:            i_this->mpBrkAnms[1]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:780:            if (frame > 20) {
+src/d/actor/d_a_e_dd.cpp:794:                i_this->mpBrkAnms[2]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:807:                i_this->mpBrkAnms[3]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:819:                i_this->mpBrkAnms[0]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:866:            if (frame == 50) {
+src/d/actor/d_a_e_dd.cpp:870:            if (frame == 65) {
+src/d/actor/d_a_e_dd.cpp:874:            if (i_this->field_0x6d4 != 0 && frame == 56) {
+src/d/actor/d_a_e_dd.cpp:894:                i_this->mpBrkAnms[4]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:996:                i_this->mpBrkAnms[4]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:1032:                i_this->mpBrkAnms[4]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:1060:            if (frame == 91) {
+src/d/actor/d_a_e_dd.cpp:1064:            if (i_this->field_0x6d4 != 0 && frame == 96) {
+src/d/actor/d_a_e_dd.cpp:1084:                i_this->mpBrkAnms[4]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:1341:    if ((i_this->mAnm == BCK_DD_FIRE_A && i_this->mpModelMorf->getFrame() >= 44.0f) || i_this->mAnm == BCK_DD_FIRE_B) {
+src/d/actor/d_a_e_dd.cpp:1379:        i_this->mpBrkAnms[0]->setFrame(0.0f);
+src/d/actor/d_a_e_dd.cpp:1419:    if (i_this->mpBrkAnms[1]->getFrame() >= 57.0f) {
+src/d/actor/d_a_e_dd.cpp:1420:        i_this->mpBrkAnms[1]->setFrame(57.0f);
+src/d/actor/d_a_e_dd.cpp:1423:    if (i_this->mpBrkAnms[3]->getFrame() >= 46.0f) {
+src/d/actor/d_a_e_dd.cpp:1424:        i_this->mpBrkAnms[3]->setFrame(46.0f);
+src/d/actor/d_a_e_dd.cpp:1427:    if (i_this->mpBrkAnms[4]->getFrame() >= 40.0f) {
+src/d/actor/d_a_e_dd.cpp:1428:        i_this->mpBrkAnms[4]->setFrame(40.0f);
+src/d/actor/d_a_e_dk.cpp:404:        f32 fVar4 = mpMorfSO->getFrame();
+src/d/actor/d_a_e_dk.cpp:468:        f32 fVar4 = mpMorfSO->getFrame();
+src/d/actor/d_a_e_dk.cpp:744:            cLib_chaseUC(&field_0x691, 120.0f - mpMorfSO->getFrame(), 2);
+src/d/actor/d_a_e_dn.cpp:626:                i_this->anm_p->setFrame(cM_rndF(75.0f));
+src/d/actor/d_a_e_dn.cpp:1118:            if (frame == 7 || frame == 21) {
+src/d/actor/d_a_e_dn.cpp:1138:            if (frame == 13 || frame == 27) {
+src/d/actor/d_a_e_dn.cpp:1141:                if (frame == 13) {
+src/d/actor/d_a_e_dn.cpp:1469:            if (frame >= 22 && frame <= 28) {
+src/d/actor/d_a_e_dn.cpp:1504:            if (frame < 10 || (frame >= 25 && frame <= 30)) {
+src/d/actor/d_a_e_dn.cpp:1518:            if (frame >= 13 && frame <= 18) {
+src/d/actor/d_a_e_dn.cpp:1523:            if (frame >= 25 && frame <= 30) {
+src/d/actor/d_a_e_dn.cpp:1583:            if (frame >= 19) {
+src/d/actor/d_a_e_dn.cpp:1587:            if (frame >= 33 && frame <= 41) {
+src/d/actor/d_a_e_dn.cpp:1598:            if (frame == 40) {
+src/d/actor/d_a_e_dn.cpp:1600:            } else if (frame == 43) {
+src/d/actor/d_a_e_dn.cpp:1633:            if (i_this->anm_p->getFrame() >= 5.0f) {
+src/d/actor/d_a_e_dn.cpp:1650:            if (i_this->anm_p->getFrame() >= 8.0f) {
+src/d/actor/d_a_e_dn.cpp:2010:            if (i_this->anm_p->getFrame() >= 35.0f) {
+src/d/actor/d_a_e_dn.cpp:2942:        if (frame == 35) {
+src/d/actor/d_a_e_dn.cpp:2944:        } else if (frame == 28) {
+src/d/actor/d_a_e_dn.cpp:2948:        if (frame == 18) {
+src/d/actor/d_a_e_dn.cpp:2952:        if (frame == 10) {
+src/d/actor/d_a_e_dn.cpp:2956:        if (frame == 24) {
+src/d/actor/d_a_e_dn.cpp:2960:        if (frame == 3) {
+src/d/actor/d_a_e_dn.cpp:2962:        } else if (frame == 18) {
+src/d/actor/d_a_e_dn.cpp:2966:        if (frame == 10) {
+src/d/actor/d_a_e_dn.cpp:2968:        } else if (frame == 4) {
+src/d/actor/d_a_e_dn.cpp:2973:        if (frame == 15) {
+src/d/actor/d_a_e_dn.cpp:2976:    } else if (i_this->anm_no == ANM_WAIT_04 && frame == 15) {
+src/d/actor/d_a_e_dt.cpp:875:        if (35.0f <= mpMorf->getFrame() && mpMorf->getFrame() < 70.0f) {
+src/d/actor/d_a_e_dt.cpp:1208:        } else if (mpMorf->getFrame() >= 5.0f) {
+src/d/actor/d_a_e_dt.cpp:1401:        if (mpMorf->getFrame() >= 150.0f) {
+src/d/actor/d_a_e_dt.cpp:1503:        if (mpMorf->getFrame() < 30.0f) {
+src/d/actor/d_a_e_dt.cpp:1528:        if (mpMorf->getFrame() > 176.0f) {
+src/d/actor/d_a_e_dt.cpp:1714:            E_DT_n::m_fall_no = mpMorf->getFrame() - 10.0f;
+src/d/actor/d_a_e_fb.cpp:421:            if (int(mpMorf->getFrame()) == 160) {
+src/d/actor/d_a_e_fb.cpp:438:        if ((mpMorf->getFrame() >= 36.0f && mpMorf->getFrame() <= 160.0f) || mMoveMode == 2 || mMoveMode == 3) {
+src/d/actor/d_a_e_fb.cpp:739:    mpBrkAnm->setFrame(field_0x68e);
+src/d/actor/d_a_e_fm.cpp:834:        if ((int)i_this->mpFmBtk[0]->getFrame() == 0) {
+src/d/actor/d_a_e_fm.cpp:840:            i_this->mpFmBrk[TEXANM_ATTACK]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:841:            i_this->mpFmBtk[TEXANM_ATTACK]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:868:            i_this->mpFmBrk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:869:            i_this->mpFmBtk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:927:        if ((int)i_this->mpFmBtk[0]->getFrame() == 0) {
+src/d/actor/d_a_e_fm.cpp:935:        if ((int)i_this->mpFmModelMorf->getFrame() >= l_HIO.field_0x98 && (int)i_this->mpFmModelMorf->getFrame() <= l_HIO.field_0x9a) {
+src/d/actor/d_a_e_fm.cpp:937:            if ((int)i_this->mpFmModelMorf->getFrame() >= l_HIO.field_0x98 + 15) {
+src/d/actor/d_a_e_fm.cpp:950:            i_this->mpFmBrk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:951:            i_this->mpFmBtk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1120:            i_this->mpFmBrk[TEXANM_ANIMAL]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1121:            i_this->mpFmBtk[TEXANM_ANIMAL]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1129:            i_this->mpFmBrk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1130:            i_this->mpFmBtk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1407:            i_this->mpFmBrk[TEXANM_OP_DEMO]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1408:            i_this->mpFmBtk[TEXANM_OP_DEMO]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1620:            i_this->mpFmBrk[TEXANM_DEMO_END02]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1621:            i_this->mpFmBtk[TEXANM_DEMO_END02]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1819:                i_this->mpFmBrk[TEXANM_PUTOUT_WAIT]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1820:                i_this->mpFmBtk[TEXANM_PUTOUT_WAIT]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1881:            i_this->mpFmBrk[TEXANM_ANIMAL]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1882:            i_this->mpFmBtk[TEXANM_ANIMAL]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1906:            i_this->mpFmBrk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1907:            i_this->mpFmBtk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1943:                i_this->mpFmBrk[TEXANM_PUTOUT_WAIT]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:1944:                i_this->mpFmBtk[TEXANM_PUTOUT_WAIT]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2059:            i_this->mpFmBrk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2060:            i_this->mpFmBtk[TEXANM_FM]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2086:        i_this->mpFmBrk[TEXANM_DEMO_END01]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2087:        i_this->mpFmBtk[TEXANM_DEMO_END01]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2096:        i_this->mpFmBrk[TEXANM_DEMO_END01]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2097:        i_this->mpFmBtk[TEXANM_DEMO_END01]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2835:                i_this->mpAttackEfModelMorf[i]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2836:                i_this->mpAttackEfBtk[i]->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2839:                    i_this->mpAttackEfBrk->setFrame(0.0f);
+src/d/actor/d_a_e_fm.cpp:2873:        fire_range = (10.5f + KREG_F(6)) * (l_HIO.field_0x28 * i_this->mpAttackEfModelMorf[1]->getFrame());
+src/d/actor/d_a_e_fm.cpp:3025:        if (i_this->mpFmBrk[i_this->mPlayTexAnmNo]->getFrame() > i_this->mpFmBrk[i_this->mPlayTexAnmNo]->getEndFrame() - 2.0f) {
+src/d/actor/d_a_e_fm.cpp:3026:            i_this->mpFmBrk[i_this->mPlayTexAnmNo]->setFrame(i_this->mpFmBrk[i_this->mPlayTexAnmNo]->getEndFrame() - 2.0f);
+src/d/actor/d_a_e_fm.cpp:3029:        if (i_this->mpFmBtk[i_this->mPlayTexAnmNo]->getFrame() > i_this->mpFmBtk[i_this->mPlayTexAnmNo]->getEndFrame() - 2.0f) {
+src/d/actor/d_a_e_fm.cpp:3030:            i_this->mpFmBtk[i_this->mPlayTexAnmNo]->setFrame(i_this->mpFmBtk[i_this->mPlayTexAnmNo]->getEndFrame() - 2.0f);
+src/d/actor/d_a_e_fs.cpp:301:        if (frame >= 31 && frame < 36) {
+src/d/actor/d_a_e_fs.cpp:302:            if (frame == 31) {
+src/d/actor/d_a_e_gb.cpp:313:    f32 frame = i_this->anmP->getFrame();
+src/d/actor/d_a_e_gb.cpp:344:            if (frame >= 16.0f) {
+src/d/actor/d_a_e_gb.cpp:347:            } else if (frame >= 6.0f) {
+src/d/actor/d_a_e_gb.cpp:349:                if (frame == 6.0f) {
+src/d/actor/d_a_e_gb.cpp:361:            if (frame >= 10.0f && frame <= 20.0f) {
+src/d/actor/d_a_e_gb.cpp:902:    f32 frame = i_this->flowerAnmP->getFrame();
+src/d/actor/d_a_e_gb.cpp:1041:            i_this->flowerAnmP->setFrame(47.0f);
+src/d/actor/d_a_e_ge.cpp:848:            mpMorfSO->setFrame(16.0f);
+src/d/actor/d_a_e_gi.cpp:380:        mpModelMorf->setFrame(1.0f);
+src/d/actor/d_a_e_gi.cpp:412:        if (mpModelMorf->getFrame() >= 14.0f) {
+src/d/actor/d_a_e_gi.cpp:413:            if (mpModelMorf->getFrame() >= 40.0f) {
+src/d/actor/d_a_e_gi.cpp:489:        f32 anm_frame = mpModelMorf->getFrame();
+src/d/actor/d_a_e_gi.cpp:557:        if (mpModelMorf->getFrame() < 70.0f) {
+src/d/actor/d_a_e_gi.cpp:561:        } else if (mpModelMorf->getFrame() <= 80.0f) {
+src/d/actor/d_a_e_gi.cpp:675:        if (mpModelMorf->getFrame() >= 45.0f) {
+src/d/actor/d_a_e_gm.cpp:700:            if (mpModelMorf->getFrame() > 73.0f) {
+src/d/actor/d_a_e_gm.cpp:724:            } else if (mpModelMorf->getFrame() > 12.0f) {
+src/d/actor/d_a_e_hb.cpp:344:        i_this->modelMorf->setFrame(15.0f);
+src/d/actor/d_a_e_hm.cpp:295:    f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_e_hm.cpp:305:    if (mAnm_p->getFrame() > 30.0f) {
+src/d/actor/d_a_e_hm.cpp:332:        if (mAnm_p->getFrame() > 15.0f) {
+src/d/actor/d_a_e_hm.cpp:333:            mAnm_p->setFrame(15.0f);
+src/d/actor/d_a_e_hm.cpp:629:            if (mAnm_p->getFrame() > 10.0f) {
+src/d/actor/d_a_e_hm.cpp:648:        if (mAnm_p->getFrame() == 0.0f) {
+src/d/actor/d_a_e_hm.cpp:757:        if (mAnm_p->getFrame() < 70.0f) {
+src/d/actor/d_a_e_hm.cpp:760:        } else if (mAnm_p->getFrame() == 70.0f) {
+src/d/actor/d_a_e_hm.cpp:762:                mAnm_p->setFrame(69.0f);
+src/d/actor/d_a_e_hm.cpp:767:                mpBrkAnm->setFrame(yREG_F(19));
+src/d/actor/d_a_e_hm.cpp:841:    f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_e_hm.cpp:858:        if (mAnm_p->getFrame() > 30.0f) {
+src/d/actor/d_a_e_hm.cpp:912:            mAnm_p->setFrame(yREG_F(10));
+src/d/actor/d_a_e_hm.cpp:936:    f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_e_hm.cpp:944:            if (frame == 31.0f) {
+src/d/actor/d_a_e_hm.cpp:952:            } else if (frame > 32.0f) {
+src/d/actor/d_a_e_hm.cpp:980:    f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_e_hm.cpp:981:    if (frame > yREG_F(1) + 21.0f) {
+src/d/actor/d_a_e_hm.cpp:1191:                    (field_0x5d4 != 2 || !(mAnm_p->getFrame() > 33.0f)))
+src/d/actor/d_a_e_hm.cpp:1194:                } else if (field_0x5d4 == 2 && mAnm_p->getFrame() > 33.0f) {
+src/d/actor/d_a_e_hm.cpp:1205:        if (mAnm_p->getFrame() > 21.0f) {
+src/d/actor/d_a_e_hm.cpp:1226:        if (mAnm_p->getFrame() > 21.0f) {
+src/d/actor/d_a_e_hm.cpp:1261:    if (mAnm_p->getFrame() > 21.0f) {
+src/d/actor/d_a_e_hp.cpp:656:        if ((s32)mpMorfSO->getFrame() >= 16 && (s32)mpMorfSO->getFrame() <= 23) {
+src/d/actor/d_a_e_hp.cpp:663:            if ((s32)mpMorfSO->getFrame() >= 28) {
+src/d/actor/d_a_e_hp.cpp:1036:        if (mpMorfSO->getFrame() >= 23.0f) {
+src/d/actor/d_a_e_hp.cpp:1037:            if (mpMorfSO->getFrame() <= 42.0f) {
+src/d/actor/d_a_e_hz.cpp:667:            if (mpMorfSO->getFrame() > 60.0f && mpMorfSO->getFrame() < 100.0f && checkHideStart()) {
+src/d/actor/d_a_e_hz.cpp:668:                mpMorfSO->setFrame(100.0f);
+src/d/actor/d_a_e_hz.cpp:746:            if (mpMorfSO->getFrame() >= 35.0f) {
+src/d/actor/d_a_e_hz.cpp:755:                    mpMorfSO->setFrame(35.0f);
+src/d/actor/d_a_e_hz.cpp:757:            } else if (mpMorfSO->getFrame() >= 23.0f) {
+src/d/actor/d_a_e_hz.cpp:866:    f32 frame = mpMorfSO->getFrame();
+src/d/actor/d_a_e_hz.cpp:893:        frame = 6.0f - frame / 3.0f;
+src/d/actor/d_a_e_hz.cpp:894:        if (frame < 0.0f) {
+src/d/actor/d_a_e_hz.cpp:895:            frame = 0.0f;
+src/d/actor/d_a_e_hz.cpp:908:            mpMorfSO->setFrame(15.0f);
+src/d/actor/d_a_e_hz.cpp:917:            if (frame < 23.0f) {
+src/d/actor/d_a_e_hz.cpp:918:                mpMorfSO->setFrame(23.0f);
+src/d/actor/d_a_e_hz.cpp:978:        if (frame < 38.0f) {
+src/d/actor/d_a_e_hz.cpp:1150:        mpMorfSO->setFrame(0.0f);
+src/d/actor/d_a_e_hzelda.cpp:532:            i_this->mpModelMorf->setFrame(15.0f);
+src/d/actor/d_a_e_is.cpp:309:        a_this->model_morf->setFrame(0.0f);
+src/d/actor/d_a_e_kg.cpp:191:            if (frame <= 3 || ((frame >= 11 && frame <= 18) || (frame >= 26))) {
+src/d/actor/d_a_e_kg.cpp:231:            if (frame <= 3 || ((frame >= 11 && frame <= 18) || (frame >= 26))) {
+src/d/actor/d_a_e_kg.cpp:251:            if (frame == 50) {
+src/d/actor/d_a_e_kg.cpp:255:            if (frame < 58) {
+src/d/actor/d_a_e_kg.cpp:259:            if (frame >= 63) {
+src/d/actor/d_a_e_kg.cpp:609:    i_this->mpBtp->setFrame(i_this->field_0x670);
+src/d/actor/d_a_e_kk.cpp:455:        if ((s32)mpWeaponMorfSO->getFrame() >= 0x22) {
+src/d/actor/d_a_e_kk.cpp:533:        if ((s32)mpMorfSO->getFrame() == 0x19 || (s32)mpMorfSO->getFrame() == 0x31) {
+src/d/actor/d_a_e_kk.cpp:560:            !fopAcM_otherBgCheck(this, dComIfGp_getPlayer(0)) && (s32)mpMorfSO->getFrame() < 0x17 &&
+src/d/actor/d_a_e_kk.cpp:569:        if ((s32)mpMorfSO->getFrame() == 0x17) {
+src/d/actor/d_a_e_kk.cpp:577:        if ((s32)mpMorfSO->getFrame() == 9 || (s32)mpMorfSO->getFrame() == 0x17 ||
+src/d/actor/d_a_e_kk.cpp:578:            (s32)mpMorfSO->getFrame() == 0x22 || (s32)mpMorfSO->getFrame() == 0x3D)
+src/d/actor/d_a_e_kk.cpp:593:        if ((s32)mpWeaponMorfSO->getFrame() >= 0x22) {
+src/d/actor/d_a_e_kk.cpp:613:        ((s32)mpMorfSO->getFrame() == 9 || (s32)mpMorfSO->getFrame() == 0x12))
+src/d/actor/d_a_e_kk.cpp:668:        if ((s32)mpWeaponMorfSO->getFrame() >= 0x22) {
+src/d/actor/d_a_e_kk.cpp:689:    if (field_0x764 == 7 && ((s32)mpMorfSO->getFrame() == 9 || (s32)mpMorfSO->getFrame() == 0x13)) {
+src/d/actor/d_a_e_kk.cpp:835:        if ((s32)mpMorfSO->getFrame() == 0x18) {
+src/d/actor/d_a_e_kk.cpp:842:        if (field_0x764 == 5 && (s32)mpMorfSO->getFrame() == 0x1B) {
+src/d/actor/d_a_e_kk.cpp:857:    if ((s32)mpMorfSO->getFrame() < 0x19) {
+src/d/actor/d_a_e_kk.cpp:860:    } else if ((s32)mpMorfSO->getFrame() >= 0x21) {
+src/d/actor/d_a_e_kk.cpp:864:    if (field_0x764 == 0x1C && ((s32)mpMorfSO->getFrame() == 0 || (s32)mpMorfSO->getFrame() == 10))
+src/d/actor/d_a_e_kr.cpp:420:    s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_kr.cpp:425:            if (frame == 9 + TREG_S(0)) {
+src/d/actor/d_a_e_kr.cpp:576:        s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_kr.cpp:577:        if (i_this->field_0x69c[0] == 0 && frame == 9 + TREG_S(0)) {
+src/d/actor/d_a_e_kr.cpp:597:        s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_kr.cpp:598:        if (frame == 34) {
+src/d/actor/d_a_e_kr.cpp:692:    s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_kr.cpp:807:                i_this->field_0x6c4 < TREG_F(6) * 10.0f + 400.0f && frame >= 14 + BREG_S(7))
+src/d/actor/d_a_e_kr.cpp:860:        if (frame == 3) {
+src/d/actor/d_a_e_kr.cpp:864:        if (frame == 15 + TREG_S(5)) {
+src/d/actor/d_a_e_kr.cpp:869:        if (frame == 25 + TREG_S(6)) {
+src/d/actor/d_a_e_kr.cpp:874:        if (frame <= 23) {
+src/d/actor/d_a_e_kr.cpp:906:            if (frame >= 15 && frame <= 27) {
+src/d/actor/d_a_e_kr.cpp:932:        if ((s32)i_this->mpMorf->getFrame() == 24) {
+src/d/actor/d_a_e_kr.cpp:1004:    s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_kr.cpp:1134:        if (frame >= 10) {
+src/d/actor/d_a_e_mb.cpp:211:    f32 anm_frame = i_this->mpModelMorf->getFrame();
+src/d/actor/d_a_e_mf.cpp:553:                i_this->mpModelMorf->setFrame(cM_rndF(75.0f));
+src/d/actor/d_a_e_mf.cpp:1047:            if (frame == 7 || frame == 21) {
+src/d/actor/d_a_e_mf.cpp:1067:            if (frame == 13 || frame == 27) {
+src/d/actor/d_a_e_mf.cpp:1070:                if (frame == 13) {
+src/d/actor/d_a_e_mf.cpp:1382:            if (frame < 15 || (frame >= 34 && frame <= 43)) {
+src/d/actor/d_a_e_mf.cpp:1395:            if (frame >= 15 && frame <= 20) {
+src/d/actor/d_a_e_mf.cpp:1400:            if (frame >= 34 && frame <= 43) {
+src/d/actor/d_a_e_mf.cpp:1460:            i_this->mpModelMorf->setFrame(20.0f);
+src/d/actor/d_a_e_mf.cpp:1467:            if (frame >= 33 && frame <= 41) {
+src/d/actor/d_a_e_mf.cpp:1486:                i_this->mpModelMorf->setFrame(20.0f);
+src/d/actor/d_a_e_mf.cpp:1491:            if (frame == 40) {
+src/d/actor/d_a_e_mf.cpp:1493:            } else if (frame == 43) {
+src/d/actor/d_a_e_mf.cpp:1530:            if (i_this->mpModelMorf->getFrame() >= 5.0f) {
+src/d/actor/d_a_e_mf.cpp:1547:            if (i_this->mpModelMorf->getFrame() >= 8.0f) {
+src/d/actor/d_a_e_mf.cpp:1908:            if (i_this->mpModelMorf->getFrame() >= 35.0f) {
+src/d/actor/d_a_e_mf.cpp:2737:        if (frame == 35) {
+src/d/actor/d_a_e_mf.cpp:2739:        } else if (frame == 28) {
+src/d/actor/d_a_e_mf.cpp:2743:        if (frame == 18) {
+src/d/actor/d_a_e_mf.cpp:2747:        if (frame == 10) {
+src/d/actor/d_a_e_mf.cpp:2751:        if (frame == 24) {
+src/d/actor/d_a_e_mf.cpp:2755:        if (frame == 3) {
+src/d/actor/d_a_e_mf.cpp:2757:        } else if (frame == 18) {
+src/d/actor/d_a_e_mf.cpp:2761:        if (frame == 10) {
+src/d/actor/d_a_e_mf.cpp:2763:        } else if (frame == 4) {
+src/d/actor/d_a_e_mf.cpp:2768:        if (frame == 15) {
+src/d/actor/d_a_e_mf.cpp:2771:    } else if (i_this->mAnmID == ANM_WAIT_04 && frame == 15) {
+src/d/actor/d_a_e_mk.cpp:340:            // At frame 9 of the mk_jump_start animation, Ook's feet begin lifting off the ground
+src/d/actor/d_a_e_mk.cpp:341:            if (frame == TREG_S(0) + 9) {
+src/d/actor/d_a_e_mk.cpp:416:            if (frame == 5) {
+src/d/actor/d_a_e_mk.cpp:501:        if (frame == hREG_S(2) + 17) {
+src/d/actor/d_a_e_mk.cpp:505:        if (frame == hREG_S(3) + 27) {
+src/d/actor/d_a_e_mk.cpp:509:        if (frame == hREG_S(4) + 27) {
+src/d/actor/d_a_e_mk.cpp:535:        if (frame == hREG_S(2) + 17) {
+src/d/actor/d_a_e_mk.cpp:539:        if (frame == hREG_S(3) + 27) {
+src/d/actor/d_a_e_mk.cpp:543:        if (frame == hREG_S(4) + 27) {
+src/d/actor/d_a_e_mk.cpp:681:            if (frame >= TREG_S(3) + 14) {
+src/d/actor/d_a_e_mk.cpp:704:            if (frame == 22 || frame == 32) {
+src/d/actor/d_a_e_mk.cpp:708:            if (frame >= 45) {
+src/d/actor/d_a_e_mk.cpp:729:            if (i_this->anmNo == dRes_INDEX_E_MK_BCK_MK_SPRING_e && ((frame == 9 || (frame == 24)) || (frame == 35))) {
+src/d/actor/d_a_e_mk.cpp:866:            if (frame == hREG_S(3) + 8) {
+src/d/actor/d_a_e_mk.cpp:871:            if (frame == hREG_S(4) + 8) {
+src/d/actor/d_a_e_mk.cpp:875:            if (frame == TREG_S(5) + 14) {
+src/d/actor/d_a_e_mk.cpp:973:            if (frame == AREG_S(1) + 1 || frame == AREG_S(2) + 18) {
+src/d/actor/d_a_e_mk.cpp:1061:            if (frame == 144) {
+src/d/actor/d_a_e_mk.cpp:1164:            if (frame == hREG_S(3) + 8) {
+src/d/actor/d_a_e_mk.cpp:1168:            if (frame == hREG_S(4) + 8) {
+src/d/actor/d_a_e_mk.cpp:1172:            if (frame == hREG_S(5) + 14) {
+src/d/actor/d_a_e_mk.cpp:2639:        i_this->btpP->setFrame(i_this->btpFrame + 12.0f);
+src/d/actor/d_a_e_mm.cpp:401:        if ((int)i_this->modelMorf->getFrame() == 15 || (int)i_this->modelMorf->getFrame() == 28) {
+src/d/actor/d_a_e_mm.cpp:499:        if ((int)i_this->modelMorf->getFrame() == 3) {
+src/d/actor/d_a_e_mm.cpp:513:        if ((int)i_this->modelMorf->getFrame() == 9 || (int)i_this->modelMorf->getFrame() == 19) {
+src/d/actor/d_a_e_mm.cpp:551:        if ((int)i_this->modelMorf->getFrame() == 5 || (int)i_this->modelMorf->getFrame() == 8) {
+src/d/actor/d_a_e_mm.cpp:666:        if ((int)i_this->modelMorf->getFrame() == 16) {
+src/d/actor/d_a_e_mm.cpp:686:    if ((int)i_this->modelMorf->getFrame() == 9 || (int)i_this->modelMorf->getFrame() == 19) {
+src/d/actor/d_a_e_mm.cpp:727:        if ((int)i_this->modelMorf->getFrame() == 25) {
+src/d/actor/d_a_e_nz.cpp:156:        if (i_this->mpMorf->getFrame() >= 1.0f && i_this->mpMorf->getFrame() <= 7.0f) {
+src/d/actor/d_a_e_oc.cpp:1323:                if (mpMorf->getFrame() >= 20.0f && searchPlayerShakeHead()) {
+src/d/actor/d_a_e_oc.cpp:1336:    if (checkBck(5) && mpMorf->getFrame() >= 30.0f && mpMorf->getFrame() <= 45.0f) {
+src/d/actor/d_a_e_oc.cpp:1369:    int frame_ctrl = (mpMorf->getFrame() - 9.0f);
+src/d/actor/d_a_e_oc.cpp:1437:            if (mpMorf->getFrame() >= 14.0f && mpMorf->getFrame() <= 22.0f) {
+src/d/actor/d_a_e_oc.cpp:1442:            if (mpMorf->getFrame() >= 22.0f) {
+src/d/actor/d_a_e_oc.cpp:1642:                    mpMorf->setFrame(5.0f);
+src/d/actor/d_a_e_ph.cpp:813:        if (mpMorf->getFrame() > 126.0f && mAnmID == ANM_APPEAR) {
+src/d/actor/d_a_e_pm.cpp:734:        if (mpMorf->getFrame() > 5.0f) {
+src/d/actor/d_a_e_pm.cpp:982:        if (mpMorf->getFrame() > 5.0f) {
+src/d/actor/d_a_e_pm.cpp:1122:        if (mpMorf->getFrame() > 5.0f) {
+src/d/actor/d_a_e_pm.cpp:1198:        if (mpMorf->getFrame() > 20.0f) {
+src/d/actor/d_a_e_pm.cpp:1900:        if (mpMorf->getFrame() < 196.0f && mAnm == ANM_END) {
+src/d/actor/d_a_e_pm.cpp:1916:        if (mpMorf->getFrame() == 195.0f && mAnm == ANM_END) {
+src/d/actor/d_a_e_pm.cpp:1930:        if (mpMorf->getFrame() > 180.0f) {
+src/d/actor/d_a_e_po.cpp:277:        if ((int)i_this->mpMorf->getFrame() == 0x41) {
+src/d/actor/d_a_e_po.cpp:509:    s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_po.cpp:536:        if (frame == 6) {
+src/d/actor/d_a_e_po.cpp:542:        if (frame >= 23 && frame <= 33) {
+src/d/actor/d_a_e_po.cpp:543:            if (frame == 23) {
+src/d/actor/d_a_e_po.cpp:549:        } else if (frame >= 13 && frame <= 43) {
+src/d/actor/d_a_e_po.cpp:904:        if (i_this->field_0x7DD == FALSE && (int)i_this->mpMorf->getFrame() == 27) {
+src/d/actor/d_a_e_po.cpp:1201:        if ((int)i_this->mpMorf->getFrame() < 1) {
+src/d/actor/d_a_e_po.cpp:1507:        if ((int)i_this->mpMorf->getFrame() == 65) {
+src/d/actor/d_a_e_po.cpp:1941:            if (mArg0Check(i_this, 8) != 0 && (int)i_this->mpMorf->getFrame() == 10) {
+src/d/actor/d_a_e_po.cpp:1944:            if (mArg0Check(i_this, 9) != 0 && (int)i_this->mpMorf->getFrame() == 1) {
+src/d/actor/d_a_e_po.cpp:1947:            if ((int)i_this->mpMorf->getFrame() == 40) {
+src/d/actor/d_a_e_po.cpp:1952:            if ((int)i_this->mpMorf->getFrame() == 43) {
+src/d/actor/d_a_e_po.cpp:2713:        if (i_this->mAnmID == ANM_ATTACK && (int)i_this->mpMorf->getFrame() > 14 &&
+src/d/actor/d_a_e_po.cpp:2714:            (int)i_this->mpMorf->getFrame() < 50)
+src/d/actor/d_a_e_pz.cpp:509:        mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_pz.cpp:616:        if ((int)mpModelMorf->getFrame() > 27) {
+src/d/actor/d_a_e_pz.cpp:661:        if ((mAnm == 0xC && (int)mpModelMorf->getFrame() == 34) || (mAnm == 9 && (int)mpModelMorf->getFrame() == 20)) {
+src/d/actor/d_a_e_pz.cpp:666:            if ((int)mpModelMorf->getFrame() < 36) {
+src/d/actor/d_a_e_pz.cpp:671:            if ((int)mpModelMorf->getFrame() == 36) {
+src/d/actor/d_a_e_pz.cpp:962:        mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_pz.cpp:1212:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_pz.cpp:1312:                    mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_pz.cpp:1324:                mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_pz.cpp:1380:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_pz.cpp:1454:        if ((mAnm == 0xC && (int)mpModelMorf->getFrame() == 34) || (mAnm == 9 && (int)mpModelMorf->getFrame() == 20)) {
+src/d/actor/d_a_e_pz.cpp:1460:            if ((int)mpModelMorf->getFrame() == 36 || (field_0x7d8 == 5 && (int)mpModelMorf->getFrame() == 23)) {
+src/d/actor/d_a_e_pz.cpp:1467:                if ((int)mpModelMorf->getFrame() < 36 && (field_0x7d8 != 5)) {
+src/d/actor/d_a_e_pz.cpp:1622:        if ((int)mpModelMorf->getFrame() == 135) {
+src/d/actor/d_a_e_pz.cpp:1626:        if ((int)mpModelMorf->getFrame() < 170) {
+src/d/actor/d_a_e_pz.cpp:1706:        if ((int)mpModelMorf->getFrame() == 135) {
+src/d/actor/d_a_e_pz.cpp:1710:        if ((int)mpModelMorf->getFrame() < 170) {
+src/d/actor/d_a_e_pz.cpp:1723:            if ((int)mpModelMorf->getFrame() >= 125) {
+src/d/actor/d_a_e_rd.cpp:266:                i_this->mpModelMorf->setFrame(cM_rndF(30.0f));
+src/d/actor/d_a_e_rd.cpp:688:        i_this->mpMorfBowAnm->setFrame(10.0f);
+src/d/actor/d_a_e_rd.cpp:1009:                if ((int)i_this->mpModelMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rd.cpp:1144:                if ((int)i_this->mpModelMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rd.cpp:1309:            if (frame == 30) {
+src/d/actor/d_a_e_rd.cpp:1310:                i_this->mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_rd.cpp:1313:                i_this->mpModelMorf->setFrame(30.0f);
+src/d/actor/d_a_e_rd.cpp:1319:            if (frame >= 44 && frame <= 47) {
+src/d/actor/d_a_e_rd.cpp:1393:            if ((int)i_this->mpModelMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rd.cpp:1496:            if (frame >= 10) {
+src/d/actor/d_a_e_rd.cpp:1500:            if (frame == 20) {
+src/d/actor/d_a_e_rd.cpp:1528:            if (frame <= 3) {
+src/d/actor/d_a_e_rd.cpp:1533:            if (frame == 2) {
+src/d/actor/d_a_e_rd.cpp:1602:            if (frame >= 10) {
+src/d/actor/d_a_e_rd.cpp:1606:            if (frame == 20) {
+src/d/actor/d_a_e_rd.cpp:1636:            if (frame <= 3) {
+src/d/actor/d_a_e_rd.cpp:1641:            if (frame == 2) {
+src/d/actor/d_a_e_rd.cpp:1678:            if (frame >= 10) {
+src/d/actor/d_a_e_rd.cpp:1682:            if (frame == 20) {
+src/d/actor/d_a_e_rd.cpp:1703:            if (frame <= 3) {
+src/d/actor/d_a_e_rd.cpp:1707:            if (frame == 2) {
+src/d/actor/d_a_e_rd.cpp:1738:            if (frame == 6) {
+src/d/actor/d_a_e_rd.cpp:1907:                    if ((int)i_this->mpModelMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rd.cpp:2167:            if (frame <= 23) {
+src/d/actor/d_a_e_rd.cpp:2189:            if (frame == 14) {
+src/d/actor/d_a_e_rd.cpp:2215:            if (frame <= 3 + XREG_S(5)) {
+src/d/actor/d_a_e_rd.cpp:2219:            if (frame == 2 + XREG_S(7)) {
+src/d/actor/d_a_e_rd.cpp:2317:            if ((int)i_this->mpModelMorf->getFrame() == 21) {
+src/d/actor/d_a_e_rd.cpp:2472:            if ((int)i_this->mpModelMorf->getFrame() <= 10) {
+src/d/actor/d_a_e_rd.cpp:2481:                if ((int)i_this->mpModelMorf->getFrame() == 10) {
+src/d/actor/d_a_e_rd.cpp:2886:            if (i_this->mpModelMorf->getFrame() >= 35.0f) {
+src/d/actor/d_a_e_rd.cpp:3263:            if (frame >= 10) {
+src/d/actor/d_a_e_rd.cpp:3267:            if (frame == 20) {
+src/d/actor/d_a_e_rd.cpp:3291:            if (frame <= 3) {
+src/d/actor/d_a_e_rd.cpp:3296:            if (frame == 2) {
+src/d/actor/d_a_e_rd.cpp:3590:            if ((int)i_this->mpModelMorf->getFrame() == 21) {
+src/d/actor/d_a_e_rd.cpp:4398:            if (frame >= 10) {
+src/d/actor/d_a_e_rd.cpp:4402:            if (frame == 20) {
+src/d/actor/d_a_e_rd.cpp:4426:            if (frame <= 3) {
+src/d/actor/d_a_e_rd.cpp:4431:            if (frame == 2) {
+src/d/actor/d_a_e_rd.cpp:4636:            if (frame > 60 && frame < 200 && (((i_this->field_0x970 & 7) == 0) || bVar1) && pl_check(i_this, fVar1, sVar1)) {
+src/d/actor/d_a_e_rd.cpp:6292:        if (i_this->mAnmID == BCK_RD_RUN && (frame == 1 || frame == 10)) {
+src/d/actor/d_a_e_rd.cpp:6296:        if (i_this->mAnmID == BCK_RD_KYORO2 && (frame == 5 || frame == 26)) {
+src/d/actor/d_a_e_rd.cpp:6300:        if ((i_this->mAnmID == BCK_RD_SHOOT_READY && frame == 10) || (i_this->mAnmID == BCK_RD_RSHOOT_READY && frame == 5) || (i_this->mAnmID == BCK_RD_ARMAMENT && frame == 10)) {
+src/d/actor/d_a_e_rdb.cpp:296:        if (frame > 63 && frame < 73) {
+src/d/actor/d_a_e_rdb.cpp:300:        if (frame == 68) {
+src/d/actor/d_a_e_rdb.cpp:333:        if (frame > 61 && frame < 72) {
+src/d/actor/d_a_e_rdb.cpp:426:            if (frame > 15) {
+src/d/actor/d_a_e_rdb.cpp:427:                i_this->mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_rdb.cpp:503:        if (frame >= 25 && frame <= 35) {
+src/d/actor/d_a_e_rdb.cpp:507:        if (frame >= 35 && frame <= 42) {
+src/d/actor/d_a_e_rdb.cpp:538:        if (frame == 3) {
+src/d/actor/d_a_e_rdb.cpp:551:        if (frame == 141) {
+src/d/actor/d_a_e_rdb.cpp:607:        if (frame == 12) {
+src/d/actor/d_a_e_rdb.cpp:619:        if (frame == 50) {
+src/d/actor/d_a_e_rdb.cpp:657:        if ((frame >= 128 && frame <= 142) || (frame >= 166 && frame <= 175)) {
+src/d/actor/d_a_e_rdy.cpp:266:        i_this->mpMorf->setFrame(cM_rndF(30.0f));
+src/d/actor/d_a_e_rdy.cpp:604:        i_this->mpBowMorf->setFrame(10.0f);
+src/d/actor/d_a_e_rdy.cpp:772:        if ((int)i_this->mpMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rdy.cpp:890:        if ((int)i_this->mpMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rdy.cpp:1053:        if (frame == 30) {
+src/d/actor/d_a_e_rdy.cpp:1054:            i_this->mpMorf->setFrame(0.0f);
+src/d/actor/d_a_e_rdy.cpp:1057:            i_this->mpMorf->setFrame(30.0f);
+src/d/actor/d_a_e_rdy.cpp:1063:        if (frame >= 44 && frame <= 47) {
+src/d/actor/d_a_e_rdy.cpp:1128:        if ((int)i_this->mpMorf->getFrame() == 11) {
+src/d/actor/d_a_e_rdy.cpp:1238:        if (frame >= 10) {
+src/d/actor/d_a_e_rdy.cpp:1241:        if (frame == 20) {
+src/d/actor/d_a_e_rdy.cpp:1269:        if (frame <= 3 + XREG_S(5)) {
+src/d/actor/d_a_e_rdy.cpp:1273:        if (frame == 2 + XREG_S(7)) {
+src/d/actor/d_a_e_rdy.cpp:1360:        if (frame >= 10) {
+src/d/actor/d_a_e_rdy.cpp:1363:        if (frame == 20) {
+src/d/actor/d_a_e_rdy.cpp:1395:        if (frame <= 3 + XREG_S(5)) {
+src/d/actor/d_a_e_rdy.cpp:1399:        if (frame == 2 + XREG_S(7)) {
+src/d/actor/d_a_e_rdy.cpp:1462:        if (frame >= 10) {
+src/d/actor/d_a_e_rdy.cpp:1465:        if (frame == 20) {
+src/d/actor/d_a_e_rdy.cpp:1486:        if (frame <= 3 + XREG_S(5)) {
+src/d/actor/d_a_e_rdy.cpp:1489:        if (frame == 2 + XREG_S(7)) {
+src/d/actor/d_a_e_rdy.cpp:1527:        if (frame == 6) {
+src/d/actor/d_a_e_rdy.cpp:1651:        if (frame == 15 + TREG_S(7)) {
+src/d/actor/d_a_e_rdy.cpp:1657:        if (frame == 30 + TREG_S(8)) {
+src/d/actor/d_a_e_rdy.cpp:1847:        if (frame == 14) {
+src/d/actor/d_a_e_rdy.cpp:1868:        if (frame <= 3 + XREG_S(5)) {
+src/d/actor/d_a_e_rdy.cpp:1871:        if (frame == 2 + XREG_S(7)) {
+src/d/actor/d_a_e_rdy.cpp:1966:        if ((int)i_this->mpMorf->getFrame() <= 10) {
+src/d/actor/d_a_e_rdy.cpp:1975:            if ((int)i_this->mpMorf->getFrame() == 10) {
+src/d/actor/d_a_e_rdy.cpp:2319:        if (i_this->mpMorf->getFrame() >= 35.0f) {
+src/d/actor/d_a_e_rdy.cpp:2629:        if (frame >= 10) {
+src/d/actor/d_a_e_rdy.cpp:2632:        if (frame == 20) {
+src/d/actor/d_a_e_rdy.cpp:2654:        if (frame <= 3 + XREG_S(5)) {
+src/d/actor/d_a_e_rdy.cpp:2658:        if (frame == 2 + XREG_S(7)) {
+src/d/actor/d_a_e_rdy.cpp:4459:    if (i_this->mAnm == ANM_RUN && (frame == 1 || frame == 10)) {
+src/d/actor/d_a_e_rdy.cpp:4462:    if (i_this->mAnm == ANM_KYORO2 && (frame == 5 || frame == 26)) {
+src/d/actor/d_a_e_rdy.cpp:4465:    if ((i_this->mAnm == ANM_SHOOT_READY && frame == 10)
+src/d/actor/d_a_e_rdy.cpp:4466:        || (i_this->mAnm == ANM_RSHOOT_READY && frame == 5)
+src/d/actor/d_a_e_rdy.cpp:4467:        || (i_this->mAnm == ANM_ARMAMENT && frame == 10))
+src/d/actor/d_a_e_s1.cpp:574:        i_this->mpMorf->setFrame(cM_rndF(10.0f));
+src/d/actor/d_a_e_s1.cpp:660:        i_this->mpMorf->setFrame(cM_rndF(15.0f));
+src/d/actor/d_a_e_s1.cpp:969:            i_this->mpMorf->setFrame(10.0f);
+src/d/actor/d_a_e_sb.cpp:353:            if (mpMorf->getFrame() < 53.0f && field_0x5c0 == 2) {
+src/d/actor/d_a_e_sb.cpp:357:            if (mpMorf->getFrame() > 53.0f) {
+src/d/actor/d_a_e_sb.cpp:379:            if (64.0f == mpMorf->getFrame()) {
+src/d/actor/d_a_e_sb.cpp:671:            if (mpMorf->getFrame() == 0.0f) {
+src/d/actor/d_a_e_sb.cpp:746:            if (2.0f == mpMorf->getFrame()) {
+src/d/actor/d_a_e_sf.cpp:560:            if (frame >= 15 && frame <= 22) {
+src/d/actor/d_a_e_sf.cpp:564:            if (frame == 15) {
+src/d/actor/d_a_e_sf.cpp:604:            if (frame < 58) {
+src/d/actor/d_a_e_sf.cpp:608:            if (frame == (int)(TREG_F(7) + 10.0f)) {
+src/d/actor/d_a_e_sf.cpp:610:                i_this->mpModelMorf->setFrame(55.0f);
+src/d/actor/d_a_e_sf.cpp:613:            if (frame >= 81 && frame <= 86) {
+src/d/actor/d_a_e_sf.cpp:617:            if (frame == 78) {
+src/d/actor/d_a_e_sf.cpp:621:            if (frame >= (int)(TREG_F(8) + 100.0f)) {
+src/d/actor/d_a_e_sf.cpp:665:            if (i_this->mpModelMorf->getFrame() >= 8.0f) {
+src/d/actor/d_a_e_sf.cpp:809:            i_this->mpModelMorf->setFrame(39.0f);
+src/d/actor/d_a_e_sm.cpp:813:            if (mpModelMorf->getFrame() >= 2.0f) {
+src/d/actor/d_a_e_sm.cpp:872:            if (mpModelMorf->getFrame() >= 2.0f) {
+src/d/actor/d_a_e_st.cpp:805:            if (frame >= 11 && frame <= 23) {
+src/d/actor/d_a_e_st.cpp:851:            if (frame >= 0x1E && frame <= 0x2A) {
+src/d/actor/d_a_e_st.cpp:859:            if (frame >= 0x1E && frame <= YREG_S(4) + 0x37) {
+src/d/actor/d_a_e_st.cpp:908:            if (frame >= 0x17) {
+src/d/actor/d_a_e_st.cpp:1139:            i_this->mpModelMorf->setFrame(cM_rndF(20.0f));
+src/d/actor/d_a_e_st.cpp:1230:            if (frame >= 0x1E && frame <= 0x2A) {
+src/d/actor/d_a_e_st.cpp:1238:            if (frame >= 0x1E && frame <= YREG_S(4) + 0x37) {
+src/d/actor/d_a_e_st.cpp:1342:                i_this->mpModelMorf->setFrame(cM_rndF(20.0f));
+src/d/actor/d_a_e_st.cpp:1473:            if (frame >= 0x1E && frame <= 0x2A) {
+src/d/actor/d_a_e_st.cpp:1481:            if (frame >= 0x1E && frame <= YREG_S(4) + 0x37) {
+src/d/actor/d_a_e_st.cpp:1878:            if (frame >= 0x1A && frame <= 0x22) {
+src/d/actor/d_a_e_th.cpp:285:    f32 anm_frame = i_this->mpModelMorf->getFrame();
+src/d/actor/d_a_e_th.cpp:372:        if (NREG_S(1) + 25 == (int)i_this->mpModelMorf->getFrame()) {
+src/d/actor/d_a_e_th.cpp:418:        if (NREG_S(2) + 9 == (int)i_this->mpModelMorf->getFrame()) {
+src/d/actor/d_a_e_th_ball.cpp:553:            i_this->field_0x15c0 = master->mpModelMorf->getFrame();
+src/d/actor/d_a_e_tk.cpp:337:            if ((int)i_this->mpMorf->getFrame() == 24) {
+src/d/actor/d_a_e_tk.cpp:342:            if ((int)i_this->mpMorf->getFrame() == 28) {
+src/d/actor/d_a_e_tk.cpp:454:        if (i_this->mpMorf->getFrame() > 10.0f) {
+src/d/actor/d_a_e_tk2.cpp:246:        if ((int)i_this->mpMorf->getFrame() == 0x18) {
+src/d/actor/d_a_e_tk2.cpp:251:        if ((int)i_this->mpMorf->getFrame() == 0x1c) {
+src/d/actor/d_a_e_tk2.cpp:282:        if (i_this->mpMorf->getFrame() > 10.0f) {
+src/d/actor/d_a_e_vt.cpp:319:    f32 anm_frame = mpMorf->getFrame();
+src/d/actor/d_a_e_vt.cpp:1407:        mpWeaponBrk->setFrame(0.0f);
+src/d/actor/d_a_e_vt.cpp:1494:            mpWeaponBrk->setFrame(0.0f);
+src/d/actor/d_a_e_vt.cpp:1804:    f32 anm_frame = mpMorf->getFrame();
+src/d/actor/d_a_e_vt.cpp:1934:    f32 anm_frame = mpMorf->getFrame();
+src/d/actor/d_a_e_vt.cpp:2634:    f32 anm_frame = mpMorf->getFrame();
+src/d/actor/d_a_e_vt.cpp:2682:        if (mpMorf->getFrame() <= 15.0f) {
+src/d/actor/d_a_e_vt.cpp:2716:        if (mpMorf->getFrame() < 40.0f) {
+src/d/actor/d_a_e_vt.cpp:3006:            mpEndEfMorf->setFrame(0.0f);
+src/d/actor/d_a_e_vt.cpp:3007:            mpEndEfBrk->setFrame(0.0f);
+src/d/actor/d_a_e_warpappear.cpp:655:            if (ihasiActor->mpBtkAnm->getFrame() >= 140.0f) {
+src/d/actor/d_a_e_wb.cpp:1136:                i_this->mpModelMorf->setFrame(cM_rndF(10.0f));
+src/d/actor/d_a_e_wb.cpp:2125:        if (frame < 15 + JREG_S(4)) {
+src/d/actor/d_a_e_wb.cpp:2626:        if ((int)i_this->mpModelMorf->getFrame() == 10) {
+src/d/actor/d_a_e_wb.cpp:3256:            i_this->mpModelMorf->setFrame(cM_rndF(10.0f));
+src/d/actor/d_a_e_ww.cpp:904:        if (mpModelMorf->getFrame() <= 5.0f && checkSideStep() != 0) {
+src/d/actor/d_a_e_ww.cpp:1311:        if (mpModelMorf->getFrame() <= 5.0f) {
+src/d/actor/d_a_e_yc.cpp:85:        if (i_this->mTimer[0] == 0 && frame == 14) {
+src/d/actor/d_a_e_yc.cpp:198:        if (i_this->mTimer[0] == 0 && frame == 14) {
+src/d/actor/d_a_e_yc.cpp:357:        if (frame == 11 && rider->mDemoMode == 0 & i_this->mDistToPlayer < 200.0f) {
+src/d/actor/d_a_e_yc.cpp:389:        if (frame == 30) {
+src/d/actor/d_a_e_yc.cpp:497:        if (i_this->mAnm == e_yc_class::ANM_HANGED_BRUSH2 && frame == 24) {
+src/d/actor/d_a_e_yd.cpp:254:    s32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_yd.cpp:272:        if (frame >= 15 && frame <= 35) {
+src/d/actor/d_a_e_yd.cpp:310:        i_this->mpMorf->setFrame(15.0f);
+src/d/actor/d_a_e_yh.cpp:345:    f32 frame = i_this->mpMorf->getFrame();
+src/d/actor/d_a_e_yh.cpp:409:        i_this->mpMorf->setFrame(15.0f);
+src/d/actor/d_a_e_yh.cpp:1514:            local_114 = 5000.0f * cM_ssin((i_this->mpMorf->getFrame() * 65536.0f) / 11.0f);
+src/d/actor/d_a_e_yk.cpp:994: *    - Applies gravity (-4.0f/frame)
+src/d/actor/d_a_e_ym.cpp:2452:            if (mpMorf->getFrame() < 36.0f) {
+src/d/actor/d_a_e_yr.cpp:530:    s32 frame;
+src/d/actor/d_a_e_yr.cpp:535:            frame == 9 + TREG_S(0))
+src/d/actor/d_a_e_yr.cpp:679:        if (frame > 15 + TREG_S(2)) {
+src/d/actor/d_a_e_yr.cpp:689:        if (frame == 44) {
+src/d/actor/d_a_e_yr.cpp:729:        if (frame >= TREG_S(3) && frame <= 9 + TREG_S(4)) {
+src/d/actor/d_a_e_yr.cpp:785:    s32 frame;
+src/d/actor/d_a_e_yr.cpp:789:        if (i_this->field_0x6a4[0] == 0 && frame == 9 + TREG_S(0)) {
+src/d/actor/d_a_e_yr.cpp:810:        if (frame == 34) {
+src/d/actor/d_a_e_yr.cpp:883:    s32 frame = i_this->mpMorfSO->getFrame();
+src/d/actor/d_a_e_yr.cpp:990:                i_this->mPlayerLatDist < 10.0f * TREG_F(6) + 400.0f && frame >= 14 + BREG_S(7))
+src/d/actor/d_a_e_yr.cpp:1036:        if (frame == 3) {
+src/d/actor/d_a_e_yr.cpp:1039:        if (frame == 15 + TREG_S(5)) {
+src/d/actor/d_a_e_yr.cpp:1043:        if (frame == 25 + TREG_S(6)) {
+src/d/actor/d_a_e_yr.cpp:1047:        if (frame <= 23) {
+src/d/actor/d_a_e_yr.cpp:1077:            if (frame >= 15 && frame <= 27) {
+src/d/actor/d_a_e_yr.cpp:1101:        if ((s32)i_this->mpMorfSO->getFrame() == 24) {
+src/d/actor/d_a_e_yr.cpp:1180:    s32 frame = i_this->mpMorfSO->getFrame();
+src/d/actor/d_a_e_yr.cpp:1309:        if (frame >= 10) {
+src/d/actor/d_a_e_zh.cpp:1058:            if ((int)mpModelMorf->getFrame() < 84) {
+src/d/actor/d_a_e_zh.cpp:1062:            if ((int)mpModelMorf->getFrame() == 84) {
+src/d/actor/d_a_e_zh.cpp:1707:                    if ((int)mpModelMorf->getFrame() == 1 && bitSw != 0xFF && !fopAcM_isSwitch(this, bitSw)) {
+src/d/actor/d_a_e_zh.cpp:1713:                if ((int)mpModelMorf->getFrame() >= 1) {
+src/d/actor/d_a_e_zh.cpp:1714:                    if ((int)mpModelMorf->getFrame() <= 6 && current.pos.y < mBgc.GetGroundH() + 300.0f) {
+src/d/actor/d_a_e_zm.cpp:372:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_zm.cpp:433:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_e_zm.cpp:462:                if ((int)mpModelMorf->getFrame() == 2) {
+src/d/actor/d_a_e_zm.cpp:618:            if ((int)mpModelMorf->getFrame() == 3) {
+src/d/actor/d_a_e_zs.cpp:274:            if ((int)mpMorf->getFrame() == 0) {
+src/d/actor/d_a_e_zs.cpp:360:            if ((int)mpMorf->getFrame() < 1) {
+src/d/actor/d_a_fr.cpp:157:                if ((int)i_this->mMorf->getFrame() == 14) {
+src/d/actor/d_a_fr.cpp:258:            if ((int)i_this->mMorf->getFrame() >= 10) {
+src/d/actor/d_a_fr.cpp:259:                if ((int)i_this->mMorf->getFrame() <= 25) {
+src/d/actor/d_a_fr.cpp:261:                    if ((int)i_this->mMorf->getFrame() >= 10) {
+src/d/actor/d_a_fr.cpp:262:                        if ((int)i_this->mMorf->getFrame() <= 15 && (s8)i_this->field_0x5cc == 0) {
+src/d/actor/d_a_fr.cpp:277:                    if ((int)i_this->mMorf->getFrame() < 20) {
+src/d/actor/d_a_fr.cpp:305:            i_this->mMorf->setFrame(13.0f);
+src/d/actor/d_a_fr.cpp:328:            if ((int)i_this->mMorf->getFrame() >= 10) {
+src/d/actor/d_a_fr.cpp:329:                if ((int)i_this->mMorf->getFrame() <= 25) {
+src/d/actor/d_a_fr.cpp:331:                    if ((int)i_this->mMorf->getFrame() >= 10) {
+src/d/actor/d_a_fr.cpp:332:                        if ((int)i_this->mMorf->getFrame() <= 15 && (s8)i_this->field_0x5cc == 0) {
+src/d/actor/d_a_fr.cpp:350:                    if ((int)i_this->mMorf->getFrame() < 20) {
+src/d/actor/d_a_fr.cpp:379:            i_this->mMorf->setFrame(0.0f);
+src/d/actor/d_a_horse.cpp:815:            var_f31 = field_0x1144->getFrame() - field_0x1144->getRate();
+src/d/actor/d_a_horse.cpp:857:        var_f28 = temp_r26->getFrame() / temp_r26->getFrameMax();
+src/d/actor/d_a_horse.cpp:876:    bckA->setFrame(m_frameCtrl[0].getFrame());
+src/d/actor/d_a_horse.cpp:879:    bckB->setFrame(m_frameCtrl[1].getFrame());
+src/d/actor/d_a_horse.cpp:931:    f32 frame;
+src/d/actor/d_a_horse.cpp:938:    m_frameCtrl[0].setFrameCtrl(bck->getAttribute(), i_startF, end_frame, i_speed, frame);
+src/d/actor/d_a_horse.cpp:956:        m_frameCtrl[0].setFrame(0);
+src/d/actor/d_a_horse.cpp:961:    m_anmRatio[0].getAnmTransform()->setFrame(m_frameCtrl[0].getFrame());
+src/d/actor/d_a_horse.cpp:965:            m_frameCtrl[1].setFrame(0);
+src/d/actor/d_a_horse.cpp:970:        m_anmRatio[1].getAnmTransform()->setFrame(m_frameCtrl[1].getFrame());
+src/d/actor/d_a_horse.cpp:975:        if (m_anmIdx[2] == ANM_HS_WAIT_03 && m_frameCtrl[2].checkPass(18)) {
+src/d/actor/d_a_horse.cpp:979:        m_anmRatio[2].getAnmTransform()->setFrame(m_frameCtrl[2].getFrame());
+src/d/actor/d_a_horse.cpp:1476:        if (frame_ctrl->checkPass(10) || frame_ctrl->checkPass(34)) {
+src/d/actor/d_a_horse.cpp:1480:        if (frame_ctrl->checkPass(12) || frame_ctrl->checkPass(35)) {
+src/d/actor/d_a_horse.cpp:1482:        } else if (frame_ctrl->checkPass(14)) {
+src/d/actor/d_a_horse.cpp:1484:        } else if (frame_ctrl->checkPass(19)) {
+src/d/actor/d_a_horse.cpp:1536:                        m_anmRatio[0].getAnmTransform()->setFrame(0);
+src/d/actor/d_a_horse.cpp:1555:                        m_anmRatio[0].getAnmTransform()->setFrame(0);
+src/d/actor/d_a_horse.cpp:1899:        if (checkStateFlg0(FLG0_UNK_40000) && (m_anmIdx[2] != ANM_HS_WAIT_03 || m_frameCtrl[2].getFrame() >= 18.0f)) {
+src/d/actor/d_a_horse.cpp:2007:        if (m_anmIdx[2] != ANM_HS_WAIT_03 || m_frameCtrl[2].getFrame() >= 18.0f) {
+src/d/actor/d_a_horse.cpp:3174:    f32 frame;
+src/d/actor/d_a_horse.cpp:3183:    m_frameCtrl[2].setFrameCtrl(bck->getAttribute(), i_startF, endF, i_speed, frame);
+src/d/actor/d_a_horse.cpp:3439:    if (!checkEndResetStateFlg0(ERFLG0_MOVE_ACCEPT) && !checkStateFlg0(FLG0_UNK_40000) && (m_anmIdx[0] != ANM_HS_WALK_START || !(m_frameCtrl[0].getFrame() >= 15.0f)) && !dComIfGp_event_runCheck()) {
+src/d/actor/d_a_horse.cpp:3446:    if (m_anmIdx[0] == ANM_HS_WAIT_03 && m_frameCtrl[0].checkPass(18)) {
+src/d/actor/d_a_horse.cpp:3483:    } else if ((m_anmIdx[0] == ANM_HS_EXCITEMENT || m_anmIdx[0] == ANM_HS_EXCITEMENT_2) && !m_frameCtrl[0].checkPass(0.0f)) {
+src/d/actor/d_a_horse.cpp:3498:            if (m_anmIdx[0] == ANM_HS_WAIT_04 || (m_anmIdx[0] == ANM_HS_WAIT_01B_CONNECT && m_frameCtrl[0].getFrame() > 1.0f)) {
+src/d/actor/d_a_horse.cpp:3749:        if (frame_ctrl->getFrame() > field_0x177C) {
+src/d/actor/d_a_horse.cpp:3754:            if (var_r25 == 0 && checkTurnAfterFastMove(frame_ctrl->getFrame())) {
+src/d/actor/d_a_horse.cpp:3760:            if (frame_ctrl->checkPass(59)) {
+src/d/actor/d_a_horse.cpp:3772:    f32 frame = frame_ctrl->getFrame();
+src/d/actor/d_a_horse.cpp:3773:    if (frame <= var_f30) {
+src/d/actor/d_a_horse.cpp:3775:            if ((frame >= var_r29->_0 && frame <= var_r29->_4) || frame >= var_r29->_8) {
+src/d/actor/d_a_horse.cpp:3862:        if (frame_ctrl->checkPass(8.0f) && !checkInputOnR()) {
+src/d/actor/d_a_horse.cpp:3866:        if (frame_ctrl->checkPass(14.0f) && !checkEndResetStateFlg0(ERFLG0_CUT_TURN_CANCEL)) {
+src/d/actor/d_a_horse.cpp:3871:    if (frame_ctrl->checkPass(field_0x1784) != 0) {
+src/d/actor/d_a_horse.cpp:3875:    bool sp8 = frame_ctrl->getFrame() < field_0x1784;
+src/d/actor/d_a_horse.cpp:3900:        if (frame_ctrl->getFrame() >= field_0x1780 && frame_ctrl->getFrame() < field_0x1774) {
+src/d/actor/d_a_horse.cpp:3902:            if (!checkStateFlg0(daHorse_FLG0(FLG0_UNK_200000 | FLG0_UNK_100000)) || frame_ctrl->getFrame() < field_0x1774 - 10.0f) {
+src/d/actor/d_a_horse.cpp:3907:                f32 f31 = cM_fsin(field_0x1778 * (frame_ctrl->getFrame() - field_0x1780));
+src/d/actor/d_a_horse.cpp:3970:    } else if (frame_ctrl->getFrame() > field_0x1784 - 3.0f && frame_ctrl->getFrame() < 3.0f + field_0x1784) {
+src/d/actor/d_a_horse.cpp:4195:            m_anmRatio[0].getAnmTransform()->setFrame(anm_frame);
+src/d/actor/d_a_horse.cpp:4197:            m_frameCtrl[0].setFrame(anm_frame);
+src/d/actor/d_a_horse.cpp:4451:            m_sound.updateAnime(field_0x1144->getFrame(), field_0x1144->getRate());
+src/d/actor/d_a_horse.cpp:4470:    } else if (fabsf(speedF) > 0.2f * m_hio->m.max_backward_speed || (m_anmIdx[0] == ANM_HS_WALK_START && m_frameCtrl[0].getFrame() > 2.0f)) {
+src/d/actor/d_a_hozelda.cpp:283:        var_f29 = var_r27->getFrame() / var_r27->getFrameMax();
+src/d/actor/d_a_hozelda.cpp:302:    bckA->setFrame(mFrameCtrl[0].getFrame());
+src/d/actor/d_a_hozelda.cpp:305:    bckB->setFrame(mFrameCtrl[1].getFrame());
+src/d/actor/d_a_hozelda.cpp:323:    bck->setFrame(0.0f);
+src/d/actor/d_a_hozelda.cpp:362:    f32 frame;
+src/d/actor/d_a_hozelda.cpp:369:    mFrameCtrl[0].setFrameCtrl(bck->getAttribute(), i_startF, end_frame, i_speed, frame);
+src/d/actor/d_a_hozelda.cpp:381:    mAnmRatioPack[0].getAnmTransform()->setFrame(mFrameCtrl[0].getFrame());
+src/d/actor/d_a_hozelda.cpp:393:        f32 btp_frame = mEyeBtp.getFrame();
+src/d/actor/d_a_hozelda.cpp:601:                frame_ctrl->setFrame(horse->getAnmFrame(1));
+src/d/actor/d_a_hozelda.cpp:602:                mAnmRatioPack[1].getAnmTransform()->setFrame(frame_ctrl->getFrame());
+src/d/actor/d_a_hozelda.cpp:609:            mFrameCtrl[0].setFrame(horse->getAnmFrame(0));
+src/d/actor/d_a_hozelda.cpp:610:            mAnmRatioPack[0].getAnmTransform()->setFrame(mFrameCtrl[0].getFrame());
+src/d/actor/d_a_hozelda.cpp:613:                frame_ctrl->setFrame(mFrameCtrl[0].getFrame());
+src/d/actor/d_a_hozelda.cpp:614:                mAnmRatioPack[1].getAnmTransform()->setFrame(frame_ctrl->getFrame());
+src/d/actor/d_a_kago.cpp:2446:            mpMorf->setFrame(0.0f);
+src/d/actor/d_a_mg_fish.cpp:635:                fish->mpBtpAnm->setFrame(2.0f);
+src/d/actor/d_a_midna.cpp:608:        mpGokouAppearBrk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:682:        mUpperBck.setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:695:            mFaceBck.setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:696:            mFaceBck.getBckAnm()->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:736:        mpMorf->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:745:        mpAppearBrk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:746:        mpMaskAppearBrk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:747:        mpHairhandAppearBrk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:748:        mpGokouAppearBrk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:750:        mpAppearBrk->setFrame(mpAppearBrk->getFrameMax() - 0.001f);
+src/d/actor/d_a_midna.cpp:751:        mpMaskAppearBrk->setFrame(mpMaskAppearBrk->getFrameMax() - 0.001f);
+src/d/actor/d_a_midna.cpp:752:        mpHairhandAppearBrk->setFrame(mpHairhandAppearBrk->getFrameMax() - 0.001f);
+src/d/actor/d_a_midna.cpp:757:            f32 fvar8 = mpGokouAppearBrk->getFrame() - 2.0f;
+src/d/actor/d_a_midna.cpp:764:            mpGokouAppearBrk->setFrame(mpGokouAppearBrk->getFrameMax() - 0.001f);
+src/d/actor/d_a_midna.cpp:890:                f32 fvar7 = (mpMorf->getFrame() - 24.0f) * 0.05f;
+src/d/actor/d_a_midna.cpp:1125:    if (!(checkSetAnime(0, ANM_S_RETURN) && mpMorf->getFrame() > 14.0f)) {
+src/d/actor/d_a_midna.cpp:1129:    if (field_0x84e == 1 || (checkSetAnime(0, ANM_S_APPEAR) && mpMorf->getFrame() < 3.0f)) {
+src/d/actor/d_a_midna.cpp:1213:                                         && mpMorf->getFrame() >= 72.0f) {
+src/d/actor/d_a_midna.cpp:1221:                                         && mpMorf->getFrame() >= 2.0f) {
+src/d/actor/d_a_midna.cpp:1338:                if (mpMorf->getFrame() >= 26.0f) {
+src/d/actor/d_a_midna.cpp:1340:                } else if (mpMorf->getFrame() >= 13.0f) {
+src/d/actor/d_a_midna.cpp:1400:            if (mpMorf->getFrame() >= 4.0f && mpMorf->getFrame() < 17.0f) {
+src/d/actor/d_a_midna.cpp:1631:                            btk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:1645:                        mpDemoFCTmpBlk->getBlkAnm()->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:1661:                        brk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:1682:                        brk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:2394:        (anm == ANM_WARPIN && mpMorf->getFrame() > 2.0f) || anm == ANM_S_RETURN
+src/d/actor/d_a_midna.cpp:2906:    brk->setFrame(brk->getFrameMax() - 0.001f);
+src/d/actor/d_a_midna.cpp:2918:    btk->setFrame(0.0f);
+src/d/actor/d_a_midna.cpp:3366:            tevStr.TevColor.r = (mpMorf->getFrame() / mpMorf->getEndFrame()) * -32.0f;
+src/d/actor/d_a_movie_player.cpp:2651:	s32 frame = 0;
+src/d/actor/d_a_movie_player.cpp:2662:			if (frame == 0)
+src/d/actor/d_a_movie_player.cpp:2814:	s32 frame;
+src/d/actor/d_a_movie_player.cpp:2819:    frame = 0;
+src/d/actor/d_a_movie_player.cpp:2974:    s32 frame;
+src/d/actor/d_a_movie_player.cpp:2979:    frame = 0;
+src/d/actor/d_a_movie_player.cpp:3724:static BOOL daMP_THPPlayerPrepare(s32 frame, s32 flag, s32 audioTrack) {
+src/d/actor/d_a_movie_player.cpp:3727:		if (frame > 0) {
+src/d/actor/d_a_movie_player.cpp:3734:                int offset = daMP_ActivePlayer.header.offsetDataOffsets + (frame - 1) * 4;
+src/d/actor/d_a_movie_player.cpp:3873:    s32 frame;
+src/d/actor/d_a_movie_player.cpp:4046:    if (!fopOvlpM_IsPeek() && frame > 0 && (cAPICPad_ANY_BUTTON(0) || !daMP_c::daMP_c_Get_MovieRestFrame())) {
+src/d/actor/d_a_myna.cpp:1431:        f32 reg_f30 = mBtpAnm.getFrame();
+src/d/actor/d_a_npc2.cpp:627:            f32 frame = mBtp.getFrame();
+src/d/actor/d_a_npc4.cpp:619:    f32 damage_ratio, frame;
+src/d/actor/d_a_npc_cd.cpp:429:    f32 lastframe = mpMorf->getFrame();
+src/d/actor/d_a_npc_cd2.cpp:707:    f32 prevFrame = mpMorf->getFrame();
+src/d/actor/d_a_npc_chat.cpp:3950:                if (mAnm_p->getFrame() >= 1.0f && mAnm_p->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_clerkb.cpp:310:                    if (10.0f < mpMorf[0]->getFrame()) {
+src/d/actor/d_a_npc_coach.cpp:1619:        f32 frame = mChHorse.mpModelMorf->getFrame();
+src/d/actor/d_a_npc_fairy.cpp:2098:            mpMorf[0]->setFrame(0.0f);
+src/d/actor/d_a_npc_gra.cpp:2125:            pos.y += l_offsetHeight[(u32)mAnm_p->getFrame() % 0x1f]; // maybe meant to be & 0x1f
+src/d/actor/d_a_npc_gra.cpp:2296:                if (mAnm_p->getFrame() >= 0.0f && mAnm_p->getFrame() <= 5.0f) {
+src/d/actor/d_a_npc_gra.cpp:2343:                if (field_0x14D8 == 0x1f && mAnm_p->getFrame() >= 10.0f &&
+src/d/actor/d_a_npc_gra.cpp:2344:                    mAnm_p->getFrame() < 11.0f)
+src/d/actor/d_a_npc_gra.cpp:2701:            if (mAnm_p->getFrame() >= 8.0f) {
+src/d/actor/d_a_npc_gra.cpp:2925:        field_0x14D8 == 0x28 && mAnm_p->getFrame() >= 18.0f && mAnm_p->getFrame() <= 20.0f)
+src/d/actor/d_a_npc_gra.cpp:3061:            if (mAnm_p->getFrame() >= 79.0f) {
+src/d/actor/d_a_npc_gra.cpp:3063:            } else if (mAnm_p->getFrame() >= 7.0f) {
+src/d/actor/d_a_npc_gra.cpp:3068:            if (mAnm_p->getFrame() >= 93.0f && mAnm_p->getFrame() < 94.0f) {
+src/d/actor/d_a_npc_grz.cpp:855:        f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_grz.cpp:857:        if (mAnm == ANM_PUNCHING && ((frame >= 15.0f && frame < 16.0f) || (frame >= 35.0f && frame < 36.0f))) {
+src/d/actor/d_a_npc_grz.cpp:878:                if (mAnm == ANM_PUNCHING && ((frame >= 10.0f && frame < 18.0f && i >= 2) || ((frame < 2.0f || frame >= 29.0f) && i < 2))) {
+src/d/actor/d_a_npc_grz.cpp:1809:                    f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_grz.cpp:1810:                    if ((frame >= 10.0f && frame < 11.0f) || (frame >= 28.0f && frame < 29.0f)) {
+src/d/actor/d_a_npc_grz.cpp:2297:                if (mAnm_p->getFrame() >= 20.0f) {
+src/d/actor/d_a_npc_grz.cpp:2309:                f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_grz.cpp:2310:                if ((frame >= 10.0f && frame < 11.0f) || (frame >= 28.0f && frame < 29.0f)) {
+src/d/actor/d_a_npc_grz.cpp:2322:                f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_grz.cpp:2323:                if ((frame >= 10.0f && frame < 11.0f) || (frame >= 28.0f && frame < 29.0f)) {
+src/d/actor/d_a_npc_grz.cpp:2330:            if (mAnm_p->getFrame() >= 17.0f) {
+src/d/actor/d_a_npc_grz.cpp:2339:            } else if (mAnm_p->getFrame() == 35.0f) {
+src/d/actor/d_a_npc_gwolf.cpp:965:                if (mAnm_p->getFrame() >= 1.0f && mAnm_p->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_gwolf.cpp:971:                if (mAnm_p->getFrame() >= 1.0f && mAnm_p->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_gwolf.cpp:977:                if (mAnm_p->getFrame() >= 1.0f && mAnm_p->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_gwolf.cpp:1307:                if (mAnm_p->getFrame() >= 3.0f) {
+src/d/actor/d_a_npc_gwolf.cpp:1437:                if (mAnm_p->getFrame() >= 3.0f && speed.y > 5.0f) {
+src/d/actor/d_a_npc_gwolf.cpp:1534:                if (mAnm_p->getFrame() >= 28.0f) {
+src/d/actor/d_a_npc_hanjo.cpp:867:            dVar13 = mpMorf[0]->getFrame();
+src/d/actor/d_a_npc_henna.cpp:333:        i_this->mpBckAnms[i_this->field_0x688]->setFrame(0.0f);
+src/d/actor/d_a_npc_henna.cpp:334:        i_this->mpBckAnms[i_this->field_0x688 + 4]->setFrame(0.0f);
+src/d/actor/d_a_npc_henna.cpp:481:        i_this->mpMorf->setFrame(i_this->mpMorf->getEndFrame() - 1.0f);
+src/d/actor/d_a_npc_henna.cpp:485:        if (i_this->mpMorf->getFrame() <= 12.0f + VREG_F(6)) {
+src/d/actor/d_a_npc_henna.cpp:625:    if (i_this->mAnmResIndex == 21 && i_this->mpMorf->getFrame() <= 12.0f + VREG_F(6)) {
+src/d/actor/d_a_npc_henna.cpp:2425:    i_this->mpBtkAnms[i_this->field_0x654]->setFrame(i_this->anm_speed);
+src/d/actor/d_a_npc_henna.cpp:2434:        i_this->mpBtpAnms[0]->setFrame(i_this->field_0x69c);
+src/d/actor/d_a_npc_henna.cpp:2436:        i_this->mpBtpAnms[i_this->field_0x658]->setFrame(1.0f);
+src/d/actor/d_a_npc_henna.cpp:2451:        if (i_this->mpBckAnms[i_this->field_0x688 + anmIndexOffset]->getFrame() >
+src/d/actor/d_a_npc_henna.cpp:2454:            i_this->mpBckAnms[i_this->field_0x688 + anmIndexOffset]->setFrame(
+src/d/actor/d_a_npc_kasi_hana.cpp:1840:            if (mMotion == MOT_MICH_KYA_TALK && (mAnm_p->getFrame() == 19.0f || mAnm_p->getFrame() == 1.0f)) {
+src/d/actor/d_a_npc_kasi_hana.cpp:1930:            if (mMotion == MOT_MICH_KYA_TALK && (mAnm_p->getFrame() == 19.0f || mAnm_p->getFrame() == 1.0f)) {
+src/d/actor/d_a_npc_kasi_hana.cpp:2027:            if (mMotion == MOT_MICH_KYA_TALK && (mAnm_p->getFrame() == 19.0f || mAnm_p->getFrame() == 1.0f)) {
+src/d/actor/d_a_npc_kasi_kyu.cpp:1162:            if (mAnm_p->getFrame() == 19.0f || mAnm_p->getFrame() == 1.0f) {
+src/d/actor/d_a_npc_kasi_mich.cpp:1157:            if (mAnm_p->getFrame() == 19.0f || mAnm_p->getFrame() == 1.0f) {
+src/d/actor/d_a_npc_kn.cpp:1244:            if (field_0x15ce && mpModelMorf[0]->getFrame() >= 30.0f && mpModelMorf[0]->getFrame() <= 40.0f) {
+src/d/actor/d_a_npc_kn.cpp:2733:                if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:3081:                if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:3426:                if (mMotionSeqMngr.getStepNo() == 0 && !(mpModelMorf[0]->getFrame() <= 4) &&
+src/d/actor/d_a_npc_kn.cpp:3427:                    mpModelMorf[0]->getFrame() <= 14)
+src/d/actor/d_a_npc_kn.cpp:3435:                    if (mpModelMorf[0]->getFrame() <= 10) {
+src/d/actor/d_a_npc_kn.cpp:3554:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:3712:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:3891:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:4050:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:4114:            } else if (mpModelMorf[0]->getFrame() >= 8.0f && mpModelMorf[0]->getFrame() < 9.0f) {
+src/d/actor/d_a_npc_kn.cpp:4225:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:4378:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:4561:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:4718:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:4897:            } else if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn.cpp:5053:        f32 frame = mpModelMorf[0]->getFrame();
+src/d/actor/d_a_npc_kn.cpp:5054:        if (frame >= 17.0f && frame < 37.0f) {
+src/d/actor/d_a_npc_kn.cpp:5059:            f32 var_f30 = frame;
+src/d/actor/d_a_npc_kn.cpp:5082:            if (frame >= 31.0f) {
+src/d/actor/d_a_npc_kn.cpp:5193:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5198:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5203:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5208:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5213:            if (mpModelMorf[0]->getFrame() >= 4.0f && mpModelMorf[0]->getFrame() < 5.0f) {
+src/d/actor/d_a_npc_kn.cpp:5218:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5222:            } else if (mpModelMorf[0]->getFrame() >= 27.0f && mpModelMorf[0]->getFrame() < 28.0f) {
+src/d/actor/d_a_npc_kn.cpp:5231:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5236:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5241:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn.cpp:5246:            if (mpModelMorf[0]->getFrame() >= 1.0f && mpModelMorf[0]->getFrame() < 2.0f) {
+src/d/actor/d_a_npc_kn_teach01.inc:246:                if (mpModelMorf[0]->getFrame() >= 13.0f && mpModelMorf[0]->getFrame() < 14.0f) {
+src/d/actor/d_a_npc_kn_teach02.inc:248:                    if (mpModelMorf[0]->getFrame() >= 2.0f && mpModelMorf[0]->getFrame() < 3.0f) {
+src/d/actor/d_a_npc_kn_teach02.inc:261:                    if (mpModelMorf[0]->getFrame() >= 34.0f && mpModelMorf[0]->getFrame() < 35.0f) {
+src/d/actor/d_a_npc_knj.cpp:403:            mBrkAnm.setFrame(mType * 10);
+src/d/actor/d_a_npc_ks.cpp:1485:            if (((i_this->res_id == 39 || i_this->res_id == 43 && frame < 7) ||
+src/d/actor/d_a_npc_ks.cpp:1486:                (frame > 40 && frame < 48) || frame > 65)) {
+src/d/actor/d_a_npc_ks.cpp:1565:                if (i_this->model->getFrame() >= 37.0f + AREG_F(17)) {
+src/d/actor/d_a_npc_ks.cpp:3815:            if (frame >= 11) {
+src/d/actor/d_a_npc_ks.cpp:3929:            if ((i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7)) || ((frame > 40 && frame < 48) || frame > 65)) {
+src/d/actor/d_a_npc_ks.cpp:4330:            if ((i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || (frame > 40 && frame < 48)) || frame > 65) {
+src/d/actor/d_a_npc_ks.cpp:4541:            if (i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || ((frame > 40 && frame < 48) || frame > 65)) {
+src/d/actor/d_a_npc_ks.cpp:4717:            if (i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || ((frame > 40 && frame < 48) ) || frame > 65) {
+src/d/actor/d_a_npc_ks.cpp:5044:            if ((i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || (frame > 40 && frame < 48)) || frame > 65) {
+src/d/actor/d_a_npc_ks.cpp:5226:            if ((i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || (frame > 40 && frame < 48)) || frame > 65) {
+src/d/actor/d_a_npc_ks.cpp:5712:            if ((i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || (frame > 40 && frame < 48)) || frame > 65) {
+src/d/actor/d_a_npc_ks.cpp:5952:            if (frame >= 11) {
+src/d/actor/d_a_npc_ks.cpp:5964:            if ((i_this->res_id == 39 || (i_this->res_id == 43 && frame < 7) || (frame > 40 && frame < 48)) || frame > 65) {
+src/d/actor/d_a_npc_moi.cpp:1114:            if (5.0f <= mpMorf[0]->getFrame() && mpMorf[0]->getFrame() <= 7.0f) {
+src/d/actor/d_a_npc_moi.cpp:1117:            if (20.0f <= mpMorf[0]->getFrame() && mpMorf[0]->getFrame() <= 22.0f) {
+src/d/actor/d_a_npc_ne.cpp:1168:        if (i_this->mpMorf->getFrame() >= 16.0f) {
+src/d/actor/d_a_npc_ne.cpp:1293:        if (frame >= 1) {
+src/d/actor/d_a_npc_ne.cpp:1294:            if (frame < 10) {
+src/d/actor/d_a_npc_ne.cpp:1335:        if (frame >= 3) {
+src/d/actor/d_a_npc_ne.cpp:1342:        if (frame >= 1) {
+src/d/actor/d_a_npc_ne.cpp:1349:        if (frame >= 3) {
+src/d/actor/d_a_npc_ne.cpp:1351:            i_this->mpMorf->setFrame(4.0f);
+src/d/actor/d_a_npc_ne.cpp:1553:        if (frame >= 1) {
+src/d/actor/d_a_npc_ne.cpp:1554:            if (frame < 10) {
+src/d/actor/d_a_npc_ne.cpp:2033:        if (frame >= 1) {
+src/d/actor/d_a_npc_ne.cpp:2040:            i_this->mpMorf->setFrame(4.0f);
+src/d/actor/d_a_npc_post.cpp:1089:            if (37.0f < mpMorf[0]->getFrame()) {
+src/d/actor/d_a_npc_pouya.cpp:795:        mpMorf[0]->setFrame(mpMorf[0]->getEndFrame());
+src/d/actor/d_a_npc_prayer.cpp:568:        if (1.0f == mAnm_p->getFrame()) {
+src/d/actor/d_a_npc_tk.cpp:315:            if (mpMorf->getFrame() >= 7.0f && mpMorf->getFrame() <= 27.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2475:            if (mAnm_p->getFrame() == 13.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2581:            if (mAnm_p->getFrame() == 13.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2697:            if (mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 34.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2701:            if (mAnm_p->getFrame() == 35.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2769:            if (mAnm_p->getFrame() > 18.0f && mAnm_p->getFrame() < 32.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2773:            if (mAnm_p->getFrame() == 13.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:2897:            if ((mMotion == 13 && mAnm_p->getFrame() == 8.0f) || (mMotion == 0x1C && mAnm_p->getFrame() == 34.0f)) {
+src/d/actor/d_a_npc_wrestler.cpp:2909:                if (mAnm_p->getFrame() == 15.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:3043:            if (mAnm_p->getFrame() == 4.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:3077:            if (mAnm_p->getFrame() > 4.0f && mAnm_p->getFrame() < 24.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:3258:            if (mAnm_p->getFrame() == 13.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:3391:            if (mAnm_p->getFrame() == 5.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:3584:            f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_wrestler.cpp:3585:            if (frame >= 23.0f && frame <= 34.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:4094:                    if (mMotionPhase == 0 && mAnm_p->getFrame() == 40.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:4103:                        if (mAnm_p->getFrame() > mAnm_p->getEndFrame() - 1.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:4338:                    if (mMotionPhase == 0 && mAnm_p->getFrame() == 20.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:4347:                        if (mAnm_p->getFrame() > mAnm_p->getEndFrame() - 1.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5034:            if (mAnm_p->getFrame() == 11.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5038:            if (mAnm_p->getFrame() == 11.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5040:            } else if (mAnm_p->getFrame() == 35.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5044:            if (mAnm_p->getFrame() == 15.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5048:            if (mAnm_p->getFrame() == 15.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5052:            if (mAnm_p->getFrame() == 2.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5056:            if (mAnm_p->getFrame() == 32.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5060:            if (mAnm_p->getFrame() == 2.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5064:            if (mAnm_p->getFrame() == 7.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5068:            if (mAnm_p->getFrame() == 7.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5072:            if (mAnm_p->getFrame() == 5.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5076:            if (mAnm_p->getFrame() == 5.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5080:            if (mAnm_p->getFrame() == 10.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5084:            if (mAnm_p->getFrame() == 23.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5088:            if (mAnm_p->getFrame() == 3.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5092:            if (mAnm_p->getFrame() == 37.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5096:            if (mAnm_p->getFrame() == 13.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5101:        if (mAnm_p->getFrame() == 42.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5105:        if (mAnm_p->getFrame() == 11.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5109:        if (mAnm_p->getFrame() == 11.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5113:        if (mAnm_p->getFrame() == 12.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5117:        if (mAnm_p->getFrame() == 15.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5121:        if (mAnm_p->getFrame() == 2.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5125:        if (mAnm_p->getFrame() == 32.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5129:        if (mAnm_p->getFrame() == 2.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5133:        if (mAnm_p->getFrame() == 35.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5137:        if (mAnm_p->getFrame() == 7.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5141:        if (mAnm_p->getFrame() == 7.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5145:        if (mAnm_p->getFrame() == 5.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5149:        if (mAnm_p->getFrame() == 13.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5153:        if (mAnm_p->getFrame() == 5.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5157:        if (mAnm_p->getFrame() == 10.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5161:        if (mAnm_p->getFrame() == 23.0f) {
+src/d/actor/d_a_npc_wrestler.cpp:5165:        if (mAnm_p->getFrame() == 3.0f) {
+src/d/actor/d_a_npc_zra.inc:455:            if (mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 21.0f) {
+src/d/actor/d_a_npc_zra.inc:504:                if (mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 17.0f) {
+src/d/actor/d_a_npc_zra.inc:578:        f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:581:                if (frame >= 2.0f && frame <= 4.0f) {
+src/d/actor/d_a_npc_zra.inc:585:                if (frame >= 16.0f && frame <= 18.0f) {
+src/d/actor/d_a_npc_zra.inc:607:        if (mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 21.0f) {
+src/d/actor/d_a_npc_zra.inc:751:        if (mAnm_p->getFrame() < 40.0f) {
+src/d/actor/d_a_npc_zra.inc:1237:            f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:1240:                    if (frame >= 2.0f && frame <= 4.0f) {
+src/d/actor/d_a_npc_zra.inc:1244:                    if (frame >= 16.0f && frame <= 18.0f) {
+src/d/actor/d_a_npc_zra.inc:1245:                        mAnm_p->setFrame(18.0f);
+src/d/actor/d_a_npc_zra.inc:1613:    f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:1615:    if (frame < 3.0f) {
+src/d/actor/d_a_npc_zra.inc:1617:    } else if (frame < 6.0f) {
+src/d/actor/d_a_npc_zra.inc:1619:    } else if (frame < 9.0f) {
+src/d/actor/d_a_npc_zra.inc:1621:    } else if (frame < 13.0f) {
+src/d/actor/d_a_npc_zra.inc:1623:    } else if (frame < 20.0f) {
+src/d/actor/d_a_npc_zra.inc:1625:    } else if (frame < 36.0f) {
+src/d/actor/d_a_npc_zra.inc:1827:                if (mIsAboveWater && mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 17.0f) {
+src/d/actor/d_a_npc_zra.inc:1886:                        if (mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 17.0f) {
+src/d/actor/d_a_npc_zra.inc:2112:        f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:2115:            if (frame <= 3.0f) {
+src/d/actor/d_a_npc_zra.inc:2117:            } else if (frame <= 6.0f) {
+src/d/actor/d_a_npc_zra.inc:2119:            } else if (frame <= 9.0f) {
+src/d/actor/d_a_npc_zra.inc:2121:            } else if (frame <= 13.0f) {
+src/d/actor/d_a_npc_zra.inc:2123:            } else if (frame <= 20.0f) {
+src/d/actor/d_a_npc_zra.inc:2283:                f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:2288:                        if (frame >= 2.0f && frame <= 4.0f) {
+src/d/actor/d_a_npc_zra.inc:2292:                        if (frame >= 16.0f && frame <= 18.0f) {
+src/d/actor/d_a_npc_zra.inc:2293:                            mAnm_p->setFrame(18.0f);
+src/d/actor/d_a_npc_zra.inc:2786:        f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:2789:            if (frame <= 3.0f) {
+src/d/actor/d_a_npc_zra.inc:2791:            } else if (frame <= 6.0f) {
+src/d/actor/d_a_npc_zra.inc:2793:            } else if (frame <= 9.0f) {
+src/d/actor/d_a_npc_zra.inc:2795:            } else if (frame <= 13.0f) {
+src/d/actor/d_a_npc_zra.inc:2797:            } else if (frame <= 20.0f) {
+src/d/actor/d_a_npc_zra.inc:3097:        f32 frame = mAnm_p->getFrame();
+src/d/actor/d_a_npc_zra.inc:3100:            if (frame <= 3.0f) {
+src/d/actor/d_a_npc_zra.inc:3102:            } else if (frame <= 6.0f) {
+src/d/actor/d_a_npc_zra.inc:3104:            } else if (frame <= 9.0f) {
+src/d/actor/d_a_npc_zra.inc:3106:            } else if (frame <= 13.0f) {
+src/d/actor/d_a_npc_zra.inc:3108:            } else if (frame <= 20.0f) {
+src/d/actor/d_a_npc_zra.inc:3417:            if (mAnm_p->getFrame() > 13.0f && mAnm_p->getFrame() < 17.0f) {
+src/d/actor/d_a_npc_zrz.cpp:307:    f32 damage_ratio, frame;
+src/d/actor/d_a_npc_zrz.cpp:344:                mBtpAnm.entry(&modelData->getMaterialTable(), (s16)mBtpAnm.getFrame());
+src/d/actor/d_a_obj_avalanche.cpp:65:        mBckAnm->setFrame(0.0f);
+src/d/actor/d_a_obj_bemos.cpp:547:    if (mBmfOffBck->getFrame() == 0.0f) {
+src/d/actor/d_a_obj_bemos.cpp:715:    int frame = mBeamBtk->getFrame() + 0.5f;
+src/d/actor/d_a_obj_bk_leaf.cpp:96:            mpBckAnm->setFrame(0.0f);
+src/d/actor/d_a_obj_bosswarp.cpp:193:    mpBtkAnm[1]->setFrame(mpBtkAnm[1]->getEndFrame());
+src/d/actor/d_a_obj_bosswarp.cpp:282:    if (mpBrkAnm != NULL && mpBrkAnm->getFrame() != 0.0f) {
+src/d/actor/d_a_obj_cho.cpp:201:    if (mpMorf->getFrame() > 3.5f) {
+src/d/actor/d_a_obj_firepillar2.cpp:339:        mBck->setFrame(0.0f);
+src/d/actor/d_a_obj_gra2.cpp:1709:    if (mpModelMorf->getFrame() >= 4.5f && mpModelMorf->getFrame() <= 5.5f) {
+src/d/actor/d_a_obj_gra2.cpp:1762:    if (mpModelMorf->getFrame() == 4.0f || ( mpModelMorf->getFrame() >= 18.5f && mpModelMorf->getFrame() <= 19.5f)) {
+src/d/actor/d_a_obj_gra2.cpp:1815:        mpModelMorf->setFrame(6.0f);
+src/d/actor/d_a_obj_gra2_soldier.inc:33:                        if (mpModelMorf->getFrame() >= 4.0f) {
+src/d/actor/d_a_obj_gra2_soldier.inc:341:            } else if (mpModelMorf->getFrame() >= 25.0f && field_0x1fe0 == 0) {
+src/d/actor/d_a_obj_gra2_soldier.inc:358:                if (mpModelMorf->getFrame() == 9.0f) {
+src/d/actor/d_a_obj_gra2_soldier.inc:361:                    if (mpModelMorf->getFrame() == 15.0f) {
+src/d/actor/d_a_obj_gra2_soldier.inc:364:                        if (mpModelMorf->getFrame() == 20.0f) {
+src/d/actor/d_a_obj_gra2_soldier.inc:367:                            if (mpModelMorf->getFrame() >= 24.0f) {
+src/d/actor/d_a_obj_gra2_soldier.inc:1035:                    if (mpModelMorf->getFrame() < 2.0f) {
+src/d/actor/d_a_obj_gra2_soldier.inc:1352:                if (mpModelMorf->getFrame() < 2.0f) {
+src/d/actor/d_a_obj_iceleaf.cpp:166:    mpBck->setFrame(0.0f);
+src/d/actor/d_a_obj_iceleaf.cpp:286:    if (mpBck != NULL && mpBck->getFrame() == 12) {
+src/d/actor/d_a_obj_kamakiri.cpp:434:        f32 unusedFloat1 = mpMorfSO->getFrame();
+src/d/actor/d_a_obj_katatsumuri.cpp:261:        if (mpMorfSO->getFrame() > 50.0f + XREG_F(0)) {
+src/d/actor/d_a_obj_kshutter.cpp:185:            mpBckAnm->setFrame(0.0f);
+src/d/actor/d_a_obj_kshutter.cpp:652:    if (mpBckAnm->getFrame() == 1.0f) {
+src/d/actor/d_a_obj_kshutter.cpp:655:    } else if (mpBckAnm->getFrame() == 17.0f) {
+src/d/actor/d_a_obj_kshutter.cpp:657:    } else if (mpBckAnm->getFrame() == 18.0f) {
+src/d/actor/d_a_obj_kshutter.cpp:680:    if (mpBckAnm->getFrame() == 1.0f) {
+src/d/actor/d_a_obj_kshutter.cpp:684:    } else if (mpBckAnm->getFrame() == 17.0f) {
+src/d/actor/d_a_obj_kshutter.cpp:688:    if (mpBckAnm->getFrame() == 20.0f) {
+src/d/actor/d_a_obj_lv6bemos2.cpp:420:        if (mpBtkAnm != NULL && mpBtkAnm->getFrame() != 0.0f) {
+src/d/actor/d_a_obj_lv6bemos2.cpp:476:    f32 fVar1 = (int)(mpBtkAnm->getFrame() + 0.5f) * 360.0f;
+src/d/actor/d_a_obj_lv6bemos2.cpp:786:    mpBtkAnm->setFrame(0.0f);
+src/d/actor/d_a_obj_lv6bemos2.cpp:1053:            if (mpBckAnm->getFrame() == mpBckAnm->getEndFrame() - 6.0f) {
+src/d/actor/d_a_obj_lv7bridge.cpp:146:            mpBck[1]->setFrame(mpBck[1]->getEndFrame());
+src/d/actor/d_a_obj_lv8Lift.cpp:90:            mBtk.setFrame(mBtk.getEndFrame() - 1.0f);
+src/d/actor/d_a_obj_lv8Lift.cpp:311:        if ((mBtk.getFrame() <= mBtk.getStartFrame() - 1.0f + 20.0f) &&
+src/d/actor/d_a_obj_lv8OptiLift.cpp:335:        if (mBtk.getFrame() <= var_f31 && mpBgW != NULL && mpBgW->ChkUsed()) {
+src/d/actor/d_a_obj_mhole.cpp:178:        mpBtk2Anm->setFrame(0.0f);
+src/d/actor/d_a_obj_mirror_table.cpp:340:        u8 alpha = (mpStairBrkAnm->getFrame() * 255.0f) / mpStairBrkAnm->getEndFrame();
+src/d/actor/d_a_obj_nan.cpp:164:    if (mMorf->getFrame() == 39.0f ||
+src/d/actor/d_a_obj_nan.cpp:165:        mMorf->getFrame() == 79.0f)
+src/d/actor/d_a_obj_nan.cpp:235:            if (60.0f < mMorf->getFrame() ||
+src/d/actor/d_a_obj_nan.cpp:236:                (30.0f < mMorf->getFrame() && mMorf->getFrame() < 40.0f))
+src/d/actor/d_a_obj_poTbox.cpp:131:                mBck.setFrame(mBck.getEndFrame() - 1.0f);
+src/d/actor/d_a_obj_poTbox.cpp:132:                mBrk.setFrame(mBrk.getEndFrame() - 1.0f);
+src/d/actor/d_a_obj_rotBridge.cpp:201:            if (mBck.getFrame() == mBck.getEndFrame() - 10.0f) {
+src/d/actor/d_a_obj_scannon_crs.cpp:349:            } else if (mBck.getFrame() > 240.0f) {
+src/d/actor/d_a_obj_sekizoa.cpp:2201:            mBrkAnm.setFrame(mBrkAnm.getEndFrame() - 1.0f);
+src/d/actor/d_a_obj_sekizoa.cpp:2202:            mBtkAnm.setFrame(mBtkAnm.getEndFrame() - 1.0f);
+src/d/actor/d_a_obj_swBallA.cpp:117:        field_0x588->setFrame(field_0x588->getEndFrame());
+src/d/actor/d_a_obj_swBallA.cpp:121:        field_0x588->setFrame(0.0f);
+src/d/actor/d_a_obj_swBallB.cpp:144:        field_0x588->setFrame(field_0x588->getEndFrame());
+src/d/actor/d_a_obj_swBallC.cpp:79:        field_0x574->setFrame(field_0x574->getEndFrame());
+src/d/actor/d_a_obj_swpush2.cpp:663:    if (mpOnBtk->isStop() && mpOnBtk->getFrame() != 0.0f) {
+src/d/actor/d_a_obj_swpush2.cpp:678:    if (mpOnBtk->isStop() && mpOnBtk->getFrame() != 0.0f) {
+src/d/actor/d_a_obj_tobyhouse.cpp:354:            mActiveBck->setFrame(0.0f);
+src/d/actor/d_a_obj_tobyhouse.cpp:362:            mActiveBck->setFrame(0.0f);
+src/d/actor/d_a_obj_tobyhouse.cpp:368:            mActiveBck->setFrame(0.0f);
+src/d/actor/d_a_obj_tp.cpp:113:        i_this->mBrk->setFrame(0.0f);
+src/d/actor/d_a_obj_tp.cpp:115:            i_this->mBrks[0]->setFrame(0.0f);
+src/d/actor/d_a_obj_tp.cpp:116:            i_this->mBrks[1]->setFrame(0.0f);
+src/d/actor/d_a_obj_tp.cpp:137:            i_this->mMorf->setFrame(9.0f);
+src/d/actor/d_a_obj_tp.cpp:162:        if (i_this->mBrk->getFrame() < 38.0f) {
+src/d/actor/d_a_obj_tp.cpp:169:                i_this->mBrks[0]->setFrame(36.0f);
+src/d/actor/d_a_obj_tp.cpp:180:            if (i_this->mBrks[0]->getFrame() <= 1.0f) {
+src/d/actor/d_a_obj_tp.cpp:226:            if (i_this->mBrks[0]->getFrame() < 38.0f) {
+src/d/actor/d_a_obj_tp.cpp:233:                if (i_this->mBrks[1]->getFrame() >= 19.0f) {
+src/d/actor/d_a_obj_tp.cpp:234:                    i_this->mBrks[1]->setFrame(19.0f - (i_this->mBrks[1]->getFrame() - 19.0f));
+src/d/actor/d_a_obj_tp.cpp:236:                if (i_this->mBrks[1]->getFrame() < 19.0f) {
+src/d/actor/d_a_obj_tp.cpp:241:                if (i_this->mBrks[1]->getFrame() < 38.0f) {
+src/d/actor/d_a_obj_tp.cpp:245:                if (local_97 == 2 && i_this->mBrks[1]->getFrame() < 38.0f) {
+src/d/actor/d_a_obj_vground.cpp:83:        mpBrk->setFrame(2.0f);
+src/d/actor/d_a_obj_vground.cpp:84:        mpBtk->setFrame(2.0f);
+src/d/actor/d_a_obj_vground.cpp:87:            mpBrk->setFrame(1.0f);
+src/d/actor/d_a_obj_vground.cpp:88:            mpBtk->setFrame(1.0f);
+src/d/actor/d_a_obj_vground.cpp:90:            mpBrk->setFrame(0.0f);
+src/d/actor/d_a_obj_vground.cpp:91:            mpBtk->setFrame(0.0f);
+src/d/actor/d_a_obj_volcbom.cpp:710:            mBtk1->setFrame(0.0f);
+src/d/actor/d_a_obj_volcbom.cpp:739:        if (mBck1->getFrame() == 222.0f) {
+src/d/actor/d_a_obj_warp_kbrg.cpp:110:            mpPortalBrk->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_kbrg.cpp:173:    mpBridgeBtk->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_kbrg.cpp:196:        mpPortalBtk->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_kbrg.cpp:503:            mpPortalBrk->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_kbrg.cpp:534:        if (240.0f == mpBridgeBck->getFrame()) {
+src/d/actor/d_a_obj_warp_kbrg.cpp:551:        if (180.0f == mpBridgeBck->getFrame()) {
+src/d/actor/d_a_obj_warp_obrg.cpp:382:            mpBck->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_obrg.cpp:383:            mpBtk->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_obrg.cpp:397:            mpBck->setFrame(0.0f);
+src/d/actor/d_a_obj_warp_obrg.cpp:398:            mpBtk->setFrame(0.0f);
+src/d/actor/d_a_obj_window.cpp:101:        f32 frame = mpBckAnm->getFrame();
+src/d/actor/d_a_obj_window.cpp:102:        if (frame == 164.0f || frame == 757.0f) {
+src/d/actor/d_a_obj_window.cpp:105:        if (frame < 125.0f) {
+src/d/actor/d_a_obj_window.cpp:107:        } else if (frame < 264.0f) {
+src/d/actor/d_a_obj_window.cpp:109:        } else if (frame < 364.0f) {
+src/d/actor/d_a_obj_window.cpp:111:        } else if (frame < 464.0f) {
+src/d/actor/d_a_obj_window.cpp:113:        } else if (frame < 544.0f) {
+src/d/actor/d_a_obj_window.cpp:115:        } else if (frame < 714.0f) {
+src/d/actor/d_a_obj_window.cpp:117:        } else if (frame < 829.0f) {
+src/d/actor/d_a_obj_yousei.cpp:141:        mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_obj_yousei.cpp:166:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_obj_yousei.cpp:263:    f32 anm_frame = mpModelMorf->getFrame();
+src/d/actor/d_a_obj_yousei.cpp:287:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_obj_yousei.cpp:332:            mpModelMorf->setFrame(0.0f);
+src/d/actor/d_a_obj_ystone.cpp:127:            i_this->mpMorf->setFrame(1.0f);
+src/d/actor/d_a_obj_ystone.cpp:134:                i_this->mpMorf->setFrame(0.0f);
+src/d/actor/d_a_peru.cpp:627:            mpMorf[0]->setFrame(22.0f);
+src/d/actor/d_a_peru.cpp:632:        if (mpMorf[0]->getFrame() >= 36.0f) {
+src/d/actor/d_a_peru.cpp:682:        if (field_0xe58 == 1 && mpMorf[0]->getFrame() >= 10.0f) {
+src/d/actor/d_a_peru.cpp:709:        if (mpMorf[0]->getFrame() == 23.0f) {
+src/d/actor/d_a_sq.cpp:255:        i_this->mpMorf->setFrame(6.0f);
+src/d/actor/d_a_swhit0.cpp:403:    mBrk.setFrame(color_p[getType() * 2]);
+src/d/actor/d_a_tag_Lv6Gate.cpp:41:        mpBtk[0]->setFrame(mpBtk[0]->getEndFrame());
+src/d/actor/d_a_tag_Lv6Gate.cpp:185:                    mpBtk[0]->setFrame(mpBtk[0]->getEndFrame());
+src/d/actor/d_a_tag_statue_evt.cpp:81:        mpGlowingSkyCharacterBrk->setFrame(0.0f);
+src/d/actor/d_a_tag_statue_evt.cpp:90:            mpGlowingSkyCharacterBrk->setFrame(0.0f);
+src/d/actor/d_a_tag_statue_evt.cpp:97:    mpPlatformCircleBtk->setFrame(static_cast<f32>(mSkyCharacterEventBitIdIndex));
+src/d/actor/d_a_tbox.cpp:815:    mpEffectAnm->setFrame(0.0f);
+src/d/actor/d_a_tbox.cpp:836:    if (mpEffectAnm->getFrame() == 110.0f) {
+src/d/actor/d_a_tbox.cpp:994:            mpAnm->setFrame(0.0f);
+src/d/actor/d_a_tbox2.cpp:322:            mpBck->setFrame(0);
+src/d/actor/d_a_title.cpp:272:    mBck.setFrame(mBck.getEndFrame() - 1.0f);
+src/d/actor/d_a_title.cpp:273:    mBpk.setFrame(mBpk.getEndFrame() - 1.0f);
+src/d/actor/d_a_title.cpp:274:    mBrk.setFrame(mBrk.getEndFrame() - 1.0f);
+src/d/actor/d_a_title.cpp:275:    mBtk.setFrame(mBtk.getEndFrame() - 1.0f);
+src/d/d_file_sel_warning.cpp:58:    field_0x24->setFrame(2849.0f);
+src/d/d_file_sel_warning.cpp:117:        field_0x24->setFrame(field_0x28);
+src/d/d_file_sel_warning.cpp:139:    field_0x24->setFrame(field_0x28);
+src/d/d_file_sel_warning.cpp:148:    field_0x24->setFrame(field_0x28);
+src/d/d_file_sel_warning.cpp:155:    field_0x24->setFrame(2849.0f);
+src/d/d_file_select.cpp:463:    mFileSel05Btk->setFrame(mSelFileBtk05Frame);
+src/d/d_file_select.cpp:517:    mCpSel03Btk->setFrame(mCpSel03BtkFrame);
+src/d/d_file_select.cpp:736:            mBaseMoveAnm->setFrame(field_0x00e0[mSelectNum]);
+src/d/d_file_select.cpp:882:    mBaseMoveAnm->setFrame(field_0x00e0[mSelectNum]);
+src/d/d_file_select.cpp:907:        mBaseMoveAnm->setFrame(field_0x00e0[mSelectNum]);
+src/d/d_file_select.cpp:932:        mBaseMoveAnm->setFrame(field_0x00e0[mSelectNum]);
+src/d/d_file_select.cpp:941:        field_0x0088->setFrame(field_0x00e0[mLastSelectNum]);
+src/d/d_file_select.cpp:963:            field_0x0088->setFrame(field_0x00e0[mLastSelectNum]);
+src/d/d_file_select.cpp:981:            mBaseMoveAnm->setFrame(field_0x00e0[mSelectNum]);
+src/d/d_file_select.cpp:1243:    m3mBck->setFrame(field_0x0358);
+src/d/d_file_select.cpp:1263:        m3mBck->setFrame(field_0x0358);
+src/d/d_file_select.cpp:1291:        m3mBck->setFrame(field_0x034c[mSelectMenuNum]);
+src/d/d_file_select.cpp:1298:        m3mBck2->setFrame(field_0x034c[mLastSelectMenuNum]);
+src/d/d_file_select.cpp:1323:        m3mBck->setFrame(field_0x034c[mSelectMenuNum]);
+src/d/d_file_select.cpp:1345:            m3mBck2->setFrame(field_0x034c[mLastSelectMenuNum]);
+src/d/d_file_select.cpp:1640:        mCpSelBck->setFrame(99.0f);
+src/d/d_file_select.cpp:1645:        mCpSelBck2->setFrame(109.0f);
+src/d/d_file_select.cpp:1656:    field_0x0094->setFrame(field_0x0120);
+src/d/d_file_select.cpp:1765:        mCpSelBck->setFrame(field_0x02b4[field_0x026b]);
+src/d/d_file_select.cpp:1774:        mCpSelBck2->setFrame(field_0x02b4[field_0x026c]);
+src/d/d_file_select.cpp:1793:            mCpSelBck2->setFrame(field_0x02b4[field_0x026c]);
+src/d/d_file_select.cpp:1808:            mCpSelBck->setFrame(field_0x02b4[field_0x026b]);
+src/d/d_file_select.cpp:1948:    mYnSelBck3->setFrame(field_0x0100);
+src/d/d_file_select.cpp:1968:        mYnSelBck3->setFrame(field_0x0100);
+src/d/d_file_select.cpp:2046:        mYnSelBck->setFrame(field_0x00f8[field_0x0269]);
+src/d/d_file_select.cpp:2065:        mYnSelBck2->setFrame(field_0x00f8[field_0x0268]);
+src/d/d_file_select.cpp:2185:        mYnSelBck->setFrame(field_0x00f8[field_0x0269]);
+src/d/d_file_select.cpp:2193:        mYnSelBck2->setFrame(field_0x00f8[field_0x0268]);
+src/d/d_file_select.cpp:3140:    mBaseMoveAnm->setFrame(field_0x00a0);
+src/d/d_file_select.cpp:3253:    mCpSelBck->setFrame(0.0f);
+src/d/d_file_select.cpp:3372:    m3mBck->setFrame(799.0f);
+src/d/d_file_select.cpp:3424:    field_0x0098->setFrame(3000.0f);
+src/d/d_file_select.cpp:3814:    field_0x0090->setFrame(field_0x0130);
+src/d/d_file_select.cpp:3837:        field_0x0090->setFrame(field_0x0130);
+src/d/d_file_select.cpp:5069:        field_0x009c->setFrame(field_0x0110);
+src/d/d_file_select.cpp:5092:    field_0x0094->setFrame(field_0x0120);
+src/d/d_file_select.cpp:5112:        field_0x0094->setFrame(field_0x0120);
+src/d/d_file_select.cpp:5320:        mBrkAnm->setFrame(field_0x03c4);
+src/d/d_file_select.cpp:5328:        mBckAnm->setFrame(field_0x03c8);
+src/d/d_kankyo.cpp:8092:    mctx->genSlider("frame", &step1.start_frame, 0, 0xff, 0, NULL, 0xffff, 0xffff, 0x200, 0x18);
+src/d/d_kankyo.cpp:8097:    mctx->genSlider("frame", &step2.start_frame, 0, 0xff, 0, NULL, 0xffff, 0xffff, 0x200, 0x18);
+src/d/d_kankyo.cpp:8102:    mctx->genSlider("frame", &step3.start_frame, 0, 0xff, 0, NULL, 0xffff, 0xffff, 0x200, 0x18);
+src/d/d_kankyo.cpp:8107:    mctx->genSlider("frame", &step4.start_frame, 0, 0xff, 0, NULL, 0xffff, 0xffff, 0x200, 0x18);
+src/d/d_kankyo_rain.cpp:5024:            u32 demo_frame = dDemo_c::getFrame();
+src/d/d_menu_dmap.cpp:190:    field_0xd28[0]->setFrame(field_0xdc8[0]);
+src/d/d_menu_dmap.cpp:228:            field_0xd28[i]->setFrame(field_0xdc8[i]);
+src/d/d_menu_option.cpp:634:    field_0x30->setFrame(field_0x3c4);
+src/d/d_menu_option.cpp:2190:    field_0x20->setFrame(field_0x3c8[2]);
+src/d/d_menu_option.cpp:2209:        field_0x20->setFrame(field_0x3c8[2]);
+src/d/d_menu_option.cpp:2254:            field_0x24->setFrame(field_0x3c8[field_0x3fa]);
+src/d/d_menu_option.cpp:2278:            field_0x28->setFrame(field_0x3c8[field_0x3f9]);
+src/d/d_menu_option.cpp:2335:        field_0x24->setFrame(field_0x3c8[field_0x3fa]);
+src/d/d_menu_option.cpp:2342:        field_0x28->setFrame(field_0x3c8[field_0x3f9]);
+src/d/d_menu_save.cpp:397:    field_0x40->setFrame(field_0x50);
+src/d/d_menu_save.cpp:750:    field_0x150->setFrame(field_0x154);
+src/d/d_menu_save.cpp:756:    field_0x158->setFrame(field_0x15c);
+src/d/d_menu_save.cpp:762:    field_0x160->setFrame(field_0x164);
+src/d/d_menu_save.cpp:807:            field_0x40->setFrame(field_0x50);
+src/d/d_menu_save.cpp:1736:            field_0x40->setFrame(field_0x74[mSelectedFile]);
+src/d/d_menu_save.cpp:1821:        field_0x40->setFrame(field_0x74[mSelectedFile]);
+src/d/d_menu_save.cpp:1830:        field_0x44->setFrame(field_0x74[mLastSelFile]);
+src/d/d_menu_save.cpp:1853:            field_0x44->setFrame(field_0x74[mLastSelFile]);
+src/d/d_menu_save.cpp:1871:            field_0x40->setFrame(field_0x74[mSelectedFile]);
+src/d/d_menu_save.cpp:1974:        field_0x40->setFrame(field_0x8c[mYesNoPrevCursor]);
+src/d/d_menu_save.cpp:1982:        field_0x44->setFrame(field_0x8c[mYesNoCursor]);
+src/d/d_menu_save.cpp:2273:    field_0x40->setFrame(mDataBaseMoveAnmFrame);
+src/d/d_menu_save.cpp:2294:        field_0x40->setFrame(mDataBaseMoveAnmFrame);
+src/d/d_menu_save.cpp:2334:    field_0x40->setFrame(field_0x74[mSelectedFile]);
+src/d/d_menu_save.cpp:2357:        field_0x40->setFrame(field_0x74[mSelectedFile]);
+src/d/d_menu_save.cpp:2390:    field_0x48->setFrame(mYesNoMoveAnmFrame);
+src/d/d_menu_save.cpp:2412:        field_0x48->setFrame(mYesNoMoveAnmFrame);
+src/d/d_menu_save.cpp:2463:            field_0x40->setFrame(field_0x8c[mYesNoPrevCursor]);
+src/d/d_menu_save.cpp:2486:            field_0x44->setFrame(field_0x8c[mYesNoCursor]);
+src/d/d_meter2_draw.cpp:1294:        i_bpk->setFrame(field_0x558);
+src/d/d_meter_HIO.cpp:164:    mctx->genSlider("open frame", &mOpenFrames, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:165:    mctx->genSlider("close frame", &mCloseFrames, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:252:    mctx->genSlider("open frame", &mOpenFrame[0], 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:253:    mctx->genSlider("close frame", &mCloseFrame[0], 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:438:    mctx->genSlider("open frame", &mOpenFrames, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:439:    mctx->genSlider("close frame", &mCloseFrames, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:520:    mctx->genSlider("open frame", &mOpenFrame, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:521:    mctx->genSlider("close frame", &mCloseFrame, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:555:    mctx->genSlider("open frame", &mOpenFrames, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:556:    mctx->genSlider("close frame", &mCloseFrames, 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:602:    mctx->genSlider("open frame", &mOpenFrame[0], 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_HIO.cpp:603:    mctx->genSlider("close frame", &mCloseFrame[0], 1, 20, 0, NULL, -1, -1, 512, 24);
+src/d/d_meter_string.cpp:221:    f32 frame;
+src/d/d_meter_string.cpp:241:                (temp_f24 / 2) + (var_f25 + var_f29), center.y, &frame,
+src/d/d_msg_scrn_item.cpp:361:        field_0x118[i]->setFrame(field_0x140[i]);
+src/d/d_msg_scrn_item.cpp:369:        field_0x12c[i]->setFrame(field_0x154[i]);
+src/d/d_msg_scrn_kanban.cpp:46:    field_0xcc->setFrame(1.0f);
+src/d/d_msg_scrn_tree.cpp:49:    field_0xcc->setFrame(1.0f);
+src/d/d_particle.cpp:549:            pattern->setFrame(field_0x391);
+src/d/d_particle.cpp:554:            tevRegKey->setFrame(field_0x391);
+src/d/d_select_cursor.cpp:282:                field_0x30->setFrame(field_0x44);
+src/d/d_select_cursor.cpp:287:                    field_0x30->setFrame(field_0x44);
+src/d/d_select_cursor.cpp:305:                    field_0x34[i]->setFrame(field_0x48[i]);
+src/d/d_select_cursor.cpp:321:                field_0x2C->setFrame(field_0x40);
+src/d/d_select_icon.cpp:14:        field_0x1c->setFrame(field_0x20);
+src/d/d_select_icon.cpp:21:        field_0x24->setFrame(field_0x28);
+src/d/d_timer.cpp:1467:    f32 frame;
+src/d/d_timer.cpp:1493:                    (temp_f24 / 2) + (temp_f28 + var_f26), center.y, &frame,
+src/d/d_timer.cpp:1502:                    (temp_f24 / 2) + (temp_f28 + var_f26), center.y, &frame,
+src/m_Do/m_Do_ext.cpp:1742:            mpSound->initAnime(mpBas, getPlaySpeed() >= 0.0f, getLoopFrame(), getFrame());
+src/m_Do/m_Do_ext.cpp:2113:            mpSound->initAnime(mpBas, getPlaySpeed() >= 0.0f, getLoopFrame(), getFrame());
+src/m_Do/m_Do_ext.cpp:2132:                mpSound->initAnime(mpBas, getPlaySpeed() >= 0.0f, getLoopFrame(), getFrame());
+src/m_Do/m_Do_ext.cpp:2167:            field_0x40->setFrame(mFrameCtrl.getFrame());
+src/m_Do/m_Do_graphic.cpp:1840:                // "Frame Buffer capture 2nd time (Rendering)"
+src/m_Do/m_Do_graphic.cpp:1912:                // "Frame Buffer capture 3rd time (Rendering)"
+src/m_Do/m_Do_main.cpp:740:        static u32 frame;
+src/m_Do/m_Do_main.cpp:744:        if (memorycheck_check_frame != 0 && frame % memorycheck_check_frame == 0) {
+src/m_Do/m_Do_main.cpp:749:        if (fillcheck_check_frame != 0 && frame % fillcheck_check_frame == 0) {
+src/revolution/homebuttonLib/HBMBase.cpp:325:        alpha = pFader->getFrame() * 255 / pFader->getMaxFrame();
+src/revolution/homebuttonLib/HBMBase.cpp:1431:                f32 restFrame = mFader.getMaxFrame() - mFader.getFrame();
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:21:    u16 GetStepCurveValue(f32 frame, const res::StepKey* keyArray, u32 keySize);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:22:    f32 GetHermiteCurveValue(f32 frame, const res::HermiteKey* keyArray, u32 keySize);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:25:                        const u32* animTargetOffsets, f32 frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:27:                           const u32* animTargetOffsets, f32 frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:29:                            const u32* animTargetOffsets, f32 frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:31:                              const u32* animTargetOffsets, f32 frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:33:                           const u32* animTargetOffsets, f32 frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:35:                               const u32* animTargetOffsets, f32 frame, void** tpls);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:37:                          const u32* animTargetOffsets, f32 frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:42:    u16 GetStepCurveValue(f32 frame, const res::StepKey* keyArray, u32 keySize) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:43:        if (keySize == 1 || frame <= keyArray[0].frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:47:        if (frame >= keyArray[keySize - 1].frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:65:        if (RIsSame(frame, keyArray[ikeyR].frame, 0.001f)) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:72:    f32 GetHermiteCurveValue(f32 frame, const res::HermiteKey* keyArray, u32 keySize) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:73:        if (keySize == 1 || frame <= keyArray[0].frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:77:        if (frame >= keyArray[keySize - 1].frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:97:        if (RIsSame(frame, key1.frame, 0.001f)) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:98:            if (ikeyR < keySize - 1 && keyArray[ikeyR + 1].frame == key1.frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:105:        f32 t1 = frame - key0.frame;
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:106:        f32 t2 = 1.0f / (key1.frame - key0.frame);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:128:                        const u32* animTargetOffsets, f32 frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:145:                           const u32* animTargetOffsets, f32 frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:156:            pPane->SetVisible(GetStepCurveValue(frame, keys, pAnimTarget->keyNum) != 0);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:161:                            const u32* animTargetOffsets, f32 frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:172:            f32 value = GetHermiteCurveValue(frame, keys, pAnimTarget->keyNum);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:184:                                     const u32* animTargetOffsets, f32 frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:195:            f32 value = GetHermiteCurveValue(frame, keys, pAnimTarget->keyNum);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:207:                           const u32* animTargetOffsets, f32 frame) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:227:                               const u32* animTargetOffsets, f32 frame, void** tpls) {
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:240:                    u16 fileIdx = GetStepCurveValue(frame, keys, pAnimTarget->keyNum);
+src/revolution/homebuttonLib/nw4hbm/lyt/lyt_animation.cpp:249:                          const u32* animTargetOffsets, f32 frame) {

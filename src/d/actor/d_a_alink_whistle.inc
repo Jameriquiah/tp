@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_procname.h"
 #include "d/actor/d_a_horse.h"
@@ -234,7 +235,7 @@ int daAlink_c::procGrassWhistleWait() {
 
             if (mProcVar2.field_0x300c == 0) {
                 voiceStart(Z2SE_PLAY_REED_TOBIKUSA);
-                mProcVar0.field_0x3008 = 100;
+                mProcVar0.field_0x3008 = tpFramesS16(100);
 
                 if (dComIfGs_isEventBit(dSv_event_flag_c::F_0700) &&
                     dComIfGs_isEventBit(dSv_event_flag_c::F_0037))
@@ -243,7 +244,7 @@ int daAlink_c::procGrassWhistleWait() {
                 }
             } else {
                 voiceStart(Z2SE_PLAY_REED_UMAKUSA);
-                mProcVar0.field_0x3008 = 140;
+                mProcVar0.field_0x3008 = tpFramesS16(140);
 
                 if (mProcVar2.field_0x300c == 1) {
                     dComIfGs_onEventBit(dSv_event_flag_c::F_0580);

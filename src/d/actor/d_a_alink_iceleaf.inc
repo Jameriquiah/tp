@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_obj_iceleaf.h"
 #include "SSystem/SComponent/c_math.h"
 
@@ -464,7 +465,7 @@ int daAlink_c::procBoardRowInit() {
     commonProcInit(PROC_BOARD_ROW);
     setSingleAnimeBaseSpeed(ANM_RIDE_KICK, getBoardRowAnmSpeed(), mpHIO->mItem.mBoard.m.mPushInterpolation);
     onResetFlg1(RFLG1_UNK_40);
-    mProcVar0.field_0x3008 = 4;
+    mProcVar0.field_0x3008 = tpFramesS16(4);
     mProcVar4.field_0x3010 = 1;
     mProcVar5.field_0x3012 = 0;
     return 1;
@@ -477,7 +478,7 @@ int daAlink_c::procBoardRow() {
 
     if (mProcVar4.field_0x3010 != 0) {
         onResetFlg1(RFLG1_UNK_40);
-        mProcVar0.field_0x3008 = 4;
+        mProcVar0.field_0x3008 = tpFramesS16(4);
     }
 
     if (!checkNextActionBoard()) {

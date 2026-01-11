@@ -4,6 +4,7 @@
  */
 
 #include "d/dolzel.h" // IWYU pragma: keep
+#include "tp_fps.h"
 
 #include "d/actor/d_a_alink.h"
 #include "JSystem/J2DGraph/J2DAnmLoader.h"
@@ -4025,7 +4026,7 @@ void daAlink_c::setSelectEquipItem(int param_0) {
             mSheathModel = mpSwMSheathModel;
         } else {
             if (!checkSwordGet()) {
-                mSwordChangeWaitTimer = 100;
+                mSwordChangeWaitTimer = tpFramesU8(100);
             }
             mSwordModel = mpSwAModel;
             mSheathModel = mpSwASheathModel;
@@ -4045,7 +4046,7 @@ void daAlink_c::setSelectEquipItem(int param_0) {
             (temp != mSwordModel || checkNoResetFlg2(FLG2_STATUS_WINDOW_DRAW)))
         {
             if (temp != mSwordModel) {
-                mSwordChangeWaitTimer = 5;
+                mSwordChangeWaitTimer = tpFramesU8(5);
             }
 
             if (checkWoodSwordEquip()) {
@@ -4293,7 +4294,7 @@ void daAlink_c::playerInit() {
     field_0x3108 = shape_angle.y;
 
     field_0x2f20.setOldPosP(&field_0x3624, &field_0x3630);
-    field_0x2fc3 = 10;
+    field_0x2fc3 = tpFramesU8(10);
 
     field_0x2f5c.mPosition = current.pos;
     field_0x2f5c.mColor.r = 80;
@@ -4324,7 +4325,7 @@ int daAlink_c::setStartProcInit() {
     BOOL horse_start = checkHorseStart(last_mode, start_mode);
 
     setDamagePoint(getLastSceneDamage(), last_mode == 4, 0, 1);
-    mSwordUpTimer = getLastSceneSwordAtUpTime() * 2;
+    mSwordUpTimer = tpFramesU16(getLastSceneSwordAtUpTime() * 2);
 
     if (checkWolf()) {
         setFaceBasicAnime(ANM_WAIT);
@@ -4413,7 +4414,7 @@ int daAlink_c::setStartProcInit() {
             mDemo.setStartDemoType();
             mDemo.setDemoMode(14);
             mDemo.setMoveAngle(current.angle.y);
-            mDemo.setTimer(35);
+            mDemo.setTimer(tpFramesS16(35));
 
             if (checkModeFlg(0x400)) {
                 daHorse_c* var_r27 = dComIfGp_getHorseActor();
@@ -9013,10 +9014,10 @@ void daAlink_c::setStickData() {
 
     if (abs_v < 0x4000 && abs_v > 0x6D4 && field_0x3180 * angle_diff >= 0) {
         field_0x3180 += angle_diff;
-        mStickSpinTimer = 4;
+        mStickSpinTimer = tpFramesS16(4);
     } else if (field_0x3180 * angle_diff < 0) {
         field_0x3180 = angle_diff;
-        mStickSpinTimer = 4;
+        mStickSpinTimer = tpFramesS16(4);
     } else if (mStickSpinTimer > 0) {
         mStickSpinTimer--;
     } else {
@@ -10566,7 +10567,7 @@ int daAlink_c::checkItemChangeAutoAction() {
 
 void daAlink_c::setFastShotTimer() {
     if (!dComIfGp_checkPlayerStatus0(0, 0x2000)) {
-        mFastShotTime = mpHIO->mItem.m.mItemFPTransitionTimer;
+        mFastShotTime = tpFramesS16(mpHIO->mItem.m.mItemFPTransitionTimer);
     }
 }
 
@@ -16795,7 +16796,7 @@ int daAlink_c::procCoMetamorphose() {
             return 1;
         }
 
-        mClothesChangeWaitTimer = 4;
+        mClothesChangeWaitTimer = tpFramesU8(4);
         mpWlMidnaModel = NULL;
         mProcVar0.field_0x3008 = 1;
 
@@ -16893,7 +16894,7 @@ int daAlink_c::procCoMetamorphoseOnlyInit() {
 
 int daAlink_c::procCoMetamorphoseOnly() {
     if (mProcVar2.field_0x300c == 0) {
-        mClothesChangeWaitTimer = 4;
+        mClothesChangeWaitTimer = tpFramesU8(4);
         mProcVar2.field_0x300c = 1;
     } else if (mClothesChangeWaitTimer == 0) {
         if (mProcVar3.field_0x300e == 0) {
@@ -17264,7 +17265,7 @@ int daAlink_c::execute() {
                 !strcmp(event_name, "MapToolCamera19") || !strcmp(event_name, "fire_insect"))) ||
             (checkStageName("F_SP115") && !strcmp(event_name, "MapToolCamera23"))))
         {
-                mWolfEyeUp = mpHIO->mWolf.m.mSensesLingerTime + 1;
+                mWolfEyeUp = tpFramesS16(mpHIO->mWolf.m.mSensesLingerTime + 1);
         } else if (checkEndResetFlg1(ERFLG1_WOLF_EYE_KEEP) || (checkDungeon() && eventInfo.checkCommandDoor()) ||
             mProcID == PROC_WOLF_GET_SMELL || mProcID == PROC_WOLF_DIG ||
             mProcID == PROC_WOLF_DIG_THROUGH || checkNoResetFlg0(FLG0_UNK_4000) ||
@@ -17272,11 +17273,11 @@ int daAlink_c::execute() {
             (checkEventRun() && partner != NULL && (partner->attention_info.flags & fopAc_AttnFlag_UNK_0x400000)) ||
             !strcmp(dComIfGp_getEventManager().getRunEventName(), l_defaultGetEventName))
         {
-            mWolfEyeUp = mpHIO->mWolf.m.mSensesLingerTime;
+            mWolfEyeUp = tpFramesS16(mpHIO->mWolf.m.mSensesLingerTime);
         } else if (mTargetedActor != NULL || dComIfGp_checkPlayerStatus0(0, 0x2000)) {
-            mWolfEyeUp = mpHIO->mWolf.m.mSensesLingerTime - 1;
+            mWolfEyeUp = tpFramesS16(mpHIO->mWolf.m.mSensesLingerTime - 1);
         } else if (!dComIfGp_getEvent()->isOrderOK() && mProcID != PROC_GET_ITEM &&
-                   mWolfEyeUp <= mpHIO->mWolf.m.mSensesLingerTime)
+                   mWolfEyeUp <= tpFramesS16(mpHIO->mWolf.m.mSensesLingerTime))
         {
             offWolfEyeUp();
         } else {
@@ -17285,7 +17286,7 @@ int daAlink_c::execute() {
     }
 
     if (checkEndResetFlg0(ERFLG0_ENEMY_DEAD) && mEquipItem == 0x103) {
-        mSwordFlourishTimer = mpHIO->mCut.m.mFlourishTime;
+        mSwordFlourishTimer = tpFramesS16(mpHIO->mCut.m.mFlourishTime);
     }
 
     if ((checkWolf() && field_0x2fbc == 11 && checkWaterPolygonUnder()) || field_0x2fbb == 11) {
@@ -17681,8 +17682,8 @@ int daAlink_c::execute() {
 
             if (checkWolfEyeUp() != 0) {
                 mWolfEyeUpTimer++;
-                if (mWolfEyeUpTimer > 30) {
-                    mWolfEyeUpTimer = 30;
+                if (mWolfEyeUpTimer > tpFramesU8(30)) {
+                    mWolfEyeUpTimer = tpFramesU8(30);
                 }
             } else if (mWolfEyeUpTimer != 0) {
                 mWolfEyeUpTimer--;
@@ -17742,11 +17743,11 @@ int daAlink_c::execute() {
             if (mHotspringRecoverTimer != 0) {
                 mHotspringRecoverTimer--;
             } else {
-                mHotspringRecoverTimer = mpHIO->mBasic.m.mHotspringRecoverTime;
+                mHotspringRecoverTimer = tpFramesU8(mpHIO->mBasic.m.mHotspringRecoverTime);
                 dComIfGp_setItemLifeCount(1.0f, 1);
             }
         } else {
-            mHotspringRecoverTimer = mpHIO->mBasic.m.mHotspringRecoverTime;
+            mHotspringRecoverTimer = tpFramesU8(mpHIO->mBasic.m.mHotspringRecoverTime);
         }
 
         if (checkAttentionLock() || (!checkUpperReadyThrowAnime() &&
@@ -17793,7 +17794,7 @@ int daAlink_c::execute() {
         if (checkMagicArmorWearAbility() && mClothesChangeWaitTimer == 0) {
             if (checkMagicArmorNoDamage() && !checkEventRun()) {
                 if (field_0x2fc3 == 0) {
-                    field_0x2fc3 = 10;
+                    field_0x2fc3 = tpFramesU8(10);
                     dComIfGp_setItemRupeeCount(-1);
                 } else {
                     field_0x2fc3--;
@@ -18548,11 +18549,11 @@ int daAlink_c::draw() {
             int color_timer = mDamageTimer + mDamageColorTime;
 
             int r, g, b;
-            if (color_timer > 32) {
+            if (color_timer > tpFramesS32(32)) {
                 r = mpHIO->mDamage.m.mDamageR0;
                 g = mpHIO->mDamage.m.mDamageG0;
                 b = mpHIO->mDamage.m.mDamageB0;
-            } else if (color_timer > 16) {
+            } else if (color_timer > tpFramesS32(16)) {
                 r = mpHIO->mDamage.m.mDamageR1;
                 g = mpHIO->mDamage.m.mDamageG1;
                 b = mpHIO->mDamage.m.mDamageB1;

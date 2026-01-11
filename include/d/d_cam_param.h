@@ -2,6 +2,7 @@
 #define D_D_CAM_PARAM_H
 
 #include "SSystem/SComponent/c_angle.h"
+#include "tp_fps.h"
 
 struct dCamMath {
     static f32 rationalBezierRatio(f32, f32);
@@ -127,34 +128,34 @@ public:
 
     bool CheckFlag2(u16 i_flag) { return (i_flag & mFlags2) != 0; }
     f32 WaitRollSpeed() { return mWaitRollSpeed; }
-    int WaitRollTimer() { return mWaitRollTimer; }
-    int ThrowTimer() { return mThrowTimer; }
+    int WaitRollTimer() { return tpFramesS32(mWaitRollTimer); }
+    int ThrowTimer() { return tpFramesS32(mThrowTimer); }
     f32 ThrowCushion() { return mThrowCushion; }
     f32 ThrowVAngle() { return mThrowVAngle; }
     f32 ThrowCtrAdjust() { return mThrowCtrOffset; }
     f32 ChargeBRatio() { return mChargeBRatio; }
-    int ChargeTimer() { return mChargeTimer; }
+    int ChargeTimer() { return tpFramesS32(mChargeTimer); }
     f32 ChargeLatitude() { return mChargeLatitude; }
 
     bool CheckFlag(u16 i_flag) { return (i_flag & mDebugFlags) != 0; }
     f32 ManualEndVal() { return mManualEndVal; }
     f32 CinemaScopeTrimHeight() { return mTrimCineScopeHeight; }
     f32 VistaTrimHeight() { return mTrimVistaHeight; }
-    f32 ForceLockOffTimer() { return mForceLockOffTimer; }
+    f32 ForceLockOffTimer() { return tpFramesF32(mForceLockOffTimer); }
     f32 ForceLockOffDist() { return mForceLockOffDist; }
     f32 USOValue() { return mFalseValue; }
     f32 USOAngle() { return mFalseAngle; }
     f32 WindShakeGap4Ctr() { return mWindShakeCtr; }
     f32 WindShakeGap4Fvy() { return mWindShakeFvy; }
     f32 LockonChangeCushion() { return mLockonChangeCushion; }
-    int LockonChangeTimer() { return mLockonChangeTimer; }
+    int LockonChangeTimer() { return tpFramesS32(mLockonChangeTimer); }
     f32 Cushion4Base() { return mBaseCushion; }
     f32 Cushion4Jump() { return mJumpCushion; }
     f32 CusCus() { return mCusCus; }
     f32 ParallelDist() { return mParallelDist; }
     f32 CurveWeight() { return mCurveWeight; }
-    s16 MapToolCameraLongTimer() { return mMapToolCamLongTimer; }
-    s16 MapToolCameraShortTimer() { return mMapToolCamShortTimer; }
+    s16 MapToolCameraLongTimer() { return tpFramesS16(mMapToolCamLongTimer); }
+    s16 MapToolCameraShortTimer() { return tpFramesS16(mMapToolCamShortTimer); }
 
     /* 0x000 */ f32 mDrawNear;
     /* 0x004 */ f32 mDrawFar;

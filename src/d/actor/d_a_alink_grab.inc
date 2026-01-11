@@ -1,4 +1,5 @@
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "d/actor/d_a_obj_carry.h"
 #include "d/d_bg_w.h"
@@ -2196,7 +2197,7 @@ int daAlink_c::procGoatCatchInit(fopAc_ac_c* param_0, f32 param_1) {
 
     field_0x37c8 = current.pos;
 
-    mProcVar0.field_0x3008 = 95;
+    mProcVar0.field_0x3008 = tpFramesS16(95);
     mProcVar1.field_0x300a = 0;
     mProcVar2.field_0x300c = 0;
 

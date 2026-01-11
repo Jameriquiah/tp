@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_b_bh.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_b_bq.h"
 #include "d/d_bomb.h"
 #include "d/d_com_inf_game.h"
@@ -109,17 +110,17 @@ static void b_bh_wait(b_bh_class* i_this) {
     f32 temp_f31 = 30.0f + TREG_F(12);
     if (bq_p->field_0x6fb != 0) {
         if (i_this->mID == 0) {
-            i_this->mTimers[1] = 100.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(100.0f + cM_rndF(50.0f)));
         } else {
-            i_this->mTimers[1] = 50.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(50.0f + cM_rndF(50.0f)));
         }
     }
 
     if (dComIfGp_event_runCheck()) {
         if (i_this->mID == 0) {
-            i_this->mTimers[1] = 350.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(350.0f + cM_rndF(50.0f)));
         } else {
-            i_this->mTimers[1] = 250.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(250.0f + cM_rndF(50.0f)));
         }
     }
 
@@ -128,14 +129,14 @@ static void b_bh_wait(b_bh_class* i_this) {
         anm_init(i_this, BCK_BH_WAIT, 10.0f, 2, 1.0f);
         i_this->mMode = 1;
         if (a_this->health <= 1) {
-            i_this->mTimers[1] = ((f32)l_HIO.attack_freq_a / 2) + cM_rndF((f32)l_HIO.attack_freq_a / 2);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(((f32)l_HIO.attack_freq_a / 2) + cM_rndF((f32)l_HIO.attack_freq_a / 2)));
         } else {
-            i_this->mTimers[1] = l_HIO.attack_freq_a + cM_rndF(l_HIO.attack_freq_a);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(l_HIO.attack_freq_a + cM_rndF(l_HIO.attack_freq_a)));
         }
         break;
     case 1:
         if (i_this->mTimers[0] == 0) {
-            i_this->mTimers[0] = 10.0f + cM_rndF(30.0f);
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(10.0f + cM_rndF(30.0f)));
             i_this->field_0x674.x = i_this->mBasePos.x + cM_rndFX(300.0f);
             i_this->field_0x674.z = i_this->mBasePos.z + cM_rndFX(300.0f);
             i_this->field_0x674.y = BREG_F(3) + (i_this->mBasePos.y + (550.0f * l_HIO.model_size) + cM_rndFX(200.0f));
@@ -213,7 +214,7 @@ static void b_bh_attack_1(b_bh_class* i_this) {
     case 0:
         anm_init(i_this, BCK_BH_ATTACKWAIT, 5.0f, 2, 1.0f);
         i_this->mMode = 2;
-        i_this->mTimers[0] = NREG_S(0) + 35;
+        i_this->mTimers[0] = static_cast<s16>(tpFramesF32(NREG_S(0) + 35));
 
         if (i_this->field_0x6a0 != 0) {
             i_this->mSound.startCreatureVoice(Z2SE_EN_BH_V_SP_ATTACK, -1);
@@ -222,7 +223,7 @@ static void b_bh_attack_1(b_bh_class* i_this) {
         }
         break;
     case 2:
-        if (i_this->mTimers[0] == NREG_S(4) + 8) {
+        if (i_this->mTimers[0] == tpFramesS16(NREG_S(4) + 8)) {
             anm_init(i_this, BCK_BH_ATTACK, 3.0f, 0, 1.0f);
         }
 
@@ -252,19 +253,19 @@ static void b_bh_attack_1(b_bh_class* i_this) {
 
         if (i_this->mTimers[0] == 0) {
             i_this->mMode = 3;
-            i_this->mTimers[0] = 25;
+            i_this->mTimers[0] = tpFramesS16(25);
             i_this->field_0x6a0 = 0;
         }
         break;
     case 3:
-        if (i_this->mTimers[0] == 22) {
+        if (i_this->mTimers[0] == tpFramesS16(22)) {
             i_this->mSound.startCreatureSound(Z2SE_EN_BH_ATTACK, 0, -1);
         }
 
         target_speed = 200.0f + YREG_F(0);
         var_f30 = 100.0f + YREG_F(1);
         if (i_this->mTimers[0] == 0 || i_this->field_0x688 < (500.0f + YREG_F(6)) || i_this->field_0x68c > (1700.0f + YREG_F(5))) {
-            i_this->mTimers[0] = YREG_S(2) + 20;
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(YREG_S(2) + 20));
             i_this->mMode = 4;
         }
         break;
@@ -272,7 +273,7 @@ static void b_bh_attack_1(b_bh_class* i_this) {
         if (i_this->mTimers[0] == 0) {
             i_this->mAction = ACTION_WAIT;
             i_this->mMode = 0;
-            i_this->mTimers[0] = 60.0f + cM_rndF(50.0f);
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(60.0f + cM_rndF(50.0f)));
             i_this->field_0x674.x = i_this->mBasePos.x + cM_rndFX(300.0f);
             i_this->field_0x674.z = i_this->mBasePos.z + cM_rndFX(300.0f);
             i_this->field_0x674.y = BREG_F(3) + (i_this->mBasePos.y + (550.0f * l_HIO.model_size) + cM_rndFX(200.0f));
@@ -316,7 +317,7 @@ static void b_bh_bombeat(b_bh_class* i_this) {
         if (i_this->mpModelMorf->isStop()) {
             anm_init(i_this, BCK_BH_EATWAIT, 1.0f, 2, 1.0f);
             i_this->mMode = 2;
-            i_this->mTimers[0] = 40;
+            i_this->mTimers[0] = tpFramesS16(40);
         }
         break;
     case 2:
@@ -327,7 +328,7 @@ static void b_bh_bombeat(b_bh_class* i_this) {
             i_this->field_0xf22 = 1;
 
             i_this->mSound.startCreatureVoice(Z2SE_EN_BH_V_DAMAGE, -1);
-            i_this->mTimers[0] = 20;
+            i_this->mTimers[0] = tpFramesS16(20);
         }
         break;
     case 3:
@@ -360,14 +361,14 @@ static s8 b_bh_down(b_bh_class* i_this) {
         anm_init(i_this, BCK_BH_ROUT, 1.0f, 2, 1.0f);
         i_this->field_0x690 = 0.0f;
         i_this->mMode = 1;
-        i_this->mTimers[0] = 200;
+        i_this->mTimers[0] = tpFramesS16(200);
         break;
     case 1:
         if (sp20.abs() >600.0f) {
             sp8 = 1;
         }
 
-        if (i_this->mTimers[0] > 100) {
+        if (i_this->mTimers[0] > tpFramesS16(100)) {
             i_this->mSound.startCreatureVoiceLevel(Z2SE_EN_BH_V_ROUT, -1);
         }
 
@@ -383,7 +384,7 @@ static s8 b_bh_down(b_bh_class* i_this) {
 
         if (i_this->mBasePos.y <= 50.0f + (a_this->home.pos.y - 1600.0f) + JREG_F(5)) {
             i_this->mMode = 2;
-            i_this->mTimers[0] = l_HIO.down_revive_time;
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(l_HIO.down_revive_time));
         }
 
         if (a_this->current.pos.y < a_this->home.pos.y) {
@@ -407,7 +408,7 @@ static s8 b_bh_down(b_bh_class* i_this) {
             a_this->current.pos.x = i_this->mBasePos.x;
             a_this->current.pos.z = i_this->mBasePos.z;
             i_this->field_0xf20 = 1;
-            i_this->mTimers[3] = 60;
+            i_this->mTimers[3] = tpFramesS16(60);
         }
         break;
     case 10:
@@ -422,9 +423,9 @@ static s8 b_bh_down(b_bh_class* i_this) {
             i_this->mMode = 1;
 
             if (i_this->mID == 0) {
-                i_this->mTimers[1] = 300;
+                i_this->mTimers[1] = tpFramesS16(300);
             } else {
-                i_this->mTimers[1] = 400;
+                i_this->mTimers[1] = tpFramesS16(400);
             }
         }
     }
@@ -451,23 +452,23 @@ static void b_bh_b_wait(b_bh_class* i_this) {
 
     if (bq_p->field_0x6fb != 0) {
         if (i_this->mID == 0) {
-            i_this->mTimers[1] = 100.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(100.0f + cM_rndF(50.0f)));
         } else {
-            i_this->mTimers[1] = 50.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(50.0f + cM_rndF(50.0f)));
         }
     }
 
     if (dComIfGp_event_runCheck()) {
         if (bq_p->field_0x6ec == 0) {
             if (i_this->mID == 0) {
-                i_this->mTimers[1] = 350.0f + cM_rndF(50.0f);
+                i_this->mTimers[1] = static_cast<s16>(tpFramesF32(350.0f + cM_rndF(50.0f)));
             } else {
-                i_this->mTimers[1] = 250.0f + cM_rndF(50.0f);
+                i_this->mTimers[1] = static_cast<s16>(tpFramesF32(250.0f + cM_rndF(50.0f)));
             }
         } else if (i_this->mID == 0) {
-            i_this->mTimers[1] = 150.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(150.0f + cM_rndF(50.0f)));
         } else {
-            i_this->mTimers[1] = 70.0f + cM_rndF(50.0f);
+            i_this->mTimers[1] = static_cast<s16>(tpFramesF32(70.0f + cM_rndF(50.0f)));
         }
     }
 
@@ -475,11 +476,11 @@ static void b_bh_b_wait(b_bh_class* i_this) {
     case 0:
         anm_init(i_this, BCK_BH_WAIT, 10.0f, 2, 1.0f);
         i_this->mMode = 1;
-        i_this->mTimers[1] = l_HIO.attack_freq_b + cM_rndF(l_HIO.attack_freq_b);
+        i_this->mTimers[1] = static_cast<s16>(tpFramesF32(l_HIO.attack_freq_b + cM_rndF(l_HIO.attack_freq_b)));
         break;
     case 1:
         if (i_this->mTimers[0] == 0) {
-            i_this->mTimers[0] = 10.0f + cM_rndF(30.0f);
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(10.0f + cM_rndF(30.0f)));
             i_this->field_0x674.x = i_this->field_0x6b0.x + cM_rndFX(300.0f);
             i_this->field_0x674.z = i_this->field_0x6b0.z + cM_rndFX(300.0f);
             i_this->field_0x674.y = BREG_F(3) + (i_this->field_0x6b0.y + (550.0f * l_HIO.model_size) + cM_rndFX(200.0f));
@@ -541,11 +542,11 @@ static void b_bh_b_attack_1(b_bh_class* i_this) {
     case 0:
         anm_init(i_this, BCK_BH_ATTACKWAIT, 5.0f, 2, 1.0f);
         i_this->mMode = 2;
-        i_this->mTimers[0] = NREG_S(0) + 35;
+        i_this->mTimers[0] = static_cast<s16>(tpFramesF32(NREG_S(0) + 35));
         i_this->mSound.startCreatureVoice(Z2SE_EN_BH_V_ATTACK, -1);
         break;
     case 2:
-        if (i_this->mTimers[0] == NREG_S(4) + 8) {
+        if (i_this->mTimers[0] == tpFramesS16(NREG_S(4) + 8)) {
             anm_init(i_this, BCK_BH_ATTACK, 3.0f, 0, 1.0f);
         }
 
@@ -566,11 +567,11 @@ static void b_bh_b_attack_1(b_bh_class* i_this) {
 
         if (i_this->mTimers[0] == 0) {
             i_this->mMode = 3;
-            i_this->mTimers[0] = 25;
+            i_this->mTimers[0] = tpFramesS16(25);
         }
         break;
     case 3:
-        if (i_this->mTimers[0] == 22) {
+        if (i_this->mTimers[0] == tpFramesS16(22)) {
             i_this->mSound.startCreatureSound(Z2SE_EN_BH_ATTACK, 0, -1);
         }
 
@@ -578,7 +579,7 @@ static void b_bh_b_attack_1(b_bh_class* i_this) {
         speed_step = 100.0f + YREG_F(1);
 
         if (i_this->mTimers[0] == 0 || i_this->field_0x688 < (500.0f + YREG_F(6)) || i_this->field_0x68c > (1700.0f + YREG_F(5))) {
-            i_this->mTimers[0] = YREG_S(3) + 10;
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(YREG_S(3) + 10));
             i_this->mMode = 4;
         }
         break;
@@ -586,7 +587,7 @@ static void b_bh_b_attack_1(b_bh_class* i_this) {
         if (i_this->mTimers[0] == 0) {
             i_this->mAction = ACTION_B_WAIT;
             i_this->mMode = 0;
-            i_this->mTimers[0] = 60.0f + cM_rndF(50.0f);
+            i_this->mTimers[0] = static_cast<s16>(tpFramesF32(60.0f + cM_rndF(50.0f)));
             i_this->field_0x674.x = i_this->field_0x6b0.x + cM_rndFX(300.0f);
             i_this->field_0x674.z = i_this->field_0x6b0.z + cM_rndFX(300.0f);
             i_this->field_0x674.y = BREG_F(3) + (i_this->field_0x6b0.y + (550.0f * l_HIO.model_size) + cM_rndFX(200.0f));
@@ -625,7 +626,7 @@ static void b_bh_b_bombeat(b_bh_class* i_this) {
         if (i_this->mpModelMorf->isStop()) {
             anm_init(i_this, BCK_BH_EATWAIT, 1.0f, 2, 1.0f);
             i_this->mMode = 2;
-            i_this->mTimers[0] = 60;
+            i_this->mTimers[0] = tpFramesS16(60);
         }
         break;
     case 2:
@@ -634,7 +635,7 @@ static void b_bh_b_bombeat(b_bh_class* i_this) {
             anm_init(i_this, BCK_BH_DAMAGE, 1.0f, 0, 1.0f);
             i_this->field_0x90c = 2;
             i_this->field_0xf22 = 1;
-            i_this->mTimers[0] = 20;
+            i_this->mTimers[0] = tpFramesS16(20);
         }
         break;
     case 3:
@@ -668,14 +669,14 @@ static s8 b_bh_b_down(b_bh_class* i_this) {
         anm_init(i_this, BCK_BH_ROUT, 1.0f, 2, 1.0f);
         i_this->field_0x690 = 0.0f;
         i_this->mMode = 1;
-        i_this->mTimers[0] = 200;
+        i_this->mTimers[0] = tpFramesS16(200);
         break;
     case 1:
         if (spC.abs() > 600.0f) {
             var_r27 = 1;
         }
 
-        if (i_this->mTimers[0] > 100) {
+        if (i_this->mTimers[0] > tpFramesS16(100)) {
             i_this->mSound.startCreatureVoiceLevel(Z2SE_EN_BH_V_ROUT, -1);
         }
 
@@ -949,7 +950,7 @@ static void damage_check(b_bh_class* i_this) {
         i_this->field_0x69e = 6;
         i_this->mAction = ACTION_WAIT;
         i_this->mMode = 1;
-        i_this->mTimers[1] = l_HIO.attack_freq_a + cM_rndF(l_HIO.attack_freq_a);
+        i_this->mTimers[1] = static_cast<s16>(tpFramesF32(l_HIO.attack_freq_a + cM_rndF(l_HIO.attack_freq_a)));
         i_this->mTimers[0] = 0;
         anm_init(i_this, BCK_BH_NODAMAGE, 3.0f, 0, 1.0f);
         i_this->mSound.startCreatureVoice(Z2SE_EN_BH_V_NODAMAGE, -1);

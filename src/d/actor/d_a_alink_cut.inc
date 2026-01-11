@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_b_gnd.h"
 #include "SSystem/SComponent/c_math.h"
 
@@ -1311,10 +1312,10 @@ int daAlink_c::procCutFinishJumpUpLandInit() {
 
     if (mComboCutCount == 3) {
         field_0x3484 = mpHIO->mCut.mCutFinishJumpUppercut.m.mComboCheckFrame;
-        mProcVar0.field_0x3008 = mpHIO->mCut.mCutFinishJumpUppercut.m.mComboStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mCut.mCutFinishJumpUppercut.m.mComboStopTime);
     } else {
         field_0x3484 = mpHIO->mCut.mCutFinishJumpUppercut.m.mLandAnm.mCancelFrame;
-        mProcVar0.field_0x3008 = mpHIO->mCut.mCutFinishJumpUppercut.m.mStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mCut.mCutFinishJumpUppercut.m.mStopTime);
     }
 
     mProcVar5.field_0x3012 = 0;
@@ -1790,7 +1791,7 @@ int daAlink_c::procCutTurnMove() {
     } else {
         mProcVar0.field_0x3008++;
         if (mProcVar0.field_0x3008 >= 14.0f) {
-            mProcVar0.field_0x3008 = 100;
+            mProcVar0.field_0x3008 = tpFramesS16(100);
         }
     }
 
@@ -2021,12 +2022,12 @@ int daAlink_c::procCutDownLandInit(fopEn_enemy_c* i_enemy) {
         }
 
         var_r30 = 0x20;
-        mProcVar0.field_0x3008 = mpHIO->mCut.mCutDown.m.mSuccessStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mCut.mCutDown.m.mSuccessStopTime);
         dComIfGp_getVibration().StartShock(4, 31, cXyz(0.0f, 1.0f, 0.0f));
     } else {
         var_r30 = mPolySound;
         mProcVar3.field_0x300e = 0;
-        mProcVar0.field_0x3008 = mpHIO->mCut.mCutDown.m.mFailStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mCut.mCutDown.m.mFailStopTime);
     }
 
     mZ2Link.startCollisionSE(Z2SE_HIT_SWORD_STAB, var_r30);

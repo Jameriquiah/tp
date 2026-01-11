@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "d/actor/d_a_arrow.h"
 #include "d/actor/d_a_horse.h"
@@ -37,7 +38,7 @@ f32 daAlink_c::getArrowIncAtR() const {
 }
 
 s16 daAlink_c::getBombArrowFlyExplodeTime() const {
-    return mpHIO->mItem.mBow.m.mBombArrowFlyExplodeTime;
+    return tpFramesS16(mpHIO->mItem.mBow.m.mBombArrowFlyExplodeTime);
 }
 
 f32 daAlink_c::getArrowIncAtMaxStart() const {
@@ -123,7 +124,7 @@ void daAlink_c::deleteArrow() {
 
     if (arrow_p != NULL && fopAcM_GetName(arrow_p) == PROC_ARROW) {
         if (arrow_p->checkBombArrow() &&
-            (mDamageTimer == mpHIO->mDamage.m.mInvincibleTime || checkModeFlg(8)))
+            (mDamageTimer == tpFramesS16(mpHIO->mDamage.m.mInvincibleTime) || checkModeFlg(8)))
         {
             arrow_p->setBombArrowExplode();
             dComIfGp_addSelectItemNum(mSelectItemId, -1);
@@ -242,7 +243,7 @@ void daAlink_c::setBowReloadAnime() {
     }
 
     field_0x2f96 = 0;
-    field_0x301c = mpHIO->mItem.mBow.m.mChargeArrowTime;
+    field_0x301c = tpFramesS16(mpHIO->mItem.mBow.m.mChargeArrowTime);
 }
 
 BOOL daAlink_c::checkUpperItemActionBow() {
@@ -335,7 +336,7 @@ BOOL daAlink_c::checkUpperItemActionBow() {
                     dComIfGp_setItemArrowNumCount(-1);
                     mItemAcKeep.clearData();
                     onResetFlg0(RFLG0_UNK_20000000);
-                    field_0x30a4 = mpHIO->mItem.mBow.m.mBombArrowHoldTime;
+                    field_0x30a4 = tpFramesS16(mpHIO->mItem.mBow.m.mBombArrowHoldTime);
                 } else {
                     seStartOnlyReverb(Z2SE_AL_ARROW_EMPTY);
                 }

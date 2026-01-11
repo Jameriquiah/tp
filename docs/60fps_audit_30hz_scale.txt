@@ -1,0 +1,219 @@
+src/Z2AudioLib/Z2WolfHowlMgr.cpp:184:                volume = getParamByExp(mReleaseTimer, 30.0f, 0.0f, 2.0f, 0.0f, 1.0f, Z2Calc::CURVE_POSITIVE);
+src/Z2AudioLib/Z2WolfHowlMgr.cpp:215:        f32 releaseScale = getParamByExp(mReleaseTimer, 30.0f, 0.0f, 1.0f, 0.97f, 1.0f, Z2Calc::CURVE_NEGATIVE);
+src/d/actor/d_a_alink.cpp:14874:        } else if (frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink_HIO.inc:251:    ctx->genSlider("", &m.mWolfToLinkCancelFrame, 0.0f, 30.0f, 0, NULL, 0xffff, 0xffff,
+src/d/actor/d_a_alink_HIO.inc:1704:    ctx->genSlider("", &m.mCrawlMoveRate, 0.0f, 30.0f, 0, NULL, 0xffff, 0xffff, 0x200,
+src/d/actor/d_a_alink_HIO.inc:4228:    ctx->genSlider("", &m.mThreatMoveRate, 0.0f, 30.0f, 0, NULL, 0xffff, 0xffff, 0x200,
+src/d/actor/d_a_alink_HIO.inc:4469:    ctx->genSlider("", &m.mProneMoveRate, 0.0f, 30.0f, 0, NULL, 0xffff, 0xffff, 0x200,
+src/d/actor/d_a_alink_HIO.inc:4860:    ctx->genSlider("", &m.mMovementRate, 0.0f, 30.0f, 0, NULL, 0xffff, 0xffff, 0x200, 0x18);
+src/d/actor/d_a_alink_bottle.inc:483:        } else if (frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink_cut.inc:2083:        } else if (frameCtrl_p->getFrame() >= 30.0f) {
+src/d/actor/d_a_alink_horse.inc:1766:            if (temp_r29->getAnmFrame(0) >= 30.0f) {
+src/d/actor/d_a_alink_wolf.inc:3472:            field_0x2060->getOldFrameTransInfo(0)->mTranslate.x -= 30.0f;
+src/d/actor/d_a_alink_wolf.inc:4848:        if ((temp_r29->getFrame() >= 13.0f && temp_r29->getFrame() < 30.0f) || (temp_r29->getFrame() >= 48.0f && temp_r29->getFrame() < 63.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8114:        if (frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_alink_wolf.inc:8278:            } else if (frameCtrl_p->checkPass(7.5f) || frameCtrl_p->checkPass(30.0f)) {
+src/d/actor/d_a_b_bh.cpp:138:            i_this->mTimers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_b_bh.cpp:482:            i_this->mTimers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_b_dr.cpp:1935:        if (mpModelMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_b_dre.cpp:262:            if (!(mpModelMorf->getFrame() <= 130.0f) || mAnm != 0x38) {
+src/d/actor/d_a_b_dre.cpp:275:        if (mpModelMorf->getFrame() > 130.0f && mAnm == 0x38) {
+src/d/actor/d_a_b_dre.cpp:302:        if (mpModelMorf->checkFrame(130.0f)) {
+src/d/actor/d_a_b_dre.cpp:522:            mTimers[2] = 30.0f + cM_rndF(30.0f);
+src/d/actor/d_a_b_dre.cpp:526:            mTimers[1] = 30.0f + cM_rndF(30.0f);
+src/d/actor/d_a_b_ds.cpp:1895:            if (mpMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_b_gg.cpp:819:        if ((f32)mTimers[0] == 30.0f + HREG_F(0)) {
+src/d/actor/d_a_b_gg.cpp:930:        if ((f32)mTimers[0] == (30.0f + HREG_F(2))) {
+src/d/actor/d_a_b_gg.cpp:934:        if (!((f32)mTimers[0] > (30.0f + HREG_F(2)))) {
+src/d/actor/d_a_b_gos.cpp:77:        i_this->mTimers[0] = cM_rndF(30) + 30.0f;
+src/d/actor/d_a_b_mgn.cpp:1291:            setBck(BCK_MGN_WAIT, J3DFrameCtrl::EMode_LOOP, 30.0f, 1.0f);
+src/d/actor/d_a_b_mgn.cpp:1584:            if (mpMgnBtk->getFrame() > 30.0f) {
+src/d/actor/d_a_b_mgn.cpp:1991:        if (mpMgnModelMorf->getFrame() >= 30.0f) {
+src/d/actor/d_a_b_mgn.cpp:2892:        if (mpMgnModelMorf->getFrame() < 230.0f) {
+src/d/actor/d_a_b_ob.cpp:1167:            i_this->mTimers[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_b_ob.cpp:1253:                i_this->mTimers[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_b_oh.cpp:171:        i_this->mTimers[0] = (s16)(cM_rndF(30.0f) + 60.0f);
+src/d/actor/d_a_b_tn.cpp:1067:            mTimer3 = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_b_tn.cpp:1072:            mTimer3 = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_b_tn.cpp:1077:            mTimer3 = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_b_tn.cpp:1950:        if (mpModelMorf2->getFrame() < 30.0f) {
+src/d/actor/d_a_b_tn.cpp:2461:        if (mpModelMorf2->getFrame() <= 30.0f) {
+src/d/actor/d_a_b_tn.cpp:2502:        if (mpModelMorf2->getFrame() >= 22.0f && mpModelMorf2->getFrame() < 30.0f) {
+src/d/actor/d_a_b_tn.cpp:2511:        if (mpModelMorf2->checkFrame(30.0f)) {
+src/d/actor/d_a_b_tn.cpp:3309:            mTimer3 = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_b_tn.cpp:3337:                    mTimer3 = cM_rndF(30.0f) + 60.0f;
+src/d/actor/d_a_b_tn.cpp:3762:        } else if (mpModelMorf2->checkFrame(30.0f)) {
+src/d/actor/d_a_b_tn.cpp:3828:            if (mpModelMorf2->checkFrame(30.0f)) {
+src/d/actor/d_a_b_zant.cpp:2092:                    mModeTimer = cM_rndF(30.0f) + 100.0f;
+src/d/actor/d_a_b_zant.cpp:2099:                    mModeTimer = cM_rndF(30.0f) + 100.0f;
+src/d/actor/d_a_b_zant.cpp:3844:                mModeTimer = cM_rndF(15.0f) + 30.0f;
+src/d/actor/d_a_b_zant.cpp:4125:            setBck(BCK_ZAN_SW_FATIGUE, J3DFrameCtrl::EMode_LOOP, 30.0f, 1.0f);
+src/d/actor/d_a_cow.cpp:1197:                mTimer1 = (u8)(rand + 30.0f);
+src/d/actor/d_a_crod.cpp:212:            mLight.mPow = mBck.getFrame() * 300.0f * 0.03125f;
+src/d/actor/d_a_cstatue.cpp:718:                mpMorf->getFrame() < 30.0f)
+src/d/actor/d_a_do.cpp:1022:        i_this->mTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_do.cpp:2049:        i_this->mASwimTimer = cM_rndF(25.0f) + 30.0f;
+src/d/actor/d_a_do.cpp:2170:            i_this->mBtpTimer = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_e_ba.cpp:338:        i_this->mTimer[1] = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_e_ba.cpp:358:            i_this->mTimer[0] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_e_ba.cpp:363:            i_this->mTimer[1] = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_e_ba.cpp:474:            i_this->mTimer[0] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_e_ba.cpp:580:        i_this->mTimer[0] = cM_rndF(30.0f) + 100.0f;
+src/d/actor/d_a_e_bee.cpp:247:                i_bee->mTimer = cM_rndF(50.0f) + 30.0f;
+src/d/actor/d_a_e_bee.cpp:250:                i_bee->mTimer = cM_rndF(30.0f) + 15.0f;
+src/d/actor/d_a_e_bee.cpp:347:        i_bee->mTimer = cM_rndF(30.0f) + 20.0f;
+src/d/actor/d_a_e_bu.cpp:373:        i_this->timers[1] = 30.0f + cM_rndF(100.0f);
+src/d/actor/d_a_e_bu.cpp:391:            i_this->timers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_bu.cpp:396:            i_this->timers[1] = 30.0f + cM_rndF(100.0f);
+src/d/actor/d_a_e_bu.cpp:495:            i_this->timers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_bu.cpp:577:        i_this->timers[0] = 100.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_bu.cpp:661:                i_this->timers[1] = 30.0f + cM_rndF(20.0f);
+src/d/actor/d_a_e_cr.cpp:177:        a_this->timers[0] = 30.0f + cM_rndF(60.0f);
+src/d/actor/d_a_e_cr.cpp:204:            a_this->timers[0] = 30.0f + cM_rndF(60.0f);
+src/d/actor/d_a_e_cr.cpp:261:            a_this->timers[0] = 50.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_db.cpp:452:            i_this->timers[1] = 30.0f + cM_rndF(20.0f);
+src/d/actor/d_a_e_db.cpp:461:            i_this->timers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_db.cpp:532:            i_this->timers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_dn.cpp:601:                i_this->timer[0] = cM_rndF(10.0f) + 30.0f;
+src/d/actor/d_a_e_dn.cpp:1098:                i_this->timer[2] = JREG_F(1) + (cM_rndF(30.0f) + 30.0f);
+src/d/actor/d_a_e_dn.cpp:1222:                i_this->timer[2] = JREG_F(1) + (cM_rndF(30.0f) + 30.0f);
+src/d/actor/d_a_e_dt.cpp:823:            mTimer = (u8)(150.0f + cM_rndFX(30.0f));
+src/d/actor/d_a_e_dt.cpp:882:        if (mpMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_e_dt.cpp:1503:        if (mpMorf->getFrame() < 30.0f) {
+src/d/actor/d_a_e_dt.cpp:1845:        if (mpMorf->checkFrame(130.0f)) {
+src/d/actor/d_a_e_dt.cpp:1874:        if (mpMorf->checkFrame(330.0f)) {
+src/d/actor/d_a_e_fm.cpp:1050:                i_this->mTimers[1] = 30.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_fm.cpp:2992:    } else if (i_this->mAnm == BCK_FM_DAMAGEWALK && (i_this->mpFmModelMorf->checkFrame(1.0f) || i_this->mpFmModelMorf->checkFrame(30.0f))) {
+src/d/actor/d_a_e_fm.cpp:2996:    } else if (i_this->mAnm == BCK_FM_KYORO2 && (i_this->mpFmModelMorf->checkFrame(1.0f) || i_this->mpFmModelMorf->checkFrame(30.0f))) {
+src/d/actor/d_a_e_gb.cpp:173:                i_this->timer[0] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_e_gb.cpp:445:            head_anm_init(i_this, dRes_ID_E_GB_BCK_GB_DIE_e, 30.0f, J3DFrameCtrl::EMode_NONE, 1.0f);
+src/d/actor/d_a_e_ge.cpp:412:        mAnmChangeTimer = (s16)(cM_rndF(30.0f) + 30.0f);
+src/d/actor/d_a_e_ge.cpp:522:        mAnmChangeTimer = (s16)(cM_rndF(30.0f) + 30.0f);
+src/d/actor/d_a_e_gob.cpp:384:            i_this->mTimers[0] = 60.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_gob.cpp:395:            i_this->mTimers[0] = 90.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_hb.cpp:400:            i_this->timers[1] = 30.0f + cM_rndF(20.0f);
+src/d/actor/d_a_e_hb.cpp:409:            i_this->timers[0] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_hm.cpp:305:    if (mAnm_p->getFrame() > 30.0f) {
+src/d/actor/d_a_e_hm.cpp:858:        if (mAnm_p->getFrame() > 30.0f) {
+src/d/actor/d_a_e_hz.cpp:472:    if (checkBck(0x10) && (mpMorfSO->checkFrame(0.0f) || mpMorfSO->checkFrame(30.0f))) {
+src/d/actor/d_a_e_hzelda.cpp:537:        if (i_this->mpModelMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_e_mb.cpp:145:                i_this->mTimers[0] = cM_rndF(30.0f) + 125.0f + 50.0f;
+src/d/actor/d_a_e_nest.cpp:427:    i_this->mRotation.x = i_this->mWobble * cM_ssin(i_this->mFrame * 3000);
+src/d/actor/d_a_e_oc.cpp:830:        } else if (mpMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_e_oc.cpp:1336:    if (checkBck(5) && mpMorf->getFrame() >= 30.0f && mpMorf->getFrame() <= 45.0f) {
+src/d/actor/d_a_e_ot.cpp:378:        mTimer2 = 180.0f + cM_rndFX(30.0f);
+src/d/actor/d_a_e_ot.cpp:383:            mTimer2 = 180.0f + cM_rndFX(30.0f);
+src/d/actor/d_a_e_pm.cpp:1129:            mTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_pm.cpp:1140:            mTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_pm.cpp:2562:        mEyeAnmTimer = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_e_rb.cpp:616:                    child[i]->timers[1] = 10.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_rd.cpp:266:                i_this->mpModelMorf->setFrame(cM_rndF(30.0f));
+src/d/actor/d_a_e_rd.cpp:1313:                i_this->mpModelMorf->setFrame(30.0f);
+src/d/actor/d_a_e_rd.cpp:6315:                if (i_this->mpModelMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_e_rdy.cpp:266:        i_this->mpMorf->setFrame(cM_rndF(30.0f));
+src/d/actor/d_a_e_rdy.cpp:957:        i_this->mTimer[3] = cM_rndF(15.0f) + 30.0f;
+src/d/actor/d_a_e_rdy.cpp:1057:            i_this->mpMorf->setFrame(30.0f);
+src/d/actor/d_a_e_rdy.cpp:1609:            i_this->mTimer[0] = cM_rndF(30.0f) + 60.0f;
+src/d/actor/d_a_e_rdy.cpp:1833:            i_this->mTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_rdy.cpp:1881:                i_this->mTimer[1] = cM_rndF(30.0f) + 20.0f;
+src/d/actor/d_a_e_rdy.cpp:2787:                i_this->mTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_rdy.cpp:2834:                i_this->mTimer[0] = cM_rndF(15.0f) + 30.0f;
+src/d/actor/d_a_e_rdy.cpp:3432:            if (vec1.abs() < 30.0f || i_this->mTimer[3] == 0) {
+src/d/actor/d_a_e_s1.cpp:603:        i_this->mTimers[0] = 30.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_s1.cpp:844:            e_actor->mTimers[0] = cM_rndF(10.0f) + 30.0f;
+src/d/actor/d_a_e_s1.cpp:1014:            i_this->mTimers[0] = cM_rndF(10.0f) + 30.0f;
+src/d/actor/d_a_e_s1.cpp:1095:            i_this->mTimers[0] = cM_rndF(10.0f) + 30.0f;
+src/d/actor/d_a_e_sg.cpp:251:                    i_this->mTimers[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_sg.cpp:264:            i_this->mTimers[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_sg.cpp:335:            i_this->mTimers[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_sg.cpp:515:                i_this->mTimers[1] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_e_sg.cpp:621:            i_this->mTimers[0] = (cM_rndF(30.0f) + 10.0f);
+src/d/actor/d_a_e_sm2.cpp:146:        i_this->timers[0] = 30.0f + cM_rndF(60.0f);
+src/d/actor/d_a_e_sm2.cpp:545:            i_this->timers[0] = 40.0f + cM_rndF(30.0f);
+src/d/actor/d_a_e_st.cpp:650:            i_this->mTimers[1] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_st.cpp:713:            i_this->mTimers[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_st.cpp:1640:            cLib_addCalcAngleS2(&a_this->current.angle.z, (s16)(fVar2 * cM_scos(i_this->mTimers[1] * 3000)), 4, maxStep);
+src/d/actor/d_a_e_st.cpp:1648:                    anm_init(i_this, BCK_ST_DEAD, YREG_F(6) + 30.0f, J3DFrameCtrl::EMode_NONE, 1.0f);
+src/d/actor/d_a_e_tk.cpp:192:            i_this->mActionTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_tk.cpp:199:            i_this->mActionTimer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_tk.cpp:271:                i_this->mActionTimer[1] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_tk.cpp:348:            i_this->mActionTimer[0] = cM_rndF(30.0f) + 60.0f;
+src/d/actor/d_a_e_tk.cpp:596:        if (i_this->mpMorf->checkFrame(1.0f) || i_this->mpMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_e_tk2.cpp:195:            i_this->mActionTimer[1] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_e_tk2.cpp:256:            i_this->mActionTimer[0] = (short)(int)(cM_rndF(30.0f) + 70.0f);
+src/d/actor/d_a_e_tk2.cpp:410:               (i_this->mpMorf->checkFrame(1.0f) || i_this->mpMorf->checkFrame(30.0f)))
+src/d/actor/d_a_e_vt.cpp:1824:        if (30.0f <= anm_frame && anm_frame <= 43.0f) {
+src/d/actor/d_a_e_vt.cpp:2142:        if (mpMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_e_vt.cpp:2338:            setBck(ANM_FLOAT_WAIT_e, J3DFrameCtrl::EMode_LOOP, nREG_F(19) + 30.0f, 1.0f);
+src/d/actor/d_a_e_vt.cpp:2519:        setBck(ANM_SUBS_FLY_e, J3DFrameCtrl::EMode_LOOP, 30.0f, 1.0f);
+src/d/actor/d_a_e_wb.cpp:1772:        if (i_this->mSpeedCapTimer > 0 && a_this->speedF > 30.0f) {
+src/d/actor/d_a_e_yg.cpp:339:            i_this->mTimers[0] = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_e_yg.cpp:353:                i_this->mTimers[0] = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_e_yg.cpp:374:                i_this->mTimers[0] = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_e_yk.cpp:593:        i_this->mActionTimers[1]  = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_e_yk.cpp:617:            i_this->mActionTimers[0] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_e_yk.cpp:622:            i_this->mActionTimers[1]  = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_e_yk.cpp:771:            i_this->mActionTimers[0] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_e_yk.cpp:936:        i_this->mActionTimers[0] = cM_rndF(30.0f) + 100.0f;
+src/d/actor/d_a_e_ymb.cpp:2638:            if (mpModelMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_mg_fish.cpp:1865:            pvVar5->timers[2] = cM_rndF(13.0f) + 30.0f;
+src/d/actor/d_a_midna.cpp:2449:    mEyeMoveTimer = cM_rndF(30.0f) + 75.0f;
+src/d/actor/d_a_ni.cpp:329:            i_this->mTimers[0] = cM_rndF(60) + 30.0f;
+src/d/actor/d_a_ni.cpp:508:            i_this->mTimers[0] = cM_rndF(60) + 30.0f;
+src/d/actor/d_a_ni.cpp:518:            (fopAcM_wayBgCheck(i_this, 100.0f, 30.0f) && i_this->mTimers[1] == 0))
+src/d/actor/d_a_npc_du.cpp:188:                i_this->mTimers[0] = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_npc_du.cpp:197:            if (i_this->mTimers[0] == 0 || (fopAcM_wayBgCheck(actor, 100.0f, 30.0f) && i_this->mTimers[1] == 0)) {
+src/d/actor/d_a_npc_du.cpp:282:                i_this->mTimers[0] = cM_rndF(60.0f) + 30.0f;
+src/d/actor/d_a_npc_du.cpp:300:            if (i_this->mTimers[0] == 0 || (fopAcM_wayBgCheck(actor, 100.0f, 30.0f) && i_this->mTimers[1] == 0)) {
+src/d/actor/d_a_npc_kn.cpp:1244:            if (field_0x15ce && mpModelMorf[0]->getFrame() >= 30.0f && mpModelMorf[0]->getFrame() <= 40.0f) {
+src/d/actor/d_a_npc_ks.cpp:1288:                    i_this->timer[0] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_npc_ks.cpp:1501:                i_this->timer[0] = cM_rndF(10.0f) + 30.0f;
+src/d/actor/d_a_npc_ks.cpp:1920:                i_this->timer[0] = cM_rndF(30.0f) + 50.0f;
+src/d/actor/d_a_npc_ks.cpp:2105:                i_this->timer[0] = cM_rndF(30.0f) + 50.0f;
+src/d/actor/d_a_npc_ks.cpp:3769:                    i_this->timer[0] = cM_rndF(30.0f) + 40.0f;
+src/d/actor/d_a_npc_ks.cpp:3848:                i_this->timer[0] = cM_rndF(30.0f) + 20.0f;
+src/d/actor/d_a_npc_ks.cpp:3854:            i_this->timer[0] = cM_rndF(30.0f) + 20.0f;
+src/d/actor/d_a_npc_ks.cpp:4047:            i_this->timer[3] = cM_rndF(30.0f) + 30.0f;
+src/d/actor/d_a_npc_ks.cpp:5618:                i_this->timer[3] = l_HIO.lantern_swing_interval * 30.0f;
+src/d/actor/d_a_npc_ks.cpp:5759:                i_this->timer[3] = l_HIO.lantern_swing_interval * 30.0f;
+src/d/actor/d_a_npc_ne.cpp:579:                i_this->mTimers[1] = cM_rndF(20.0f) + 30.0f;
+src/d/actor/d_a_npc_ne.cpp:1946:        if (delta.abs() < 30.0f || i_this->mTimers[0] == 0) {
+src/d/actor/d_a_npc_ne.cpp:2590:            i_this->mBtpTimer = cM_rndF(100.0f) + 30.0f;
+src/d/actor/d_a_npc_zrz.cpp:1528:            tevStr.TevColor.a = (u8)((mEventTimer - 30) / 30.0f * 255.0f);
+src/d/actor/d_a_npc_zrz.cpp:1786:        mAllcolRatio = (30 - mEventTimer) * 0.45f / 30.0f + 0.55f;
+src/d/actor/d_a_obj_balloon.cpp:100:            mRotateTimer = (s16)(30.0f + cM_rndF(60.0f));
+src/d/actor/d_a_obj_gra2.cpp:1750:    if (mpModelMorf->checkFrame(12.0f) || mpModelMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_obj_gra2.cpp:1772:        mpModelMorf->setEndFrame(30.0f);
+src/d/actor/d_a_obj_kabuto.cpp:329:            mTimers[0] = cM_rndF(10.0f) + 30.0f;
+src/d/actor/d_a_obj_keyhole.cpp:394:        if (i_this->lock_modelMorf->checkFrame(30.0f)) {
+src/d/actor/d_a_obj_kuwagata.cpp:371:            mTimers[0] = cM_rndF(30.0f) + 10.0f;
+src/d/actor/d_a_obj_nan.cpp:236:                (30.0f < mMorf->getFrame() && mMorf->getFrame() < 40.0f))
+src/d/actor/d_a_obj_onsenTaru.cpp:210:        if (mTimer < (s16)(l_HIO.mCoolTime * 30)) {
+src/d/actor/d_a_obj_scannon.cpp:599:    } else if (mBck.checkFrame(130.0f)) {
+src/d/actor/d_a_obj_tornado2.cpp:173:            mTimer = getOffTime() * 30;
+src/d/actor/d_a_obj_tornado2.cpp:176:            mTimer = getOnTime() * 30;
+src/d/actor/d_a_obj_tornado2.cpp:179:            mTimer = getOffTime() * 30;
+src/d/actor/d_a_obj_tornado2.cpp:184:        mTimer = getOnTime() * 30;
+src/d/actor/d_a_obj_tornado2.cpp:188:        mTimer = getOffTime() * 30;
+src/d/actor/d_a_obj_tornado2.cpp:236:                mTimer = getOffTime() * 30;
+src/d/actor/d_a_obj_tornado2.cpp:267:                mTimer = getOnTime() * 30;
+src/d/actor/d_a_obj_treesh.cpp:102:            mShakeTimer[i] = cM_rndF(30.0f) + 15.0f;
+src/d/actor/d_a_obj_volcball.cpp:230:        mSearchBallCreateTimer = getData()->mSearchBallCreateTime * 30;
+src/d/actor/d_a_obj_volcball.cpp:413:        mSearchBallCreateTimer = getData()->mSearchBallCreateTime * 30;
+src/d/actor/d_a_obj_waterPillar.cpp:371:    mWaitFrameDelay = getParam(12, 5) * 0.5f * 30.0f;
+src/d/actor/d_a_obj_yousei.cpp:290:                mTimers[0] = 30.0f + cM_rndF(40.0f);
+src/d/actor/d_a_obj_yousei.cpp:350:        mTimers[1] = (30.0f + nREG_F(2) + cM_rndF(20.0f - var_f31)) - var_f31;
+src/d/actor/d_a_sq.cpp:106:        i_this->mTimer[1] = cM_rndF(30.0f) + 15.0f;
+src/d/actor/d_a_sq.cpp:231:            i_this->mTimer[1] = cM_rndF(30.0f) + 15.0f;
+src/d/d_camera.cpp:9479:            mDoGph_gInf_c::setBlureRate((int)(var_f29 * 30.0f));
+src/d/d_camera.cpp:9628:        u8 blureRate = mBlure.mAlpha * 230.0f * mult;
+src/d/d_demo.cpp:854:    m_control->setSecondPerFrame(1.0f / 30.0f);
+src/d/d_kankyo.cpp:2094:            if (pselect_p->change_rate < (1.0f / 30)) {
+src/d/d_kankyo.cpp:2095:                pselect_p->change_rate = (1.0f / 30);
+src/d/d_kankyo.cpp:2100:                    *pattern_ratio_p += (1.0f / 30) / pselect_p->change_rate;
+src/d/d_kankyo_rain.cpp:5122:            effect->mLightInfluence.mColor.g = (u8)(effect->mFlashTimer * 130.0f);
+src/d/d_meter_HIO.cpp:1214:    mTimerPosY[2] = -30.0f;
+src/d/d_msg_scrn_howl.cpp:461:    f32 fVar4 =  (30 - daAlink_getAlinkActorClass()->getWolfHowlMgrP()->getReleaseTimer()) / 30.0f;
+src/d/d_msg_scrn_howl.cpp:814:    mpWaveTex->setAlpha((screenAlpha * mpPmP_c->getAlphaRate()) * ((30 - timer) / 30.0f));
+src/d/d_s_name.cpp:118:        mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 30);
+src/d/d_s_play.cpp:624:    mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 30);

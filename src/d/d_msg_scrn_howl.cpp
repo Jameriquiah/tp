@@ -18,6 +18,7 @@
 #include "JSystem/J2DGraph/J2DGrafContext.h"
 #include "JSystem/J2DGraph/J2DScreen.h"
 #include "Z2AudioLib/Z2WolfHowlMgr.h"
+#include "tp_fps.h"
 
 typedef void (dMsgScrnHowl_c::*dMsgScrnHowl_cFunc)();
 
@@ -341,7 +342,7 @@ void dMsgScrnHowl_c::guide_off_init() {
 
 void dMsgScrnHowl_c::guide_off_proc() {
     calcMain();
-    if (daAlink_getAlinkActorClass()->getWolfHowlMgrP()->getReleaseTimer() != 30) {
+    if (daAlink_getAlinkActorClass()->getWolfHowlMgrP()->getReleaseTimer() != tpFramesS16(30)) {
         if (daAlink_getAlinkActorClass()->getWolfHowlTimer() != 0) {
             return;
         }
@@ -380,11 +381,11 @@ void dMsgScrnHowl_c::guide_demo_play_proc() {
     }
     calcMain();
     bool startGuideMelody = false;
-    if (mPlotTime == 30) {
+    if (mPlotTime == tpFramesS16(30)) {
         startGuideMelody = true;
     }
     field_0x17c = daAlink_getAlinkActorClass()->getWolfHowlMgrP()->startGuideMelody(startGuideMelody);
-    if (mPlotTime >= 30) {
+    if (mPlotTime >= tpFramesS16(30)) {
         if (field_0x17c == 0) {
             if (field_0x279a != 0) {
                 resetLine();
@@ -458,7 +459,7 @@ void dMsgScrnHowl_c::drawWave() {
     f32 local_e4 = field_0x180[sVar14];
     s32 uVar6 = g_MsgObject_HIO_c.mHowlHIO.mWaveformDotLen;
     s32 local_80 = field_0x2128 - 1 - uVar6;
-    f32 fVar4 =  (30 - daAlink_getAlinkActorClass()->getWolfHowlMgrP()->getReleaseTimer()) / 30.0f;
+    f32 fVar4 =  (tpFramesS16(30) - daAlink_getAlinkActorClass()->getWolfHowlMgrP()->getReleaseTimer()) / tpFramesF32(30.0f);
     if (local_80 < 0) {
         local_80 = 0;
     }
@@ -500,7 +501,7 @@ void dMsgScrnHowl_c::drawWave() {
                 local_64 = fVar2;
                 local_94 = temp_r4;
             }
-            if (mPlotTime >= 30 && iVar10 >= local_80 && iVar10 >= 30) {
+            if (mPlotTime >= tpFramesS16(30) && iVar10 >= local_80 && iVar10 >= tpFramesS16(30)) {
                 f32 local_b0 = 0.0f;
                 if (sVar3 > 0) {
                     local_b0 = (f32)sVar3 / (f32)uVar6;
@@ -542,13 +543,13 @@ void dMsgScrnHowl_c::drawWave() {
                 f18 = local_64;
             } else {
                 field_0x2134++;
-                if (field_0x2134 > 30) {
+                if (field_0x2134 > tpFramesS16(30)) {
                     field_0x2134 = 0;
                 }
-                if (field_0x2134 < 15) {
-                    local_dc = field_0x2134 / 15.0f;
+                if (field_0x2134 < tpFramesS16(15)) {
+                    local_dc = field_0x2134 / tpFramesF32(15.0f);
                 } else {
-                    local_dc = (30.0f - field_0x2134) / 15.0f;
+                    local_dc = (tpFramesF32(30.0f) - field_0x2134) / tpFramesF32(15.0f);
                 }
                 f17 = f26;
                 f18 = local_e4;
@@ -811,7 +812,7 @@ void dMsgScrnHowl_c::drawEffect() {
     grafContext->setScissor();
     u8 timer = daAlink_getAlinkActorClass()->getWolfHowlMgrP()->getReleaseTimer();
     u8 screenAlpha = mpScreen->search('line00')->getAlpha();
-    mpWaveTex->setAlpha((screenAlpha * mpPmP_c->getAlphaRate()) * ((30 - timer) / 30.0f));
+    mpWaveTex->setAlpha((screenAlpha * mpPmP_c->getAlphaRate()) * ((tpFramesS16(30) - timer) / tpFramesF32(30.0f)));
     f32 fVar2 = field_0x2128 * field_0x1980;
     f32 fVar3 = mpLineH[0]->getGlobalPosX() - field_0x27a8;
     field_0x199c = fVar3 + fVar2;
@@ -822,7 +823,7 @@ void dMsgScrnHowl_c::drawEffect() {
 }
 
 void dMsgScrnHowl_c::calcMain() {
-    if (mPlotTime < field_0x2138 + 380) {
+    if (mPlotTime < field_0x2138 + tpFramesS32(380)) {
         mPlotTime++;
     } else {
         field_0x212c--;
@@ -837,7 +838,7 @@ void dMsgScrnHowl_c::calcWave() {
         field_0x2128++;
         moveBaseLength(true);
     } else {
-        if (field_0x212e < field_0x2138 + 380) {
+        if (field_0x212e < field_0x2138 + tpFramesS32(380)) {
             field_0x212e++;
         }
         field_0x2132 = field_0x2124;
@@ -852,7 +853,7 @@ void dMsgScrnHowl_c::calcWave() {
     }
     if (field_0x2798 != 3) {
         s8 i_onNum = daAlink_getAlinkActorClass()->getOnLineNum();
-        if (i_onNum >= 0 && mPlotTime >= 30 && daAlink_getAlinkActorClass()->getWolfHowlTimer() != 0) {
+        if (i_onNum >= 0 && mPlotTime >= tpFramesS16(30) && daAlink_getAlinkActorClass()->getWolfHowlTimer() != 0) {
             JUT_ASSERT(1439, i_onNum < LINE_MAX);
             JUT_ASSERT(1439, mPlotTime <= PLOT_BUFFER_MAX_e);
             field_0x2158[i_onNum]++;
@@ -952,8 +953,8 @@ s8 dMsgScrnHowl_c::getOnLineNum(int param_0) {
         return -1;
     }
 
-    if (param_0 >= 30 && param_0 < field_0x2138 + 380) {
-        int iVar1 = 30;
+    if (param_0 >= tpFramesS16(30) && param_0 < field_0x2138 + tpFramesS32(380)) {
+        int iVar1 = tpFramesS16(30);
         for (int i = 0; i < mCorrectLineMax; i++) {
             iVar1 += field_0x213a[i];
             if (param_0 < iVar1) {

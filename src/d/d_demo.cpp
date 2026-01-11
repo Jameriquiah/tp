@@ -1,6 +1,7 @@
 #include "d/dolzel.h" // IWYU pragma: keep
 
 #include "d/d_demo.h"
+#include "tp_fps.h"
 #include "d/d_msg_class.h"
 #include "d/d_msg_object.h"
 #include "f_op/f_op_camera_mng.h"
@@ -8,6 +9,9 @@
 #include "d/actor/d_a_movie_player.h"
 #include "JSystem/JGadget/pointer.h"
 #include "JSystem/JGadget/define.h"
+
+
+static f32 s_demoFrameAccum = 0.0f;
 
 s16 dDemo_c::m_branchId = -1;
 
@@ -993,14 +997,23 @@ int dDemo_c::update() {
         }
     }
 
-    if (m_control->forward(1) != 0) {
-        m_frame++;
+    s_demoFrameAccum += tpFrameScale();
+    int advance = 0;
+    while (s_demoFrameAccum >= 1.0f) {
+        advance++;
+        s_demoFrameAccum -= 1.0f;
+    }
 
-        if (m_control->getSuspend() <= 0) {
-            m_frameNoMsg++;
+    if (advance > 0) {
+        if (m_control->forward(advance) != 0) {
+            m_frame += advance;
+
+            if (m_control->getSuspend() <= 0) {
+                m_frameNoMsg += advance;
+            }
+        } else {
+            m_mode = 2;
         }
-    } else {
-        m_mode = 2;
     }
 
     if (m_branchData != NULL) {
@@ -1017,7 +1030,9 @@ int dDemo_c::update() {
             if (dComIfGs_staffroll_next_go_check() == 1) {
                 mDoGph_gInf_c::fadeOut(0.1f, g_blackColor);
             }
-            env_light->staffroll_next_timer++;
+            if (advance > 0) {
+                env_light->staffroll_next_timer += advance;
+            }
         }
     }
 
@@ -1042,6 +1057,7 @@ void dDemo_c::reset() {
     m_frameNoMsg = 0;
     m_status = 0;
     m_branchData = NULL;
+    s_demoFrameAccum = 0.0f;
 }
 
 JPABaseEmitter* dDemo_particle_c::emitter_create(u32 i_id) {

@@ -1,6 +1,7 @@
 #include "d/dolzel.h" // IWYU pragma: keep
 
 #include "d/d_camera.h"
+#include "tp_fps.h"
 #include "SSystem/SComponent/c_counter.h"
 #include "SSystem/SComponent/c_math.h"
 #include <math>
@@ -3423,6 +3424,7 @@ bool dCamera_c::chaseCamera(s32 param_0) {
         if (dComIfGp_evmng_cameraPlay()) {
             int timer;
             getEvIntData(&timer, "Timer", 20);
+            timer = tpFramesS32(timer);
             chase->field_0x4 = timer != 0 ? timer : 1;
             chase->field_0x95 = true;
 
@@ -3564,7 +3566,7 @@ bool dCamera_c::chaseCamera(s32 param_0) {
         chase->field_0x58 = pos;
         if (chase->field_0x95) {
             rate = 0.75f;
-            if (push_any_key() && mMonitor.field_0xc < 0.1f && mCurCamStyleTimer > 20) {
+            if (push_any_key() && mMonitor.field_0xc < 0.1f && mCurCamStyleTimer > tpFramesS32(20)) {
                 mStyleSettle.mFinished = true;
             }
         }
@@ -5736,7 +5738,7 @@ bool dCamera_c::talktoCamera(s32 param_0) {
         break;
     }
 
-    case 32:
+    case 32: {
         if (talk->field_0x44 == 0) {
             mStyleSettle.mFinished = true;
             mViewCache.mCenter = talk->field_0x4;
@@ -5777,6 +5779,7 @@ bool dCamera_c::talktoCamera(s32 param_0) {
             mViewCache.mFovy = 60.0f;
         }
         break;
+    }
 
     case 28: {
         if (talk->field_0x44 == 0) {
@@ -6800,6 +6803,7 @@ bool dCamera_c::towerCamera(s32 param_0) {
         } else if (dComIfGp_evmng_cameraPlay()) {
             int timer;
             getEvIntData(&timer, "Timer", 20);
+            timer = tpFramesS32(timer);
             tower->field_0x4 = timer != 0 ? timer : 1;
         } else if (chkFlag(0x8000) || mCurMode == 1) {
             mStyleSettle.mFinished = true;
@@ -7159,7 +7163,7 @@ bool dCamera_c::hookshotCamera(s32 param_0) {
     }
 
     f32 fovy;
-    if (hookshot->field_0x20 && mCurCamStyleTimer > 8 && mCamParam.Flag(param_0, 0x800)) {
+    if (hookshot->field_0x20 && mCurCamStyleTimer > tpFramesS32(8) && mCamParam.Flag(param_0, 0x800)) {
         stack_d8 = hookshot->field_0x14;
         fovy = val17;
         val23 = 1.0f;
@@ -9164,6 +9168,7 @@ bool dCamera_c::eventCamera(s32 param_0) {
         mRecovery.field_0x4 = (s16)sp24;
 
         getEvIntData(&sp24, "WaitAnyKey", 0);
+        sp24 = tpFramesS32(sp24);
         if (sp24 != 0) {
             setFlag(0x200000);
         }

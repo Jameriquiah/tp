@@ -4,9 +4,10 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 
 s16 daAlink_c::getBombExplodeTime() const {
-    return mpHIO->mItem.mBomb.m.mExplodeTime;
+    return tpFramesS16(mpHIO->mItem.mBomb.m.mExplodeTime);
 }
 
 f32 daAlink_c::getBombGravity() const {

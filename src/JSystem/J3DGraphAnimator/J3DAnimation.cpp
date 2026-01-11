@@ -3,6 +3,7 @@
 #include "JSystem/J3DGraphAnimator/J3DAnimation.h"
 #include "JSystem/J3DGraphBase/J3DStruct.h"
 #include "JSystem/JMath/JMath.h"
+#include "tp_fps.h"
 
 void J3DFrameCtrl::init(s16 endFrame) {
     mAttribute = EMode_LOOP;
@@ -15,7 +16,7 @@ void J3DFrameCtrl::init(s16 endFrame) {
 }
 
 int J3DFrameCtrl::checkPass(f32 passFrame) {
-    f32 next_frame = mFrame + mRate;
+    f32 next_frame = mFrame + (mRate * tpFrameScale());
 
     switch (mAttribute) {
     case 0:
@@ -134,7 +135,7 @@ int J3DFrameCtrl::checkPass(f32 passFrame) {
 
 void J3DFrameCtrl::update() {
     mState = 0;
-    mFrame += mRate;
+    mFrame += (mRate * tpFrameScale());
 
     switch (mAttribute) {
     case EMode_NONE:

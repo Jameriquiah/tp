@@ -1,3 +1,4 @@
+#include "tp_fps.h"
 /**
  * d_a_alink_damage.inc
  * Player Damage action handling
@@ -36,7 +37,7 @@ void daAlink_c::freezeTimerDamage() {
     mProcVar0.field_0x3008--;
     mProcVar1.field_0x300a++;
 
-    if (mProcVar1.field_0x300a % 45 == 0) {
+    if (mProcVar1.field_0x300a % tpFramesS16(45) == 0) {
         setDamagePoint(1, 1, 0, 0);
     }
 
@@ -187,7 +188,7 @@ int daAlink_c::setDamagePoint(int i_dmgAmount, int i_checkZoraMag, int i_setDmgT
     mSwordUpTimer = 0;
 
     if (i_setDmgTimer) {
-        mDamageTimer = mpHIO->mDamage.m.mInvincibleTime;
+        mDamageTimer = tpFramesS16(mpHIO->mDamage.m.mInvincibleTime);
         setDamageColorTime();
     }
 
@@ -343,7 +344,7 @@ void daAlink_c::damageTimerCount() {
     } else if (mDamageColorTime != 0) {
         mDamageColorTime--;
 
-        if ((mDamageColorTime + mDamageTimer) % 16 == 0) {
+        if ((mDamageColorTime + mDamageTimer) % tpFramesS16(16) == 0) {
             setDamageColorTime();
         }
     }
@@ -484,10 +485,10 @@ BOOL daAlink_c::checkDamageAction() {
 
     if (sp2C & 0x80) {
         mIceDamageWaitTimer++;
-        if (mIceDamageWaitTimer < mpHIO->mDamage.m.mFreezeTime) {
+        if (mIceDamageWaitTimer < tpFramesS16(mpHIO->mDamage.m.mFreezeTime)) {
             sp2C = 0;
         }
-    } else if (mIceDamageWaitTimer > 3) {
+    } else if (mIceDamageWaitTimer > tpFramesS16(3)) {
         mIceDamageWaitTimer -= 3;
     } else {
         mIceDamageWaitTimer = 0;
@@ -498,7 +499,7 @@ BOOL daAlink_c::checkDamageAction() {
         setDamagePoint(1, sp2C & 0x80, TRUE, 0);
 
         if (checkWolf()) {
-            mDamageTimer = mpHIO->mDamage.m.mWolfFloorInvincibleTime;
+            mDamageTimer = tpFramesS16(mpHIO->mDamage.m.mWolfFloorInvincibleTime);
             setDamageColorTime();
         }
 
@@ -844,7 +845,7 @@ int daAlink_c::procDamageInit(dCcD_GObjInf* param_0, int param_1) {
         frame_ctrl->setRate(mpHIO->mDamage.mDamNormal.m.mIceDamageASpeed);
         frame_ctrl->setEnd(7);
         mNormalSpeed = 0.0f;
-        mProcVar0.mIceFreezeTimer = 90;
+        mProcVar0.mIceFreezeTimer = tpFramesS16(90);
         onNoResetFlg1(FLG1_ICE_FREEZE);
     } else {
         mProcVar0.mIceFreezeTimer = 0;
@@ -1270,7 +1271,7 @@ int daAlink_c::procLargeDamageUpInit(int param_0, int param_1, s16 param_2, s16 
                 mProcVar0.field_0x3008 = mDemo.getParam1();
                 var_f31 = 0.0f;
             } else if (param_0 == -2 && mDemo.getDemoType() == daPy_demo_c::DEMO_TYPE_TOOL_e) {
-                mProcVar0.field_0x3008 = 0x1E;
+                mProcVar0.field_0x3008 = tpFramesS16(0x1E);
                 var_f31 = 0.0f;
             } else {
                 mProcVar0.field_0x3008 = -1;
@@ -1528,7 +1529,7 @@ int daAlink_c::procLandDamageInit(int param_0) {
     f32 var_f31;
     if (param_0 == 0) {
         var_f31 = mpHIO->mDamage.mDamFall.m.mSmallDmgLandStartFrame;
-        mProcVar0.field_0x3008 = mpHIO->mAutoJump.m.mSpinJumpLandStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mAutoJump.m.mSpinJumpLandStopTime);
 
         if (mProcID == PROC_MAGNE_BOOTS_FLY) {
             dComIfGp_getVibration().StartShock(6, 0x1F, cXyz(0.0f, 1.0f, 0.0f));
@@ -1541,7 +1542,7 @@ int daAlink_c::procLandDamageInit(int param_0) {
         }
 
         var_f31 = mpHIO->mDamage.mDamFall.m.mSmallDmgLandStartFrame;
-        mProcVar0.field_0x3008 = mpHIO->mDamage.mDamFall.m.mSmallStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mDamage.mDamFall.m.mSmallStopTime);
         dComIfGp_getVibration().StartShock(4, 0x1F, cXyz(0.0f, 1.0f, 0.0f));
     } else {
         if (!checkEventRun()) {
@@ -1549,7 +1550,7 @@ int daAlink_c::procLandDamageInit(int param_0) {
         }
 
         var_f31 = mpHIO->mDamage.mDamFall.m.mLandAnm.mStartFrame;
-        mProcVar0.field_0x3008 = mpHIO->mDamage.mDamFall.m.mBigStopTime;
+        mProcVar0.field_0x3008 = tpFramesS16(mpHIO->mDamage.mDamFall.m.mBigStopTime);
         dComIfGp_getVibration().StartShock(5, 0x1F, cXyz(0.0f, 1.0f, 0.0f));
     }
 
@@ -1659,7 +1660,7 @@ int daAlink_c::procCoElecDamageInit(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, 
         setSingleAnimeBase(var_r29);
     }
 
-    mProcVar0.field_0x3008 = 0x2D;
+    mProcVar0.field_0x3008 = tpFramesS16(0x2D);
     mProcVar3.field_0x300e = 3;
 
     field_0x3198 = checkLargeAttack(param_2) | checkHugeAttack(param_2);
@@ -1814,11 +1815,11 @@ int daAlink_c::procDkCaught() {
     mProcVar0.field_0x3008--;
 
     if (escapeTrigger()) {
-        mProcVar0.field_0x3008 -= mpHIO->mDamage.mDamCaught.m.mInputFadeTime;
+        mProcVar0.field_0x3008 -= tpFramesS16(mpHIO->mDamage.mDamCaught.m.mInputFadeTime);
     }
 
     if (checkInputOnR() && abs((s16)(mStickAngle - mPrevStickAngle)) > 0x1000) {
-        mProcVar0.field_0x3008 -= mpHIO->mDamage.mDamCaught.m.mInputFadeTime;
+        mProcVar0.field_0x3008 -= tpFramesS16(mpHIO->mDamage.mDamCaught.m.mInputFadeTime);
     }
 
     if (mProcVar0.field_0x3008 < 0) {

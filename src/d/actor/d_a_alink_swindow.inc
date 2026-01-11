@@ -1,3 +1,4 @@
+#include "tp_fps.h"
 /**
  * d_a_alink_swindow.inc
  * Pause Menu Player Display
@@ -51,7 +52,7 @@ void daAlink_c::setOriginalHeap(JKRExpHeap** i_ppheap, u32 i_size) {
 
 void daAlink_c::setClothesChange(int param_0) {
     if (!checkWolf()) {
-        mClothesChangeWaitTimer = 4;
+        mClothesChangeWaitTimer = tpFramesU8(4);
 
         if (param_0 != 0) {
             onNoResetFlg2(FLG2_UNK_200000);
@@ -60,14 +61,14 @@ void daAlink_c::setClothesChange(int param_0) {
 }
 
 void daAlink_c::setShieldChange() {
-    mShieldChangeWaitTimer = 4;
+    mShieldChangeWaitTimer = tpFramesU8(4);
 }
 
 int daAlink_c::loadModelDVD() {
     if (mClothesChangeWaitTimer != 0) {
         mClothesChangeWaitTimer--;
 
-        if (mClothesChangeWaitTimer == 2) {
+        if (mClothesChangeWaitTimer == tpFramesU8(2)) {
             mEyeHL1.remove();
             mEyeHL2.remove();
             mpWlMidnaModel = NULL;
@@ -86,7 +87,7 @@ int daAlink_c::loadModelDVD() {
                     setArcName(checkWolf());
                 }
             }
-        } else if (mClothesChangeWaitTimer == 1) {
+        } else if (mClothesChangeWaitTimer == tpFramesU8(1)) {
             if (checkNoResetFlg2(FLG2_UNK_280000)) {
                 mClothesChangeWaitTimer = 0;
                 changeLink(1);
@@ -106,7 +107,7 @@ int daAlink_c::loadModelDVD() {
 
                     return 1;
                 }
-                mClothesChangeWaitTimer = 2;
+                mClothesChangeWaitTimer = tpFramesU8(2);
             }
         }
     } else {
@@ -127,19 +128,19 @@ int daAlink_c::loadShieldModelDVD() {
     if (mShieldChangeWaitTimer != 0) {
         mShieldChangeWaitTimer--;
 
-        if (mShieldChangeWaitTimer == 2) {
+        if (mShieldChangeWaitTimer == tpFramesU8(2)) {
             mShieldModel = NULL;
             dComIfG_resDelete(&mShieldPhaseReq, mShieldArcName);
             cPhs_Reset(&mShieldPhaseReq);
             mpShieldArcHeap->freeAll();
             setShieldArcName();
-        } else if (mShieldChangeWaitTimer == 1) {
+        } else if (mShieldChangeWaitTimer == tpFramesU8(1)) {
             if (dComIfG_resLoad(&mShieldPhaseReq, mShieldArcName, mpShieldArcHeap) == cPhs_COMPLEATE_e)
             {
                 mShieldChangeWaitTimer = 0;
                 setShieldModel();
             } else {
-                mShieldChangeWaitTimer = 2;
+                mShieldChangeWaitTimer = tpFramesU8(2);
             }
         }
     } else {
@@ -296,7 +297,7 @@ void daAlink_c::statusWindowExecute(const cXyz* i_pos, s16 i_angle) {
         loadShieldModelDVD();
         setSelectEquipItem(1);
         
-        if (mSwordChangeWaitTimer >= 30) {
+        if (mSwordChangeWaitTimer >= tpFramesU8(30)) {
             mSwordChangeWaitTimer = 0;
         }
 

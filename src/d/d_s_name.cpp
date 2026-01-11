@@ -4,6 +4,7 @@
 */
 
 #include "d/dolzel.h" // IWYU pragma: keep
+#include "tp_fps.h"
 
 #include "d/d_s_name.h"
 #include "JSystem/JKernel/JKRExpHeap.h"
@@ -115,7 +116,7 @@ s32 dScnName_c::create() {
         field_0x41e = g_snHIO.mFileSelWaitTime;
         field_0x41c = 0;
         field_0x41d = 0;
-        mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 30);
+        mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / TP_TARGET_FPS);
 
         #if VERSION == VERSION_GCN_PAL
         mBmgStatus = 0;

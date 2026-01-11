@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_horse.h"
 #include "d/actor/d_a_hozelda.h"
 #include "d/actor/d_a_e_wb.h"
@@ -661,7 +662,7 @@ int daAlink_c::setSyncHorse(int param_0) {
             s32 dir = getDirectionFromShapeAngle();
             if (dir == DIR_FORWARD)
             {
-                field_0x3004 = mpHIO->mHorse.m.mWalkOutProhibitionTime;
+                field_0x3004 = tpFramesS16(mpHIO->mHorse.m.mWalkOutProhibitionTime);
                 setSingleAnimeParam(ANM_WSTARTH, &mpHIO->mHorse.m.mWalkOutAnm);
                 offNoResetFlg1(FLG1_UNK_1000);
             }
@@ -697,16 +698,16 @@ int daAlink_c::setSyncHorse(int param_0) {
                 if (doTrigger()) {
                     onResetFlg0(RFLG0_COW_GAME_LEASH);
                     voiceStart(Z2SE_AL_V_RUSH_HORSE);
-                    field_0x30a6 = mpHIO->mHorse.m.mWhipWaitTime;
+                    field_0x30a6 = tpFramesS16(mpHIO->mHorse.m.mWhipWaitTime);
                     setHorseSwordUpAnime();
-                    field_0x3002 = -mpHIO->mHorse.m.mWhipWaitTime;
+                    field_0x3002 = -tpFramesS16(mpHIO->mHorse.m.mWhipWaitTime);
                 }
             }
         } else if (checkHorseDashAccept()) {
             setDoStatus(9);
 
             if (doTrigger()) {
-                field_0x3004 = mpHIO->mHorse.m.mWalkOutProhibitionTime;
+                field_0x3004 = tpFramesS16(mpHIO->mHorse.m.mWalkOutProhibitionTime);
                 daAlink_ANM anm;
                 const daAlinkHIO_anm_c* anmparam_p = &mpHIO->mHorse.m.mWhipAnm;
                 anm = ANM_HORSE_LASH;
@@ -727,7 +728,7 @@ int daAlink_c::setSyncHorse(int param_0) {
                     onNoResetFlg1(FLG1_UNK_800);
                 }
 
-                field_0x30a6 = mpHIO->mHorse.m.mWhipWaitTime;
+                field_0x30a6 = tpFramesS16(mpHIO->mHorse.m.mWhipWaitTime);
             }
         }
     }
@@ -780,7 +781,7 @@ int daAlink_c::setSyncHorse(int param_0) {
          mProcID != PROC_HORSE_CUT_TURN) ||
         field_0x2f8c == 10)
     {
-        if ((var_r28 || field_0x3004 != mpHIO->mHorse.m.mWalkOutProhibitionTime) && field_0x3004 != 0) {
+        if ((var_r28 || field_0x3004 != tpFramesS16(mpHIO->mHorse.m.mWalkOutProhibitionTime)) && field_0x3004 != 0) {
             field_0x3004--;
         }
 
@@ -828,7 +829,7 @@ int daAlink_c::setSyncBoar(int param_0) {
     {
         int direction = getDirectionFromShapeAngle();
         if (direction == DIR_FORWARD || direction == DIR_BACKWARD) {
-            field_0x3004 = mpHIO->mHorse.m.mWalkOutProhibitionTime;
+            field_0x3004 = tpFramesS16(mpHIO->mHorse.m.mWalkOutProhibitionTime);
             setSingleAnimeParam(ANM_WSTARTH, &mpHIO->mHorse.m.mWalkOutAnm);
         }
     }
@@ -995,7 +996,7 @@ void daAlink_c::setHorseSwordUp(int param_0) {
          (!param_0 && checkEnemyGroup(mTargetedActor) && checkNoResetFlg1(FLG1_UNK_800))))
     {
         setHorseSwordUpAnime();
-        field_0x3002 = mpHIO->mHorse.m.mSwordUpTime;
+        field_0x3002 = tpFramesS16(mpHIO->mHorse.m.mSwordUpTime);
     }
 
     offNoResetFlg1(FLG1_UNK_800);
@@ -1465,8 +1466,8 @@ int daAlink_c::procHorseRide() {
                 onNoResetFlg1(FLG1_UNK_1000);
                 voiceStart(Z2SE_AL_V_RUSH_HORSE);
 
-                field_0x30a6 = mpHIO->mHorse.m.mWhipWaitTime;
-                field_0x3004 = mpHIO->mHorse.m.mWalkOutProhibitionTime;
+                field_0x30a6 = tpFramesS16(mpHIO->mHorse.m.mWhipWaitTime);
+                field_0x3004 = tpFramesS16(mpHIO->mHorse.m.mWalkOutProhibitionTime);
                 var_r26->onPlayerBackRideLash();
             }
         } else if (mProcVar2.field_0x300c == 0 && checkHorseRide()) {
@@ -2134,7 +2135,7 @@ int daAlink_c::procHorseCutTurnInit() {
     setSyncRide(1);
     field_0x3478 = mpHIO->mCut.mHorseCutCharge.m.mSpinAttackRadius;
     setCylAtParam(getSwordAtType(), dCcG_At_Spl_UNK_1, 3, 1, 3, field_0x3478 * 0.5f, 200.0f);
-    mProcVar4.field_0x3010 = mpHIO->mCut.mHorseCutCharge.m.mSpinStopTime;
+    mProcVar4.field_0x3010 = tpFramesS16(mpHIO->mCut.mHorseCutCharge.m.mSpinStopTime);
     voiceStart(Z2SE_AL_V_KAITEN);
     setCutWaterDropEffect();
     setHorseZeldaDamage();

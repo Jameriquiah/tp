@@ -4,6 +4,7 @@
  */
 
 #include "d/dolzel.h" // IWYU pragma: keep
+#include "tp_fps.h"
 
 #include "d/d_s_play.h"
 #include "JSystem/JUtility/JUTConsole.h"
@@ -621,7 +622,7 @@ static int phase_4(dScnPly_c* i_this) {
     dComIfGp_createSimpleModel();
     dMdl_mng_c::create();
 
-    mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 30);
+    mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / TP_TARGET_FPS);
     g_envHIO.field_0x4 = -1;
     g_save_bit_HIO.field_0x4 = -1;
     new (dComIfGp_getAttention()) dAttention_c(dComIfGp_getPlayer(0), 0);

@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 
 f32 daAlink_c::getCrawlMoveAnmSpeed() {
     return getAnmSpeedStickRate(mpHIO->mCrouch.m.mCrawlAnmSpeedMin,
@@ -653,7 +654,7 @@ int daAlink_c::procCrawlAutoMoveInit(int param_0, cXyz* param_1) {
     field_0x37c8 = *param_1;
     field_0x33cc = 1.0f;
     field_0x3198 = param_0;
-    mProcVar0.field_0x3008 = 20;
+    mProcVar0.field_0x3008 = tpFramesS16(20);
     mProcVar1.field_0x300a = 300;
 
     dComIfGp_setPlayerStatus0(0, 0x8000000);

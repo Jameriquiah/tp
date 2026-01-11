@@ -1,3 +1,4 @@
+#include "tp_fps.h"
 /**
  * d_a_alink_demo.inc
  * Player Cutscene / Event action handling
@@ -797,7 +798,7 @@ void daAlink_c::setDemoData() {
 
             if (checkModeFlg(0x80000) || mDemo.getDemoMode() == daPy_demo_c::DEMO_UNK_6_e || mDemo.getDemoMode() == daPy_demo_c::DEMO_UNK_8_e) {
                 dComIfGp_setPlayerStatus0(0, 0x10);
-                mMidnaTalkDelayTimer = 30;
+                mMidnaTalkDelayTimer = tpFramesU8(30);
             } else {
                 dComIfGp_clearPlayerStatus0(0, 0x10);
             }
@@ -1719,7 +1720,7 @@ int daAlink_c::procCoTalkInit() {
         }
     }
 
-    mProcVar0.field_0x3008 = 30;
+    mProcVar0.field_0x3008 = tpFramesS16(30);
     dComIfGp_setPlayerStatus0(0, 0x10);
     return 1;
 }
@@ -2382,7 +2383,7 @@ int daAlink_c::procDoorOpenInit() {
 
         if (mDemo.getParam0() & 4) {
             field_0x3478 = 10.0f;
-            mProcVar0.field_0x3008 = 10;
+            mProcVar0.field_0x3008 = tpFramesS16(10);
 
             if (open_anm == ANM_DOOR_OPEN_LEFT) {
                 end_f = 14;
@@ -3058,7 +3059,7 @@ int daAlink_c::procCoFogDeadInit() {
     field_0x3194 = 0;
 
     dCam_getBody()->StartEventCamera(0x13, fopAcM_GetID(this), "Type", 1, &field_0x3194, 0);
-    mProcVar0.field_0x3008 = 60;
+    mProcVar0.field_0x3008 = tpFramesS16(60);
     mProcVar2.field_0x300c = 0;
     return 1;
 }
@@ -3477,7 +3478,7 @@ int daAlink_c::procTradeItemOutInit() {
         }
     }
 
-    mProcVar0.field_0x3008 = 30;
+    mProcVar0.field_0x3008 = tpFramesS16(30);
     return 1;
 }
 
@@ -4264,7 +4265,7 @@ int daAlink_c::procCoWarpInit(int param_0, int param_1) {
         field_0x3484 = 1.0f;
     } else {
         field_0x347c = -0.5f;
-        mProcVar0.field_0x3008 = 45;
+        mProcVar0.field_0x3008 = tpFramesS16(45);
 
         if (checkWolf()) {
             field_0x3480 = 3.5f;

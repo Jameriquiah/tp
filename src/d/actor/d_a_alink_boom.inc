@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_boomerang.h"
 
 BOOL daAlink_c::checkBoomerangLockAccept() {
@@ -53,7 +54,7 @@ f32 daAlink_c::getBoomLockMax() {
 }
 
 s16 daAlink_c::getBoomBgThroughTime() const {
-    return mpHIO->mItem.mBoomerang.m.mBgThroughTime;
+    return tpFramesS16(mpHIO->mItem.mBoomerang.m.mBgThroughTime);
 }
 
 bool daAlink_c::checkBossBabaRoom() {
@@ -137,7 +138,7 @@ void daAlink_c::setBoomerangReadyQuake() {
     dComIfGp_getVibration().StartQuake(1, 1, cXyz(tmp_0, 1.0f, tmp_0));
 
     onNoResetFlg3(FLG3_UNK_4);
-    mItemVar0.field_0x3018 = mpHIO->mItem.mBoomerang.m.mChargeTime;
+    mItemVar0.field_0x3018 = tpFramesS16(mpHIO->mItem.mBoomerang.m.mChargeTime);
 }
 
 void daAlink_c::setBoomerangReadyAnime() {

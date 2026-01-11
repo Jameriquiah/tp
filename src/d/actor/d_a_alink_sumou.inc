@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "d/actor/d_a_npc_wrestler.h"
 #include "d/actor/d_a_boomerang.h"
@@ -146,7 +147,7 @@ int daAlink_c::procSumouMoveInit() {
         mSpeedModifier = 1.0f;
         mSpecialMode = 7;
         mProcVar2.field_0x300c = 0xFFFF;
-        mProcVar0.field_0x3008 = 10;
+        mProcVar0.field_0x3008 = tpFramesS16(10);
         field_0x3478 = 5.0f;
         field_0x32cc = Z2SE_AL_V_SUMO_PUSH;
     } else {
@@ -160,7 +161,7 @@ int daAlink_c::procSumouMoveInit() {
         mSpeedModifier = -1.0f;
         mSpecialMode = 8;
         mProcVar2.field_0x300c = 10;
-        mProcVar0.field_0x3008 = 15;
+        mProcVar0.field_0x3008 = tpFramesS16(15);
         field_0x2f9d = 0x60;
     }
 
@@ -327,7 +328,7 @@ int daAlink_c::procSumouSideMoveInit() {
 
     field_0x2f99 = 12;
     setFootEffectProcType(5);
-    mProcVar0.field_0x3008 = 15;
+    mProcVar0.field_0x3008 = tpFramesS16(15);
 
     return 1;
 }
@@ -738,7 +739,7 @@ int daAlink_c::procSumouStaggerInit() {
     setSingleAnimeBase(ANM_SUMOU_STAGGER);
     mNormalSpeed = 0.0f;
     field_0x2f99 = 12;
-    mProcVar0.field_0x3008 = 30;
+    mProcVar0.field_0x3008 = tpFramesS16(30);
     return 1;
 }
 

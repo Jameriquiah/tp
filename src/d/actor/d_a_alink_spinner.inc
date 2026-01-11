@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_spinner.h"
 
 f32 daAlink_c::getSpinnerGravity() const {
@@ -20,10 +21,10 @@ f32 daAlink_c::getSpinnerJumpRate() const {
 
 s16 daAlink_c::getSpinnerRideMoveTime() {
     if (checkLv4BossRoom()) {
-        return mpHIO->mItem.mSpinner.m.mBossRideMoveTime;
+        return tpFramesS16(mpHIO->mItem.mSpinner.m.mBossRideMoveTime);
     }
 
-    return mpHIO->mItem.mSpinner.m.mRideMoveTime;
+    return tpFramesS16(mpHIO->mItem.mSpinner.m.mRideMoveTime);
 }
 
 f32 daAlink_c::getSpinnerRideSpeedF() {

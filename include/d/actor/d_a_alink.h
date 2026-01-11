@@ -1,6 +1,7 @@
 #ifndef D_A_D_A_ALINK_H
 #define D_A_D_A_ALINK_H
 
+#include "tp_fps.h"
 #include "JSystem/J3DGraphAnimator/J3DMaterialAnm.h"
 #include "JSystem/J3DGraphBase/J3DMatBlock.h"
 #include "Z2AudioLib/Z2WolfHowlMgr.h"
@@ -7477,7 +7478,7 @@ public:
 
     void clearComboReserb() { offNoResetFlg2(FLG2_UNK_2); }
 
-    void setDamageColorTime() { mDamageColorTime = 32 - (mDamageTimer % 16); }
+    void setDamageColorTime() { mDamageColorTime = tpFramesS16(32) - (mDamageTimer % tpFramesS16(16)); }
 
     BOOL setEnemyBomb(fopAc_ac_c* i_actor) { return exchangeGrabActor(i_actor); }
 

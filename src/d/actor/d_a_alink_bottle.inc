@@ -1,3 +1,4 @@
+#include "tp_fps.h"
 /**
  * d_a_alink_bottle.inc
  * Player Bottle action handling
@@ -274,7 +275,7 @@ int daAlink_c::commonBottleDrink(int param_0) {
                 }
 
                 if (mEquipItem == fpcNm_ITEM_CHUCHU_RARE || mEquipItem == fpcNm_ITEM_FAIRY_DROP) {
-                    mSwordUpTimer = 510;
+                    mSwordUpTimer = tpFramesU16(510);
                 }
             }
         }

@@ -4,6 +4,7 @@
  */
 
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_canoe.h"
 #include "d/actor/d_a_mg_rod.h"
 #include "SSystem/SComponent/c_math.h"
@@ -576,7 +577,7 @@ int daAlink_c::procCanoeWaitInit(int param_0) {
             canoe->startInitPaddleWater();
         } else {
             var_f31 = 10.0f;
-            mProcVar0.field_0x3008 = 10;
+            mProcVar0.field_0x3008 = tpFramesS16(10);
             var_r27 = ANM_WAIT_SIT;
         }
     } else {

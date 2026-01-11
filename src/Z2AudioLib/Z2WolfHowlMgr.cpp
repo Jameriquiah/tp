@@ -6,6 +6,7 @@
 #include "Z2AudioLib/Z2SoundMgr.h"
 #include "Z2AudioLib/Z2Audience.h"
 #include "d/d_demo.h"
+#include "tp_fps.h"
 
 static f32 cPitchDown = 0.8909f;
 
@@ -16,101 +17,101 @@ static f32 cPitchUp = 1.1892f;
 static u8 struct_8045088C = 7;
 static u8 struct_8045088D = 7;
 
-static u8 cBeginHowlTime = 30;
+static u8 cBeginHowlTime = tpFramesU8(30);
 static u8 data_8045088F = 0;
 
 static f32 cR_FlatWidth = 0.94387f;  // 1.0f / 12th root of 2
 
 static u8 struct_80450894 = 5;
-static u8 struct_80450895 = 30;
+static u8 struct_80450895 = tpFramesU8(30);
 
 static f32 sStickHigh = 0.5f;
 
 static f32 sStickCenter = 1.0f / 5.0f;
 
 static Z2WolfHowlLine sHowlTobikusa[4] = {
-    {HOWL_LINE_HIGH, 30},
-    {HOWL_LINE_LOW, 30},
-    {HOWL_LINE_HIGH, 30},
-    {HOWL_LINE_LOW, 30},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
 };
 
 static Z2WolfHowlLine sHowlUmakusa[6] = {
-    {HOWL_LINE_HIGH, 15},
-    {HOWL_LINE_MID, 15},
-    {HOWL_LINE_LOW, 60},
-    {HOWL_LINE_HIGH, 15},
-    {HOWL_LINE_MID, 15},
-    {HOWL_LINE_LOW, 60},
+    {HOWL_LINE_HIGH, tpFramesU8(15)},
+    {HOWL_LINE_MID, tpFramesU8(15)},
+    {HOWL_LINE_LOW, tpFramesU8(60)},
+    {HOWL_LINE_HIGH, tpFramesU8(15)},
+    {HOWL_LINE_MID, tpFramesU8(15)},
+    {HOWL_LINE_LOW, tpFramesU8(60)},
 };
 
 static Z2WolfHowlLine sHowlZeldaSong[6] = {
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_HIGH, 15},
-    {HOWL_LINE_LOW, 45},
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_HIGH, 15},
-    {HOWL_LINE_LOW, 45},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_HIGH, tpFramesU8(15)},
+    {HOWL_LINE_LOW, tpFramesU8(45)},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_HIGH, tpFramesU8(15)},
+    {HOWL_LINE_LOW, tpFramesU8(45)},
 };
 
 static Z2WolfHowlLine sHowlLightPrelude[6] = {
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_LOW, 40},
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_LOW, 20},
-    {HOWL_LINE_MID, 20},
-    {HOWL_LINE_HIGH, 30},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_LOW, tpFramesU8(40)},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_LOW, tpFramesU8(20)},
+    {HOWL_LINE_MID, tpFramesU8(20)},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
 };
 
 static Z2WolfHowlLine sHowlSoulRequiem[6] = {
-    {HOWL_LINE_LOW, 30},
-    {HOWL_LINE_MID, 15},
-    {HOWL_LINE_LOW, 15}, 
-    {HOWL_LINE_HIGH, 30},
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_LOW, 30},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
+    {HOWL_LINE_MID, tpFramesU8(15)},
+    {HOWL_LINE_LOW, tpFramesU8(15)}, 
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
 };
 
 static Z2WolfHowlLine sHealingSong[6] = {
-    {HOWL_LINE_HIGH, 30},
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_LOW, 30},
-    {HOWL_LINE_HIGH, 30},
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_LOW, 30},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
 };
 
 static Z2WolfHowlLine sNewSong1[7] = {
-    {HOWL_LINE_LOW, 30},
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_HIGH, 30},
-    {HOWL_LINE_LOW, 40},
-    {HOWL_LINE_MID, 20},
-    {HOWL_LINE_LOW, 30},
-    {HOWL_LINE_HIGH, 30},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(40)},
+    {HOWL_LINE_MID, tpFramesU8(20)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
+    {HOWL_LINE_HIGH, tpFramesU8(30)},
 };
 
 static Z2WolfHowlLine sNewSong2[8] = {
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_MID, 20},
-    {HOWL_LINE_LOW, 20},
-    {HOWL_LINE_MID, 60},
-    {HOWL_LINE_LOW, 20},
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_MID, 20},
-    {HOWL_LINE_LOW, 30},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_MID, tpFramesU8(20)},
+    {HOWL_LINE_LOW, tpFramesU8(20)},
+    {HOWL_LINE_MID, tpFramesU8(60)},
+    {HOWL_LINE_LOW, tpFramesU8(20)},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_MID, tpFramesU8(20)},
+    {HOWL_LINE_LOW, tpFramesU8(30)},
 };
 
 static Z2WolfHowlLine sNewSong3[9] = {
-    {HOWL_LINE_MID, 30},
-    {HOWL_LINE_LOW, 60},
-    {HOWL_LINE_MID, 40},
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_LOW, 60},
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_MID, 20},
-    {HOWL_LINE_HIGH, 20},
-    {HOWL_LINE_MID, 45},
+    {HOWL_LINE_MID, tpFramesU8(30)},
+    {HOWL_LINE_LOW, tpFramesU8(60)},
+    {HOWL_LINE_MID, tpFramesU8(40)},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_LOW, tpFramesU8(60)},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_MID, tpFramesU8(20)},
+    {HOWL_LINE_HIGH, tpFramesU8(20)},
+    {HOWL_LINE_MID, tpFramesU8(45)},
 };
 
 static Z2WolfHowlData sGuideData[9] = {
@@ -181,7 +182,7 @@ void Z2WolfHowlMgr::calcVolumeMod(f32) {
         } else {
             volume = 1.0f;
             if (mReleaseTimer != 0) {
-                volume = getParamByExp(mReleaseTimer, 30.0f, 0.0f, 2.0f, 0.0f, 1.0f, Z2Calc::CURVE_POSITIVE);
+                volume = getParamByExp(mReleaseTimer, tpFramesF32(30.0f), 0.0f, 2.0f, 0.0f, 1.0f, Z2Calc::CURVE_POSITIVE);
             }
             mWolfHowlVolume = volume;
 
@@ -212,7 +213,7 @@ void Z2WolfHowlMgr::calcPitchMod(f32 param_0, f32 param_1) {
     field_0x20 = getNowPitch();
 
     if (mReleaseTimer != 0) {
-        f32 releaseScale = getParamByExp(mReleaseTimer, 30.0f, 0.0f, 1.0f, 0.97f, 1.0f, Z2Calc::CURVE_NEGATIVE);
+        f32 releaseScale = getParamByExp(mReleaseTimer, tpFramesF32(30.0f), 0.0f, 1.0f, 0.97f, 1.0f, Z2Calc::CURVE_NEGATIVE);
         pitch = mNowPitch * releaseScale;
 
         if (mWolfHowlHandle) {
@@ -283,7 +284,7 @@ s8 Z2WolfHowlMgr::startWolfHowlSound(f32 param_0, f32 stickValue, bool isHowl, f
         mTimer++;
     } else {
          if (mTimer > cBeginHowlTime) {
-            if (mReleaseTimer < 30) {
+            if (mReleaseTimer < tpFramesS16(30)) {
                 Z2GetSoundStarter()->startLevelSound(Z2SE_WL_V_HOWL, &mWolfHowlHandle, NULL);
                 if (mWolfHowlHandle) {
                     calcPitchMod(0.0f, 0.0f);
@@ -534,7 +535,7 @@ void Z2WolfHowlMgr::startWindStoneSound(s8 curveID, Vec* pos) {
 
     if (mWindStoneHandle) {
         mWindStoneHandle->fadeIn(0);
-        mWindStoneHandle->stop(30);
+        mWindStoneHandle->stop(tpFramesS32(30));
 
         if (Z2GetLink()->getLinkState() == 1) {
             f32 linkDist = sqrtf(VECSquareDistance(pos, Z2GetLink()->getCurrentPos()));
@@ -563,7 +564,7 @@ int Z2WolfHowlMgr::startGuideMelody(bool startSound) {
 
     if (mGuideHandle) {
         mGuideHandle->fadeIn(0);
-        mGuideHandle->stop(30);
+        mGuideHandle->stop(tpFramesS32(30));
         return mGuideHandle->getCount();
     }
 

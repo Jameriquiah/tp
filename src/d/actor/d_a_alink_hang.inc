@@ -5,6 +5,7 @@
 
 #include "SSystem/SComponent/c_math.h"
 #include "d/actor/d_a_alink.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "d/actor/d_a_b_dr.h"
 #include "d/actor/d_a_b_dre.h"
@@ -2395,7 +2396,7 @@ int daAlink_c::procClimbWaitInit(int param_0, int param_1) {
         setSingleAnimeBaseSpeed(ANM_CLIMB_SLIDE_LEFT, 0.0f, 3.0f);
     }
 
-    mProcVar0.field_0x3008 = 0x33;
+    mProcVar0.field_0x3008 = tpFramesS16(0x33);
     setSpecialGravity(0.0f, maxFallSpeed, 0);
     speed.y = 0.0f;
     mNormalSpeed = 0.0f;
