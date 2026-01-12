@@ -41,7 +41,8 @@ BOOL fpcM_IsCreating(fpc_ProcID i_id) {
     return fpcCt_IsCreatingByID(i_id);
 }
 
-void fpcM_Management(fpcM_ManagementFunc i_preExecuteFn, fpcM_ManagementFunc i_postExecuteFn) {
+void fpcM_Management(fpcM_ManagementFunc i_preExecuteFn, fpcM_ManagementFunc i_postExecuteFn,
+                     bool do_execute) {
     MtxInit();
     if (!fapGm_HIO_c::isCaptureScreen()) {
         dComIfGd_peekZdata();
@@ -60,32 +61,34 @@ void fpcM_Management(fpcM_ManagementFunc i_preExecuteFn, fpcM_ManagementFunc i_p
 
             cAPIGph_Painter();
 
-            if (!dPa_control_c::isStatus(1)) {
-                fpcDt_Handler();
-            } else {
-                dPa_control_c::offStatus(1);
-            }
+            if (do_execute) {
+                if (!dPa_control_c::isStatus(1)) {
+                    fpcDt_Handler();
+                } else {
+                    dPa_control_c::offStatus(1);
+                }
 
-            if (!fpcPi_Handler()) {
-                JUT_ASSERT(353, FALSE);
-            }
+                if (!fpcPi_Handler()) {
+                    JUT_ASSERT(353, FALSE);
+                }
 
-            if (!fpcCt_Handler()) {
-                JUT_ASSERT(357, FALSE);
-            }
+                if (!fpcCt_Handler()) {
+                    JUT_ASSERT(357, FALSE);
+                }
 
-            if (i_preExecuteFn != NULL) {
-                i_preExecuteFn();
-            }
+                if (i_preExecuteFn != NULL) {
+                    i_preExecuteFn();
+                }
 
-            if (!fapGm_HIO_c::isCaptureScreen()) {
-                fpcEx_Handler((fpcLnIt_QueueFunc)fpcM_Execute);
+                if (!fapGm_HIO_c::isCaptureScreen()) {
+                    fpcEx_Handler((fpcLnIt_QueueFunc)fpcM_Execute);
+                }
             }
             if (!fapGm_HIO_c::isCaptureScreen() || fapGm_HIO_c::getCaptureScreenDivH() != 1) {
                 fpcDw_Handler((fpcDw_HandlerFuncFunc)fpcM_DrawIterater, (fpcDw_HandlerFunc)fpcM_Draw);
             }
 
-            if (i_postExecuteFn != NULL) {
+            if (do_execute && i_postExecuteFn != NULL) {
                 i_postExecuteFn();
             }
 
@@ -146,4 +149,3 @@ void* fpcM_JudgeInLayer(fpc_ProcID i_layerID, fpcCtIt_JudgeFunc i_judgeFunc, voi
 
     return NULL;
 }
-

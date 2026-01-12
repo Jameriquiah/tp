@@ -11,6 +11,7 @@
 #include "d/d_meter2_info.h"
 #include "d/d_s_play.h"
 #include "f_ap/f_ap_game.h"
+#include "f_op/f_op_actor.h"
 #include "f_op/f_op_msg_mng.h"
 #include "m_Do/m_Do_controller_pad.h"
 #include "m_Do/m_Do_graphic.h"
@@ -1626,6 +1627,7 @@ int phase_2(dScnMenu_c* i_this) {
 
     mDoGph_gInf_c::setTickRate(OS_TIMER_CLOCK / 60);
     mDoGph_gInf_c::setBackColor(g_clearColor);
+    fopAc_setInterpolationEnabled(false);
     fapGmHIO_onMenu();
     i_this->current_category = menu_info->stage_data[l_cursolID].field_0x43;
 

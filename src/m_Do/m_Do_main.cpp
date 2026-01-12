@@ -23,6 +23,7 @@
 #include "d/d_s_play.h"
 #include "d/d_debug_pad.h"
 #include "f_ap/f_ap_game.h"
+#include "f_op/f_op_actor.h"
 #include "f_op/f_op_msg.h"
 #include "m_Do/m_Do_MemCard.h"
 #include "m_Do/m_Do_Reset.h"
@@ -738,7 +739,19 @@ void main01(void) {
 
     do {
         static u32 frame;
+        static u32 interp_frame;
         frame++;
+        interp_frame++;
+
+        bool do_execute = true;
+        f32 interp_alpha = 1.0f;
+        if (fopAc_isInterpolationEnabled()) {
+            do_execute = (interp_frame & 1) != 0;
+            interp_alpha = do_execute ? 1.0f : 1.5f;
+        } else {
+            interp_frame = 0;
+        }
+        fopAc_setInterpolationAlpha(interp_alpha);
 
         #if DEBUG
         if (memorycheck_check_frame != 0 && frame % memorycheck_check_frame == 0) {
@@ -754,7 +767,9 @@ void main01(void) {
             mDoMemCd_UpDate();
         }
 
-        mDoCPd_c::read();   // read controller input
+        if (do_execute) {
+            mDoCPd_c::read();   // read controller input
+        }
 
         #if DEBUG
         if (mDoMch::GXWarningExecuteFrame) {
@@ -762,7 +777,7 @@ void main01(void) {
         }
         #endif
 
-        fapGm_Execute();    // handle game execution
+        fapGm_Execute(do_execute);    // handle game execution
 
         #if DEBUG
         if (mDoMch::GXWarningExecuteFrame) {
@@ -775,14 +790,18 @@ void main01(void) {
         fapGm_HIO_c::startCpuTimer();
         #endif
 
-        mDoAud_Execute();   // handle audio execution
+        if (do_execute) {
+            mDoAud_Execute();   // handle audio execution
+        }
 
         #if DEBUG
         fapGm_HIO_c::printCpuTimer("");
         fapGm_HIO_c::stopCpuTimer("オーディオ");
         #endif
 
-        debug();            // run debugger
+        if (do_execute) {
+            debug();            // run debugger
+        }
     } while (true);
 }
 

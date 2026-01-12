@@ -206,6 +206,35 @@ fopAc_ac_c::~fopAc_ac_c() {}
 
 int g_fopAc_type;
 
+static bool s_interp_enabled = false;
+static f32 s_interp_alpha = 1.0f;
+
+void fopAc_setInterpolationEnabled(bool enabled) {
+    s_interp_enabled = enabled;
+}
+
+bool fopAc_isInterpolationEnabled() {
+    return s_interp_enabled;
+}
+
+void fopAc_setInterpolationAlpha(f32 alpha) {
+    s_interp_alpha = alpha;
+}
+
+f32 fopAc_getInterpolationAlpha() {
+    return s_interp_alpha;
+}
+
+static s16 fopAc_interpAngleS(s16 from, s16 to, f32 alpha) {
+    s32 diff = (s32)to - (s32)from;
+    if (diff > 0x8000) {
+        diff -= 0x10000;
+    } else if (diff < -0x8000) {
+        diff += 0x10000;
+    }
+    return (s16)(from + diff * alpha);
+}
+
 BOOL fopAc_IsActor(void* i_actor) {
     return fpcM_IsJustType(g_fopAc_type, ((fopAc_ac_c*)i_actor)->actor_type);
 }
@@ -254,7 +283,27 @@ static int fopAc_Draw(void* i_this) {
             print_error_check_c error_check(actor, print_error_check_c::sDRAW);
             #endif
 
+            actor_place saved_place;
+            bool applied_interp = false;
+            if (s_interp_enabled && s_interp_alpha < 1.0f) {
+                saved_place = actor->current;
+                actor->current.pos.x = actor->old.pos.x + (saved_place.pos.x - actor->old.pos.x) * s_interp_alpha;
+                actor->current.pos.y = actor->old.pos.y + (saved_place.pos.y - actor->old.pos.y) * s_interp_alpha;
+                actor->current.pos.z = actor->old.pos.z + (saved_place.pos.z - actor->old.pos.z) * s_interp_alpha;
+                actor->current.angle.x =
+                    fopAc_interpAngleS(actor->old.angle.x, saved_place.angle.x, s_interp_alpha);
+                actor->current.angle.y =
+                    fopAc_interpAngleS(actor->old.angle.y, saved_place.angle.y, s_interp_alpha);
+                actor->current.angle.z =
+                    fopAc_interpAngleS(actor->old.angle.z, saved_place.angle.z, s_interp_alpha);
+                applied_interp = true;
+            }
+
             ret = fpcLf_DrawMethod((leafdraw_method_class*)actor->sub_method, actor);
+
+            if (applied_interp) {
+                actor->current = saved_place;
+            }
 
             #if DEBUG
             }

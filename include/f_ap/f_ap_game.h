@@ -10,7 +10,7 @@
 
 void fapGm_After();
 void fapGm_Create();
-void fapGm_Execute();
+void fapGm_Execute(bool do_execute);
 
 class fapGm_HIO_c : public JORReflexible {
 public:

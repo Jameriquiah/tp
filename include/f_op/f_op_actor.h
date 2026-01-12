@@ -382,4 +382,9 @@ BOOL fopAc_IsActor(void* i_actor);
 
 extern actor_method_class g_fopAc_Method;
 
+void fopAc_setInterpolationEnabled(bool enabled);
+bool fopAc_isInterpolationEnabled();
+void fopAc_setInterpolationAlpha(f32 alpha);
+f32 fopAc_getInterpolationAlpha();
+
 #endif

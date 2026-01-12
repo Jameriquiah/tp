@@ -13,6 +13,7 @@
 #include "d/d_com_inf_game.h"
 #include "d/d_item.h"
 #include "d/d_map_path_dmap.h"
+#include "f_op/f_op_actor.h"
 #include "m_Do/m_Do_Reset.h"
 #include "m_Do/m_Do_controller_pad.h"
 #include "m_Do/m_Do_graphic.h"
@@ -605,6 +606,7 @@ int dScnLogo_c::create() {
     dvdDataLoad();
     Z2AudioMgr::getInterface()->loadStaticWaves();
     mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 60);
+    fopAc_setInterpolationEnabled(false);
     mDoGph_gInf_c::waitBlanking(0);
     field_0x20a = 0;
     mDoGph_gInf_c::startFadeIn(30);

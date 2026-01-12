@@ -22,6 +22,8 @@
 #include "d/d_jpreviewer.h"
 #include <dolphin/base/PPCArch.h>
 #include "f_ap/f_ap_game.h"
+#include "f_op/f_op_actor.h"
+#include "f_op/f_op_view.h"
 #include "f_op/f_op_camera_mng.h"
 #include "m_Do/m_Do_controller_pad.h"
 #include "m_Do/m_Do_graphic.h"
@@ -57,6 +59,79 @@ public:
 
     /* 0x4 */ s8 id;
 };
+
+struct cam_interp_snapshot {
+    lookat_class lookat;
+    f32 fovy;
+    f32 aspect;
+    s16 bank;
+};
+
+static cam_interp_snapshot s_cam_prev;
+static cam_interp_snapshot s_cam_curr;
+static cam_interp_snapshot s_cam_restore;
+static bool s_cam_interp_valid = false;
+static bool s_cam_interp_applied = false;
+
+static s16 camInterpAngleS(s16 from, s16 to, f32 alpha) {
+    s32 diff = (s32)to - (s32)from;
+    if (diff > 0x8000) {
+        diff -= 0x10000;
+    } else if (diff < -0x8000) {
+        diff += 0x10000;
+    }
+    return (s16)(from + diff * alpha);
+}
+
+static void camInterp_capture(cam_interp_snapshot* out, const view_class* view) {
+    out->lookat = view->lookat;
+    out->fovy = view->fovy;
+    out->aspect = view->aspect;
+    out->bank = view->bank;
+}
+
+static void camInterp_apply(view_class* view, const cam_interp_snapshot* snap) {
+    view->lookat = snap->lookat;
+    view->fovy = snap->fovy;
+    view->aspect = snap->aspect;
+    view->bank = snap->bank;
+}
+
+static void camInterp_rebuild(view_class* view) {
+    C_MTXPerspective(view->projMtx, view->fovy, view->aspect, view->near, view->far);
+    mDoMtx_lookAt(view->viewMtx, &view->lookat.eye, &view->lookat.center, &view->lookat.up,
+                  view->bank);
+    cMtx_inverse(view->viewMtx, view->invViewMtx);
+
+    MTXCopy(view->viewMtx, view->viewMtxNoTrans);
+    view->viewMtxNoTrans[0][3] = 0.0f;
+    view->viewMtxNoTrans[1][3] = 0.0f;
+    view->viewMtxNoTrans[2][3] = 0.0f;
+    cMtx_concatProjView(view->projMtx, view->viewMtx, view->projViewMtx);
+}
+
+static void camInterp_applyInterpolated(view_class* view, const cam_interp_snapshot* prev,
+                                        const cam_interp_snapshot* curr, f32 alpha) {
+    cam_interp_snapshot out;
+    out.lookat.eye.x = prev->lookat.eye.x + (curr->lookat.eye.x - prev->lookat.eye.x) * alpha;
+    out.lookat.eye.y = prev->lookat.eye.y + (curr->lookat.eye.y - prev->lookat.eye.y) * alpha;
+    out.lookat.eye.z = prev->lookat.eye.z + (curr->lookat.eye.z - prev->lookat.eye.z) * alpha;
+
+    out.lookat.center.x = prev->lookat.center.x + (curr->lookat.center.x - prev->lookat.center.x) * alpha;
+    out.lookat.center.y = prev->lookat.center.y + (curr->lookat.center.y - prev->lookat.center.y) * alpha;
+    out.lookat.center.z = prev->lookat.center.z + (curr->lookat.center.z - prev->lookat.center.z) * alpha;
+
+    out.lookat.up.x = prev->lookat.up.x + (curr->lookat.up.x - prev->lookat.up.x) * alpha;
+    out.lookat.up.y = prev->lookat.up.y + (curr->lookat.up.y - prev->lookat.up.y) * alpha;
+    out.lookat.up.z = prev->lookat.up.z + (curr->lookat.up.z - prev->lookat.up.z) * alpha;
+
+    out.fovy = prev->fovy + (curr->fovy - prev->fovy) * alpha;
+    out.aspect = prev->aspect + (curr->aspect - prev->aspect) * alpha;
+    out.bank = camInterpAngleS(prev->bank, curr->bank, alpha);
+
+    camInterp_apply(view, &out);
+    camInterp_rebuild(view);
+}
 
 static void drawQuad(f32 param_0, f32 param_1, f32 param_2, f32 param_3) {
     GXBegin(GX_QUADS, GX_VTXFMT0, 4);
@@ -686,10 +761,43 @@ static void dScnPly_BeforeOfPaint() {
 
 int mDoGph_BeforeOfDraw() {
     dScnPly_BeforeOfPaint();
+
+    s_cam_interp_applied = false;
+    if (fopAc_isInterpolationEnabled()) {
+        view_class* view = dComIfGd_getView();
+        if (view != NULL) {
+            f32 alpha = fopAc_getInterpolationAlpha();
+            if (alpha == 1.0f) {
+                if (!s_cam_interp_valid) {
+                    camInterp_capture(&s_cam_curr, view);
+                    s_cam_prev = s_cam_curr;
+                    s_cam_interp_valid = true;
+                } else {
+                    s_cam_prev = s_cam_curr;
+                    camInterp_capture(&s_cam_curr, view);
+                }
+            } else if (s_cam_interp_valid) {
+                camInterp_capture(&s_cam_restore, view);
+                camInterp_applyInterpolated(view, &s_cam_prev, &s_cam_curr, alpha);
+                s_cam_interp_applied = true;
+            }
+        }
+    } else {
+        s_cam_interp_valid = false;
+    }
     return 1;
 }
 
 int mDoGph_AfterOfDraw() {
+    if (s_cam_interp_applied) {
+        view_class* view = dComIfGd_getView();
+        if (view != NULL) {
+            camInterp_apply(view, &s_cam_restore);
+            camInterp_rebuild(view);
+        }
+        s_cam_interp_applied = false;
+    }
+
     if (fapGmHIO_isMenu()) {
         JUTProcBar::getManager()->setVisible(false);
         JUTProcBar::getManager()->setVisibleHeapBar(false);

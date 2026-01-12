@@ -725,13 +725,15 @@ void fapGm_After() {
     fopCamM_Management();
 }
 
-void fapGm_Execute() {
+void fapGm_Execute(bool do_execute) {
     #if DEBUG
     JUTDbPrint::getManager()->setCharColor(g_HIO.mColor);
     #endif
 
-    fpcM_Management(NULL, fapGm_After);
-    cCt_Counter(0);
+    fpcM_Management(NULL, fapGm_After, do_execute);
+    if (do_execute) {
+        cCt_Counter(0);
+    }
 }
 
 fapGm_HIO_c g_HIO;

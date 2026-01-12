@@ -19,6 +19,7 @@
 #include "d/d_meter2_info.h"
 #include "d/d_msg_object.h"
 #include "d/d_save_HIO.h"
+#include "f_op/f_op_actor.h"
 #include "f_op/f_op_draw_iter.h"
 #include "f_op/f_op_msg_mng.h"
 #include "f_op/f_op_overlap_mng.h"
@@ -621,7 +622,8 @@ static int phase_4(dScnPly_c* i_this) {
     dComIfGp_createSimpleModel();
     dMdl_mng_c::create();
 
-    mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 30);
+    mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 60);
+    fopAc_setInterpolationEnabled(true);
     g_envHIO.field_0x4 = -1;
     g_save_bit_HIO.field_0x4 = -1;
     new (dComIfGp_getAttention()) dAttention_c(dComIfGp_getPlayer(0), 0);

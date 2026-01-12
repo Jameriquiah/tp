@@ -9,6 +9,7 @@
 #include "JSystem/JKernel/JKRExpHeap.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_meter2_info.h"
+#include "f_op/f_op_actor.h"
 #include "f_op/f_op_scene_mng.h"
 #include "m_Do/m_Do_Reset.h"
 #include "m_Do/m_Do_graphic.h"
@@ -116,6 +117,7 @@ s32 dScnName_c::create() {
         field_0x41c = 0;
         field_0x41d = 0;
         mDoGph_gInf_c::setTickRate((OS_BUS_CLOCK / 4) / 30);
+        fopAc_setInterpolationEnabled(false);
 
         #if VERSION == VERSION_GCN_PAL
         mBmgStatus = 0;
