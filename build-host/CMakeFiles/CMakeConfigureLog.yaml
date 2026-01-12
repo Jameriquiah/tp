@@ -1,0 +1,135 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: MSYS - 3.6.5-0eeda3e1.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /c/Program Files/LLVM/bin/clang++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is Clang, found in:
+        /d/tp/build-host/CMakeFiles/3.29.1/CompilerIdCXX/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1216 (message)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-nP61Sn"
+      binary: "/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-nP61Sn"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/c/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--enable-auto-import"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-nP61Sn'
+        
+        Run Build Command(s): /opt/devkitpro/msys2/usr/bin/cmake.exe -E env VERBOSE=1 /opt/devkitpro/msys2/usr/bin/make.exe -f Makefile cmTC_df284/fast
+        /opt/devkitpro/msys2/usr/bin/make  -f CMakeFiles/cmTC_df284.dir/build.make CMakeFiles/cmTC_df284.dir/build
+        make[1]: Entering directory '/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-nP61Sn'
+        Building CXX object CMakeFiles/cmTC_df284.dir/CMakeCXXCompilerABI.cpp.o
+        "/c/Program Files/LLVM/bin/clang++.exe"    -o CMakeFiles/cmTC_df284.dir/CMakeCXXCompilerABI.cpp.o -c /opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Linking CXX executable cmTC_df284.exe
+        /opt/devkitpro/msys2/usr/bin/cmake.exe -E cmake_link_script CMakeFiles/cmTC_df284.dir/link.txt --verbose=1
+        "/c/Program Files/LLVM/bin/clang++.exe" -Wl,--enable-auto-import -Wl,-v CMakeFiles/cmTC_df284.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_df284.exe -Wl,--out-implib,libcmTC_df284.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        LINK : warning LNK4044: unrecognized option '/-enable-auto-import'; ignored
+        LINK : warning LNK4044: unrecognized option '/v'; ignored
+        LINK : warning LNK4044: unrecognized option '/-out-implib'; ignored
+        LINK : warning LNK4044: unrecognized option '/-major-image-version'; ignored
+        LINK : warning LNK4044: unrecognized option '/-minor-image-version'; ignored
+        LINK : fatal error LNK1181: cannot open input file 'libcmTC_df284.dll.a'
+        clang++: error: linker command failed with exit code 1181 (use -v to see invocation)
+        make[1]: *** [CMakeFiles/cmTC_df284.dir/build.make:99: cmTC_df284.exe] Error 157
+        make[1]: Leaving directory '/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-nP61Sn'
+        make: *** [Makefile:127: cmTC_df284/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/devkitpro/msys2/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Check for working CXX compiler: /c/Program Files/LLVM/bin/clang++.exe"
+    directories:
+      source: "/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-RxJ4hE"
+      binary: "/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-RxJ4hE"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/c/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,--enable-auto-import"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-RxJ4hE'
+        
+        Run Build Command(s): /opt/devkitpro/msys2/usr/bin/cmake.exe -E env VERBOSE=1 /opt/devkitpro/msys2/usr/bin/make.exe -f Makefile cmTC_b2e44/fast
+        /opt/devkitpro/msys2/usr/bin/make  -f CMakeFiles/cmTC_b2e44.dir/build.make CMakeFiles/cmTC_b2e44.dir/build
+        make[1]: Entering directory '/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-RxJ4hE'
+        Building CXX object CMakeFiles/cmTC_b2e44.dir/testCXXCompiler.cxx.o
+        "/c/Program Files/LLVM/bin/clang++.exe"    -o CMakeFiles/cmTC_b2e44.dir/testCXXCompiler.cxx.o -c /d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-RxJ4hE/testCXXCompiler.cxx
+        Linking CXX executable cmTC_b2e44.exe
+        /opt/devkitpro/msys2/usr/bin/cmake.exe -E cmake_link_script CMakeFiles/cmTC_b2e44.dir/link.txt --verbose=1
+        "/c/Program Files/LLVM/bin/clang++.exe" -Wl,--enable-auto-import  CMakeFiles/cmTC_b2e44.dir/testCXXCompiler.cxx.o -o cmTC_b2e44.exe -Wl,--out-implib,libcmTC_b2e44.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        LINK : warning LNK4044: unrecognized option '/-enable-auto-import'; ignored
+        LINK : warning LNK4044: unrecognized option '/-out-implib'; ignored
+        LINK : warning LNK4044: unrecognized option '/-major-image-version'; ignored
+        LINK : warning LNK4044: unrecognized option '/-minor-image-version'; ignored
+        LINK : fatal error LNK1181: cannot open input file 'libcmTC_b2e44.dll.a'
+        clang++: error: linker command failed with exit code 1181 (use -v to see invocation)
+        make[1]: *** [CMakeFiles/cmTC_b2e44.dir/build.make:99: cmTC_b2e44.exe] Error 157
+        make[1]: Leaving directory '/d/tp/build-host/CMakeFiles/CMakeScratch/TryCompile-RxJ4hE'
+        make: *** [Makefile:127: cmTC_b2e44/fast] Error 2
+        
+      exitCode: 2
+...
