@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_web1.h"
+#include "tp_fps.h"
 #include "SSystem/SComponent/c_math.h"
 #include "d/actor/d_a_player.h"
 #include "d/d_bg_w.h"
@@ -35,26 +36,26 @@ static void ride_call_back(dBgW* i_bgw, fopAc_ac_c* i_this, fopAc_ac_c* i_actor)
     if (_this->mDistToActor < 140.0f) {
         if (fopAcM_GetName(i_actor) == PROC_ALINK || fopAcM_GetName(i_actor) == PROC_ALINK) {
             if (_this->field_0x5aa == 0) {
-                _this->mReboundTimer = 60;
+                _this->mReboundTimer = tpFramesS16(60);
             }
 
             if (daPy_getPlayerActorClass()->checkEquipHeavyBoots()) {
-                _this->field_0x5aa = 120;
+                _this->field_0x5aa = tpFramesS16(120);
             } else {
-                _this->field_0x5aa = 6;
+                _this->field_0x5aa = tpFramesS16(6);
             }
         } else if (fopAcM_GetName(i_actor) == PROC_OBJ_GM) {
-            _this->field_0x5aa = 120;
+            _this->field_0x5aa = tpFramesS16(120);
         } else {
-            _this->field_0x5aa = 3;
+            _this->field_0x5aa = tpFramesS16(3);
         }
     }
 }
 
 static void action(obj_web1_class* i_this) {
     if (i_this->mReboundTimer != 0) {
-        if (i_this->mReboundTimer == 60 || i_this->mReboundTimer == 40 ||
-            i_this->mReboundTimer == 20) {
+        if (i_this->mReboundTimer == tpFramesS16(60) || i_this->mReboundTimer == tpFramesS16(40) ||
+            i_this->mReboundTimer == tpFramesS16(20)) {
             fopAcM_seStart(i_this, Z2SE_OBJ_WEB_BOUND_S, 0);
         }
 
@@ -94,13 +95,13 @@ static void action(obj_web1_class* i_this) {
 
     f32 target = 0.0f;
     if (i_this->field_0x5aa != 0) {
-        if (i_this->field_0x5aa > 100) {
+        if (i_this->field_0x5aa > tpFramesS16(100)) {
             target = 10.0f;
             i_this->mActionMode++;
             i_this->field_0x5a2[0] = 0;
-        } else if (i_this->field_0x5aa > 80) {
+        } else if (i_this->field_0x5aa > tpFramesS16(80)) {
             target = 5.0f;
-        } else if (i_this->field_0x5aa >= 4) {
+        } else if (i_this->field_0x5aa >= tpFramesS16(4)) {
             target = 2.0f;
         } else {
             target = 1.0f;

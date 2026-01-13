@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_swpush5.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_player.h"
 #include "d/d_s_play.h"
 #include "Z2AudioLib/Z2Instances.h"
@@ -247,7 +248,7 @@ void daObjSw5_c::actionPauseOrder() {
 
 void daObjSw5_c::actionPauseInit() {
     daPy_getPlayerActorClass()->onWolfEyeKeep();
-    mPauseTimer = 10;
+    mPauseTimer = tpFramesU8(10);
     mAction = 2;
 }
 
@@ -309,7 +310,7 @@ void daObjSw5_c::modeWaitLower() {
 
     if (var_r30) {
         if (mIsPlayerRideHvy) {
-            mPauseTimer += 30;
+            mPauseTimer += tpFramesU8(30);
             modeLowerInit();
         } else {
             if (field_0x5fc == 1.0f) {

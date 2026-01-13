@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_tag_waterfall.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_procname.h"
 #include "f_op/f_op_camera_mng.h"
@@ -221,7 +222,7 @@ cPhs__Step daTagWaterFall_c::create() {
         m_master_id = id;
 
         mColorBlend = 0.0f;
-        mFrameCountdown = 30;
+        mFrameCountdown = tpFramesU8(30);
     }
 
     return cPhs_COMPLEATE_e;

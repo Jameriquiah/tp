@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_waterPillar.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 #include "SSystem/SComponent/c_math.h"
 
@@ -368,7 +369,7 @@ bool daWtPillar_c::eventStart() {
 }
 
 void daWtPillar_c::actionWaitInit() {
-    mWaitFrameDelay = getParam(12, 5) * 0.5f * 30.0f;
+    mWaitFrameDelay = tpFramesU16(static_cast<u16>(getParam(12, 5) * 0.5f * 30.0f));
     mStartedRisingOrDoesNotRiseAndFall = field_0xB44 = false;
 
     fopAcM_seStartCurrent(this, Z2SE_OBJ_WTR_CLMN_WAIT, 0);
@@ -410,7 +411,7 @@ void daWtPillar_c::actionUpFirst() {
 }
 
 void daWtPillar_c::actionUpFirstWaitInit() {
-    mWaitFrameDelay = l_HIO.mUpFirstWaitFrames;
+    mWaitFrameDelay = tpFramesU16(l_HIO.mUpFirstWaitFrames);
     mEffectOscillationAmplitude = l_HIO.mEffectOscillationAmplitude;
     mEffectOscillationAngle = l_HIO.mEffectOscillationAngle;
     mEffectOscillationDampingScale = l_HIO.mEffectOscillationDampingScale;
@@ -460,7 +461,7 @@ void daWtPillar_c::actionUp() {
 }
 
 void daWtPillar_c::actionUpWaitInit() {
-    mWaitFrameDelay = l_HIO.mUpWaitFrames;
+    mWaitFrameDelay = tpFramesU16(l_HIO.mUpWaitFrames);
     mEffectOscillationAmplitude = l_HIO.mEffectOscillationAmplitude;
     mEffectOscillationAngle = l_HIO.mEffectOscillationAngle;
     mEffectOscillationDampingScale = l_HIO.mEffectOscillationDampingScale;

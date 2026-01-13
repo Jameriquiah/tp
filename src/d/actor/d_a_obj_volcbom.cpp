@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_volcbom.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_midna.h"
 #include "d/actor/d_a_player.h"
 #include "d/d_bg_w.h"
@@ -584,7 +585,7 @@ void daObjVolcBom_c::orderZHintEvent() {
                 if (mNaviTimer == 0) {
                     mDoAud_seStart(Z2SE_NAVI_CALLVOICE, 0, 0, 0);
                 }
-                mNaviTimer = 60;
+                mNaviTimer = tpFramesU8(60);
             }
         }
     }

@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_swpush.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_player.h"
 #include "d/d_s_play.h"
 #include "Z2AudioLib/Z2Instances.h"
@@ -519,7 +520,7 @@ void daObjSwpush::Act_c::mode_upper() {
 
     if (prm_get_couple() != 0 && nr_ride_people(field_0x5f2) == 1 && nr_ride_people(field_0x5f3) != 1 && mDebounceTimer <= 0) {
         mSpeed = attr().draw_pypcon_acc * 2.0f;
-        mDebounceTimer = 30;
+        mDebounceTimer = tpFramesS16(30);
         bVar1 = true;
     } else if (mDebounceTimer > 0) {
         mDebounceTimer--;
@@ -527,7 +528,7 @@ void daObjSwpush::Act_c::mode_upper() {
 
     if (!cLib_checkBit(attr().flags, FLAG_REQ_HEAVY) && mDebounceTimer <= 0 && mRidingMode && !mPrevRiding) {
         mSpeed = attr().draw_pypcon_acc;
-        mDebounceTimer = 30;
+        mDebounceTimer = tpFramesS16(30);
         bVar1 = true;
     } else if (mDebounceTimer > 0) {
         mDebounceTimer--;

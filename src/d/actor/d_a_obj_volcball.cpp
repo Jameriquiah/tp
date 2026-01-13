@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_volcball.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_obj_volcbom.h"
 #include "SSystem/SComponent/c_math.h"
 #include "d/actor/d_a_player.h"
@@ -227,7 +228,8 @@ void daObjVolcBall_c::actionWarning() {
         mTime = getData()->mNormalEruptTime * 30.0f +
                 cM_rndFX(getData()->mRandEruptTime * 30.0f);
 
-        mSearchBallCreateTimer = getData()->mSearchBallCreateTime * 30;
+        mSearchBallCreateTimer =
+            (u32)tpFramesS32((s32)(getData()->mSearchBallCreateTime * 30.0f));
     }
 
     mDoAud_seStartLevel(Z2SE_ENV_VOLCANO_SHAKE, NULL, 0,
@@ -410,7 +412,8 @@ bool daObjVolcBall_c::createSearchBall() {
             var_r30 = true;
         }
 
-        mSearchBallCreateTimer = getData()->mSearchBallCreateTime * 30;
+        mSearchBallCreateTimer =
+            (u32)tpFramesS32((s32)(getData()->mSearchBallCreateTime * 30.0f));
     }
 
     return var_r30;

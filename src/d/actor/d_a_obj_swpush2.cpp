@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_obj_swpush2.h"
+#include "tp_fps.h"
 #include "d/actor/d_a_player.h"
 
 #if DEBUG
@@ -441,7 +442,7 @@ void daObjSwpush2::Act_c::mode_upper() {
     }
 
     if (mRideType != 0 && mPrevRideType == 0 && mPauseDemoTimer <= 0) {
-        mPauseDemoTimer = 30;
+        mPauseDemoTimer = tpFramesS16(30);
         do_pause_demo = true;
     } else if (mPauseDemoTimer > 0) {
         mPauseDemoTimer--;

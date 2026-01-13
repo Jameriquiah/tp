@@ -8,6 +8,7 @@
 #include "d/actor/d_a_obj_timer.h"
 #include "d/d_com_inf_game.h"
 #include "f_op/f_op_actor_mng.h"
+#include "tp_fps.h"
 
 int daObjTimer::Act_c::_create() {
     fopAcM_ct(this, Act_c);
@@ -41,7 +42,7 @@ void daObjTimer::Act_c::mode_wait() {
 }
 
 void daObjTimer::Act_c::mode_count_init() {
-    field_0x56c = prm_get_time() * 15;
+    field_0x56c = prm_get_time() * tpFramesS32(15);
     field_0x568 = 1;
 }
 
@@ -50,12 +51,12 @@ void daObjTimer::Act_c::mode_count() {
     
     if (!field_0x570) {
         field_0x56c--;
-        if (prm_get_SeStop() && field_0x56c % 30 == 0) {
+        if (prm_get_SeStop() && field_0x56c % tpFramesS32(30) == 0) {
                 if (dComIfGp_event_runCheck() && prm_get_demoStop()) {
-                    field_0x56c += 30;
+                    field_0x56c += tpFramesS32(30);
                 }
 
-                int iVar1 = field_0x56c / 30;
+                int iVar1 = field_0x56c / tpFramesS32(30);
                 if (iVar1 <= 20) {
                     if (iVar1 > 10) {
                         soundID = JA_SE_SYS_EV_TIMER_20;

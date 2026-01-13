@@ -9,6 +9,7 @@
 #include "d/d_msg_object.h"
 #include "f_op/f_op_actor_mng.h"
 #include "m_Do/m_Do_graphic.h"
+#include "tp_fps.h"
 
 static u32 m_master_id = -1;
 
@@ -84,7 +85,7 @@ void daTagKagoFall_c::actionWaitRiver() {
                     return;
                 }
             } else {
-                mNoCarryTimer = 150;
+                mNoCarryTimer = tpFramesS16(150);
             }
         }
 
@@ -98,9 +99,9 @@ void daTagKagoFall_c::actionWaitRiver() {
 
                 mRestartPos = dCam_getBody()->Eye();
                 mActionState = 1;
-                mTimer = 30;
+                mTimer = tpFramesS16(30);
                 player->onNoResetFlg0(daPy_py_c::FLG0_UNK_10000);
-                mRiverTimer = 60;
+                mRiverTimer = tpFramesU8(60);
             }
         }
         break;
@@ -113,7 +114,7 @@ void daTagKagoFall_c::actionWaitRiver() {
         if (mRiverTimer == 0) {
             Z2GetAudioMgr()->seStart(Z2SE_FORCE_BACK, NULL, 0, 0, 1.0f, 1.0f, -1.0f, -1.0f, 0);
             mDoGph_gInf_c::fadeOut(0.05f, static_cast<JUtility::TColor&>(g_blackColor));
-            mRiverTimer = 20;
+            mRiverTimer = tpFramesU8(20);
             mActionState = 2;
         }
 
@@ -124,7 +125,7 @@ void daTagKagoFall_c::actionWaitRiver() {
         if (mRiverTimer == 0) {
             daPy_getPlayerActorClass()->offNoResetFlg0(daPy_py_c::FLG0_UNK_10000);
             mActionState = 3;
-            mTimer = 40;
+            mTimer = tpFramesS16(40);
         }
         dCam_getBody()->Set(player->eyePos, mRestartPos);
         break;
@@ -179,7 +180,7 @@ void daTagKagoFall_c::actionWaitFall() {
                     mActionState = 1;
                 }
             } else {
-                mNoCarryTimer = 150;
+                mNoCarryTimer = tpFramesS16(150);
             }
         }
         break;
@@ -200,7 +201,7 @@ void daTagKagoFall_c::actionWaitFall() {
             eventInfo.onCondition(dEvtCnd_CANDEMO_e);
         } else {
             mDoGph_gInf_c::fadeOut(0.05f, static_cast<JUtility::TColor&>(g_blackColor));
-            mTimer = 60;
+            mTimer = tpFramesS16(60);
             mActionState = 2;
             Z2GetAudioMgr()->seStart(Z2SE_FORCE_BACK, NULL, 0, 0, 1.0f, 1.0f, -1.0f, -1.0f, 0);
             player->voiceStart(Z2SE_WL_V_FALL_TO_RESTART);
@@ -212,7 +213,7 @@ void daTagKagoFall_c::actionWaitFall() {
             mTimer--;
         }
 
-        if (mTimer <= 45) {
+        if (mTimer <= tpFramesS16(45)) {
             player->setPlayerPosAndAngle(&mRestartPos, 0, 0);
         }
 

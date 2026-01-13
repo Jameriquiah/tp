@@ -6,6 +6,7 @@
 #include "d/dolzel_rel.h" // IWYU pragma: keep
 
 #include "d/actor/d_a_swhit0.h"
+#include "tp_fps.h"
 #include "d/d_com_inf_game.h"
 
 #define COLOR_YELLOW 0
@@ -338,7 +339,7 @@ int daSwhit0_c::actionSwWait() {
         return 0;
     }
 
-    if (++mSwWaitTimer > 30) {
+    if (++mSwWaitTimer > tpFramesS16(30)) {
         if (!fopAcM_isSwitch(this, getSwNo())) {
             setActio(ACTION_ON_WAIT_e);
             onSwitch();

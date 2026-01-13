@@ -9,6 +9,7 @@
 #include "SSystem/SComponent/c_math.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_kankyo_rain.h"
+#include "tp_fps.h"
 
 static const u16 l_R02_eff_id[3] = {0x8B5E, 0x8B5F, 0xFFFF};
 
@@ -170,22 +171,22 @@ int daObjTrnd2_c::Create() {
     case 1:
         if (swBit != 0xFF && !fopAcM_isSwitch(this, swBit)) {
             mColumnOn = false;
-            mTimer = getOffTime() * 30;
+            mTimer = tpFramesS32((s32)(getOffTime() * 30));
         } else if (cM_rndF(1.0f) > 0.5f) {
             mColumnOn = true;
-            mTimer = getOnTime() * 30;
+            mTimer = tpFramesS32((s32)(getOnTime() * 30));
         } else {
             mColumnOn = false;
-            mTimer = getOffTime() * 30;
+            mTimer = tpFramesS32((s32)(getOffTime() * 30));
         }
         break;
     case 2:
         mColumnOn = true;
-        mTimer = getOnTime() * 30;
+        mTimer = tpFramesS32((s32)(getOnTime() * 30));
         break;
     case 3:
         mColumnOn = false;
-        mTimer = getOffTime() * 30;
+        mTimer = tpFramesS32((s32)(getOffTime() * 30));
         break;
     }
 
@@ -233,7 +234,7 @@ int daObjTrnd2_c::execute() {
         case 3:
             if (cLib_calcTimer(&mTimer) == 0 || (swBit != 0xFF && !fopAcM_isSwitch(this, swBit))) {
                 set_column = true;
-                mTimer = getOffTime() * 30;
+                mTimer = tpFramesS32((s32)(getOffTime() * 30));
             }
             break;
         }
@@ -264,7 +265,7 @@ int daObjTrnd2_c::execute() {
                 ((swBit != 0xFF && fopAcM_isSwitch(this, swBit)) || swBit == 0xFF))
             {
                 set_column = true;
-                mTimer = getOnTime() * 30;
+                mTimer = tpFramesS32((s32)(getOnTime() * 30));
             }
             break;
         }

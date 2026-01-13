@@ -4437,9 +4437,9 @@ int daAlink_c::setStartProcInit() {
             } else if (checkSwimAction(1)) {
                 if (start_mode == 1) {
                     if (checkWolf()) {
-                        mNormalSpeed = 0.5f * mpHIO->mWolf.mWlSwim.m.mMaxSpeed;
+                        mNormalSpeed = 0.5f * mpHIO->mWolf.mWlSwim.m.mMaxSpeed * tpFrameScale();
                     } else {
-                        mNormalSpeed = 0.5f * mpHIO->mSwim.m.mForwardMaxSpeed;
+                        mNormalSpeed = 0.5f * mpHIO->mSwim.m.mForwardMaxSpeed * tpFrameScale();
                     }
                 }
 
@@ -4456,11 +4456,14 @@ int daAlink_c::setStartProcInit() {
                 field_0x2f99 = 0;
             } else if (start_mode == 1) {
                 if (checkWolf()) {
-                    mNormalSpeed = mpHIO->mWolf.mWlMove.m.mIdleToWalkRate * mpHIO->mWolf.mWlMove.m.mMaxSpeed;
+                    mNormalSpeed =
+                        mpHIO->mWolf.mWlMove.m.mIdleToWalkRate * mpHIO->mWolf.mWlMove.m.mMaxSpeed *
+                        tpFrameScale();
                     speedF = mNormalSpeed;
                     procWolfMoveInit();
                 } else {
-                    mNormalSpeed = mpHIO->mMove.m.mWalkChangeRate * mpHIO->mMove.m.mMaxSpeed;
+                    mNormalSpeed =
+                        mpHIO->mMove.m.mWalkChangeRate * mpHIO->mMove.m.mMaxSpeed * tpFrameScale();
                     speedF = mNormalSpeed;
                     procMoveInit();
                 }
@@ -4482,14 +4485,14 @@ int daAlink_c::setStartProcInit() {
                     procCrawlMoveInit(0, 0);
                 }
             } else if (checkWolf()) {
-                if (mNormalSpeed > mpHIO->mWolf.mWlMove.m.mMaxSpeed) {
-                    mNormalSpeed = mpHIO->mWolf.mWlMove.m.mMaxSpeed;
+                if (mNormalSpeed > mpHIO->mWolf.mWlMove.m.mMaxSpeed * tpFrameScale()) {
+                    mNormalSpeed = mpHIO->mWolf.mWlMove.m.mMaxSpeed * tpFrameScale();
                 }
                 speedF = mNormalSpeed;
                 procWolfMoveInit();
             } else {
-                if (mNormalSpeed > mpHIO->mMove.m.mMaxSpeed) {
-                    mNormalSpeed = mpHIO->mMove.m.mMaxSpeed;
+                if (mNormalSpeed > mpHIO->mMove.m.mMaxSpeed * tpFrameScale()) {
+                    mNormalSpeed = mpHIO->mMove.m.mMaxSpeed * tpFrameScale();
                 }
                 speedF = mNormalSpeed;
                 procMoveInit();
@@ -10140,8 +10143,8 @@ BOOL daAlink_c::checkLandAction(int param_0) {
         } else if (checkInputOnR() && temp_r27 == DIR_FORWARD && temp_r3 == DIR_FORWARD &&
                    mNormalSpeed > 5.0f)
         {
-            if (mNormalSpeed > mpHIO->mMove.m.mMaxSpeed) {
-                mNormalSpeed = mpHIO->mMove.m.mMaxSpeed;
+            if (mNormalSpeed > mpHIO->mMove.m.mMaxSpeed * tpFrameScale()) {
+                mNormalSpeed = mpHIO->mMove.m.mMaxSpeed * tpFrameScale();
             }
             mNormalSpeed *= 0.6f;
             current.angle.y = shape_angle.y;
@@ -10349,12 +10352,12 @@ BOOL daAlink_c::checkAutoJumpAction() {
                     sp8 = sp1C;
                 }
 
-                current.pos.x += field_0x3428 * spC;
-                current.pos.z += field_0x3428 * sp8;
+                current.pos.x += field_0x3428 * spC * tpFrameScale();
+                current.pos.z += field_0x3428 * sp8 * tpFrameScale();
 
                 if (checkWolf() && cLib_distanceAngleS(cM_atan2s(spC, sp8), shape_angle.y) >= 0x4000) {
-                    current.pos.x -= 75.0f * cM_ssin(shape_angle.y);
-                    current.pos.z -= 75.0f * cM_scos(shape_angle.y);
+                    current.pos.x -= 75.0f * cM_ssin(shape_angle.y) * tpFrameScale();
+                    current.pos.z -= 75.0f * cM_scos(shape_angle.y) * tpFrameScale();
                 }
             } else {
                 sp24 = mpHIO->mAutoJump.m.mFallInterpolation;
@@ -12132,8 +12135,9 @@ void daAlink_c::setSpecialGravity(f32 i_gravity, f32 i_speed, int i_offFlag) {
         onNoResetFlg3(FLG3_UNK_4000);
     }
 
-    gravity = i_gravity;
-    maxFallSpeed = i_speed;
+    const f32 step = tpFrameScale();
+    gravity = i_gravity * step;
+    maxFallSpeed = i_speed * step;
 }
 
 void daAlink_c::transAnimeProc(cXyz* param_0, f32 param_1, f32 param_2) {
@@ -12306,6 +12310,7 @@ void daAlink_c::setFootSpeed() {
 
 void daAlink_c::posMove() {
     cXyz sp108;
+    const f32 step = tpFrameScale();
 
     f32 temp_f30 = cM_ssin(shape_angle.y);
     f32 temp_f29 = cM_scos(shape_angle.y);
@@ -12395,7 +12400,9 @@ void daAlink_c::posMove() {
 
     if (checkModeFlg(MODE_SWIMMING)) {
         cLib_chasePos(&field_0x3750, cXyz::Zero, mpHIO->mDamage.mDamSwim.m.mDeceleration);
-        current.pos += field_0x3750;
+        current.pos.x += field_0x3750.x * step;
+        current.pos.y += field_0x3750.y * step;
+        current.pos.z += field_0x3750.z * step;
 
         if (checkNoResetFlg0(FLG0_SWIM_UP) && mProcID != PROC_SWIM_DIVE) {
             current.pos.y = mWaterY;
@@ -12405,13 +12412,13 @@ void daAlink_c::posMove() {
             speed.y = 0.0f;
         } else if (checkWolf()) {
             if (checkHeavyStateOn(1, 1)) {
-                speed.y += mpHIO->mWolf.mWlSwim.m.mHeavyBuoyancy;
+                speed.y += mpHIO->mWolf.mWlSwim.m.mHeavyBuoyancy * step;
 
                 if (speed.y > mpHIO->mWolf.mWlSwim.m.mHeavyMaxSurfacingSpeed) {
                     speed.y = mpHIO->mWolf.mWlSwim.m.mHeavyMaxSurfacingSpeed;
                 }
             } else {
-                speed.y += mpHIO->mWolf.mWlSwim.m.mBuoyancy;
+                speed.y += mpHIO->mWolf.mWlSwim.m.mBuoyancy * step;
 
                 if (speed.y > mpHIO->mWolf.mWlSwim.m.mMaxSurfacingSpeed) {
                     speed.y = mpHIO->mWolf.mWlSwim.m.mMaxSurfacingSpeed;
@@ -12429,18 +12436,18 @@ void daAlink_c::posMove() {
         } else if (speed.y > mpHIO->mSwim.m.mMaxFloatUpSpeed) {
             speed.y += gravity;
         } else if (speed.y < maxFallSpeed) {
-            speed.y += 1.0f;
+            speed.y += 1.0f * step;
         } else {
             if (checkZoraWearAbility() &&
                 mWaterY > current.pos.y + mpHIO->mSwim.m.mNormalBuoyancyWaterDepth)
             {
-                speed.y += mpHIO->mSwim.m.mZoraClothesBuoyancy;
+                speed.y += mpHIO->mSwim.m.mZoraClothesBuoyancy * step;
 
                 if (speed.y < 0.0f) {
                     speed.y = 0.0f;
                 }
             } else {
-                speed.y += mpHIO->mSwim.m.mBuoyancy;
+                speed.y += mpHIO->mSwim.m.mBuoyancy * step;
             }
 
             if (speed.y > mpHIO->mSwim.m.mMaxFloatUpSpeed) {
@@ -12483,22 +12490,26 @@ void daAlink_c::posMove() {
             Vec spFC = {0.0f, 0.0f, 0.0f};
             spFC.z = speedF;
             mDoMtx_stack_c::multVecSR(&spFC, &speed);
-            current.pos += speed;
-            current.pos.x += field_0x342c;
-            current.pos.z += field_0x3430;
+            current.pos.x += speed.x * step;
+            current.pos.y += speed.y * step;
+            current.pos.z += speed.z * step;
+            current.pos.x += field_0x342c * step;
+            current.pos.z += field_0x3430 * step;
         } else {
-            current.pos += speed;
-            current.pos.x += field_0x342c;
-            current.pos.z += field_0x3430;
+            current.pos.x += speed.x * step;
+            current.pos.y += speed.y * step;
+            current.pos.z += speed.z * step;
+            current.pos.x += field_0x342c * step;
+            current.pos.z += field_0x3430 * step;
 
             if (checkEndResetFlg1(ERFLG1_UNK_800) && checkStageName("F_SP113")) {
-                current.pos.y -= 50.0f;
+                current.pos.y -= 50.0f * step;
             }
         }
     }
 
     if (checkBoardRide() && !checkModeFlg(2)) {
-        current.pos.y -= speedF * cM_ssin(var_r26);
+        current.pos.y -= speedF * cM_ssin(var_r26) * step;
     }
 
     if (getSumouMode() && mProcID != PROC_SUMOU_WIN_LOSE) {
@@ -12520,32 +12531,38 @@ void daAlink_c::posMove() {
 
         if (!eventRunning) {
             if (!checkEndResetFlg0(ERFLG0_UNK_8) || !checkHeavyStateOn(1, 1)) {
-                current.pos.x += field_0x3400;
-                current.pos.z += field_0x3404;
+            current.pos.x += field_0x3400 * step;
+            current.pos.z += field_0x3404 * step;
             }
 
             if (mLinkAcch.ChkGroundHit() && dComIfG_Bgsp().ChkPolySafe(mLinkAcch.m_gnd)) {
                 s16 angle1 = getGroundAngle(&mLinkAcch.m_gnd, 0);
-                current.pos.z += field_0x35c4.z * cM_scos(angle1);
+                current.pos.z += field_0x35c4.z * cM_scos(angle1) * step;
 
                 s16 angle2 = getGroundAngle(&mLinkAcch.m_gnd, 0x4000);
-                current.pos.x += field_0x35c4.x * cM_scos(angle2);
+                current.pos.x += field_0x35c4.x * cM_scos(angle2) * step;
 
                 if (checkZeroSpeedF() && field_0x35c4.abs2() > 9.0f) {
                     seStartOnlyReverbLevel(Z2SE_AL_ICE_SLIP);
                 }
             }
 
-            current.pos += field_0x3594;
+            current.pos.x += field_0x3594.x * step;
+            current.pos.y += field_0x3594.y * step;
+            current.pos.z += field_0x3594.z * step;
 
             if (checkModeFlg(2)) {
-                current.pos += mWindSpeed;
+                current.pos.x += mWindSpeed.x * step;
+                current.pos.y += mWindSpeed.y * step;
+                current.pos.z += mWindSpeed.z * step;
             } else {
-                current.pos.x += mWindSpeed.x;
-                current.pos.z += mWindSpeed.z;
+                current.pos.x += mWindSpeed.x * step;
+                current.pos.z += mWindSpeed.z * step;
             }
         } else if (checkNoResetFlg0(FLG0_UNK_14000)) {
-            current.pos += field_0x3594;
+            current.pos.x += field_0x3594.x * step;
+            current.pos.y += field_0x3594.y * step;
+            current.pos.z += field_0x3594.z * step;
         }
     } else if (checkOctaIealSpecialCollect()) {
         f32 temp_f1 = getHookshotTopPos()->abs(current.pos);
@@ -12565,13 +12582,13 @@ void daAlink_c::posMove() {
 
         if (temp_f31 > 1.0f) {
             if ((s16)(field_0x814.GetCCMoveP()->atan2sX_Z() - shape_angle.y) >= 0) {
-                current.pos.x += temp_f31 * temp_f29;
-                current.pos.z -= temp_f31 * temp_f30;
-            } else {
-                current.pos.x -= temp_f31 * temp_f29;
-                current.pos.z += temp_f31 * temp_f30;
-            }
+            current.pos.x += temp_f31 * temp_f29 * step;
+            current.pos.z -= temp_f31 * temp_f30 * step;
+        } else {
+            current.pos.x -= temp_f31 * temp_f29 * step;
+            current.pos.z += temp_f31 * temp_f30 * step;
         }
+    }
     }
 
     if (checkModeFlg(MODE_SWIMMING) && checkNoResetFlg0(FLG0_SWIM_UP)) {
@@ -12626,13 +12643,15 @@ void daAlink_c::posMove() {
             mDoMtx_stack_c::copy(mMagneBootMtx);
             mDoMtx_stack_c::YrotM(shape_angle.y);
             mDoMtx_stack_c::multVec(&sp78, &spD8);
-            current.pos += spD8;
+            current.pos.x += spD8.x * step;
+            current.pos.y += spD8.y * step;
+            current.pos.z += spD8.z * step;
         } else {
-            current.pos.x += field_0x3464;
-            current.pos.z += field_0x3468;
+            current.pos.x += field_0x3464 * step;
+            current.pos.z += field_0x3468 * step;
 
             if (checkRootTransYClearMode()) {
-                current.pos.y += sp78.y;
+                current.pos.y += sp78.y * step;
             }
         }
     }
@@ -12683,8 +12702,8 @@ void daAlink_c::posMove() {
         if (hangMoveBgCheck(shape_angle.y + 0x4000, &sp9C) ||
             hangMoveBgCheck(shape_angle.y - 0x4000, &sp9C))
         {
-            current.pos.x += sp9C.x;
-            current.pos.z += sp9C.z;
+            current.pos.x += sp9C.x * step;
+            current.pos.z += sp9C.z * step;
         }
     }
 }
@@ -14567,11 +14586,11 @@ void daAlink_c::commonProcInit(daAlink_c::daAlink_PROC i_procID) {
     if ((dComIfGp_checkPlayerStatus0(0, 8) && !checkModeFlg(MODE_VINE_CLIMB) && mProcID != PROC_HANG_CLIMB) ||
         ((dComIfGp_checkPlayerStatus1(0, 0x2000000) && mProcID != PROC_HOOKSHOT_WALL_SHOOT && mProcID != PROC_HOOKSHOT_WALL_WAIT))) {
         if (mProcID == PROC_CLIMB_TO_ROOF) {
-            current.pos.x += 10.0f * cM_ssin(shape_angle.y);
-            current.pos.z += 10.0f * cM_scos(shape_angle.y);
+            current.pos.x += 10.0f * cM_ssin(shape_angle.y) * tpFrameScale();
+            current.pos.z += 10.0f * cM_scos(shape_angle.y) * tpFrameScale();
         } else {
-            current.pos.x -= 10.0f * cM_ssin(shape_angle.y);
-            current.pos.z -= 10.0f * cM_scos(shape_angle.y);
+            current.pos.x -= 10.0f * cM_ssin(shape_angle.y) * tpFrameScale();
+            current.pos.z -= 10.0f * cM_scos(shape_angle.y) * tpFrameScale();
         }
     }
 
@@ -14909,7 +14928,7 @@ int daAlink_c::procMove() {
         if (mDemo.getDemoMode() == 2 &&
             mNormalSpeed > field_0x594 * mpHIO->mMove.m.mWalkChangeRate)
         {
-            mNormalSpeed = field_0x594 * mpHIO->mMove.m.mWalkChangeRate;
+            mNormalSpeed = field_0x594 * mpHIO->mMove.m.mWalkChangeRate * tpFrameScale();
         }
 
         setBlendMoveAnime(-1.0f);
@@ -15078,6 +15097,7 @@ int daAlink_c::procMoveTurn() {
 }
 
 int daAlink_c::procSideStepInit(int jump_type) {
+    const f32 step = tpFrameScale();
     if (jump_type == 1 && !checkHeavyStateOn(1, 1) &&
         (checkNoUpperAnime() || checkEquipAnime() || field_0x2fcc != 0 && checkUpperGuardAnime()))
     {
@@ -15090,8 +15110,8 @@ int daAlink_c::procSideStepInit(int jump_type) {
     if (field_0x2f98 == 1) {
         current.angle.y = shape_angle.y + 0x8000;
         setSingleAnimeParam(ANM_BACK_JUMP, &mpHIO->mSideStep.m.mBackJumpAnm);
-        mNormalSpeed = mpHIO->mSideStep.m.mBackJumpSpeedH;
-        speed.y = mpHIO->mSideStep.m.mBackJumpSpeedV;
+        mNormalSpeed = mpHIO->mSideStep.m.mBackJumpSpeedH * step;
+        speed.y = mpHIO->mSideStep.m.mBackJumpSpeedV * step;
         mProcVar1.field_0x300a = 0;
     } else {
         daAlink_ANM anm_id;
@@ -15104,8 +15124,8 @@ int daAlink_c::procSideStepInit(int jump_type) {
         }
 
         setSingleAnimeParam(anm_id, &mpHIO->mSideStep.m.mSideJumpAnm);
-        mNormalSpeed = mpHIO->mSideStep.m.mSideJumpSpeedH;
-        speed.y = mpHIO->mSideStep.m.mSideJumpSpeedV;
+        mNormalSpeed = mpHIO->mSideStep.m.mSideJumpSpeedH * step;
+        speed.y = mpHIO->mSideStep.m.mSideJumpSpeedV * step;
         mProcVar1.field_0x300a = 1;
     }
 
@@ -15526,14 +15546,15 @@ int daAlink_c::procFrontRoll() {
 }
 
 int daAlink_c::procFrontRollCrashInit() {
+    const f32 step = tpFrameScale();
     commonProcInit(PROC_FRONT_ROLL_CRASH);
     setSingleAnime(ANM_ROLL_CRASH, 0.0f,
                    mpHIO->mFrontRoll.m.mCrashAnm.mStartFrame,
                    mpHIO->mFrontRoll.m.mCrashAnm.mEndFrame,
                    mpHIO->mFrontRoll.m.mCrashAnm.mInterpolation);
 
-    mNormalSpeed = mpHIO->mFrontRoll.m.mCrashSpeedH;
-    speed.y = mpHIO->mFrontRoll.m.mCrashSpeedV;
+    mNormalSpeed = mpHIO->mFrontRoll.m.mCrashSpeedH * step;
+    speed.y = mpHIO->mFrontRoll.m.mCrashSpeedV * step;
 
     if (checkNoResetFlg0(FLG0_UNDERWATER)) {
         mNormalSpeed *= mpHIO->mItem.mIronBoots.m.mWaterVelocityX;
@@ -15750,18 +15771,19 @@ int daAlink_c::procBackJumpInit(int param_0) {
     u32 horse_ride = checkHorseRide();
     BOOL guard_anime = checkUpperGuardAnime();
     BOOL ganon_finish = mProcID == PROC_GANON_FINISH;
+    const f32 step = tpFrameScale();
 
     commonProcInit(PROC_BACK_JUMP);
 
     if (param_0) {
         setSingleAnimeParam(ANM_BACKFLIP, &mpHIO->mCut.mCutDown.m.mRecoverAnm);
-        mNormalSpeed = mpHIO->mCut.mCutDown.m.mRecoverSpeedV;
-        speed.y = mpHIO->mCut.mCutDown.m.mSpeedV;
+        mNormalSpeed = mpHIO->mCut.mCutDown.m.mRecoverSpeedV * step;
+        speed.y = mpHIO->mCut.mCutDown.m.mSpeedV * step;
         voiceStart(Z2SE_AL_V_TODOME_RETURN);
     } else {
         setSingleAnimeParam(ANM_BACKFLIP, &mpHIO->mBackJump.m.mBackflipAnm);
-        mNormalSpeed = mpHIO->mBackJump.m.mBackflipSpeedH;
-        speed.y = mpHIO->mBackJump.m.mBackflipSpeedV;
+        mNormalSpeed = mpHIO->mBackJump.m.mBackflipSpeedH * step;
+        speed.y = mpHIO->mBackJump.m.mBackflipSpeedV * step;
         voiceStart(Z2SE_AL_V_BACKTEN);
     }
 
@@ -15865,7 +15887,7 @@ int daAlink_c::procBackJumpLand() {
 int daAlink_c::procSlipInit() {
     commonProcInit(PROC_SLIP);
     setSingleAnimeParam(ANM_SLIP, &mpHIO->mMove.m.mSlideAnm);
-    mNormalSpeed = speedF * mpHIO->mMove.m.mSlideSpeed;
+    mNormalSpeed = speedF * mpHIO->mMove.m.mSlideSpeed * tpFrameScale();
 
     field_0x2f9d = 0x40;
     setFootEffectProcType(1);
@@ -15881,7 +15903,7 @@ int daAlink_c::procSlip() {
         if (checkInputOnR()) {
             current.angle.y = shape_angle.y + 0x8000;
             shape_angle.y += 0x100;
-            mNormalSpeed = field_0x594 * 0.5f;
+            mNormalSpeed = field_0x594 * 0.5f * tpFrameScale();
             procMoveTurnInit(0);
         } else {
             checkNextAction(0);
@@ -15929,6 +15951,7 @@ public:
 int daAlink_c::procAutoJumpInit(int param_0) {
     u32 chk_mode_400 = checkModeFlg(0x400);
     BOOL not_front_roll = mProcID != PROC_FRONT_ROLL ? TRUE : FALSE;
+    const f32 step = tpFrameScale();
 
     if (checkIronBallWaitAnime()) {
         resetUpperAnime(UPPER_2, -1.0f);
@@ -16001,14 +16024,14 @@ int daAlink_c::procAutoJumpInit(int param_0) {
     }
 
     if (chk_mode_400) {
-        speedF = field_0x594 * 0.75f;
+        speedF = field_0x594 * 0.75f * step;
     } else {
         if (speedF > field_0x594 || param_0 ||
             mpHIO->mAutoJump.m.mAlwaysMaxSpeedJump == true)
         {
-            speedF = field_0x594;
-        } else if (speedF < mpHIO->mAutoJump.m.mMinJumpSpeed) {
-            speedF = mpHIO->mAutoJump.m.mMinJumpSpeed;
+            speedF = field_0x594 * step;
+        } else if (speedF < mpHIO->mAutoJump.m.mMinJumpSpeed * step) {
+            speedF = mpHIO->mAutoJump.m.mMinJumpSpeed * step;
         }
     }
 
@@ -16017,7 +16040,7 @@ int daAlink_c::procAutoJumpInit(int param_0) {
     mNormalSpeed *= cM_scos(angle);
 
     if (cucco_jump) {
-        mNormalSpeed = mpHIO->mAutoJump.m.mCuccoStartSpeed;
+        mNormalSpeed = mpHIO->mAutoJump.m.mCuccoStartSpeed * step;
     }
 
     field_0x3588 = l_waitBaseAnime;
@@ -16164,8 +16187,9 @@ int daAlink_c::procDiveJumpInit() {
     deleteEquipItem(TRUE, TRUE);
     setHeavyBoots(0);
 
-    speed.y = mpHIO->mAutoJump.m.mDiveSpeedV;
-    mNormalSpeed = mpHIO->mAutoJump.m.mDiveSpeedH;
+    const f32 step = tpFrameScale();
+    speed.y = mpHIO->mAutoJump.m.mDiveSpeedV * step;
+    mNormalSpeed = mpHIO->mAutoJump.m.mDiveSpeedH * step;
     gravity = mpHIO->mAutoJump.m.mDiveGravity;
 
     mProcVar2.field_0x300c = 0;
@@ -16205,9 +16229,10 @@ int daAlink_c::procRollJumpInit() {
     setSingleAnimeBaseSpeed(ANM_ROLL_JUMP, 0.0f,
                             mpHIO->mAutoJump.m.mSpinJumpInterpolation);
 
-    field_0x3478 = field_0x3410;
-    mNormalSpeed = field_0x3410;
-    speed.y = field_0x3414;
+    const f32 step = tpFrameScale();
+    field_0x3478 = field_0x3410 * step;
+    mNormalSpeed = field_0x3410 * step;
+    speed.y = field_0x3414 * step;
 
     field_0x2fe6 = field_0x30ee;
     shape_angle.y = field_0x30ee;
@@ -16246,8 +16271,8 @@ int daAlink_c::procRollJump() {
 
         cLib_chaseF(&field_0x347c,
                     field_0x33a8 * cM_scos(field_0x2fe2 - shape_angle.y) *
-                        mpHIO->mAutoJump.m.mSpinJumpAddSpeed,
-                    mpHIO->mAutoJump.m.mSpinJumpAccel);
+                        mpHIO->mAutoJump.m.mSpinJumpAddSpeed * tpFrameScale(),
+                    mpHIO->mAutoJump.m.mSpinJumpAccel * tpFrameScale());
         mNormalSpeed = field_0x3478 + field_0x347c;
     }
 
@@ -16286,8 +16311,8 @@ int daAlink_c::procFallInit(int param_0, f32 param_1) {
         current.angle.y = shape_angle.y;
 
         if (var_r3) {
-            current.pos.x += cM_ssin(shape_angle.y) * 5.0f;
-            current.pos.z += cM_scos(shape_angle.y) * 5.0f;
+            current.pos.x += cM_ssin(shape_angle.y) * 5.0f * tpFrameScale();
+            current.pos.z += cM_scos(shape_angle.y) * 5.0f * tpFrameScale();
         }
     } else if (param_0 == 4) {
         current.angle.y = field_0x2ffe;

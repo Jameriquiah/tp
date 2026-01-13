@@ -19,6 +19,7 @@
 #include "d/d_s_play.h"
 #include "d/d_debug_viewer.h"
 #include "f_op/f_op_actor_mng.h"
+#include "tp_fps.h"
 #include "f_op/f_op_camera_mng.h"
 #include "f_op/f_op_scene_mng.h"
 #include "m_Do/m_Do_lib.h"
@@ -791,7 +792,7 @@ void fopAcM_calcSpeed(fopAc_ac_c* i_actor) {
     cXyz* speed = fopAcM_GetSpeed_p(i_actor);
 
     xSpeed = speedF * cM_ssin(i_actor->current.angle.y);
-    ySpeed = speed->y + gravity;
+    ySpeed = speed->y + (gravity * tpFrameScale());
     zSpeed = speedF * cM_scos(i_actor->current.angle.y);
 
     if (ySpeed < fopAcM_GetMaxFallSpeed(i_actor)) {
@@ -803,14 +804,15 @@ void fopAcM_calcSpeed(fopAc_ac_c* i_actor) {
 void fopAcM_posMove(fopAc_ac_c* i_actor, const cXyz* i_movePos) {
     cXyz* pos = fopAcM_GetPosition_p(i_actor);
     cXyz* speed = fopAcM_GetSpeed_p(i_actor);
-    pos->x += speed->x;
-    pos->y += speed->y;
-    pos->z += speed->z;
+    const f32 step = tpFrameScale();
+    pos->x += speed->x * step;
+    pos->y += speed->y * step;
+    pos->z += speed->z * step;
 
     if (i_movePos != NULL) {
-        pos->x += i_movePos->x;
-        pos->y += i_movePos->y;
-        pos->z += i_movePos->z;
+        pos->x += i_movePos->x * step;
+        pos->y += i_movePos->y * step;
+        pos->z += i_movePos->z * step;
     }
 }
 

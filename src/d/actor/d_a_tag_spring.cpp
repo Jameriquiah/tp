@@ -8,6 +8,7 @@
 #include "d/actor/d_a_tag_spring.h"
 #include "d/actor/d_a_player.h"
 #include "d/d_procname.h"
+#include "tp_fps.h"
 
 void daTagSpring_c::initBaseMtx() {
     setBaseMtx();
@@ -55,11 +56,11 @@ int daTagSpring_c::execute() {
         if (mTimer != 0) {
             mTimer--;
         } else {
-            mTimer = 30;
+            mTimer = tpFramesU8(30);
             dComIfGp_setItemLifeCount(1.0f, 1);
         }
     } else {
-        mTimer = 30;
+        mTimer = tpFramesU8(30);
     }
 
     return 1;
